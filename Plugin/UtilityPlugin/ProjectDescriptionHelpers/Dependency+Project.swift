@@ -8,20 +8,24 @@ public extension TargetDependency {
     }
 }
 
+public extension TargetDependency.Project {
+    static let Data = TargetDependency.project(name: "Data")
+    static let Domain = TargetDependency.project(name: "Domain")
+    static let Presentation = TargetDependency.project(name: "Presentation")
+}
+
 public extension TargetDependency.Project.Modules {
-    // static let ThirdPartyLib = TargetDependency.module(name: "ThirdPartyLib")
-    // static let Utility = TargetDependency.module(name: "Utility")
+    static let Core = TargetDependency.module(name: "Core")
+    static let Error = TargetDependency.module(name: "Error")
+    static let ThirdPartyLib = TargetDependency.module(name: "ThirdPartyLib")
 }
 
 public extension TargetDependency.Project.Services {
-    // static let APIKit = TargetDependency.service(name: "APIKit")
-    // static let Data = TargetDependency.service(name: "DataModule")
-    // static let Domain = TargetDependency.service(name: "DomainModule")
-    // static let DatabaseModule = TargetDependency.service(name: "DatabaseModule")
-    // static let NetworkModule = TargetDependency.service(name: "NetworkModule")
-    // static let DataMappingModule = TargetDependency.service(name: "DataMappingModule")
+    static let APIKit = TargetDependency.service(name: "APIKit")
+    static let Network = TargetDependency.service(name: "Network")
+    static let DataMapping = TargetDependency.service(name: "DataMapping")
 }
 
 public extension TargetDependency.Project.UserInterfaces {
-    // static let DesignSystem = TargetDependency.ui(name: "DesignSystem")
+    static let DesignSystem = TargetDependency.ui(name: "DesignSystem")
 }
