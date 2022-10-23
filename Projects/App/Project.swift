@@ -28,7 +28,10 @@ let targets: [Target] = [
         sources: ["Sources/**"],
         resources: ["Resources/**"],
         scripts: scripts,
-        dependencies: [],
+        dependencies: [
+            .Project.Presentation,
+            .Project.Data
+        ],
         settings: .settings(base: Environment.baseSetting)
     ),
     .init(
