@@ -1,0 +1,773 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 55;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		ECA4252D29224DB8004DFDAF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECA4252C29224DB8004DFDAF /* AppDelegate.swift */; };
+		ECA4252F29224DB8004DFDAF /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECA4252E29224DB8004DFDAF /* SceneDelegate.swift */; };
+		ECA4253629224DBB004DFDAF /* Asset.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ECA4253529224DBB004DFDAF /* Asset.xcassets */; };
+		ECA4253929224DBB004DFDAF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ECA4253729224DBB004DFDAF /* LaunchScreen.storyboard */; };
+		ECA4254429224DBB004DFDAF /* FogFog_iOSTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECA4254329224DBB004DFDAF /* FogFog_iOSTests.swift */; };
+		ECA4254E29224DBB004DFDAF /* FogFog_iOSUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECA4254D29224DBB004DFDAF /* FogFog_iOSUITests.swift */; };
+		ECA4255029224DBB004DFDAF /* FogFog_iOSUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECA4254F29224DBB004DFDAF /* FogFog_iOSUITestsLaunchTests.swift */; };
+		ECA4257229225409004DFDAF /* Image.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ECA4257129225409004DFDAF /* Image.xcassets */; };
+		ECA425742922543B004DFDAF /* Color.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ECA425732922543B004DFDAF /* Color.xcassets */; };
+		ECA4257629225450004DFDAF /* SplashViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECA4257529225450004DFDAF /* SplashViewController.swift */; };
+		ECA425782922545C004DFDAF /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECA425772922545C004DFDAF /* MapViewController.swift */; };
+		ECA4257A292254A8004DFDAF /* BottomDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECA42579292254A8004DFDAF /* BottomDetailViewController.swift */; };
+		ECA4257C292254B0004DFDAF /* SideBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECA4257B292254B0004DFDAF /* SideBarViewController.swift */; };
+		ECA4257E292254C6004DFDAF /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECA4257D292254C6004DFDAF /* BaseViewController.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		ECA4254029224DBB004DFDAF /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = ECA4252129224DB8004DFDAF /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = ECA4252829224DB8004DFDAF;
+			remoteInfo = "FogFog-iOS";
+		};
+		ECA4254A29224DBB004DFDAF /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = ECA4252129224DB8004DFDAF /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = ECA4252829224DB8004DFDAF;
+			remoteInfo = "FogFog-iOS";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		ECA4252929224DB8004DFDAF /* FogFog-iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "FogFog-iOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		ECA4252C29224DB8004DFDAF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		ECA4252E29224DB8004DFDAF /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		ECA4253529224DBB004DFDAF /* Asset.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Asset.xcassets; sourceTree = "<group>"; };
+		ECA4253829224DBB004DFDAF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		ECA4253A29224DBB004DFDAF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		ECA4253F29224DBB004DFDAF /* FogFog-iOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "FogFog-iOSTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		ECA4254329224DBB004DFDAF /* FogFog_iOSTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FogFog_iOSTests.swift; sourceTree = "<group>"; };
+		ECA4254929224DBB004DFDAF /* FogFog-iOSUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "FogFog-iOSUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		ECA4254D29224DBB004DFDAF /* FogFog_iOSUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FogFog_iOSUITests.swift; sourceTree = "<group>"; };
+		ECA4254F29224DBB004DFDAF /* FogFog_iOSUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FogFog_iOSUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		ECA4257129225409004DFDAF /* Image.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Image.xcassets; sourceTree = "<group>"; };
+		ECA425732922543B004DFDAF /* Color.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Color.xcassets; sourceTree = "<group>"; };
+		ECA4257529225450004DFDAF /* SplashViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = SplashViewController.swift; path = "FogFog-iOS/Presentation/BottomDetailView/SplashViewController.swift"; sourceTree = SOURCE_ROOT; };
+		ECA425772922545C004DFDAF /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
+		ECA42579292254A8004DFDAF /* BottomDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BottomDetailViewController.swift; sourceTree = "<group>"; };
+		ECA4257B292254B0004DFDAF /* SideBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideBarViewController.swift; sourceTree = "<group>"; };
+		ECA4257D292254C6004DFDAF /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
+		ECA4258129225A41004DFDAF /* .gitkeep */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitkeep; sourceTree = "<group>"; };
+		ECA4258329225A66004DFDAF /* .gitkeep */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitkeep; sourceTree = "<group>"; };
+		ECA4258529225A75004DFDAF /* .gitkeep */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitkeep; sourceTree = "<group>"; };
+		ECA4258729225A7D004DFDAF /* .gitkeep */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitkeep; sourceTree = "<group>"; };
+		ECA4258929225A87004DFDAF /* .gitkeep */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitkeep; sourceTree = "<group>"; };
+		ECA4258B29225A92004DFDAF /* .gitkeep */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitkeep; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		ECA4252629224DB8004DFDAF /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		ECA4253C29224DBB004DFDAF /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		ECA4254629224DBB004DFDAF /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		ECA4252029224DB8004DFDAF = {
+			isa = PBXGroup;
+			children = (
+				ECA4252B29224DB8004DFDAF /* FogFog-iOS */,
+				ECA4254229224DBB004DFDAF /* FogFog-iOSTests */,
+				ECA4254C29224DBB004DFDAF /* FogFog-iOSUITests */,
+				ECA4252A29224DB8004DFDAF /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		ECA4252A29224DB8004DFDAF /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				ECA4252929224DB8004DFDAF /* FogFog-iOS.app */,
+				ECA4253F29224DBB004DFDAF /* FogFog-iOSTests.xctest */,
+				ECA4254929224DBB004DFDAF /* FogFog-iOSUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		ECA4252B29224DB8004DFDAF /* FogFog-iOS */ = {
+			isa = PBXGroup;
+			children = (
+				ECA4255D292251D8004DFDAF /* App */,
+				ECA42562292252AB004DFDAF /* Utils */,
+				ECA425612922529F004DFDAF /* Supports */,
+				ECA4256029225297004DFDAF /* Resources */,
+				ECA4255F2922528B004DFDAF /* Presentation */,
+				ECA4255E292251E0004DFDAF /* Models */,
+			);
+			path = "FogFog-iOS";
+			sourceTree = "<group>";
+		};
+		ECA4254229224DBB004DFDAF /* FogFog-iOSTests */ = {
+			isa = PBXGroup;
+			children = (
+				ECA4254329224DBB004DFDAF /* FogFog_iOSTests.swift */,
+			);
+			path = "FogFog-iOSTests";
+			sourceTree = "<group>";
+		};
+		ECA4254C29224DBB004DFDAF /* FogFog-iOSUITests */ = {
+			isa = PBXGroup;
+			children = (
+				ECA4254D29224DBB004DFDAF /* FogFog_iOSUITests.swift */,
+				ECA4254F29224DBB004DFDAF /* FogFog_iOSUITestsLaunchTests.swift */,
+			);
+			path = "FogFog-iOSUITests";
+			sourceTree = "<group>";
+		};
+		ECA4255D292251D8004DFDAF /* App */ = {
+			isa = PBXGroup;
+			children = (
+				ECA4252C29224DB8004DFDAF /* AppDelegate.swift */,
+				ECA4252E29224DB8004DFDAF /* SceneDelegate.swift */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		ECA4255E292251E0004DFDAF /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				ECA4258B29225A92004DFDAF /* .gitkeep */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		ECA4255F2922528B004DFDAF /* Presentation */ = {
+			isa = PBXGroup;
+			children = (
+				ECA425672922533A004DFDAF /* Splash */,
+				ECA4256A29225355004DFDAF /* Map */,
+				ECA425692922534E004DFDAF /* BottomDetailView */,
+				ECA4256829225346004DFDAF /* SideBar */,
+			);
+			path = Presentation;
+			sourceTree = "<group>";
+		};
+		ECA4256029225297004DFDAF /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				ECA4253729224DBB004DFDAF /* LaunchScreen.storyboard */,
+				ECA4256E2922538E004DFDAF /* Image */,
+				ECA4256D29225388004DFDAF /* Colors */,
+				ECA4256C29225382004DFDAF /* Fonts */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		ECA425612922529F004DFDAF /* Supports */ = {
+			isa = PBXGroup;
+			children = (
+				ECA4253A29224DBB004DFDAF /* Info.plist */,
+			);
+			path = Supports;
+			sourceTree = "<group>";
+		};
+		ECA42562292252AB004DFDAF /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				ECA42563292252BC004DFDAF /* Base */,
+				ECA42565292252E7004DFDAF /* Logging */,
+				ECA4256629225303004DFDAF /* UIComponents */,
+				ECA4256F292253AF004DFDAF /* Extension */,
+				ECA42564292252CD004DFDAF /* Analytics */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		ECA42563292252BC004DFDAF /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				ECA4257D292254C6004DFDAF /* BaseViewController.swift */,
+			);
+			path = Base;
+			sourceTree = "<group>";
+		};
+		ECA42564292252CD004DFDAF /* Analytics */ = {
+			isa = PBXGroup;
+			children = (
+				ECA4258729225A7D004DFDAF /* .gitkeep */,
+			);
+			path = Analytics;
+			sourceTree = "<group>";
+		};
+		ECA42565292252E7004DFDAF /* Logging */ = {
+			isa = PBXGroup;
+			children = (
+				ECA4258129225A41004DFDAF /* .gitkeep */,
+			);
+			path = Logging;
+			sourceTree = "<group>";
+		};
+		ECA4256629225303004DFDAF /* UIComponents */ = {
+			isa = PBXGroup;
+			children = (
+				ECA4258329225A66004DFDAF /* .gitkeep */,
+			);
+			path = UIComponents;
+			sourceTree = "<group>";
+		};
+		ECA425672922533A004DFDAF /* Splash */ = {
+			isa = PBXGroup;
+			children = (
+				ECA4257529225450004DFDAF /* SplashViewController.swift */,
+			);
+			path = Splash;
+			sourceTree = "<group>";
+		};
+		ECA4256829225346004DFDAF /* SideBar */ = {
+			isa = PBXGroup;
+			children = (
+				ECA4257B292254B0004DFDAF /* SideBarViewController.swift */,
+			);
+			path = SideBar;
+			sourceTree = "<group>";
+		};
+		ECA425692922534E004DFDAF /* BottomDetailView */ = {
+			isa = PBXGroup;
+			children = (
+				ECA42579292254A8004DFDAF /* BottomDetailViewController.swift */,
+			);
+			path = BottomDetailView;
+			sourceTree = "<group>";
+		};
+		ECA4256A29225355004DFDAF /* Map */ = {
+			isa = PBXGroup;
+			children = (
+				ECA425772922545C004DFDAF /* MapViewController.swift */,
+			);
+			path = Map;
+			sourceTree = "<group>";
+		};
+		ECA4256C29225382004DFDAF /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				ECA4258929225A87004DFDAF /* .gitkeep */,
+			);
+			path = Fonts;
+			sourceTree = "<group>";
+		};
+		ECA4256D29225388004DFDAF /* Colors */ = {
+			isa = PBXGroup;
+			children = (
+				ECA425732922543B004DFDAF /* Color.xcassets */,
+			);
+			path = Colors;
+			sourceTree = "<group>";
+		};
+		ECA4256E2922538E004DFDAF /* Image */ = {
+			isa = PBXGroup;
+			children = (
+				ECA4253529224DBB004DFDAF /* Asset.xcassets */,
+				ECA4257129225409004DFDAF /* Image.xcassets */,
+			);
+			path = Image;
+			sourceTree = "<group>";
+		};
+		ECA4256F292253AF004DFDAF /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				ECA4258529225A75004DFDAF /* .gitkeep */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		ECA4252829224DB8004DFDAF /* FogFog-iOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = ECA4255329224DBB004DFDAF /* Build configuration list for PBXNativeTarget "FogFog-iOS" */;
+			buildPhases = (
+				ECA4252529224DB8004DFDAF /* Sources */,
+				ECA4252629224DB8004DFDAF /* Frameworks */,
+				ECA4252729224DB8004DFDAF /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "FogFog-iOS";
+			productName = "FogFog-iOS";
+			productReference = ECA4252929224DB8004DFDAF /* FogFog-iOS.app */;
+			productType = "com.apple.product-type.application";
+		};
+		ECA4253E29224DBB004DFDAF /* FogFog-iOSTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = ECA4255629224DBB004DFDAF /* Build configuration list for PBXNativeTarget "FogFog-iOSTests" */;
+			buildPhases = (
+				ECA4253B29224DBB004DFDAF /* Sources */,
+				ECA4253C29224DBB004DFDAF /* Frameworks */,
+				ECA4253D29224DBB004DFDAF /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				ECA4254129224DBB004DFDAF /* PBXTargetDependency */,
+			);
+			name = "FogFog-iOSTests";
+			productName = "FogFog-iOSTests";
+			productReference = ECA4253F29224DBB004DFDAF /* FogFog-iOSTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		ECA4254829224DBB004DFDAF /* FogFog-iOSUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = ECA4255929224DBB004DFDAF /* Build configuration list for PBXNativeTarget "FogFog-iOSUITests" */;
+			buildPhases = (
+				ECA4254529224DBB004DFDAF /* Sources */,
+				ECA4254629224DBB004DFDAF /* Frameworks */,
+				ECA4254729224DBB004DFDAF /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				ECA4254B29224DBB004DFDAF /* PBXTargetDependency */,
+			);
+			name = "FogFog-iOSUITests";
+			productName = "FogFog-iOSUITests";
+			productReference = ECA4254929224DBB004DFDAF /* FogFog-iOSUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		ECA4252129224DB8004DFDAF /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1340;
+				LastUpgradeCheck = 1340;
+				TargetAttributes = {
+					ECA4252829224DB8004DFDAF = {
+						CreatedOnToolsVersion = 13.4.1;
+					};
+					ECA4253E29224DBB004DFDAF = {
+						CreatedOnToolsVersion = 13.4.1;
+						TestTargetID = ECA4252829224DB8004DFDAF;
+					};
+					ECA4254829224DBB004DFDAF = {
+						CreatedOnToolsVersion = 13.4.1;
+						TestTargetID = ECA4252829224DB8004DFDAF;
+					};
+				};
+			};
+			buildConfigurationList = ECA4252429224DB8004DFDAF /* Build configuration list for PBXProject "FogFog-iOS" */;
+			compatibilityVersion = "Xcode 13.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = ECA4252029224DB8004DFDAF;
+			productRefGroup = ECA4252A29224DB8004DFDAF /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				ECA4252829224DB8004DFDAF /* FogFog-iOS */,
+				ECA4253E29224DBB004DFDAF /* FogFog-iOSTests */,
+				ECA4254829224DBB004DFDAF /* FogFog-iOSUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		ECA4252729224DB8004DFDAF /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				ECA4253929224DBB004DFDAF /* LaunchScreen.storyboard in Resources */,
+				ECA425742922543B004DFDAF /* Color.xcassets in Resources */,
+				ECA4257229225409004DFDAF /* Image.xcassets in Resources */,
+				ECA4253629224DBB004DFDAF /* Asset.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		ECA4253D29224DBB004DFDAF /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		ECA4254729224DBB004DFDAF /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		ECA4252529224DB8004DFDAF /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				ECA4257629225450004DFDAF /* SplashViewController.swift in Sources */,
+				ECA4257C292254B0004DFDAF /* SideBarViewController.swift in Sources */,
+				ECA4252D29224DB8004DFDAF /* AppDelegate.swift in Sources */,
+				ECA4257A292254A8004DFDAF /* BottomDetailViewController.swift in Sources */,
+				ECA4252F29224DB8004DFDAF /* SceneDelegate.swift in Sources */,
+				ECA4257E292254C6004DFDAF /* BaseViewController.swift in Sources */,
+				ECA425782922545C004DFDAF /* MapViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		ECA4253B29224DBB004DFDAF /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				ECA4254429224DBB004DFDAF /* FogFog_iOSTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		ECA4254529224DBB004DFDAF /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				ECA4255029224DBB004DFDAF /* FogFog_iOSUITestsLaunchTests.swift in Sources */,
+				ECA4254E29224DBB004DFDAF /* FogFog_iOSUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		ECA4254129224DBB004DFDAF /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = ECA4252829224DB8004DFDAF /* FogFog-iOS */;
+			targetProxy = ECA4254029224DBB004DFDAF /* PBXContainerItemProxy */;
+		};
+		ECA4254B29224DBB004DFDAF /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = ECA4252829224DB8004DFDAF /* FogFog-iOS */;
+			targetProxy = ECA4254A29224DBB004DFDAF /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		ECA4253729224DBB004DFDAF /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				ECA4253829224DBB004DFDAF /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		ECA4255129224DBB004DFDAF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		ECA4255229224DBB004DFDAF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		ECA4255429224DBB004DFDAF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = RQHZUCMHSH;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "FogFog-iOS/Supports/Info.plist";
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "seungchan.FogFog-iOS";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		ECA4255529224DBB004DFDAF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = RQHZUCMHSH;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "FogFog-iOS/Supports/Info.plist";
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "seungchan.FogFog-iOS";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		ECA4255729224DBB004DFDAF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = RQHZUCMHSH;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "seungchan.FogFog-iOSTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/FogFog-iOS.app/FogFog-iOS";
+			};
+			name = Debug;
+		};
+		ECA4255829224DBB004DFDAF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = RQHZUCMHSH;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "seungchan.FogFog-iOSTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/FogFog-iOS.app/FogFog-iOS";
+			};
+			name = Release;
+		};
+		ECA4255A29224DBB004DFDAF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = RQHZUCMHSH;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "seungchan.FogFog-iOSUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "FogFog-iOS";
+			};
+			name = Debug;
+		};
+		ECA4255B29224DBB004DFDAF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = RQHZUCMHSH;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "seungchan.FogFog-iOSUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "FogFog-iOS";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		ECA4252429224DB8004DFDAF /* Build configuration list for PBXProject "FogFog-iOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				ECA4255129224DBB004DFDAF /* Debug */,
+				ECA4255229224DBB004DFDAF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		ECA4255329224DBB004DFDAF /* Build configuration list for PBXNativeTarget "FogFog-iOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				ECA4255429224DBB004DFDAF /* Debug */,
+				ECA4255529224DBB004DFDAF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		ECA4255629224DBB004DFDAF /* Build configuration list for PBXNativeTarget "FogFog-iOSTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				ECA4255729224DBB004DFDAF /* Debug */,
+				ECA4255829224DBB004DFDAF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		ECA4255929224DBB004DFDAF /* Build configuration list for PBXNativeTarget "FogFog-iOSUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				ECA4255A29224DBB004DFDAF /* Debug */,
+				ECA4255B29224DBB004DFDAF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = ECA4252129224DB8004DFDAF /* Project object */;
+}
