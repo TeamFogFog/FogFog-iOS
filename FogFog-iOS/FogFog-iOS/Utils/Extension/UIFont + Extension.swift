@@ -9,14 +9,39 @@ import UIKit.UIFont
 
 extension UIFont {
     
-    // 1안
-    static func font(_ type: FogFont, ofSize size: CGFloat) -> UIFont {
-        return UIFont(name: type.rawValue, size: size)!
+    static func PretendardEL(_ size: CGFloat) -> UIFont {
+        return UIFont(name: FogFont.extraLight.rawValue, size: size)!
     }
     
+    static func PretendardL(_ size: CGFloat) -> UIFont {
+        return UIFont(name: FogFont.light.rawValue, size: size)!
+    }
     
-    // 2안
-    static var fogB20: UIFont {
-        return UIFont(name: FogFont.regular.rawValue, size: 20)!
+    static func PretendardR(_ size: CGFloat) -> UIFont {
+        return UIFont(name: FogFont.regular.rawValue, size: size)!
+    }
+    
+    static func PretendardM(_ size: CGFloat) -> UIFont {
+        return UIFont(name: FogFont.medium.rawValue, size: size)!
+    }
+    
+    static func PretendardEB(_ size: CGFloat) -> UIFont {
+        return UIFont(name: FogFont.extraBold.rawValue, size: size)!
+    }
+    
+    static func PretendardB(_ size: CGFloat) -> UIFont {
+        return UIFont(name: FogFont.bold.rawValue, size: size)!
+    }
+    
+    static func PretendardSB(_ size: CGFloat) -> UIFont {
+        return UIFont(name: FogFont.semibold.rawValue, size: size)!
+    }
+    
+    static func PretendardT(_ size: CGFloat) -> UIFont {
+        return UIFont(name: FogFont.thin.rawValue, size: size)!
+    }
+    
+    static func PretendardBL(_ size: CGFloat) -> UIFont {
+        return UIFont(name: FogFont.black.rawValue, size: size)!
     }
 }
