@@ -21,6 +21,9 @@
 		ECA4257A292254A8004DFDAF /* BottomDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECA42579292254A8004DFDAF /* BottomDetailViewController.swift */; };
 		ECA4257C292254B0004DFDAF /* SideBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECA4257B292254B0004DFDAF /* SideBarViewController.swift */; };
 		ECA4257E292254C6004DFDAF /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECA4257D292254C6004DFDAF /* BaseViewController.swift */; };
+		ECA4259729229B15004DFDAF /* FogFont.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECA4259629229B15004DFDAF /* FogFont.swift */; };
+		ECA4259929229BD9004DFDAF /* UIFont + Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECA4259829229BD9004DFDAF /* UIFont + Extension.swift */; };
+		ECA4259B2922A4A6004DFDAF /* FogImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECA4259A2922A4A6004DFDAF /* FogImage.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -63,8 +66,19 @@
 		ECA4258329225A66004DFDAF /* .gitkeep */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitkeep; sourceTree = "<group>"; };
 		ECA4258529225A75004DFDAF /* .gitkeep */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitkeep; sourceTree = "<group>"; };
 		ECA4258729225A7D004DFDAF /* .gitkeep */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitkeep; sourceTree = "<group>"; };
-		ECA4258929225A87004DFDAF /* .gitkeep */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitkeep; sourceTree = "<group>"; };
 		ECA4258B29225A92004DFDAF /* .gitkeep */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitkeep; sourceTree = "<group>"; };
+		ECA4258D29229A05004DFDAF /* Pretendard-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Pretendard-Regular.otf"; sourceTree = "<group>"; };
+		ECA4258E29229A05004DFDAF /* Pretendard-Light.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Pretendard-Light.otf"; sourceTree = "<group>"; };
+		ECA4258F29229A05004DFDAF /* Pretendard-ExtraBold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Pretendard-ExtraBold.otf"; sourceTree = "<group>"; };
+		ECA4259029229A05004DFDAF /* Pretendard-Black.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Pretendard-Black.otf"; sourceTree = "<group>"; };
+		ECA4259129229A05004DFDAF /* Pretendard-SemiBold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Pretendard-SemiBold.otf"; sourceTree = "<group>"; };
+		ECA4259229229A05004DFDAF /* Pretendard-ExtraLight.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Pretendard-ExtraLight.otf"; sourceTree = "<group>"; };
+		ECA4259329229A05004DFDAF /* Pretendard-Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Pretendard-Bold.otf"; sourceTree = "<group>"; };
+		ECA4259429229A05004DFDAF /* Pretendard-Thin.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Pretendard-Thin.otf"; sourceTree = "<group>"; };
+		ECA4259529229A05004DFDAF /* Pretendard-Medium.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Pretendard-Medium.otf"; sourceTree = "<group>"; };
+		ECA4259629229B15004DFDAF /* FogFont.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FogFont.swift; sourceTree = "<group>"; };
+		ECA4259829229BD9004DFDAF /* UIFont + Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIFont + Extension.swift"; sourceTree = "<group>"; };
+		ECA4259A2922A4A6004DFDAF /* FogImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FogImage.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -268,7 +282,16 @@
 		ECA4256C29225382004DFDAF /* Fonts */ = {
 			isa = PBXGroup;
 			children = (
-				ECA4258929225A87004DFDAF /* .gitkeep */,
+				ECA4259029229A05004DFDAF /* Pretendard-Black.otf */,
+				ECA4259329229A05004DFDAF /* Pretendard-Bold.otf */,
+				ECA4258F29229A05004DFDAF /* Pretendard-ExtraBold.otf */,
+				ECA4259229229A05004DFDAF /* Pretendard-ExtraLight.otf */,
+				ECA4258E29229A05004DFDAF /* Pretendard-Light.otf */,
+				ECA4259529229A05004DFDAF /* Pretendard-Medium.otf */,
+				ECA4258D29229A05004DFDAF /* Pretendard-Regular.otf */,
+				ECA4259129229A05004DFDAF /* Pretendard-SemiBold.otf */,
+				ECA4259429229A05004DFDAF /* Pretendard-Thin.otf */,
+				ECA4259629229B15004DFDAF /* FogFont.swift */,
 			);
 			path = Fonts;
 			sourceTree = "<group>";
@@ -286,6 +309,7 @@
 			children = (
 				ECA4253529224DBB004DFDAF /* Asset.xcassets */,
 				ECA4257129225409004DFDAF /* Image.xcassets */,
+				ECA4259A2922A4A6004DFDAF /* FogImage.swift */,
 			);
 			path = Image;
 			sourceTree = "<group>";
@@ -294,6 +318,7 @@
 			isa = PBXGroup;
 			children = (
 				ECA4258529225A75004DFDAF /* .gitkeep */,
+				ECA4259829229BD9004DFDAF /* UIFont + Extension.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -430,10 +455,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				ECA4259929229BD9004DFDAF /* UIFont + Extension.swift in Sources */,
 				ECA4257629225450004DFDAF /* SplashViewController.swift in Sources */,
 				ECA4257C292254B0004DFDAF /* SideBarViewController.swift in Sources */,
 				ECA4252D29224DB8004DFDAF /* AppDelegate.swift in Sources */,
+				ECA4259729229B15004DFDAF /* FogFont.swift in Sources */,
 				ECA4257A292254A8004DFDAF /* BottomDetailViewController.swift in Sources */,
+				ECA4259B2922A4A6004DFDAF /* FogImage.swift in Sources */,
 				ECA4252F29224DB8004DFDAF /* SceneDelegate.swift in Sources */,
 				ECA4257E292254C6004DFDAF /* BaseViewController.swift in Sources */,
 				ECA425782922545C004DFDAF /* MapViewController.swift in Sources */,
