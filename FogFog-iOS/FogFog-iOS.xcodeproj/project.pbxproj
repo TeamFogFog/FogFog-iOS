@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1DDE6DAB87E9F15EAEAD8A1B /* Pods_FogFog_iOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 44BDDCB91FAFFFC51A0C1A4C /* Pods_FogFog_iOS.framework */; };
+		35919B344F294722AA448E4E /* Pods_FogFog_iOS_FogFog_iOSUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D67B489E657987D4A7AD92C7 /* Pods_FogFog_iOS_FogFog_iOSUITests.framework */; };
+		56E6DAD19F1058E2F6B779B7 /* Pods_FogFog_iOSTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 848DD0928406FC10714344E4 /* Pods_FogFog_iOSTests.framework */; };
 		ECA4252D29224DB8004DFDAF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECA4252C29224DB8004DFDAF /* AppDelegate.swift */; };
 		ECA4252F29224DB8004DFDAF /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECA4252E29224DB8004DFDAF /* SceneDelegate.swift */; };
 		ECA4253629224DBB004DFDAF /* Asset.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ECA4253529224DBB004DFDAF /* Asset.xcassets */; };
@@ -24,6 +27,14 @@
 		ECA4259729229B15004DFDAF /* FogFont.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECA4259629229B15004DFDAF /* FogFont.swift */; };
 		ECA4259929229BD9004DFDAF /* UIFont + Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECA4259829229BD9004DFDAF /* UIFont + Extension.swift */; };
 		ECA4259B2922A4A6004DFDAF /* FogImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECA4259A2922A4A6004DFDAF /* FogImage.swift */; };
+		ECA4259E292346A2004DFDAF /* Then in Frameworks */ = {isa = PBXBuildFile; productRef = ECA4259D292346A2004DFDAF /* Then */; };
+		ECA425A1292346B1004DFDAF /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = ECA425A0292346B1004DFDAF /* SnapKit */; };
+		ECA425A4292346BF004DFDAF /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = ECA425A3292346BF004DFDAF /* Kingfisher */; };
+		ECA425B229234744004DFDAF /* Moya in Frameworks */ = {isa = PBXBuildFile; productRef = ECA425B129234744004DFDAF /* Moya */; };
+		ECA425B429234744004DFDAF /* RxMoya in Frameworks */ = {isa = PBXBuildFile; productRef = ECA425B329234744004DFDAF /* RxMoya */; };
+		ECA425C929234C4F004DFDAF /* RxCocoa in Frameworks */ = {isa = PBXBuildFile; productRef = ECA425C829234C4F004DFDAF /* RxCocoa */; };
+		ECA425CB29234C4F004DFDAF /* RxRelay in Frameworks */ = {isa = PBXBuildFile; productRef = ECA425CA29234C4F004DFDAF /* RxRelay */; };
+		ECA425CD29234C4F004DFDAF /* RxSwift in Frameworks */ = {isa = PBXBuildFile; productRef = ECA425CC29234C4F004DFDAF /* RxSwift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +55,15 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		30E75DE5335BE7B01C6F6804 /* Pods-FogFog-iOSTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FogFog-iOSTests.debug.xcconfig"; path = "Target Support Files/Pods-FogFog-iOSTests/Pods-FogFog-iOSTests.debug.xcconfig"; sourceTree = "<group>"; };
+		44BDDCB91FAFFFC51A0C1A4C /* Pods_FogFog_iOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FogFog_iOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		47D49EE273F775CA2202B593 /* Pods-FogFog-iOS-FogFog-iOSUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FogFog-iOS-FogFog-iOSUITests.debug.xcconfig"; path = "Target Support Files/Pods-FogFog-iOS-FogFog-iOSUITests/Pods-FogFog-iOS-FogFog-iOSUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		568E5A05A08D8D049D3D8E62 /* Pods-FogFog-iOSTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FogFog-iOSTests.release.xcconfig"; path = "Target Support Files/Pods-FogFog-iOSTests/Pods-FogFog-iOSTests.release.xcconfig"; sourceTree = "<group>"; };
+		848DD0928406FC10714344E4 /* Pods_FogFog_iOSTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FogFog_iOSTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		888CEAED3234D2B94DAA26DB /* Pods-FogFog-iOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FogFog-iOS.release.xcconfig"; path = "Target Support Files/Pods-FogFog-iOS/Pods-FogFog-iOS.release.xcconfig"; sourceTree = "<group>"; };
+		A9F085CD5FE1A63DDBE5140E /* Pods-FogFog-iOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FogFog-iOS.debug.xcconfig"; path = "Target Support Files/Pods-FogFog-iOS/Pods-FogFog-iOS.debug.xcconfig"; sourceTree = "<group>"; };
+		D67B489E657987D4A7AD92C7 /* Pods_FogFog_iOS_FogFog_iOSUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FogFog_iOS_FogFog_iOSUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		DABD884BD50346C82E3C3CA3 /* Pods-FogFog-iOS-FogFog-iOSUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FogFog-iOS-FogFog-iOSUITests.release.xcconfig"; path = "Target Support Files/Pods-FogFog-iOS-FogFog-iOSUITests/Pods-FogFog-iOS-FogFog-iOSUITests.release.xcconfig"; sourceTree = "<group>"; };
 		ECA4252929224DB8004DFDAF /* FogFog-iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "FogFog-iOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		ECA4252C29224DB8004DFDAF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		ECA4252E29224DB8004DFDAF /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -64,7 +84,6 @@
 		ECA4257D292254C6004DFDAF /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		ECA4258129225A41004DFDAF /* .gitkeep */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitkeep; sourceTree = "<group>"; };
 		ECA4258329225A66004DFDAF /* .gitkeep */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitkeep; sourceTree = "<group>"; };
-		ECA4258529225A75004DFDAF /* .gitkeep */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitkeep; sourceTree = "<group>"; };
 		ECA4258729225A7D004DFDAF /* .gitkeep */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitkeep; sourceTree = "<group>"; };
 		ECA4258B29225A92004DFDAF /* .gitkeep */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitkeep; sourceTree = "<group>"; };
 		ECA4258D29229A05004DFDAF /* Pretendard-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Pretendard-Regular.otf"; sourceTree = "<group>"; };
@@ -86,6 +105,15 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				ECA425CD29234C4F004DFDAF /* RxSwift in Frameworks */,
+				ECA425B229234744004DFDAF /* Moya in Frameworks */,
+				ECA425A4292346BF004DFDAF /* Kingfisher in Frameworks */,
+				ECA4259E292346A2004DFDAF /* Then in Frameworks */,
+				ECA425C929234C4F004DFDAF /* RxCocoa in Frameworks */,
+				ECA425B429234744004DFDAF /* RxMoya in Frameworks */,
+				ECA425A1292346B1004DFDAF /* SnapKit in Frameworks */,
+				ECA425CB29234C4F004DFDAF /* RxRelay in Frameworks */,
+				1DDE6DAB87E9F15EAEAD8A1B /* Pods_FogFog_iOS.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -93,6 +121,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				56E6DAD19F1058E2F6B779B7 /* Pods_FogFog_iOSTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -100,12 +129,36 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				35919B344F294722AA448E4E /* Pods_FogFog_iOS_FogFog_iOSUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		5AEB748B4AD84E268CB5A70A /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				44BDDCB91FAFFFC51A0C1A4C /* Pods_FogFog_iOS.framework */,
+				D67B489E657987D4A7AD92C7 /* Pods_FogFog_iOS_FogFog_iOSUITests.framework */,
+				848DD0928406FC10714344E4 /* Pods_FogFog_iOSTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		60D90129AD5918F67985D847 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				A9F085CD5FE1A63DDBE5140E /* Pods-FogFog-iOS.debug.xcconfig */,
+				888CEAED3234D2B94DAA26DB /* Pods-FogFog-iOS.release.xcconfig */,
+				47D49EE273F775CA2202B593 /* Pods-FogFog-iOS-FogFog-iOSUITests.debug.xcconfig */,
+				DABD884BD50346C82E3C3CA3 /* Pods-FogFog-iOS-FogFog-iOSUITests.release.xcconfig */,
+				30E75DE5335BE7B01C6F6804 /* Pods-FogFog-iOSTests.debug.xcconfig */,
+				568E5A05A08D8D049D3D8E62 /* Pods-FogFog-iOSTests.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		ECA4252029224DB8004DFDAF = {
 			isa = PBXGroup;
 			children = (
@@ -113,6 +166,8 @@
 				ECA4254229224DBB004DFDAF /* FogFog-iOSTests */,
 				ECA4254C29224DBB004DFDAF /* FogFog-iOSUITests */,
 				ECA4252A29224DB8004DFDAF /* Products */,
+				60D90129AD5918F67985D847 /* Pods */,
+				5AEB748B4AD84E268CB5A70A /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -317,7 +372,6 @@
 		ECA4256F292253AF004DFDAF /* Extension */ = {
 			isa = PBXGroup;
 			children = (
-				ECA4258529225A75004DFDAF /* .gitkeep */,
 				ECA4259829229BD9004DFDAF /* UIFont + Extension.swift */,
 			);
 			path = Extension;
@@ -330,15 +384,27 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = ECA4255329224DBB004DFDAF /* Build configuration list for PBXNativeTarget "FogFog-iOS" */;
 			buildPhases = (
+				E42CDA508C1C5C9F396ABACE /* [CP] Check Pods Manifest.lock */,
 				ECA4252529224DB8004DFDAF /* Sources */,
 				ECA4252629224DB8004DFDAF /* Frameworks */,
 				ECA4252729224DB8004DFDAF /* Resources */,
+				91E7FC4BB854296B16FAAABD /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
 			name = "FogFog-iOS";
+			packageProductDependencies = (
+				ECA4259D292346A2004DFDAF /* Then */,
+				ECA425A0292346B1004DFDAF /* SnapKit */,
+				ECA425A3292346BF004DFDAF /* Kingfisher */,
+				ECA425B129234744004DFDAF /* Moya */,
+				ECA425B329234744004DFDAF /* RxMoya */,
+				ECA425C829234C4F004DFDAF /* RxCocoa */,
+				ECA425CA29234C4F004DFDAF /* RxRelay */,
+				ECA425CC29234C4F004DFDAF /* RxSwift */,
+			);
 			productName = "FogFog-iOS";
 			productReference = ECA4252929224DB8004DFDAF /* FogFog-iOS.app */;
 			productType = "com.apple.product-type.application";
@@ -347,6 +413,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = ECA4255629224DBB004DFDAF /* Build configuration list for PBXNativeTarget "FogFog-iOSTests" */;
 			buildPhases = (
+				06782D3B4C98AAB057BCB22A /* [CP] Check Pods Manifest.lock */,
 				ECA4253B29224DBB004DFDAF /* Sources */,
 				ECA4253C29224DBB004DFDAF /* Frameworks */,
 				ECA4253D29224DBB004DFDAF /* Resources */,
@@ -365,9 +432,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = ECA4255929224DBB004DFDAF /* Build configuration list for PBXNativeTarget "FogFog-iOSUITests" */;
 			buildPhases = (
+				6FE48479E5C0D7422BA9FC77 /* [CP] Check Pods Manifest.lock */,
 				ECA4254529224DBB004DFDAF /* Sources */,
 				ECA4254629224DBB004DFDAF /* Frameworks */,
 				ECA4254729224DBB004DFDAF /* Resources */,
+				77E665F8674477CECF410D23 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -411,6 +480,13 @@
 				Base,
 			);
 			mainGroup = ECA4252029224DB8004DFDAF;
+			packageReferences = (
+				ECA4259C292346A2004DFDAF /* XCRemoteSwiftPackageReference "Then" */,
+				ECA4259F292346B1004DFDAF /* XCRemoteSwiftPackageReference "SnapKit" */,
+				ECA425A2292346BF004DFDAF /* XCRemoteSwiftPackageReference "Kingfisher" */,
+				ECA425B029234744004DFDAF /* XCRemoteSwiftPackageReference "Moya" */,
+				ECA425C729234C4F004DFDAF /* XCRemoteSwiftPackageReference "RxSwift" */,
+			);
 			productRefGroup = ECA4252A29224DB8004DFDAF /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -449,6 +525,109 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		06782D3B4C98AAB057BCB22A /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-FogFog-iOSTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		6FE48479E5C0D7422BA9FC77 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-FogFog-iOS-FogFog-iOSUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		77E665F8674477CECF410D23 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-FogFog-iOS-FogFog-iOSUITests/Pods-FogFog-iOS-FogFog-iOSUITests-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-FogFog-iOS-FogFog-iOSUITests/Pods-FogFog-iOS-FogFog-iOSUITests-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-FogFog-iOS-FogFog-iOSUITests/Pods-FogFog-iOS-FogFog-iOSUITests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		91E7FC4BB854296B16FAAABD /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-FogFog-iOS/Pods-FogFog-iOS-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-FogFog-iOS/Pods-FogFog-iOS-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-FogFog-iOS/Pods-FogFog-iOS-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E42CDA508C1C5C9F396ABACE /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-FogFog-iOS-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		ECA4252529224DB8004DFDAF /* Sources */ = {
@@ -628,6 +807,7 @@
 		};
 		ECA4255429224DBB004DFDAF /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A9F085CD5FE1A63DDBE5140E /* Pods-FogFog-iOS.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -655,6 +835,7 @@
 		};
 		ECA4255529224DBB004DFDAF /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 888CEAED3234D2B94DAA26DB /* Pods-FogFog-iOS.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -682,6 +863,7 @@
 		};
 		ECA4255729224DBB004DFDAF /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 30E75DE5335BE7B01C6F6804 /* Pods-FogFog-iOSTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -702,6 +884,7 @@
 		};
 		ECA4255829224DBB004DFDAF /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 568E5A05A08D8D049D3D8E62 /* Pods-FogFog-iOSTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -722,6 +905,7 @@
 		};
 		ECA4255A29224DBB004DFDAF /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 47D49EE273F775CA2202B593 /* Pods-FogFog-iOS-FogFog-iOSUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -740,6 +924,7 @@
 		};
 		ECA4255B29224DBB004DFDAF /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = DABD884BD50346C82E3C3CA3 /* Pods-FogFog-iOS-FogFog-iOSUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -796,6 +981,92 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		ECA4259C292346A2004DFDAF /* XCRemoteSwiftPackageReference "Then" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/devxoul/Then.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 3.0.0;
+			};
+		};
+		ECA4259F292346B1004DFDAF /* XCRemoteSwiftPackageReference "SnapKit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SnapKit/SnapKit.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.0.0;
+			};
+		};
+		ECA425A2292346BF004DFDAF /* XCRemoteSwiftPackageReference "Kingfisher" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/onevcat/Kingfisher.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 7.0.0;
+			};
+		};
+		ECA425B029234744004DFDAF /* XCRemoteSwiftPackageReference "Moya" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Moya/Moya.git";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
+		ECA425C729234C4F004DFDAF /* XCRemoteSwiftPackageReference "RxSwift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/ReactiveX/RxSwift.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 6.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		ECA4259D292346A2004DFDAF /* Then */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = ECA4259C292346A2004DFDAF /* XCRemoteSwiftPackageReference "Then" */;
+			productName = Then;
+		};
+		ECA425A0292346B1004DFDAF /* SnapKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = ECA4259F292346B1004DFDAF /* XCRemoteSwiftPackageReference "SnapKit" */;
+			productName = SnapKit;
+		};
+		ECA425A3292346BF004DFDAF /* Kingfisher */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = ECA425A2292346BF004DFDAF /* XCRemoteSwiftPackageReference "Kingfisher" */;
+			productName = Kingfisher;
+		};
+		ECA425B129234744004DFDAF /* Moya */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = ECA425B029234744004DFDAF /* XCRemoteSwiftPackageReference "Moya" */;
+			productName = Moya;
+		};
+		ECA425B329234744004DFDAF /* RxMoya */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = ECA425B029234744004DFDAF /* XCRemoteSwiftPackageReference "Moya" */;
+			productName = RxMoya;
+		};
+		ECA425C829234C4F004DFDAF /* RxCocoa */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = ECA425C729234C4F004DFDAF /* XCRemoteSwiftPackageReference "RxSwift" */;
+			productName = RxCocoa;
+		};
+		ECA425CA29234C4F004DFDAF /* RxRelay */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = ECA425C729234C4F004DFDAF /* XCRemoteSwiftPackageReference "RxSwift" */;
+			productName = RxRelay;
+		};
+		ECA425CC29234C4F004DFDAF /* RxSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = ECA425C729234C4F004DFDAF /* XCRemoteSwiftPackageReference "RxSwift" */;
+			productName = RxSwift;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = ECA4252129224DB8004DFDAF /* Project object */;
 }
