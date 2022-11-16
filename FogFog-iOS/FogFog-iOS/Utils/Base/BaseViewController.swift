@@ -13,6 +13,7 @@ class BaseViewController: UIViewController {
         super.viewDidLoad()
 
         setStyle()
+        setConstraints()
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -21,5 +22,10 @@ class BaseViewController: UIViewController {
         navigationController?.setNavigationBarHidden(true, animated: true)
     }
     
-    func setStyle() {}
+    func setStyle() {
+        
+        view.backgroundColor = .white
+    }
+    
+    func setConstraints() {}
 }
