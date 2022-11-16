@@ -35,6 +35,11 @@
 		ECA425C929234C4F004DFDAF /* RxCocoa in Frameworks */ = {isa = PBXBuildFile; productRef = ECA425C829234C4F004DFDAF /* RxCocoa */; };
 		ECA425CB29234C4F004DFDAF /* RxRelay in Frameworks */ = {isa = PBXBuildFile; productRef = ECA425CA29234C4F004DFDAF /* RxRelay */; };
 		ECA425CD29234C4F004DFDAF /* RxSwift in Frameworks */ = {isa = PBXBuildFile; productRef = ECA425CC29234C4F004DFDAF /* RxSwift */; };
+		ECA425CF292382AD004DFDAF /* NavigationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECA425CE292382AD004DFDAF /* NavigationView.swift */; };
+		ECA425D12924CD99004DFDAF /* LocationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECA425D02924CD99004DFDAF /* LocationService.swift */; };
+		ECA425D32924CDB6004DFDAF /* DefaultLocationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECA425D22924CDB6004DFDAF /* DefaultLocationService.swift */; };
+		ECA425D52924D95C004DFDAF /* GoogleMap.plist in Resources */ = {isa = PBXBuildFile; fileRef = ECA425D42924D95C004DFDAF /* GoogleMap.plist */; };
+		ECA425D72924DA66004DFDAF /* Bundle + Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECA425D62924DA66004DFDAF /* Bundle + Extension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -98,6 +103,11 @@
 		ECA4259629229B15004DFDAF /* FogFont.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FogFont.swift; sourceTree = "<group>"; };
 		ECA4259829229BD9004DFDAF /* UIFont + Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIFont + Extension.swift"; sourceTree = "<group>"; };
 		ECA4259A2922A4A6004DFDAF /* FogImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FogImage.swift; sourceTree = "<group>"; };
+		ECA425CE292382AD004DFDAF /* NavigationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationView.swift; sourceTree = "<group>"; };
+		ECA425D02924CD99004DFDAF /* LocationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationService.swift; sourceTree = "<group>"; };
+		ECA425D22924CDB6004DFDAF /* DefaultLocationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultLocationService.swift; sourceTree = "<group>"; };
+		ECA425D42924D95C004DFDAF /* GoogleMap.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = GoogleMap.plist; sourceTree = "<group>"; };
+		ECA425D62924DA66004DFDAF /* Bundle + Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Bundle + Extension.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -254,6 +264,7 @@
 			isa = PBXGroup;
 			children = (
 				ECA4253A29224DBB004DFDAF /* Info.plist */,
+				ECA425D42924D95C004DFDAF /* GoogleMap.plist */,
 			);
 			path = Supports;
 			sourceTree = "<group>";
@@ -330,6 +341,9 @@
 			isa = PBXGroup;
 			children = (
 				ECA425772922545C004DFDAF /* MapViewController.swift */,
+				ECA425CE292382AD004DFDAF /* NavigationView.swift */,
+				ECA425D02924CD99004DFDAF /* LocationService.swift */,
+				ECA425D22924CDB6004DFDAF /* DefaultLocationService.swift */,
 			);
 			path = Map;
 			sourceTree = "<group>";
@@ -373,6 +387,7 @@
 			isa = PBXGroup;
 			children = (
 				ECA4259829229BD9004DFDAF /* UIFont + Extension.swift */,
+				ECA425D62924DA66004DFDAF /* Bundle + Extension.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -503,6 +518,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				ECA425D52924D95C004DFDAF /* GoogleMap.plist in Resources */,
 				ECA4253929224DBB004DFDAF /* LaunchScreen.storyboard in Resources */,
 				ECA425742922543B004DFDAF /* Color.xcassets in Resources */,
 				ECA4257229225409004DFDAF /* Image.xcassets in Resources */,
@@ -636,14 +652,18 @@
 			files = (
 				ECA4259929229BD9004DFDAF /* UIFont + Extension.swift in Sources */,
 				ECA4257629225450004DFDAF /* SplashViewController.swift in Sources */,
+				ECA425CF292382AD004DFDAF /* NavigationView.swift in Sources */,
 				ECA4257C292254B0004DFDAF /* SideBarViewController.swift in Sources */,
 				ECA4252D29224DB8004DFDAF /* AppDelegate.swift in Sources */,
+				ECA425D32924CDB6004DFDAF /* DefaultLocationService.swift in Sources */,
 				ECA4259729229B15004DFDAF /* FogFont.swift in Sources */,
 				ECA4257A292254A8004DFDAF /* BottomDetailViewController.swift in Sources */,
 				ECA4259B2922A4A6004DFDAF /* FogImage.swift in Sources */,
 				ECA4252F29224DB8004DFDAF /* SceneDelegate.swift in Sources */,
 				ECA4257E292254C6004DFDAF /* BaseViewController.swift in Sources */,
+				ECA425D12924CD99004DFDAF /* LocationService.swift in Sources */,
 				ECA425782922545C004DFDAF /* MapViewController.swift in Sources */,
+				ECA425D72924DA66004DFDAF /* Bundle + Extension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
