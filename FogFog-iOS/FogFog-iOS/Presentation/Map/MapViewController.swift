@@ -7,10 +7,10 @@
 
 import UIKit
 
+import CoreLocation
+import GoogleMaps
 import SnapKit
 import Then
-import GoogleMaps
-import CoreLocation
 
 final class MapViewController: BaseViewController {
     
@@ -18,7 +18,7 @@ final class MapViewController: BaseViewController {
     private let camera = GMSCameraPosition(latitude: 37.54330366639085, longitude: 127.04455548501139, zoom: 12)
     private var mapView = GMSMapView()
     private var myMarker = GMSMarker()
-    private var locationManager: CLLocationManager = CLLocationManager()
+    private var locationManager = CLLocationManager()
     private var currentLocation: CLLocation!
     
     override func loadView() {
@@ -44,7 +44,7 @@ final class MapViewController: BaseViewController {
         navigationView.snp.makeConstraints {
             $0.top.equalToSuperview()
             $0.height.equalTo(102)
-            $0.width.equalToSuperview()
+            $0.leading.trailing.equalToSuperview()
         }
     }
     

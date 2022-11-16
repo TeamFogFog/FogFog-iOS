@@ -18,7 +18,6 @@ final class NavigationView: UIView {
     override init(frame: CGRect) {
         super.init(frame: frame)
         
-            self.backgroundColor = .white
         setupView()
         setupConstraints()
     }
@@ -30,6 +29,8 @@ final class NavigationView: UIView {
     
     private func setupView() {
         
+        self.backgroundColor = .white
+        
         logoImageView.do {
             $0.contentMode = .scaleAspectFit
             $0.image = FogImage.logo
@@ -38,7 +39,6 @@ final class NavigationView: UIView {
         menuButton.do {
             $0.setImage(FogImage.hamburger, for: .normal)
         }
-        
         
         [logoImageView, menuButton]
             .forEach { addSubview($0) }
