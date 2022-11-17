@@ -10,6 +10,8 @@
 		1DDE6DAB87E9F15EAEAD8A1B /* Pods_FogFog_iOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 44BDDCB91FAFFFC51A0C1A4C /* Pods_FogFog_iOS.framework */; };
 		35919B344F294722AA448E4E /* Pods_FogFog_iOS_FogFog_iOSUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D67B489E657987D4A7AD92C7 /* Pods_FogFog_iOS_FogFog_iOSUITests.framework */; };
 		56E6DAD19F1058E2F6B779B7 /* Pods_FogFog_iOSTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 848DD0928406FC10714344E4 /* Pods_FogFog_iOSTests.framework */; };
+		BDEA50CF29261C4200110982 /* GoogleMap.plist in Resources */ = {isa = PBXBuildFile; fileRef = BDEA50CE29261C4200110982 /* GoogleMap.plist */; };
+		BDEA50D129261C6600110982 /* .swiftlint.yml in Resources */ = {isa = PBXBuildFile; fileRef = BDEA50D029261C6600110982 /* .swiftlint.yml */; };
 		ECA4252D29224DB8004DFDAF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECA4252C29224DB8004DFDAF /* AppDelegate.swift */; };
 		ECA4252F29224DB8004DFDAF /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECA4252E29224DB8004DFDAF /* SceneDelegate.swift */; };
 		ECA4253629224DBB004DFDAF /* Asset.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ECA4253529224DBB004DFDAF /* Asset.xcassets */; };
@@ -36,7 +38,6 @@
 		ECA425CB29234C4F004DFDAF /* RxRelay in Frameworks */ = {isa = PBXBuildFile; productRef = ECA425CA29234C4F004DFDAF /* RxRelay */; };
 		ECA425CD29234C4F004DFDAF /* RxSwift in Frameworks */ = {isa = PBXBuildFile; productRef = ECA425CC29234C4F004DFDAF /* RxSwift */; };
 		ECA425CF292382AD004DFDAF /* NavigationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECA425CE292382AD004DFDAF /* NavigationView.swift */; };
-		ECA425D52924D95C004DFDAF /* GoogleMap.plist in Resources */ = {isa = PBXBuildFile; fileRef = ECA425D42924D95C004DFDAF /* GoogleMap.plist */; };
 		ECA425D72924DA66004DFDAF /* Bundle + Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECA425D62924DA66004DFDAF /* Bundle + Extension.swift */; };
 /* End PBXBuildFile section */
 
@@ -65,6 +66,8 @@
 		848DD0928406FC10714344E4 /* Pods_FogFog_iOSTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FogFog_iOSTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		888CEAED3234D2B94DAA26DB /* Pods-FogFog-iOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FogFog-iOS.release.xcconfig"; path = "Target Support Files/Pods-FogFog-iOS/Pods-FogFog-iOS.release.xcconfig"; sourceTree = "<group>"; };
 		A9F085CD5FE1A63DDBE5140E /* Pods-FogFog-iOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FogFog-iOS.debug.xcconfig"; path = "Target Support Files/Pods-FogFog-iOS/Pods-FogFog-iOS.debug.xcconfig"; sourceTree = "<group>"; };
+		BDEA50CE29261C4200110982 /* GoogleMap.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = GoogleMap.plist; sourceTree = "<group>"; };
+		BDEA50D029261C6600110982 /* .swiftlint.yml */ = {isa = PBXFileReference; lastKnownFileType = text.yaml; path = .swiftlint.yml; sourceTree = "<group>"; };
 		D67B489E657987D4A7AD92C7 /* Pods_FogFog_iOS_FogFog_iOSUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FogFog_iOS_FogFog_iOSUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DABD884BD50346C82E3C3CA3 /* Pods-FogFog-iOS-FogFog-iOSUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FogFog-iOS-FogFog-iOSUITests.release.xcconfig"; path = "Target Support Files/Pods-FogFog-iOS-FogFog-iOSUITests/Pods-FogFog-iOS-FogFog-iOSUITests.release.xcconfig"; sourceTree = "<group>"; };
 		ECA4252929224DB8004DFDAF /* FogFog-iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "FogFog-iOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -102,7 +105,6 @@
 		ECA4259829229BD9004DFDAF /* UIFont + Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIFont + Extension.swift"; sourceTree = "<group>"; };
 		ECA4259A2922A4A6004DFDAF /* FogImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FogImage.swift; sourceTree = "<group>"; };
 		ECA425CE292382AD004DFDAF /* NavigationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationView.swift; sourceTree = "<group>"; };
-		ECA425D42924D95C004DFDAF /* GoogleMap.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = GoogleMap.plist; sourceTree = "<group>"; };
 		ECA425D62924DA66004DFDAF /* Bundle + Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Bundle + Extension.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -168,6 +170,7 @@
 		ECA4252029224DB8004DFDAF = {
 			isa = PBXGroup;
 			children = (
+				BDEA50D029261C6600110982 /* .swiftlint.yml */,
 				ECA4252B29224DB8004DFDAF /* FogFog-iOS */,
 				ECA4254229224DBB004DFDAF /* FogFog-iOSTests */,
 				ECA4254C29224DBB004DFDAF /* FogFog-iOSUITests */,
@@ -260,7 +263,7 @@
 			isa = PBXGroup;
 			children = (
 				ECA4253A29224DBB004DFDAF /* Info.plist */,
-				ECA425D42924D95C004DFDAF /* GoogleMap.plist */,
+				BDEA50CE29261C4200110982 /* GoogleMap.plist */,
 			);
 			path = Supports;
 			sourceTree = "<group>";
@@ -393,6 +396,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = ECA4255329224DBB004DFDAF /* Build configuration list for PBXNativeTarget "FogFog-iOS" */;
 			buildPhases = (
+				BDEA50D229261C7700110982 /* Run SwiftLint Script */,
 				E42CDA508C1C5C9F396ABACE /* [CP] Check Pods Manifest.lock */,
 				ECA4252529224DB8004DFDAF /* Sources */,
 				ECA4252629224DB8004DFDAF /* Frameworks */,
@@ -512,7 +516,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				ECA425D52924D95C004DFDAF /* GoogleMap.plist in Resources */,
+				BDEA50D129261C6600110982 /* .swiftlint.yml in Resources */,
+				BDEA50CF29261C4200110982 /* GoogleMap.plist in Resources */,
 				ECA4253929224DBB004DFDAF /* LaunchScreen.storyboard in Resources */,
 				ECA425742922543B004DFDAF /* Color.xcassets in Resources */,
 				ECA4257229225409004DFDAF /* Image.xcassets in Resources */,
@@ -614,6 +619,25 @@
 			shellPath = /bin/sh;
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-FogFog-iOS/Pods-FogFog-iOS-resources.sh\"\n";
 			showEnvVarsInLog = 0;
+		};
+		BDEA50D229261C7700110982 /* Run SwiftLint Script */ = {
+			isa = PBXShellScriptBuildPhase;
+			alwaysOutOfDate = 1;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = "Run SwiftLint Script";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "export PATH=\"$PATH:/opt/homebrew/bin\"\n\nif which swiftlint > /dev/null; then\n  swiftlint\nelse\n  echo \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi\n";
 		};
 		E42CDA508C1C5C9F396ABACE /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
