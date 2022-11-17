@@ -7,7 +7,6 @@
 
 import UIKit.UIImage
 
-
 public enum FogImage {
 
     static let logo = UIImage(named: "ic_fogfog")!
