@@ -21,6 +21,17 @@ final class MapViewController: BaseViewController {
     private var locationManager = CLLocationManager()
     private var currentLocation: CLLocation!
     
+    private weak var viewModel: MapViewModel?
+    
+    init(viewModel: MapViewModel) {
+        self.viewModel = viewModel
+        super.init(nibName: nil, bundle: nil)
+    }
+    
+    required init?(coder: NSCoder) {
+        fatalError("MapViewController Error!")
+    }
+    
     override func loadView() {
         self.view = mapView
     }
