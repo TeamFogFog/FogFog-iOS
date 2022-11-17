@@ -19,4 +19,3 @@ enum FogFont: String, CaseIterable {
     case semibold = "Pretendard-SemiBold"
     case thin = "Pretendard-Thin"
 }
-
