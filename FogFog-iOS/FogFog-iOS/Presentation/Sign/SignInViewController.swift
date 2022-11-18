@@ -71,6 +71,7 @@ final class SignInViewController: BaseViewController {
         
         speechBubbleImageView.do {
             $0.image = FogImage.speechBubble
+            $0.addShadow(offset: CGSize(width: 0, height: 2), color: .shadowGray, opacity: 0.14, radius: 17)
         }
         
         speechBubbleLabel.do {
