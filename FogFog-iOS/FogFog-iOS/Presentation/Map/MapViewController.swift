@@ -37,7 +37,7 @@ final class MapViewController: BaseViewController {
         setLocation()
     }
     
-    override func setConstraints() {
+    override func setLayout() {
         
         view.addSubview(navigationView)
         
