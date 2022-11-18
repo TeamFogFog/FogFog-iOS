@@ -10,6 +10,7 @@
 		1DDE6DAB87E9F15EAEAD8A1B /* Pods_FogFog_iOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 44BDDCB91FAFFFC51A0C1A4C /* Pods_FogFog_iOS.framework */; };
 		35919B344F294722AA448E4E /* Pods_FogFog_iOS_FogFog_iOSUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D67B489E657987D4A7AD92C7 /* Pods_FogFog_iOS_FogFog_iOSUITests.framework */; };
 		56E6DAD19F1058E2F6B779B7 /* Pods_FogFog_iOSTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 848DD0928406FC10714344E4 /* Pods_FogFog_iOSTests.framework */; };
+		77F1D82229269CC800F31D0C /* UIColor + Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77F1D82129269CC800F31D0C /* UIColor + Extension.swift */; };
 		77F1D8252926AAD300F31D0C /* Pretendard-Black.otf in Resources */ = {isa = PBXBuildFile; fileRef = ECA4259029229A05004DFDAF /* Pretendard-Black.otf */; };
 		77F1D8262926AAD600F31D0C /* Pretendard-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = ECA4259329229A05004DFDAF /* Pretendard-Bold.otf */; };
 		77F1D8272926AAD900F31D0C /* Pretendard-ExtraBold.otf in Resources */ = {isa = PBXBuildFile; fileRef = ECA4258F29229A05004DFDAF /* Pretendard-ExtraBold.otf */; };
@@ -72,6 +73,7 @@
 		44BDDCB91FAFFFC51A0C1A4C /* Pods_FogFog_iOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FogFog_iOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		47D49EE273F775CA2202B593 /* Pods-FogFog-iOS-FogFog-iOSUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FogFog-iOS-FogFog-iOSUITests.debug.xcconfig"; path = "Target Support Files/Pods-FogFog-iOS-FogFog-iOSUITests/Pods-FogFog-iOS-FogFog-iOSUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		568E5A05A08D8D049D3D8E62 /* Pods-FogFog-iOSTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FogFog-iOSTests.release.xcconfig"; path = "Target Support Files/Pods-FogFog-iOSTests/Pods-FogFog-iOSTests.release.xcconfig"; sourceTree = "<group>"; };
+		77F1D82129269CC800F31D0C /* UIColor + Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor + Extension.swift"; sourceTree = "<group>"; };
 		848DD0928406FC10714344E4 /* Pods_FogFog_iOSTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FogFog_iOSTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		888CEAED3234D2B94DAA26DB /* Pods-FogFog-iOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FogFog-iOS.release.xcconfig"; path = "Target Support Files/Pods-FogFog-iOS/Pods-FogFog-iOS.release.xcconfig"; sourceTree = "<group>"; };
 		A9F085CD5FE1A63DDBE5140E /* Pods-FogFog-iOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FogFog-iOS.debug.xcconfig"; path = "Target Support Files/Pods-FogFog-iOS/Pods-FogFog-iOS.debug.xcconfig"; sourceTree = "<group>"; };
@@ -394,6 +396,7 @@
 			children = (
 				ECA4259829229BD9004DFDAF /* UIFont + Extension.swift */,
 				ECA425D62924DA66004DFDAF /* Bundle + Extension.swift */,
+				77F1D82129269CC800F31D0C /* UIColor + Extension.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -692,6 +695,7 @@
 				ECA4257C292254B0004DFDAF /* SideBarViewController.swift in Sources */,
 				ECA4252D29224DB8004DFDAF /* AppDelegate.swift in Sources */,
 				ECA4259729229B15004DFDAF /* FogFont.swift in Sources */,
+				77F1D82229269CC800F31D0C /* UIColor + Extension.swift in Sources */,
 				ECA4257A292254A8004DFDAF /* BottomDetailViewController.swift in Sources */,
 				ECA4259B2922A4A6004DFDAF /* FogImage.swift in Sources */,
 				ECA4252F29224DB8004DFDAF /* SceneDelegate.swift in Sources */,
