@@ -10,6 +10,15 @@
 		1DDE6DAB87E9F15EAEAD8A1B /* Pods_FogFog_iOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 44BDDCB91FAFFFC51A0C1A4C /* Pods_FogFog_iOS.framework */; };
 		35919B344F294722AA448E4E /* Pods_FogFog_iOS_FogFog_iOSUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D67B489E657987D4A7AD92C7 /* Pods_FogFog_iOS_FogFog_iOSUITests.framework */; };
 		56E6DAD19F1058E2F6B779B7 /* Pods_FogFog_iOSTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 848DD0928406FC10714344E4 /* Pods_FogFog_iOSTests.framework */; };
+		77F1D8252926AAD300F31D0C /* Pretendard-Black.otf in Resources */ = {isa = PBXBuildFile; fileRef = ECA4259029229A05004DFDAF /* Pretendard-Black.otf */; };
+		77F1D8262926AAD600F31D0C /* Pretendard-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = ECA4259329229A05004DFDAF /* Pretendard-Bold.otf */; };
+		77F1D8272926AAD900F31D0C /* Pretendard-ExtraBold.otf in Resources */ = {isa = PBXBuildFile; fileRef = ECA4258F29229A05004DFDAF /* Pretendard-ExtraBold.otf */; };
+		77F1D8282926AADB00F31D0C /* Pretendard-ExtraLight.otf in Resources */ = {isa = PBXBuildFile; fileRef = ECA4259229229A05004DFDAF /* Pretendard-ExtraLight.otf */; };
+		77F1D8292926AADD00F31D0C /* Pretendard-Light.otf in Resources */ = {isa = PBXBuildFile; fileRef = ECA4258E29229A05004DFDAF /* Pretendard-Light.otf */; };
+		77F1D82A2926AAE000F31D0C /* Pretendard-Medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = ECA4259529229A05004DFDAF /* Pretendard-Medium.otf */; };
+		77F1D82B2926AAE200F31D0C /* Pretendard-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = ECA4258D29229A05004DFDAF /* Pretendard-Regular.otf */; };
+		77F1D82C2926AAE500F31D0C /* Pretendard-SemiBold.otf in Resources */ = {isa = PBXBuildFile; fileRef = ECA4259129229A05004DFDAF /* Pretendard-SemiBold.otf */; };
+		77F1D82D2926AAE800F31D0C /* Pretendard-Thin.otf in Resources */ = {isa = PBXBuildFile; fileRef = ECA4259429229A05004DFDAF /* Pretendard-Thin.otf */; };
 		BDEA50CF29261C4200110982 /* GoogleMap.plist in Resources */ = {isa = PBXBuildFile; fileRef = BDEA50CE29261C4200110982 /* GoogleMap.plist */; };
 		BDEA50D129261C6600110982 /* .swiftlint.yml in Resources */ = {isa = PBXBuildFile; fileRef = BDEA50D029261C6600110982 /* .swiftlint.yml */; };
 		ECA4252D29224DB8004DFDAF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECA4252C29224DB8004DFDAF /* AppDelegate.swift */; };
@@ -517,11 +526,20 @@
 			buildActionMask = 2147483647;
 			files = (
 				BDEA50D129261C6600110982 /* .swiftlint.yml in Resources */,
+				77F1D8262926AAD600F31D0C /* Pretendard-Bold.otf in Resources */,
+				77F1D8282926AADB00F31D0C /* Pretendard-ExtraLight.otf in Resources */,
+				77F1D8272926AAD900F31D0C /* Pretendard-ExtraBold.otf in Resources */,
+				77F1D82B2926AAE200F31D0C /* Pretendard-Regular.otf in Resources */,
 				BDEA50CF29261C4200110982 /* GoogleMap.plist in Resources */,
+				77F1D82D2926AAE800F31D0C /* Pretendard-Thin.otf in Resources */,
+				77F1D8292926AADD00F31D0C /* Pretendard-Light.otf in Resources */,
 				ECA4253929224DBB004DFDAF /* LaunchScreen.storyboard in Resources */,
 				ECA425742922543B004DFDAF /* Color.xcassets in Resources */,
+				77F1D82C2926AAE500F31D0C /* Pretendard-SemiBold.otf in Resources */,
 				ECA4257229225409004DFDAF /* Image.xcassets in Resources */,
+				77F1D8252926AAD300F31D0C /* Pretendard-Black.otf in Resources */,
 				ECA4253629224DBB004DFDAF /* Asset.xcassets in Resources */,
+				77F1D82A2926AAE000F31D0C /* Pretendard-Medium.otf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
