@@ -14,10 +14,10 @@ final class SignInViewController: BaseViewController {
     
     // MARK: Properties
     private let titleLabel = UILabel()
-    private let checkImageView1 = UIImageView()
-    private let checkImageView2 = UIImageView()
-    private let subtitleLabel1 = UILabel()
-    private let subtitleLabel2 = UILabel()
+    private let firstCheckImageView = UIImageView()
+    private let secondCheckImageView = UIImageView()
+    private let firstSubtitleLabel = UILabel()
+    private let secondSubtitleLabel = UILabel()
     private let mapImageView = UIImageView()
     private let speechBubbleImageView = UIImageView()
     private let speechBubbleLabel = UILabel()
@@ -45,24 +45,22 @@ final class SignInViewController: BaseViewController {
             $0.numberOfLines = 2
         }
         
-        [checkImageView1, checkImageView2].forEach {
+        [firstCheckImageView, secondCheckImageView].forEach {
             $0.do { $0.image = FogImage.check }
         }
         
-        subtitleLabel1.do {
+        firstSubtitleLabel.do {
             $0.text = "서울시 783개 흡연구역"
             $0.font = .pretendardM(16)
             $0.textAlignment = .left
             $0.textColor = .white
-            $0.numberOfLines = 1
         }
         
-        subtitleLabel2.do {
+        secondSubtitleLabel.do {
             $0.text = "지속적으로 업데이트 되는 데이터"
             $0.font = .pretendardM(16)
             $0.textAlignment = .left
             $0.textColor = .white
-            $0.numberOfLines = 1
         }
         
         mapImageView.do {
@@ -79,7 +77,6 @@ final class SignInViewController: BaseViewController {
             $0.font = .pretendardM(14)
             $0.textAlignment = .center
             $0.textColor = .gray1
-            $0.numberOfLines = 1
         }
         
         kakaoButton.do {
@@ -104,37 +101,39 @@ final class SignInViewController: BaseViewController {
     }
     
     override func setLayout() {
-        view.addSubviews([titleLabel, checkImageView1, checkImageView2, subtitleLabel1, subtitleLabel2, mapImageView, speechBubbleImageView, speechBubbleLabel, kakaoButton, appleButton])
+        view.addSubviews([titleLabel, firstCheckImageView, secondCheckImageView,
+                          firstSubtitleLabel, secondSubtitleLabel, mapImageView,
+                          speechBubbleImageView, speechBubbleLabel, kakaoButton, appleButton])
         
         titleLabel.snp.makeConstraints {
             $0.top.equalToSuperview().inset(94)
             $0.leading.equalToSuperview().inset(16)
         }
         
-        checkImageView1.snp.makeConstraints {
+        firstCheckImageView.snp.makeConstraints {
             $0.top.equalTo(titleLabel.snp.bottom).offset(17)
             $0.leading.equalTo(titleLabel.snp.leading)
-            $0.width.height.equalTo(18)
+            $0.size.equalTo(18)
         }
         
-        checkImageView2.snp.makeConstraints {
-            $0.top.equalTo(checkImageView1.snp.bottom).offset(12)
+        secondCheckImageView.snp.makeConstraints {
+            $0.top.equalTo(firstCheckImageView.snp.bottom).offset(12)
             $0.leading.equalTo(titleLabel.snp.leading)
-            $0.width.height.equalTo(18)
+            $0.size.equalTo(18)
         }
         
-        subtitleLabel1.snp.makeConstraints {
-            $0.leading.equalTo(checkImageView1.snp.trailing).offset(11)
-            $0.centerY.equalTo(checkImageView1.snp.centerY)
+        firstSubtitleLabel.snp.makeConstraints {
+            $0.leading.equalTo(firstCheckImageView.snp.trailing).offset(11)
+            $0.centerY.equalTo(firstCheckImageView.snp.centerY)
         }
         
-        subtitleLabel2.snp.makeConstraints {
-            $0.leading.equalTo(checkImageView2.snp.trailing).offset(11)
-            $0.centerY.equalTo(checkImageView2.snp.centerY)
+        secondSubtitleLabel.snp.makeConstraints {
+            $0.leading.equalTo(secondCheckImageView.snp.trailing).offset(11)
+            $0.centerY.equalTo(secondCheckImageView.snp.centerY)
         }
         
         mapImageView.snp.makeConstraints {
-            $0.top.equalTo(subtitleLabel2.snp.bottom).offset(48.adjustedH)
+            $0.top.equalTo(secondSubtitleLabel.snp.bottom).offset(48.adjustedH)
             $0.trailing.equalToSuperview()
             $0.leading.equalToSuperview().inset(78.adjusted)
         }
