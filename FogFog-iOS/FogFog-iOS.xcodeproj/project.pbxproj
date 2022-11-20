@@ -23,6 +23,7 @@
 		77F1D82C2926AAE500F31D0C /* Pretendard-SemiBold.otf in Resources */ = {isa = PBXBuildFile; fileRef = ECA4259129229A05004DFDAF /* Pretendard-SemiBold.otf */; };
 		77F1D82D2926AAE800F31D0C /* Pretendard-Thin.otf in Resources */ = {isa = PBXBuildFile; fileRef = ECA4259429229A05004DFDAF /* Pretendard-Thin.otf */; };
 		77F1D82F2927F2CC00F31D0C /* Adjusted + Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77F1D82E2927F2CC00F31D0C /* Adjusted + Extension.swift */; };
+		BD46305C292A25B300E9E9C2 /* BottomDetailRootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD46305B292A25B300E9E9C2 /* BottomDetailRootView.swift */; };
 		BDC50ECB292A07B2002378C6 /* GoogleMap.plist in Resources */ = {isa = PBXBuildFile; fileRef = BDC50ECA292A07B2002378C6 /* GoogleMap.plist */; };
 		BDC50ED2292A07EB002378C6 /* BottomDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDC50ED1292A07EB002378C6 /* BottomDetailViewModel.swift */; };
 		BDC50ED6292A09BD002378C6 /* BaseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDC50ED5292A09BD002378C6 /* BaseView.swift */; };
@@ -97,6 +98,7 @@
 		848DD0928406FC10714344E4 /* Pods_FogFog_iOSTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FogFog_iOSTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		888CEAED3234D2B94DAA26DB /* Pods-FogFog-iOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FogFog-iOS.release.xcconfig"; path = "Target Support Files/Pods-FogFog-iOS/Pods-FogFog-iOS.release.xcconfig"; sourceTree = "<group>"; };
 		A9F085CD5FE1A63DDBE5140E /* Pods-FogFog-iOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FogFog-iOS.debug.xcconfig"; path = "Target Support Files/Pods-FogFog-iOS/Pods-FogFog-iOS.debug.xcconfig"; sourceTree = "<group>"; };
+		BD46305B292A25B300E9E9C2 /* BottomDetailRootView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BottomDetailRootView.swift; sourceTree = "<group>"; };
 		BDC50ECA292A07B2002378C6 /* GoogleMap.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = GoogleMap.plist; sourceTree = "<group>"; };
 		BDC50ED1292A07EB002378C6 /* BottomDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BottomDetailViewModel.swift; sourceTree = "<group>"; };
 		BDC50ED5292A09BD002378C6 /* BaseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseView.swift; sourceTree = "<group>"; };
@@ -223,6 +225,7 @@
 		BDC50ECD292A07CD002378C6 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				BD46305B292A25B300E9E9C2 /* BottomDetailRootView.swift */,
 				ECA42579292254A8004DFDAF /* BottomDetailViewController.swift */,
 			);
 			path = View;
@@ -858,6 +861,7 @@
 				77F1D820292692FE00F31D0C /* SignInViewController.swift in Sources */,
 				ECA425EA29262A80004DFDAF /* LoginCoordinator.swift in Sources */,
 				ECA425DE29253292004DFDAF /* CoordinatorCase.swift in Sources */,
+				BD46305C292A25B300E9E9C2 /* BottomDetailRootView.swift in Sources */,
 				ECA425F6292634C9004DFDAF /* LoginViewModel.swift in Sources */,
 				ECA4259729229B15004DFDAF /* FogFont.swift in Sources */,
 				BDC50ED2292A07EB002378C6 /* BottomDetailViewModel.swift in Sources */,
