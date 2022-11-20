@@ -10,7 +10,7 @@ import UIKit
 final class BottomDetailRootView: BaseView {
     
     // MARK: Literals
-    enum Literals {
+    private enum Literals {
         static let dummyDistance = "223m"
         static let dummyPlaceTitle = "흡연구역"
         static let dummyDetailAddress = "상세주소"
@@ -18,7 +18,7 @@ final class BottomDetailRootView: BaseView {
     }
     
     // MARK: Metrics
-    enum Metrics {
+    private enum Metrics {
         static let margin = 13.adjusted
         
         static let bottomSheetViewWidth = 343.adjusted
@@ -52,7 +52,7 @@ final class BottomDetailRootView: BaseView {
     private let placeMarkerImageView = UIImageView()
     private let placeDetailTitleLabel = UILabel()
     private let findRouteButton = UIButton()
-    
+
     override func setStyle() {
         backgroundColor = .white
         
@@ -108,10 +108,10 @@ final class BottomDetailRootView: BaseView {
     }
     
     override func setLayout() {
-        self.addSubview(bottomSheetView)
-        placeImageViewContainer.addSubview(placeImageView)
+        addSubview(bottomSheetView)
         bottomSheetView.addSubviews([
             placeImageViewContainer,
+            placeImageView,
             distanceButton,
             placeTitleLabel,
             placeMarkerImageView,
@@ -121,7 +121,7 @@ final class BottomDetailRootView: BaseView {
         
         bottomSheetView.snp.makeConstraints {
             $0.directionalHorizontalEdges.equalToSuperview().inset(Metrics.margin)
-            $0.bottom.equalTo(safeAreaLayoutGuide).inset(Metrics.bottomSheetBottom)
+            $0.bottom.equalToSuperview().inset(-Metrics.bottomSheetViewHeight)
             $0.height.equalTo(Metrics.bottomSheetViewHeight)
         }
         
@@ -132,7 +132,7 @@ final class BottomDetailRootView: BaseView {
         }
         
         placeImageView.snp.makeConstraints {
-            $0.edges.equalToSuperview().inset(Metrics.imageInsets)
+            $0.edges.equalTo(placeImageViewContainer).inset(Metrics.imageInsets)
         }
         
         distanceButton.snp.makeConstraints {
@@ -163,6 +163,18 @@ final class BottomDetailRootView: BaseView {
             $0.centerX.equalToSuperview()
             $0.size.equalTo(Metrics.findRouteButtonSize)
             $0.bottom.equalToSuperview().inset(Metrics.findRouteButtonBottom)
+        }
+    }
+    
+    func showBottomDetailView(
+        withDuration duration: Double
+    ) {
+        bottomSheetView.snp.updateConstraints {
+            $0.bottom.equalToSuperview().inset(Metrics.bottomSheetBottom)
+        }
+        
+        UIView.animate(withDuration: duration) { [weak self] in
+            self?.layoutIfNeeded()
         }
     }
 }

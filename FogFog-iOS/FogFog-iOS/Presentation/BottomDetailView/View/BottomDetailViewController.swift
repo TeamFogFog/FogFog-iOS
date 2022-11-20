@@ -27,4 +27,13 @@ final class BottomDetailViewController: BaseViewController {
     override func loadView() {
         self.view = rootView
     }
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        rootView.showBottomDetailView(withDuration: 0.3)
+    }
 }
