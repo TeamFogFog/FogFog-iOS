@@ -10,6 +10,19 @@
 		1DDE6DAB87E9F15EAEAD8A1B /* Pods_FogFog_iOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 44BDDCB91FAFFFC51A0C1A4C /* Pods_FogFog_iOS.framework */; };
 		35919B344F294722AA448E4E /* Pods_FogFog_iOS_FogFog_iOSUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D67B489E657987D4A7AD92C7 /* Pods_FogFog_iOS_FogFog_iOSUITests.framework */; };
 		56E6DAD19F1058E2F6B779B7 /* Pods_FogFog_iOSTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 848DD0928406FC10714344E4 /* Pods_FogFog_iOSTests.framework */; };
+		77F1D820292692FE00F31D0C /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77F1D81F292692FE00F31D0C /* SignInViewController.swift */; };
+		77F1D82229269CC800F31D0C /* UIColor + Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77F1D82129269CC800F31D0C /* UIColor + Extension.swift */; };
+		77F1D82429269E1C00F31D0C /* UIView + Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77F1D82329269E1C00F31D0C /* UIView + Extension.swift */; };
+		77F1D8252926AAD300F31D0C /* Pretendard-Black.otf in Resources */ = {isa = PBXBuildFile; fileRef = ECA4259029229A05004DFDAF /* Pretendard-Black.otf */; };
+		77F1D8262926AAD600F31D0C /* Pretendard-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = ECA4259329229A05004DFDAF /* Pretendard-Bold.otf */; };
+		77F1D8272926AAD900F31D0C /* Pretendard-ExtraBold.otf in Resources */ = {isa = PBXBuildFile; fileRef = ECA4258F29229A05004DFDAF /* Pretendard-ExtraBold.otf */; };
+		77F1D8282926AADB00F31D0C /* Pretendard-ExtraLight.otf in Resources */ = {isa = PBXBuildFile; fileRef = ECA4259229229A05004DFDAF /* Pretendard-ExtraLight.otf */; };
+		77F1D8292926AADD00F31D0C /* Pretendard-Light.otf in Resources */ = {isa = PBXBuildFile; fileRef = ECA4258E29229A05004DFDAF /* Pretendard-Light.otf */; };
+		77F1D82A2926AAE000F31D0C /* Pretendard-Medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = ECA4259529229A05004DFDAF /* Pretendard-Medium.otf */; };
+		77F1D82B2926AAE200F31D0C /* Pretendard-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = ECA4258D29229A05004DFDAF /* Pretendard-Regular.otf */; };
+		77F1D82C2926AAE500F31D0C /* Pretendard-SemiBold.otf in Resources */ = {isa = PBXBuildFile; fileRef = ECA4259129229A05004DFDAF /* Pretendard-SemiBold.otf */; };
+		77F1D82D2926AAE800F31D0C /* Pretendard-Thin.otf in Resources */ = {isa = PBXBuildFile; fileRef = ECA4259429229A05004DFDAF /* Pretendard-Thin.otf */; };
+		77F1D82F2927F2CC00F31D0C /* Adjusted + Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77F1D82E2927F2CC00F31D0C /* Adjusted + Extension.swift */; };
 		BDEA50CF29261C4200110982 /* GoogleMap.plist in Resources */ = {isa = PBXBuildFile; fileRef = BDEA50CE29261C4200110982 /* GoogleMap.plist */; };
 		BDEA50D129261C6600110982 /* .swiftlint.yml in Resources */ = {isa = PBXBuildFile; fileRef = BDEA50D029261C6600110982 /* .swiftlint.yml */; };
 		ECA4252D29224DB8004DFDAF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECA4252C29224DB8004DFDAF /* AppDelegate.swift */; };
@@ -75,6 +88,10 @@
 		44BDDCB91FAFFFC51A0C1A4C /* Pods_FogFog_iOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FogFog_iOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		47D49EE273F775CA2202B593 /* Pods-FogFog-iOS-FogFog-iOSUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FogFog-iOS-FogFog-iOSUITests.debug.xcconfig"; path = "Target Support Files/Pods-FogFog-iOS-FogFog-iOSUITests/Pods-FogFog-iOS-FogFog-iOSUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		568E5A05A08D8D049D3D8E62 /* Pods-FogFog-iOSTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FogFog-iOSTests.release.xcconfig"; path = "Target Support Files/Pods-FogFog-iOSTests/Pods-FogFog-iOSTests.release.xcconfig"; sourceTree = "<group>"; };
+		77F1D81F292692FE00F31D0C /* SignInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewController.swift; sourceTree = "<group>"; };
+		77F1D82129269CC800F31D0C /* UIColor + Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor + Extension.swift"; sourceTree = "<group>"; };
+		77F1D82329269E1C00F31D0C /* UIView + Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView + Extension.swift"; sourceTree = "<group>"; };
+		77F1D82E2927F2CC00F31D0C /* Adjusted + Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Adjusted + Extension.swift"; sourceTree = "<group>"; };
 		848DD0928406FC10714344E4 /* Pods_FogFog_iOSTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FogFog_iOSTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		888CEAED3234D2B94DAA26DB /* Pods-FogFog-iOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FogFog-iOS.release.xcconfig"; path = "Target Support Files/Pods-FogFog-iOS/Pods-FogFog-iOS.release.xcconfig"; sourceTree = "<group>"; };
 		A9F085CD5FE1A63DDBE5140E /* Pods-FogFog-iOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FogFog-iOS.debug.xcconfig"; path = "Target Support Files/Pods-FogFog-iOS/Pods-FogFog-iOS.debug.xcconfig"; sourceTree = "<group>"; };
@@ -191,6 +208,14 @@
 			path = Pods;
 			sourceTree = "<group>";
 		};
+		77F1D81E292692C800F31D0C /* Sign */ = {
+			isa = PBXGroup;
+			children = (
+				77F1D81F292692FE00F31D0C /* SignInViewController.swift */,
+			);
+			path = Sign;
+			sourceTree = "<group>";
+		};
 		ECA4252029224DB8004DFDAF = {
 			isa = PBXGroup;
 			children = (
@@ -264,6 +289,7 @@
 		ECA4255F2922528B004DFDAF /* Presentation */ = {
 			isa = PBXGroup;
 			children = (
+				77F1D81E292692C800F31D0C /* Sign */,
 				ECA425F229263495004DFDAF /* Common */,
 				ECA425672922533A004DFDAF /* Splash */,
 				ECA425F129263486004DFDAF /* Login */,
@@ -414,6 +440,9 @@
 			children = (
 				ECA4259829229BD9004DFDAF /* UIFont + Extension.swift */,
 				ECA425D62924DA66004DFDAF /* Bundle + Extension.swift */,
+				77F1D82129269CC800F31D0C /* UIColor + Extension.swift */,
+				77F1D82329269E1C00F31D0C /* UIView + Extension.swift */,
+				77F1D82E2927F2CC00F31D0C /* Adjusted + Extension.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -633,11 +662,20 @@
 			buildActionMask = 2147483647;
 			files = (
 				BDEA50D129261C6600110982 /* .swiftlint.yml in Resources */,
+				77F1D8262926AAD600F31D0C /* Pretendard-Bold.otf in Resources */,
+				77F1D8282926AADB00F31D0C /* Pretendard-ExtraLight.otf in Resources */,
+				77F1D8272926AAD900F31D0C /* Pretendard-ExtraBold.otf in Resources */,
+				77F1D82B2926AAE200F31D0C /* Pretendard-Regular.otf in Resources */,
 				BDEA50CF29261C4200110982 /* GoogleMap.plist in Resources */,
+				77F1D82D2926AAE800F31D0C /* Pretendard-Thin.otf in Resources */,
+				77F1D8292926AADD00F31D0C /* Pretendard-Light.otf in Resources */,
 				ECA4253929224DBB004DFDAF /* LaunchScreen.storyboard in Resources */,
 				ECA425742922543B004DFDAF /* Color.xcassets in Resources */,
+				77F1D82C2926AAE500F31D0C /* Pretendard-SemiBold.otf in Resources */,
 				ECA4257229225409004DFDAF /* Image.xcassets in Resources */,
+				77F1D8252926AAD300F31D0C /* Pretendard-Black.otf in Resources */,
 				ECA4253629224DBB004DFDAF /* Asset.xcassets in Resources */,
+				77F1D82A2926AAE000F31D0C /* Pretendard-Medium.otf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -785,6 +823,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				ECA4259929229BD9004DFDAF /* UIFont + Extension.swift in Sources */,
+				77F1D82F2927F2CC00F31D0C /* Adjusted + Extension.swift in Sources */,
 				ECA4257629225450004DFDAF /* SplashViewController.swift in Sources */,
 				ECA425DA29253155004DFDAF /* Coordinator.swift in Sources */,
 				ECA425F4292634A6004DFDAF /* LoginViewController.swift in Sources */,
@@ -794,10 +833,13 @@
 				ECA425DC29253259004DFDAF /* CoordinatorFinishDelegate.swift in Sources */,
 				ECA4257C292254B0004DFDAF /* SideBarViewController.swift in Sources */,
 				ECA4252D29224DB8004DFDAF /* AppDelegate.swift in Sources */,
+				77F1D820292692FE00F31D0C /* SignInViewController.swift in Sources */,
 				ECA425EA29262A80004DFDAF /* LoginCoordinator.swift in Sources */,
 				ECA425DE29253292004DFDAF /* CoordinatorCase.swift in Sources */,
 				ECA425F6292634C9004DFDAF /* LoginViewModel.swift in Sources */,
 				ECA4259729229B15004DFDAF /* FogFont.swift in Sources */,
+				77F1D82229269CC800F31D0C /* UIColor + Extension.swift in Sources */,
+				77F1D82429269E1C00F31D0C /* UIView + Extension.swift in Sources */,
 				ECA4257A292254A8004DFDAF /* BottomDetailViewController.swift in Sources */,
 				ECA4259B2922A4A6004DFDAF /* FogImage.swift in Sources */,
 				ECA425E829262A78004DFDAF /* MapCoordinator.swift in Sources */,
