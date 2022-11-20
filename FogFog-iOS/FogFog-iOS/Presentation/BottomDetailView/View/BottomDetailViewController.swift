@@ -7,11 +7,9 @@
 
 import UIKit
 
-class BottomDetailViewController: UIViewController {
+final class BottomDetailViewController: BaseViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
     }
 }
