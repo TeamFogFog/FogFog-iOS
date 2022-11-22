@@ -19,4 +19,7 @@ public enum FogImage {
     static let speechBubble = UIImage(named: "speechBubbleSmall")!
     static let appleLogo = UIImage(named: "appleLogo")!
     static let kakaoLogo = UIImage(named: "kakaoLogol")!
+    static let btnMap = UIImage(named: "btnMap")!
+    static let btnNotice = UIImage(named: "btnNotice")!
+    static let btnSet = UIImage(named: "btnSet")!
 }
