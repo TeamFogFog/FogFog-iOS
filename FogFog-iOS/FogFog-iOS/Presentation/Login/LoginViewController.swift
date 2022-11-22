@@ -83,14 +83,14 @@ final class LoginViewController: BaseViewController {
             $0.text = "3초만에 포그포그 시작하기"
             $0.font = .pretendardM(14)
             $0.textAlignment = .center
-            $0.textColor = .gray1
+            $0.textColor = .grayGray2
         }
         
         kakaoButton.do {
             $0.makeRounded(cornerRadius: 12.adjusted)
-            $0.backgroundColor = .kakaoYellow
+            $0.backgroundColor = .etcYellow
             $0.setTitle("카카오로 시작하기", for: .normal)
-            $0.setTitleColor(.fogBlack, for: .normal)
+            $0.setTitleColor(.grayBlack, for: .normal)
             $0.titleLabel?.font = .pretendardB(16)
             $0.setImage(FogImage.kakaoLogo, for: .normal)
             $0.imageEdgeInsets = .init(top: 0, left: 0, bottom: 0, right: 140)
@@ -98,7 +98,7 @@ final class LoginViewController: BaseViewController {
         
         appleButton.do {
             $0.makeRounded(cornerRadius: 12.adjusted)
-            $0.backgroundColor = .fogBlack
+            $0.backgroundColor = .grayBlack
             $0.setTitle("Apple로 시작하기", for: .normal)
             $0.setTitleColor(.white, for: .normal)
             $0.titleLabel?.font = .pretendardB(16)
