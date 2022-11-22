@@ -12,9 +12,11 @@ import Then
 
 final class BottomDetailViewController: BaseViewController {
     
+    // MARK: Properties
     private let rootView = BottomDetailRootView()
     private weak var viewModel: MapViewModel?
     
+    // MARK: Initializers
     init(viewModel: MapViewModel?) {
         self.viewModel = viewModel
         super.init(nibName: nil, bundle: nil)
@@ -24,6 +26,7 @@ final class BottomDetailViewController: BaseViewController {
         fatalError("init(coder:) has not been implemented")
     }
     
+    // MARK: Override Methods
     override func loadView() {
         self.view = rootView
     }
@@ -34,6 +37,7 @@ final class BottomDetailViewController: BaseViewController {
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
-        rootView.showBottomDetailView(withDuration: 0.3)
+        
+        rootView.showBottomSheet()
     }
 }

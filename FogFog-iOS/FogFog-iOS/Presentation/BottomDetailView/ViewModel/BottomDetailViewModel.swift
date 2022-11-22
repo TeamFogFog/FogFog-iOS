@@ -9,4 +9,9 @@ import Foundation
 
 final class BottomDetailViewModel {
     
+    private weak var coordinator: MapCoordinator?
+    
+    init(coordinator: MapCoordinator?) {
+        self.coordinator = coordinator
+    }
 }

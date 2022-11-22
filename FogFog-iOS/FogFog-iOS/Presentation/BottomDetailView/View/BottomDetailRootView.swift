@@ -12,17 +12,23 @@ final class BottomDetailRootView: BaseView {
     // MARK: Literals
     private enum Literals {
         static let dummyDistance = "223m"
-        static let dummyPlaceTitle = "흡연구역"
-        static let dummyDetailAddress = "상세주소"
+        static let dummyPlaceTitle = "흡연구역을 길게 작성해보겠습니다"
+        static let dummyDetailAddress = "상세주소를 길게 작성해보겠습니다"
         static let findRouteButtonTitle = "길 찾기"
     }
     
     // MARK: Metrics
     private enum Metrics {
+        static var screenHeight: CGFloat {
+            return UIScreen.main.bounds.height
+        }
+        
         static let margin = 13.adjusted
         
         static let bottomSheetViewWidth = 343.adjusted
-        static let bottomSheetViewHeight = 186.adjustedH
+        static var bottomSheetViewHeight: CGFloat {
+            return screenHeight <= 667.0 ? 186.0 : 186.0.adjustedH
+        }
         static let bottomSheetBottom = 47.adjustedH
         
         static let imageContainerSize = 122.adjusted
@@ -53,6 +59,7 @@ final class BottomDetailRootView: BaseView {
     private let placeDetailTitleLabel = UILabel()
     private let findRouteButton = UIButton()
 
+    // MARK: Override Methods
     override func setStyle() {
         backgroundColor = .white
         
@@ -161,16 +168,38 @@ final class BottomDetailRootView: BaseView {
         
         findRouteButton.snp.makeConstraints {
             $0.centerX.equalToSuperview()
-            $0.size.equalTo(Metrics.findRouteButtonSize)
+            $0.top.equalTo(placeImageViewContainer.snp.bottom).offset(Metrics.margin)
+            $0.directionalHorizontalEdges.equalToSuperview().inset(Metrics.margin)
             $0.bottom.equalToSuperview().inset(Metrics.findRouteButtonBottom)
         }
     }
     
-    func showBottomDetailView(
-        withDuration duration: Double
-    ) {
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        super.touchesBegan(touches, with: event)
+        
+        hideBottomSheet()
+    }
+}
+
+extension BottomDetailRootView {
+    
+    func showBottomSheet(withDuration duration: Double = 0.3) {
+        let movement = Metrics.bottomSheetBottom
+        
         bottomSheetView.snp.updateConstraints {
-            $0.bottom.equalToSuperview().inset(Metrics.bottomSheetBottom)
+            $0.bottom.equalToSuperview().inset(movement)
+        }
+        
+        UIView.animate(withDuration: duration) { [weak self] in
+            self?.layoutIfNeeded()
+        }
+    }
+    
+    func hideBottomSheet(withDuration duration: Double = 0.3) {
+        let movement = -(Metrics.bottomSheetViewHeight + Metrics.bottomSheetBottom)
+        
+        bottomSheetView.snp.updateConstraints {
+            $0.bottom.equalToSuperview().inset(movement)
         }
         
         UIView.animate(withDuration: duration) { [weak self] in
