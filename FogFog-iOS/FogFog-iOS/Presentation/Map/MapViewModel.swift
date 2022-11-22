@@ -30,6 +30,7 @@ final class MapViewModel: ViewModelType {
     }
         
     func transform(input: Input) -> Output {
+        
         let sideBarState = PublishRelay<Bool>()
         
         input.tapMenuButton

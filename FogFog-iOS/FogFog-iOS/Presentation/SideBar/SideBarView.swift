@@ -47,6 +47,7 @@ class SideBarView: UIView {
     
     // MARK: UI
     private func setStyle() {
+        
         self.backgroundColor = .white
         
         blueView.do {
@@ -137,6 +138,7 @@ class SideBarView: UIView {
     }
     
     private func setLayout() {
+        
         self.addSubviews([blueView, nicknameLabel, settingButton,
                           mapSettingContainerView, reportContainerView, lineView,
                           noticeButton, questionButton, versionLabel, updateButton])

@@ -16,6 +16,7 @@ import Then
 
 final class MapViewController: BaseViewController {
     
+    // MARK: Properties
     private lazy var navigationView = NavigationView()
     private lazy var sideBarView = SideBarView()
     private var blurEffectView: UIVisualEffectView!
@@ -31,6 +32,7 @@ final class MapViewController: BaseViewController {
     private let tapBlurEffectView = PublishRelay<Void>()
     private let disposeBag = DisposeBag()
     
+    // MARK: Init
     init(viewModel: MapViewModel) {
         self.viewModel = viewModel
         super.init(nibName: nil, bundle: nil)
@@ -40,6 +42,7 @@ final class MapViewController: BaseViewController {
         fatalError("MapViewController Error!")
     }
     
+    // MARK: Life Cycle
     override func loadView() {
         self.view = mapView
     }
@@ -57,6 +60,7 @@ final class MapViewController: BaseViewController {
         setLocation()
     }
     
+    // MARK: UI
     override func setStyle() {
         let blurEffect = UIBlurEffect(style: .dark)
         blurEffectView = UIVisualEffectView(effect: blurEffect)
@@ -138,6 +142,7 @@ extension MapViewController {
     }
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        
         super.touchesBegan(touches, with: event)
         if let touch = touches.first,
            touch.view == self.blurEffectView {
@@ -148,6 +153,7 @@ extension MapViewController {
 
 // MARK: - CLLocationManagerDelegate
 extension MapViewController: CLLocationManagerDelegate {
+    
     func checkCurrentLocationAuthorization(authorizationStatus: CLAuthorizationStatus) {
         switch authorizationStatus {
         case .notDetermined:
