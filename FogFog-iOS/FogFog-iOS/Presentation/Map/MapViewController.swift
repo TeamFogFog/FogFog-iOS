@@ -9,19 +9,27 @@ import UIKit
 
 import CoreLocation
 import GoogleMaps
+import RxCocoa
+import RxSwift
 import SnapKit
 import Then
 
 final class MapViewController: BaseViewController {
     
     private lazy var navigationView = NavigationView()
+    private lazy var sideBarView = SideBarView()
+    private var blurEffectView: UIVisualEffectView!
     private let camera = GMSCameraPosition(latitude: 37.54330366639085, longitude: 127.04455548501139, zoom: 12)
     private var mapView = GMSMapView()
     private var myMarker = GMSMarker()
     private var locationManager = CLLocationManager()
     private var currentLocation: CLLocation!
     
-    private weak var viewModel: MapViewModel?
+    private var viewModel: MapViewModel
+    private lazy var input = MapViewModel.Input(tapMenuButton: navigationView.menuButton.rx.tap.asSignal(), tapBlurEffectView: tapBlurEffectView.asSignal())
+    private lazy var output = viewModel.transform(input: input)
+    private let tapBlurEffectView = PublishRelay<Void>()
+    private let disposeBag = DisposeBag()
     
     init(viewModel: MapViewModel) {
         self.viewModel = viewModel
@@ -40,6 +48,7 @@ final class MapViewController: BaseViewController {
         super.viewDidLoad()
         
         assignDelegation()
+        bind()
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -48,16 +57,51 @@ final class MapViewController: BaseViewController {
         setLocation()
     }
     
+    override func setStyle() {
+        let blurEffect = UIBlurEffect(style: .dark)
+        blurEffectView = UIVisualEffectView(effect: blurEffect)
+        blurEffectView.alpha = 0.6
+        blurEffectView.isHidden = true
+    }
+    
     override func setLayout() {
         
-        view.addSubview(navigationView)
+        view.addSubviews([navigationView, blurEffectView, sideBarView])
         
         navigationView.snp.makeConstraints {
             $0.top.equalToSuperview()
             $0.height.equalTo(102)
             $0.leading.trailing.equalToSuperview()
         }
+        
+        blurEffectView.snp.makeConstraints {
+            $0.top.bottom.leading.trailing.equalToSuperview()
+        }
+        
+        sideBarView.snp.makeConstraints {
+            $0.top.bottom.equalToSuperview()
+            $0.trailing.equalToSuperview().inset(-309)
+            $0.width.equalTo(309)
+        }
     }
+}
+
+// MARK: - Bind
+extension MapViewController {
+    
+    private func bind() {
+        
+        output.isVisible
+            .asDriver()
+            .drive { state in
+                self.setSideBarViewLayout(isVisible: state)
+            }
+            .disposed(by: disposeBag)
+    }
+}
+
+// MARK: - Custom Methods
+extension MapViewController {
     
     private func assignDelegation() {
         
@@ -70,8 +114,39 @@ final class MapViewController: BaseViewController {
         locationManager.startUpdatingLocation()
         move(at: locationManager.location?.coordinate)
     }
+    
+    private func setSideBarViewLayout(isVisible: Bool = false) {
+
+        if isVisible {
+            blurEffectView.isHidden = false
+            sideBarView.snp.remakeConstraints {
+                $0.top.trailing.bottom.equalToSuperview()
+                $0.width.equalTo(309)
+            }
+        } else {
+            blurEffectView.isHidden = true
+            sideBarView.snp.remakeConstraints {
+                $0.top.bottom.equalToSuperview()
+                $0.trailing.equalToSuperview().inset(-309)
+                $0.width.equalTo(309)
+            }
+        }
+        
+        UIView.animate(withDuration: 0.2, delay: 0.0, options: .curveEaseIn, animations: {
+            self.view.layoutIfNeeded()
+        })
+    }
+    
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        super.touchesBegan(touches, with: event)
+        if let touch = touches.first,
+           touch.view == self.blurEffectView {
+            self.tapBlurEffectView.accept(Void())
+        }
+    }
 }
 
+// MARK: - CLLocationManagerDelegate
 extension MapViewController: CLLocationManagerDelegate {
     func checkCurrentLocationAuthorization(authorizationStatus: CLAuthorizationStatus) {
         switch authorizationStatus {
