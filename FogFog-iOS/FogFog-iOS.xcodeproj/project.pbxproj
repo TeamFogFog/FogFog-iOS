@@ -24,7 +24,11 @@
 		77F1D82C2926AAE500F31D0C /* Pretendard-SemiBold.otf in Resources */ = {isa = PBXBuildFile; fileRef = ECA4259129229A05004DFDAF /* Pretendard-SemiBold.otf */; };
 		77F1D82D2926AAE800F31D0C /* Pretendard-Thin.otf in Resources */ = {isa = PBXBuildFile; fileRef = ECA4259429229A05004DFDAF /* Pretendard-Thin.otf */; };
 		77F1D82F2927F2CC00F31D0C /* Adjusted + Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77F1D82E2927F2CC00F31D0C /* Adjusted + Extension.swift */; };
-		BDEA50CF29261C4200110982 /* GoogleMap.plist in Resources */ = {isa = PBXBuildFile; fileRef = BDEA50CE29261C4200110982 /* GoogleMap.plist */; };
+		BD46305C292A25B300E9E9C2 /* BottomDetailRootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD46305B292A25B300E9E9C2 /* BottomDetailRootView.swift */; };
+		BD4B550F292A29EC00ECFD04 /* SmokePlace.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD4B550E292A29EC00ECFD04 /* SmokePlace.swift */; };
+		BDC50ECB292A07B2002378C6 /* GoogleMap.plist in Resources */ = {isa = PBXBuildFile; fileRef = BDC50ECA292A07B2002378C6 /* GoogleMap.plist */; };
+		BDC50ED2292A07EB002378C6 /* BottomDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDC50ED1292A07EB002378C6 /* BottomDetailViewModel.swift */; };
+		BDC50ED6292A09BD002378C6 /* BaseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDC50ED5292A09BD002378C6 /* BaseView.swift */; };
 		BDEA50D129261C6600110982 /* .swiftlint.yml in Resources */ = {isa = PBXBuildFile; fileRef = BDEA50D029261C6600110982 /* .swiftlint.yml */; };
 		ECA4252D29224DB8004DFDAF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECA4252C29224DB8004DFDAF /* AppDelegate.swift */; };
 		ECA4252F29224DB8004DFDAF /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECA4252E29224DB8004DFDAF /* SceneDelegate.swift */; };
@@ -97,7 +101,11 @@
 		848DD0928406FC10714344E4 /* Pods_FogFog_iOSTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FogFog_iOSTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		888CEAED3234D2B94DAA26DB /* Pods-FogFog-iOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FogFog-iOS.release.xcconfig"; path = "Target Support Files/Pods-FogFog-iOS/Pods-FogFog-iOS.release.xcconfig"; sourceTree = "<group>"; };
 		A9F085CD5FE1A63DDBE5140E /* Pods-FogFog-iOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FogFog-iOS.debug.xcconfig"; path = "Target Support Files/Pods-FogFog-iOS/Pods-FogFog-iOS.debug.xcconfig"; sourceTree = "<group>"; };
-		BDEA50CE29261C4200110982 /* GoogleMap.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = GoogleMap.plist; sourceTree = "<group>"; };
+		BD46305B292A25B300E9E9C2 /* BottomDetailRootView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BottomDetailRootView.swift; sourceTree = "<group>"; };
+		BD4B550E292A29EC00ECFD04 /* SmokePlace.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SmokePlace.swift; sourceTree = "<group>"; };
+		BDC50ECA292A07B2002378C6 /* GoogleMap.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = GoogleMap.plist; sourceTree = "<group>"; };
+		BDC50ED1292A07EB002378C6 /* BottomDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BottomDetailViewModel.swift; sourceTree = "<group>"; };
+		BDC50ED5292A09BD002378C6 /* BaseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseView.swift; sourceTree = "<group>"; };
 		BDEA50D029261C6600110982 /* .swiftlint.yml */ = {isa = PBXFileReference; lastKnownFileType = text.yaml; path = .swiftlint.yml; sourceTree = "<group>"; };
 		D67B489E657987D4A7AD92C7 /* Pods_FogFog_iOS_FogFog_iOSUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FogFog_iOS_FogFog_iOSUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DABD884BD50346C82E3C3CA3 /* Pods-FogFog-iOS-FogFog-iOSUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FogFog-iOS-FogFog-iOSUITests.release.xcconfig"; path = "Target Support Files/Pods-FogFog-iOS-FogFog-iOSUITests/Pods-FogFog-iOS-FogFog-iOSUITests.release.xcconfig"; sourceTree = "<group>"; };
@@ -218,6 +226,31 @@
 			path = Protocol;
 			sourceTree = "<group>";
 		};
+		BD4B550D292A29AA00ECFD04 /* Place */ = {
+			isa = PBXGroup;
+			children = (
+				BD4B550E292A29EC00ECFD04 /* SmokePlace.swift */,
+			);
+			path = Place;
+			sourceTree = "<group>";
+		};
+		BDC50ECD292A07CD002378C6 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				BD46305B292A25B300E9E9C2 /* BottomDetailRootView.swift */,
+				ECA42579292254A8004DFDAF /* BottomDetailViewController.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		BDC50ECE292A07D0002378C6 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				BDC50ED1292A07EB002378C6 /* BottomDetailViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
 		ECA4252029224DB8004DFDAF = {
 			isa = PBXGroup;
 			children = (
@@ -283,6 +316,7 @@
 		ECA4255E292251E0004DFDAF /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				BD4B550D292A29AA00ECFD04 /* Place */,
 				ECA4258B29225A92004DFDAF /* .gitkeep */,
 			);
 			path = Models;
@@ -316,7 +350,7 @@
 			isa = PBXGroup;
 			children = (
 				ECA4253A29224DBB004DFDAF /* Info.plist */,
-				BDEA50CE29261C4200110982 /* GoogleMap.plist */,
+				BDC50ECA292A07B2002378C6 /* GoogleMap.plist */,
 			);
 			path = Supports;
 			sourceTree = "<group>";
@@ -338,6 +372,7 @@
 			isa = PBXGroup;
 			children = (
 				ECA4257D292254C6004DFDAF /* BaseViewController.swift */,
+				BDC50ED5292A09BD002378C6 /* BaseView.swift */,
 			);
 			path = Base;
 			sourceTree = "<group>";
@@ -386,7 +421,8 @@
 		ECA425692922534E004DFDAF /* BottomDetailView */ = {
 			isa = PBXGroup;
 			children = (
-				ECA42579292254A8004DFDAF /* BottomDetailViewController.swift */,
+				BDC50ECE292A07D0002378C6 /* ViewModel */,
+				BDC50ECD292A07CD002378C6 /* View */,
 			);
 			path = BottomDetailView;
 			sourceTree = "<group>";
@@ -544,8 +580,8 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = ECA4255329224DBB004DFDAF /* Build configuration list for PBXNativeTarget "FogFog-iOS" */;
 			buildPhases = (
-				BDEA50D229261C7700110982 /* Run SwiftLint Script */,
 				E42CDA508C1C5C9F396ABACE /* [CP] Check Pods Manifest.lock */,
+				BDEA50D229261C7700110982 /* Run SwiftLint Script */,
 				ECA4252529224DB8004DFDAF /* Sources */,
 				ECA4252629224DB8004DFDAF /* Frameworks */,
 				ECA4252729224DB8004DFDAF /* Resources */,
@@ -669,12 +705,12 @@
 				77F1D8282926AADB00F31D0C /* Pretendard-ExtraLight.otf in Resources */,
 				77F1D8272926AAD900F31D0C /* Pretendard-ExtraBold.otf in Resources */,
 				77F1D82B2926AAE200F31D0C /* Pretendard-Regular.otf in Resources */,
-				BDEA50CF29261C4200110982 /* GoogleMap.plist in Resources */,
 				77F1D82D2926AAE800F31D0C /* Pretendard-Thin.otf in Resources */,
 				77F1D8292926AADD00F31D0C /* Pretendard-Light.otf in Resources */,
 				ECA4253929224DBB004DFDAF /* LaunchScreen.storyboard in Resources */,
 				ECA425742922543B004DFDAF /* Color.xcassets in Resources */,
 				77F1D82C2926AAE500F31D0C /* Pretendard-SemiBold.otf in Resources */,
+				BDC50ECB292A07B2002378C6 /* GoogleMap.plist in Resources */,
 				ECA4257229225409004DFDAF /* Image.xcassets in Resources */,
 				77F1D8252926AAD300F31D0C /* Pretendard-Black.otf in Resources */,
 				ECA4253629224DBB004DFDAF /* Asset.xcassets in Resources */,
@@ -838,10 +874,14 @@
 				ECA4252D29224DB8004DFDAF /* AppDelegate.swift in Sources */,
 				ECA425EA29262A80004DFDAF /* LoginCoordinator.swift in Sources */,
 				ECA425DE29253292004DFDAF /* CoordinatorCase.swift in Sources */,
+				BD46305C292A25B300E9E9C2 /* BottomDetailRootView.swift in Sources */,
+				BD4B550F292A29EC00ECFD04 /* SmokePlace.swift in Sources */,
 				ECA425F6292634C9004DFDAF /* LoginViewModel.swift in Sources */,
 				ECA4259729229B15004DFDAF /* FogFont.swift in Sources */,
+				BDC50ED2292A07EB002378C6 /* BottomDetailViewModel.swift in Sources */,
 				77F1D82229269CC800F31D0C /* UIColor + Extension.swift in Sources */,
 				77F1D82429269E1C00F31D0C /* UIView + Extension.swift in Sources */,
+				BDC50ED6292A09BD002378C6 /* BaseView.swift in Sources */,
 				ECA4257A292254A8004DFDAF /* BottomDetailViewController.swift in Sources */,
 				ECA4259B2922A4A6004DFDAF /* FogImage.swift in Sources */,
 				ECA425E829262A78004DFDAF /* MapCoordinator.swift in Sources */,
@@ -1021,11 +1061,15 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = RQHZUCMHSH;
+				DEVELOPMENT_TEAM = W7P3R7ZL78;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "FogFog-iOS/Supports/Info.plist";
+				INFOPLIST_KEY_NSLocationAlwaysAndWhenInUseUsageDescription = "위치 권한 체크";
+				INFOPLIST_KEY_NSLocationAlwaysUsageDescription = "위치 권한 체크";
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "위치 권한 체크";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
@@ -1035,8 +1079,9 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "seungchan.FogFog-iOS";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.FogFog-iOS";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -1049,11 +1094,15 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = RQHZUCMHSH;
+				DEVELOPMENT_TEAM = W7P3R7ZL78;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "FogFog-iOS/Supports/Info.plist";
+				INFOPLIST_KEY_NSLocationAlwaysAndWhenInUseUsageDescription = "위치 권한 체크";
+				INFOPLIST_KEY_NSLocationAlwaysUsageDescription = "위치 권한 체크";
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "위치 권한 체크";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
@@ -1063,8 +1112,9 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "seungchan.FogFog-iOS";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.FogFog-iOS";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
