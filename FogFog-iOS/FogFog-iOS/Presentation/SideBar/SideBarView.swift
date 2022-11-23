@@ -10,7 +10,7 @@ import UIKit
 import SnapKit
 import Then
 
-final class SideBarView: UIView {
+final class SideBarView: BaseView {
     
     // MARK: Properties
     private let blueView = UIView()
@@ -32,21 +32,8 @@ final class SideBarView: UIView {
     private let versionLabel = UILabel()
     private let updateButton = UIButton()
     
-    // MARK: Init
-    override init(frame: CGRect) {
-        super.init(frame: frame)
-        
-        setStyle()
-        setLayout()
-    }
-    
-    @available(*, unavailable)
-    required init?(coder: NSCoder) {
-        super.init(coder: coder)
-    }
-    
     // MARK: UI
-    private func setStyle() {
+    override func setStyle() {
         
         self.backgroundColor = .white
         
@@ -137,8 +124,7 @@ final class SideBarView: UIView {
         }
     }
     
-    private func setLayout() {
-        
+    override func setLayout() {
         self.addSubviews([blueView, nicknameLabel, settingButton,
                           mapSettingContainerView, reportContainerView, lineView,
                           noticeButton, questionButton, versionLabel, updateButton])
