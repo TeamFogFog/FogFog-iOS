@@ -10,7 +10,7 @@ import UIKit
 import SnapKit
 import Then
 
-class SideBarView: UIView {
+final class SideBarView: UIView {
     
     // MARK: Properties
     private let blueView = UIView()

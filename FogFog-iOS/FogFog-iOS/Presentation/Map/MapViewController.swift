@@ -69,7 +69,6 @@ final class MapViewController: BaseViewController {
     }
     
     override func setLayout() {
-        
         view.addSubviews([navigationView, blurEffectView, sideBarView])
         
         navigationView.snp.makeConstraints {
@@ -94,11 +93,10 @@ final class MapViewController: BaseViewController {
 extension MapViewController {
     
     private func bind() {
-        
         output.isVisible
             .asDriver()
-            .drive { state in
-                self.setSideBarViewLayout(isVisible: state)
+            .drive { [weak self] state in
+                self?.setSideBarViewLayout(isVisible: state)
             }
             .disposed(by: disposeBag)
     }
@@ -108,32 +106,22 @@ extension MapViewController {
 extension MapViewController {
     
     private func assignDelegation() {
-        
         locationManager.delegate = self
     }
     
     private func setLocation() {
-        
         mapView.isMyLocationEnabled = true
         locationManager.startUpdatingLocation()
         move(at: locationManager.location?.coordinate)
     }
     
     private func setSideBarViewLayout(isVisible: Bool = false) {
-
-        if isVisible {
-            blurEffectView.isHidden = false
-            sideBarView.snp.remakeConstraints {
-                $0.top.trailing.bottom.equalToSuperview()
-                $0.width.equalTo(309)
-            }
-        } else {
-            blurEffectView.isHidden = true
-            sideBarView.snp.remakeConstraints {
-                $0.top.bottom.equalToSuperview()
-                $0.trailing.equalToSuperview().inset(-309)
-                $0.width.equalTo(309)
-            }
+        blurEffectView.isHidden = !isVisible
+        
+        sideBarView.snp.updateConstraints {
+            $0.top.bottom.equalToSuperview()
+            $0.trailing.equalToSuperview().inset(isVisible ? 0 : -309)
+            $0.width.equalTo(309)
         }
         
         UIView.animate(withDuration: 0.2, delay: 0.0, options: .curveEaseIn, animations: {
@@ -142,8 +130,8 @@ extension MapViewController {
     }
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
-        
         super.touchesBegan(touches, with: event)
+        
         if let touch = touches.first,
            touch.view == self.blurEffectView {
             self.tapBlurEffectView.accept(Void())

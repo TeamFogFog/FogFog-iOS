@@ -23,6 +23,7 @@ final class LoginViewController: BaseViewController {
     
     private weak var viewModel: LoginViewModel?
     
+    // MARK: Init
     init(viewModel: LoginViewModel) {
         self.viewModel = viewModel
         super.init(nibName: nil, bundle: nil)
@@ -32,16 +33,13 @@ final class LoginViewController: BaseViewController {
         fatalError("MapViewController Error!")
     }
     
+    // MARK: Life Cycle
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        setStyle()
-        setLayout()
     }
     
     // MARK: UI
     override func setStyle() {
-        
         view.setGradient(.fogBlue, .white)
         
         titleLabel.do {
