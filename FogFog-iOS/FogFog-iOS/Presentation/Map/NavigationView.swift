@@ -13,7 +13,7 @@ import Then
 final class NavigationView: UIView {
     
     private lazy var logoImageView = UIImageView()
-    private lazy var menuButton = UIButton()
+    lazy var menuButton = UIButton()
     
     override init(frame: CGRect) {
         super.init(frame: frame)
