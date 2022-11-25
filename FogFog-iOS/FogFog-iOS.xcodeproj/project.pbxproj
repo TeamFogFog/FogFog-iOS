@@ -10,11 +10,13 @@
 		1DDE6DAB87E9F15EAEAD8A1B /* Pods_FogFog_iOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 44BDDCB91FAFFFC51A0C1A4C /* Pods_FogFog_iOS.framework */; };
 		35919B344F294722AA448E4E /* Pods_FogFog_iOS_FogFog_iOSUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D67B489E657987D4A7AD92C7 /* Pods_FogFog_iOS_FogFog_iOSUITests.framework */; };
 		56E6DAD19F1058E2F6B779B7 /* Pods_FogFog_iOSTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 848DD0928406FC10714344E4 /* Pods_FogFog_iOSTests.framework */; };
+		7761D4F4292F3471003971DC /* MakeNicknameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7761D4F3292F3471003971DC /* MakeNicknameViewController.swift */; };
 		7761D4F6292F3749003971DC /* FogNavigationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7761D4F5292F3749003971DC /* FogNavigationView.swift */; };
 		77D32D41292A0EDD006E6314 /* ViewModelType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77D32D40292A0EDD006E6314 /* ViewModelType.swift */; };
 		77D32D43292CD6A3006E6314 /* SideBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77D32D42292CD6A2006E6314 /* SideBarView.swift */; };
 		77E70F462930951100F55CD7 /* UITextField + Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77E70F452930951100F55CD7 /* UITextField + Extension.swift */; };
 		77E70F4829309A6D00F55CD7 /* UILabel + Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77E70F4729309A6D00F55CD7 /* UILabel + Extension.swift */; };
+		77E70F4A2930D0FA00F55CD7 /* MakeNicknameViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77E70F492930D0FA00F55CD7 /* MakeNicknameViewModel.swift */; };
 		77F1D82229269CC800F31D0C /* UIColor + Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77F1D82129269CC800F31D0C /* UIColor + Extension.swift */; };
 		77F1D82429269E1C00F31D0C /* UIView + Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77F1D82329269E1C00F31D0C /* UIView + Extension.swift */; };
 		77F1D8252926AAD300F31D0C /* Pretendard-Black.otf in Resources */ = {isa = PBXBuildFile; fileRef = ECA4259029229A05004DFDAF /* Pretendard-Black.otf */; };
@@ -97,11 +99,13 @@
 		44BDDCB91FAFFFC51A0C1A4C /* Pods_FogFog_iOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FogFog_iOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		47D49EE273F775CA2202B593 /* Pods-FogFog-iOS-FogFog-iOSUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FogFog-iOS-FogFog-iOSUITests.debug.xcconfig"; path = "Target Support Files/Pods-FogFog-iOS-FogFog-iOSUITests/Pods-FogFog-iOS-FogFog-iOSUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		568E5A05A08D8D049D3D8E62 /* Pods-FogFog-iOSTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FogFog-iOSTests.release.xcconfig"; path = "Target Support Files/Pods-FogFog-iOSTests/Pods-FogFog-iOSTests.release.xcconfig"; sourceTree = "<group>"; };
+		7761D4F3292F3471003971DC /* MakeNicknameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MakeNicknameViewController.swift; sourceTree = "<group>"; };
 		7761D4F5292F3749003971DC /* FogNavigationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FogNavigationView.swift; sourceTree = "<group>"; };
 		77D32D40292A0EDD006E6314 /* ViewModelType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModelType.swift; sourceTree = "<group>"; };
 		77D32D42292CD6A2006E6314 /* SideBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideBarView.swift; sourceTree = "<group>"; };
 		77E70F452930951100F55CD7 /* UITextField + Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITextField + Extension.swift"; sourceTree = "<group>"; };
 		77E70F4729309A6D00F55CD7 /* UILabel + Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UILabel + Extension.swift"; sourceTree = "<group>"; };
+		77E70F492930D0FA00F55CD7 /* MakeNicknameViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MakeNicknameViewModel.swift; sourceTree = "<group>"; };
 		77F1D82129269CC800F31D0C /* UIColor + Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor + Extension.swift"; sourceTree = "<group>"; };
 		77F1D82329269E1C00F31D0C /* UIView + Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView + Extension.swift"; sourceTree = "<group>"; };
 		77F1D82E2927F2CC00F31D0C /* Adjusted + Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Adjusted + Extension.swift"; sourceTree = "<group>"; };
@@ -224,6 +228,24 @@
 				568E5A05A08D8D049D3D8E62 /* Pods-FogFog-iOSTests.release.xcconfig */,
 			);
 			path = Pods;
+			sourceTree = "<group>";
+		};
+		7761D4F1292F33B2003971DC /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				ECA425F5292634C9004DFDAF /* LoginViewModel.swift */,
+				77E70F492930D0FA00F55CD7 /* MakeNicknameViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		7761D4F2292F3400003971DC /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				ECA425F3292634A5004DFDAF /* LoginViewController.swift */,
+				7761D4F3292F3471003971DC /* MakeNicknameViewController.swift */,
+			);
+			path = ViewController;
 			sourceTree = "<group>";
 		};
 		77D32D3F292A0EC7006E6314 /* Protocol */ = {
@@ -535,9 +557,9 @@
 		ECA425F129263486004DFDAF /* Login */ = {
 			isa = PBXGroup;
 			children = (
+				7761D4F2292F3400003971DC /* ViewController */,
+				7761D4F1292F33B2003971DC /* ViewModel */,
 				ECA425F729263537004DFDAF /* Coordinator */,
-				ECA425F3292634A5004DFDAF /* LoginViewController.swift */,
-				ECA425F5292634C9004DFDAF /* LoginViewModel.swift */,
 			);
 			path = Login;
 			sourceTree = "<group>";
@@ -876,6 +898,7 @@
 				ECA4259929229BD9004DFDAF /* UIFont + Extension.swift in Sources */,
 				77F1D82F2927F2CC00F31D0C /* Adjusted + Extension.swift in Sources */,
 				ECA4257629225450004DFDAF /* SplashViewController.swift in Sources */,
+				77E70F4A2930D0FA00F55CD7 /* MakeNicknameViewModel.swift in Sources */,
 				ECA425DA29253155004DFDAF /* Coordinator.swift in Sources */,
 				ECA425F4292634A6004DFDAF /* LoginViewController.swift in Sources */,
 				ECA425CF292382AD004DFDAF /* NavigationView.swift in Sources */,
@@ -904,6 +927,7 @@
 				ECA425E2292532CA004DFDAF /* ImplAppCoordinator.swift in Sources */,
 				ECA4252F29224DB8004DFDAF /* SceneDelegate.swift in Sources */,
 				ECA425EC29262CF8004DFDAF /* MapViewModel.swift in Sources */,
+				7761D4F4292F3471003971DC /* MakeNicknameViewController.swift in Sources */,
 				77D32D43292CD6A3006E6314 /* SideBarView.swift in Sources */,
 				ECA4257E292254C6004DFDAF /* BaseViewController.swift in Sources */,
 				7761D4F6292F3749003971DC /* FogNavigationView.swift in Sources */,
