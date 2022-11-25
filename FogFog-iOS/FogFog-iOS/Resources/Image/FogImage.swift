@@ -22,5 +22,8 @@ public enum FogImage {
     static let btnMap = UIImage(named: "btnMap")!
     static let btnNotice = UIImage(named: "btnNotice")!
     static let btnSet = UIImage(named: "btnSet")!
+    static let btnBack = UIImage(named: "btnBack")!
     static let placeMarker = UIImage(named: "fluentLocation16Filled")!
+    static let wordMark = UIImage(named: "wordmark")!
+    static let deleteTextIcon = UIImage(named: "iconDeletetext")!
 }
