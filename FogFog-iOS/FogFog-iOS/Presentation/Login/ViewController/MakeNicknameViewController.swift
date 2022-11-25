@@ -7,6 +7,8 @@
 
 import UIKit
 
+import RxCocoa
+import RxSwift
 import SnapKit
 import Then
 
@@ -18,8 +20,13 @@ final class MakeNicknameViewController: BaseViewController {
     private let nicknameTextField = FogTextField()
     private let confirmButton = UIButton()
     private let backView = UIView()
+    private let errorImageView = UIImageView()
+    private let errorLabel = UILabel()
     
-    private weak var viewModel: MakeNicknameViewModel?
+    private let viewModel: MakeNicknameViewModel
+    private lazy var input = MakeNicknameViewModel.Input(didNicknameTextFieldChange: nicknameTextField.rx.text.orEmpty.asObservable())
+    private lazy var output = viewModel.transform(input: input)
+    private let disposeBag = DisposeBag()
     
     // MARK: Init
     init(viewModel: MakeNicknameViewModel) {
@@ -34,6 +41,8 @@ final class MakeNicknameViewController: BaseViewController {
     // MARK: Life Cycle
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        bind()
     }
     
     // MARK: UI
@@ -41,6 +50,7 @@ final class MakeNicknameViewController: BaseViewController {
         view.backgroundColor = .white
         backView.backgroundColor = .grayBlack
         naviView.setTitleLabel(title: "닉네임 설정")
+        [errorImageView, errorLabel].forEach { $0.isHidden = true }
         nicknameTextField.setPlaceHolderText(placeholder: "닉네임 입력(8자리 이내)")
         
         titleLabel.do {
@@ -56,10 +66,20 @@ final class MakeNicknameViewController: BaseViewController {
             $0.titleLabel?.textColor = .white
             $0.backgroundColor = .grayBlack
         }
+        
+        errorImageView.do {
+            $0.image = FogImage.errorIcon
+        }
+        
+        errorLabel.do {
+            $0.text = "이미 존재하는 닉네임 입니다."
+            $0.textColor = .etcRed
+            $0.font = .pretendardM(10)
+        }
     }
     
     override func setLayout() {
-        view.addSubviews([naviView, titleLabel, nicknameTextField, confirmButton, backView])
+        view.addSubviews([naviView, titleLabel, nicknameTextField, confirmButton, backView, errorImageView, errorLabel])
         
         naviView.snp.makeConstraints {
             $0.top.leading.trailing.equalToSuperview()
@@ -86,5 +106,37 @@ final class MakeNicknameViewController: BaseViewController {
             $0.top.equalTo(confirmButton.snp.bottom)
             $0.leading.trailing.bottom.equalToSuperview()
         }
+        
+        errorImageView.snp.makeConstraints {
+            $0.top.equalTo(nicknameTextField.snp.bottom).offset(10)
+            $0.leading.equalTo(nicknameTextField.snp.leading)
+            $0.size.equalTo(13)
+        }
+        
+        errorLabel.snp.makeConstraints {
+            $0.leading.equalTo(errorImageView.snp.trailing).offset(5)
+            $0.centerY.equalTo(errorImageView.snp.centerY)
+        }
+    }
+    
+    private func bind() {
+        output.nickname
+            .asDriver(onErrorJustReturn: "")
+            .drive(onNext: { [weak self] nickname in
+                self?.nicknameTextField.text = nickname
+            })
+            .disposed(by: disposeBag)
+        
+        output.isValid
+            .asDriver(onErrorJustReturn: false)
+            .drive(onNext: { [weak self] result in
+                [self?.errorImageView, self?.errorLabel].forEach { $0?.isHidden = result }
+                if result {
+                    self?.nicknameTextField.setBoderColor(color: .fogBlue)
+                } else {
+                    self?.nicknameTextField.setBoderColor(color: .etcRed)
+                }
+            })
+            .disposed(by: disposeBag)
     }
 }
