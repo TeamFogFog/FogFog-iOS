@@ -24,9 +24,10 @@ final class MakeNicknameViewController: BaseViewController {
     private let errorLabel = UILabel()
     
     private let viewModel: MakeNicknameViewModel
+    private let disposeBag = DisposeBag()
     private lazy var input = MakeNicknameViewModel.Input(didNicknameTextFieldChange: nicknameTextField.rx.text.orEmpty.asObservable())
     private lazy var output = viewModel.transform(input: input)
-    private let disposeBag = DisposeBag()
+    
     
     // MARK: Init
     init(viewModel: MakeNicknameViewModel) {
@@ -43,6 +44,7 @@ final class MakeNicknameViewController: BaseViewController {
         super.viewDidLoad()
         
         bind()
+        addTapGesture()
     }
     
     // MARK: UI
@@ -51,7 +53,10 @@ final class MakeNicknameViewController: BaseViewController {
         backView.backgroundColor = .grayBlack
         naviView.setTitleLabel(title: "닉네임 설정")
         [errorImageView, errorLabel].forEach { $0.isHidden = true }
-        nicknameTextField.setPlaceHolderText(placeholder: "닉네임 입력(8자리 이내)")
+        
+        nicknameTextField.do {
+            $0.setPlaceHolderText(placeholder: "닉네임 입력(8자리 이내)")
+        }
         
         titleLabel.do {
             $0.text = "포그포그에서 사용할\n닉네임을 입력해주세요"
@@ -138,5 +143,19 @@ final class MakeNicknameViewController: BaseViewController {
                 }
             })
             .disposed(by: disposeBag)
+    }
+}
+
+// MARK: - Keyboard
+extension MakeNicknameViewController {
+    
+    private func addTapGesture() {
+        let tapGesture = UITapGestureRecognizer(target: self, action: #selector(hideKeyboard(_:)))
+        view.addGestureRecognizer(tapGesture)
+    }
+
+    @objc
+    private func hideKeyboard(_ sender: Any) {
+        view.endEditing(true)
     }
 }
