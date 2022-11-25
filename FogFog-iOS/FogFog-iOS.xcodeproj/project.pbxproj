@@ -14,6 +14,7 @@
 		77D32D41292A0EDD006E6314 /* ViewModelType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77D32D40292A0EDD006E6314 /* ViewModelType.swift */; };
 		77D32D43292CD6A3006E6314 /* SideBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77D32D42292CD6A2006E6314 /* SideBarView.swift */; };
 		77E70F462930951100F55CD7 /* UITextField + Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77E70F452930951100F55CD7 /* UITextField + Extension.swift */; };
+		77E70F4829309A6D00F55CD7 /* UILabel + Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77E70F4729309A6D00F55CD7 /* UILabel + Extension.swift */; };
 		77F1D82229269CC800F31D0C /* UIColor + Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77F1D82129269CC800F31D0C /* UIColor + Extension.swift */; };
 		77F1D82429269E1C00F31D0C /* UIView + Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77F1D82329269E1C00F31D0C /* UIView + Extension.swift */; };
 		77F1D8252926AAD300F31D0C /* Pretendard-Black.otf in Resources */ = {isa = PBXBuildFile; fileRef = ECA4259029229A05004DFDAF /* Pretendard-Black.otf */; };
@@ -99,6 +100,7 @@
 		77D32D40292A0EDD006E6314 /* ViewModelType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModelType.swift; sourceTree = "<group>"; };
 		77D32D42292CD6A2006E6314 /* SideBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideBarView.swift; sourceTree = "<group>"; };
 		77E70F452930951100F55CD7 /* UITextField + Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITextField + Extension.swift"; sourceTree = "<group>"; };
+		77E70F4729309A6D00F55CD7 /* UILabel + Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UILabel + Extension.swift"; sourceTree = "<group>"; };
 		77F1D82129269CC800F31D0C /* UIColor + Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor + Extension.swift"; sourceTree = "<group>"; };
 		77F1D82329269E1C00F31D0C /* UIView + Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView + Extension.swift"; sourceTree = "<group>"; };
 		77F1D82E2927F2CC00F31D0C /* Adjusted + Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Adjusted + Extension.swift"; sourceTree = "<group>"; };
@@ -487,6 +489,7 @@
 				77F1D82329269E1C00F31D0C /* UIView + Extension.swift */,
 				77F1D82E2927F2CC00F31D0C /* Adjusted + Extension.swift */,
 				77E70F452930951100F55CD7 /* UITextField + Extension.swift */,
+				77E70F4729309A6D00F55CD7 /* UILabel + Extension.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -892,6 +895,7 @@
 				ECA4257A292254A8004DFDAF /* BottomDetailViewController.swift in Sources */,
 				ECA4259B2922A4A6004DFDAF /* FogImage.swift in Sources */,
 				ECA425E829262A78004DFDAF /* MapCoordinator.swift in Sources */,
+				77E70F4829309A6D00F55CD7 /* UILabel + Extension.swift in Sources */,
 				77D32D41292A0EDD006E6314 /* ViewModelType.swift in Sources */,
 				ECA425E2292532CA004DFDAF /* ImplAppCoordinator.swift in Sources */,
 				ECA4252F29224DB8004DFDAF /* SceneDelegate.swift in Sources */,
