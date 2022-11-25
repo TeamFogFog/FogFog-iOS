@@ -24,6 +24,12 @@
 		77F1D82C2926AAE500F31D0C /* Pretendard-SemiBold.otf in Resources */ = {isa = PBXBuildFile; fileRef = ECA4259129229A05004DFDAF /* Pretendard-SemiBold.otf */; };
 		77F1D82D2926AAE800F31D0C /* Pretendard-Thin.otf in Resources */ = {isa = PBXBuildFile; fileRef = ECA4259429229A05004DFDAF /* Pretendard-Thin.otf */; };
 		77F1D82F2927F2CC00F31D0C /* Adjusted + Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77F1D82E2927F2CC00F31D0C /* Adjusted + Extension.swift */; };
+		BD347C58292FD1BC009F52BA /* RoadPopUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD347C57292FD1BC009F52BA /* RoadPopUpViewController.swift */; };
+		BD347C5A292FD226009F52BA /* ExMapType.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD347C59292FD226009F52BA /* ExMapType.swift */; };
+		BD347C5E292FD2BE009F52BA /* FogButtonStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD347C5D292FD2BE009F52BA /* FogButtonStyle.swift */; };
+		BD347C60292FD4C8009F52BA /* FogButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD347C5F292FD4C8009F52BA /* FogButton.swift */; };
+		BD347C63292FEA15009F52BA /* RoadPopUpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD347C62292FEA15009F52BA /* RoadPopUpView.swift */; };
+		BD347C65292FEB08009F52BA /* RoadPopUpViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD347C64292FEB08009F52BA /* RoadPopUpViewModel.swift */; };
 		BD46305C292A25B300E9E9C2 /* BottomDetailRootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD46305B292A25B300E9E9C2 /* BottomDetailRootView.swift */; };
 		BD4B550F292A29EC00ECFD04 /* SmokePlace.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD4B550E292A29EC00ECFD04 /* SmokePlace.swift */; };
 		BDC50ECB292A07B2002378C6 /* GoogleMap.plist in Resources */ = {isa = PBXBuildFile; fileRef = BDC50ECA292A07B2002378C6 /* GoogleMap.plist */; };
@@ -101,6 +107,12 @@
 		848DD0928406FC10714344E4 /* Pods_FogFog_iOSTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FogFog_iOSTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		888CEAED3234D2B94DAA26DB /* Pods-FogFog-iOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FogFog-iOS.release.xcconfig"; path = "Target Support Files/Pods-FogFog-iOS/Pods-FogFog-iOS.release.xcconfig"; sourceTree = "<group>"; };
 		A9F085CD5FE1A63DDBE5140E /* Pods-FogFog-iOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FogFog-iOS.debug.xcconfig"; path = "Target Support Files/Pods-FogFog-iOS/Pods-FogFog-iOS.debug.xcconfig"; sourceTree = "<group>"; };
+		BD347C57292FD1BC009F52BA /* RoadPopUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoadPopUpViewController.swift; sourceTree = "<group>"; };
+		BD347C59292FD226009F52BA /* ExMapType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExMapType.swift; sourceTree = "<group>"; };
+		BD347C5D292FD2BE009F52BA /* FogButtonStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FogButtonStyle.swift; sourceTree = "<group>"; };
+		BD347C5F292FD4C8009F52BA /* FogButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FogButton.swift; sourceTree = "<group>"; };
+		BD347C62292FEA15009F52BA /* RoadPopUpView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoadPopUpView.swift; sourceTree = "<group>"; };
+		BD347C64292FEB08009F52BA /* RoadPopUpViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoadPopUpViewModel.swift; sourceTree = "<group>"; };
 		BD46305B292A25B300E9E9C2 /* BottomDetailRootView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BottomDetailRootView.swift; sourceTree = "<group>"; };
 		BD4B550E292A29EC00ECFD04 /* SmokePlace.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SmokePlace.swift; sourceTree = "<group>"; };
 		BDC50ECA292A07B2002378C6 /* GoogleMap.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = GoogleMap.plist; sourceTree = "<group>"; };
@@ -224,6 +236,26 @@
 				77D32D40292A0EDD006E6314 /* ViewModelType.swift */,
 			);
 			path = Protocol;
+			sourceTree = "<group>";
+		};
+		BD347C56292FD1A9009F52BA /* RoadPopUp */ = {
+			isa = PBXGroup;
+			children = (
+				BD347C59292FD226009F52BA /* ExMapType.swift */,
+				BD347C62292FEA15009F52BA /* RoadPopUpView.swift */,
+				BD347C57292FD1BC009F52BA /* RoadPopUpViewController.swift */,
+				BD347C64292FEB08009F52BA /* RoadPopUpViewModel.swift */,
+			);
+			path = RoadPopUp;
+			sourceTree = "<group>";
+		};
+		BD347C61292FD4F1009F52BA /* FogButton */ = {
+			isa = PBXGroup;
+			children = (
+				BD347C5F292FD4C8009F52BA /* FogButton.swift */,
+				BD347C5D292FD2BE009F52BA /* FogButtonStyle.swift */,
+			);
+			path = FogButton;
 			sourceTree = "<group>";
 		};
 		BD4B550D292A29AA00ECFD04 /* Place */ = {
@@ -396,6 +428,8 @@
 		ECA4256629225303004DFDAF /* UIComponents */ = {
 			isa = PBXGroup;
 			children = (
+				BD347C61292FD4F1009F52BA /* FogButton */,
+				BD347C56292FD1A9009F52BA /* RoadPopUp */,
 				ECA4258329225A66004DFDAF /* .gitkeep */,
 			);
 			path = UIComponents;
@@ -862,11 +896,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				ECA4259929229BD9004DFDAF /* UIFont + Extension.swift in Sources */,
+				BD347C58292FD1BC009F52BA /* RoadPopUpViewController.swift in Sources */,
 				77F1D82F2927F2CC00F31D0C /* Adjusted + Extension.swift in Sources */,
 				ECA4257629225450004DFDAF /* SplashViewController.swift in Sources */,
 				ECA425DA29253155004DFDAF /* Coordinator.swift in Sources */,
 				ECA425F4292634A6004DFDAF /* LoginViewController.swift in Sources */,
 				ECA425CF292382AD004DFDAF /* NavigationView.swift in Sources */,
+				BD347C65292FEB08009F52BA /* RoadPopUpViewModel.swift in Sources */,
 				ECA425E0292532B7004DFDAF /* AppCoordinator.swift in Sources */,
 				ECA425E629262A42004DFDAF /* ImplLoginCoordinator.swift in Sources */,
 				ECA425DC29253259004DFDAF /* CoordinatorFinishDelegate.swift in Sources */,
@@ -879,10 +915,12 @@
 				ECA425F6292634C9004DFDAF /* LoginViewModel.swift in Sources */,
 				ECA4259729229B15004DFDAF /* FogFont.swift in Sources */,
 				BDC50ED2292A07EB002378C6 /* BottomDetailViewModel.swift in Sources */,
+				BD347C5A292FD226009F52BA /* ExMapType.swift in Sources */,
 				77F1D82229269CC800F31D0C /* UIColor + Extension.swift in Sources */,
 				77F1D82429269E1C00F31D0C /* UIView + Extension.swift in Sources */,
 				BDC50ED6292A09BD002378C6 /* BaseView.swift in Sources */,
 				ECA4257A292254A8004DFDAF /* BottomDetailViewController.swift in Sources */,
+				BD347C5E292FD2BE009F52BA /* FogButtonStyle.swift in Sources */,
 				ECA4259B2922A4A6004DFDAF /* FogImage.swift in Sources */,
 				ECA425E829262A78004DFDAF /* MapCoordinator.swift in Sources */,
 				77D32D41292A0EDD006E6314 /* ViewModelType.swift in Sources */,
@@ -890,8 +928,10 @@
 				ECA4252F29224DB8004DFDAF /* SceneDelegate.swift in Sources */,
 				ECA425EC29262CF8004DFDAF /* MapViewModel.swift in Sources */,
 				77D32D43292CD6A3006E6314 /* SideBarView.swift in Sources */,
+				BD347C60292FD4C8009F52BA /* FogButton.swift in Sources */,
 				ECA4257E292254C6004DFDAF /* BaseViewController.swift in Sources */,
 				ECA425782922545C004DFDAF /* MapViewController.swift in Sources */,
+				BD347C63292FEA15009F52BA /* RoadPopUpView.swift in Sources */,
 				ECA425D72924DA66004DFDAF /* Bundle + Extension.swift in Sources */,
 				ECA425E429262A37004DFDAF /* ImplMapCoordinator.swift in Sources */,
 			);
