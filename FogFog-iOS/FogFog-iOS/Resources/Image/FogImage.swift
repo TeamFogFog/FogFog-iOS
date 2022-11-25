@@ -26,4 +26,5 @@ public enum FogImage {
     static let placeMarker = UIImage(named: "fluentLocation16Filled")!
     static let wordMark = UIImage(named: "wordmark")!
     static let deleteTextIcon = UIImage(named: "iconDeletetext")!
+    static let errorIcon = UIImage(named: "inputTextIocnNotice")!
 }
