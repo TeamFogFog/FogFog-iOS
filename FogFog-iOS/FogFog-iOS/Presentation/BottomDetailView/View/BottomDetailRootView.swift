@@ -86,7 +86,7 @@ final class BottomDetailRootView: BaseView {
             $0.setTitle(Literals.dummyDistance, for: .normal)
             $0.setTitleColor(.fogBlue, for: .normal)
             $0.titleLabel?.font = .pretendardM(12)
-            $0.backgroundColor = .blue8
+            $0.backgroundColor = .mainBlue8
             $0.makeRounded(cornerRadius: 6)
         }
         
@@ -101,7 +101,7 @@ final class BottomDetailRootView: BaseView {
         
         placeDetailTitleLabel.do {
             $0.text = Literals.dummyDetailAddress
-            $0.textColor = .gray6
+            $0.textColor = .grayGray6
             $0.font = .pretendardR(14)
         }
 
