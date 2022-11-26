@@ -146,7 +146,7 @@ final class RoadPopUpView: BaseView {
         ExMapType.allCases.forEach { type in
             let button = FogButton(style: .unselected)
             button.title = type.title
-            button.layer.cornerRadius = buttonRadius
+            button.makeRounded(cornerRadius: buttonRadius.adjusted)
             buttonStack.addArrangedSubview(button)
         }
     }
