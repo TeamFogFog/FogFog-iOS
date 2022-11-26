@@ -9,6 +9,7 @@ import UIKit
 
 final class RoadPopUpView: BaseView {
     
+    // MARK: UI
     let dimmedView = UIView()
     let containerView = UIView()
     let closeButton = UIButton()
@@ -19,15 +20,18 @@ final class RoadPopUpView: BaseView {
     let lineView = UIView()
     let confirmButton = FogButton(style: .normal)
     
+    // MARK: Properties
     private let padding: CGFloat = 20
     private let containerRadius: CGFloat = 25
     private let buttonRadius: CGFloat = 12
     
+    // MARK: Init
     override init(frame: CGRect) {
         super.init(frame: frame)
         setStackView()
     }
     
+    // MARK: Setup UI
     override func setStyle() {
         super.setStyle()
         
@@ -141,6 +145,10 @@ final class RoadPopUpView: BaseView {
             $0.bottom.equalTo(lineView.snp.top).offset(-12.5)
         }
     }
+}
+
+// MARK: Private Methods
+extension RoadPopUpView {
     
     private func setStackView() {
         ExMapType.allCases.forEach { type in
@@ -150,7 +158,11 @@ final class RoadPopUpView: BaseView {
             buttonStack.addArrangedSubview(button)
         }
     }
-    
+}
+
+// MARK: Public Methods
+extension RoadPopUpView {
+
     func select(to type: ExMapType) {
         for (index, button) in buttonStack.arrangedSubviews.enumerated() {
             guard let button = button as? FogButton else { return }

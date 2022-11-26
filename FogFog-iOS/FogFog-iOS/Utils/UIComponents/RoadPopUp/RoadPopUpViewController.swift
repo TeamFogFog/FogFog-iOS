@@ -12,15 +12,18 @@ import RxSwift
 
 final class RoadPopUpViewController: BaseViewController {
     
+    // MARK: Properties
     private let rootView = RoadPopUpView()
     private let viewModel: any ViewModelType
     private var disposeBag = DisposeBag()
     
+    // MARK: Init
     init(viewModel: any ViewModelType) {
         self.viewModel = viewModel
         super.init(nibName: nil, bundle: nil)
     }
     
+    // MARK: Life Cycle
     override func loadView() {
         self.view = rootView
     }
@@ -33,6 +36,7 @@ final class RoadPopUpViewController: BaseViewController {
 
 extension RoadPopUpViewController {
     
+    // MARK: - Bind
     func bind() {
         guard
             let kakaoButton = rootView.buttonStack.arrangedSubviews[0].subviews.first(where: { $0 is UIButton }) as? UIButton,

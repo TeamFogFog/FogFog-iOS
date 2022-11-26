@@ -9,10 +9,12 @@ import UIKit
 
 final class FogButton: BaseView {
     
+    // MARK: UI
     private let leftImageView = UIImageView()
     private let titleLabel = UILabel()
     lazy var button = UIButton()
     
+    // MARK: Properties
     var style: FogButtonStyle {
         didSet { setAppearance(style) }
     }
@@ -27,16 +29,14 @@ final class FogButton: BaseView {
         set { leftImageView.image = newValue }
     }
     
+    // MARK: Init
     init(frame: CGRect = .zero, style: FogButtonStyle = .normal) {
         self.style = style
         super.init(frame: frame)
         setAppearance(style)
     }
     
-    required init?(coder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
-    }
-    
+    // MARK: Setup UI
     override func setStyle() {
         leftImageView.do {
             $0.contentMode = .scaleAspectFill
@@ -60,6 +60,10 @@ final class FogButton: BaseView {
             $0.edges.equalToSuperview()
         }
     }
+}
+
+// MARK: Private Methods
+extension FogButton {
     
     private func setAppearance(_ style: FogButtonStyle) {
         layer.borderWidth = 1.5

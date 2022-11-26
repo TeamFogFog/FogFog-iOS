@@ -7,6 +7,7 @@
 
 import Foundation
 
+/// 외부 맵 열거형
 enum ExMapType: Int, CaseIterable {
     case kakao
     case google
