@@ -10,6 +10,8 @@
 		1DDE6DAB87E9F15EAEAD8A1B /* Pods_FogFog_iOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 44BDDCB91FAFFFC51A0C1A4C /* Pods_FogFog_iOS.framework */; };
 		35919B344F294722AA448E4E /* Pods_FogFog_iOS_FogFog_iOSUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D67B489E657987D4A7AD92C7 /* Pods_FogFog_iOS_FogFog_iOSUITests.framework */; };
 		56E6DAD19F1058E2F6B779B7 /* Pods_FogFog_iOSTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 848DD0928406FC10714344E4 /* Pods_FogFog_iOSTests.framework */; };
+		772577D929349212008273A7 /* RxKeyboard in Frameworks */ = {isa = PBXBuildFile; productRef = 772577D829349212008273A7 /* RxKeyboard */; };
+		772577DC2934924E008273A7 /* RxGesture in Frameworks */ = {isa = PBXBuildFile; productRef = 772577DB2934924E008273A7 /* RxGesture */; };
 		7761D4F4292F3471003971DC /* MakeNicknameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7761D4F3292F3471003971DC /* MakeNicknameViewController.swift */; };
 		7761D4F6292F3749003971DC /* FogNavigationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7761D4F5292F3749003971DC /* FogNavigationView.swift */; };
 		77D32D41292A0EDD006E6314 /* ViewModelType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77D32D40292A0EDD006E6314 /* ViewModelType.swift */; };
@@ -195,7 +197,9 @@
 				ECA425B429234744004DFDAF /* RxMoya in Frameworks */,
 				ECA425A1292346B1004DFDAF /* SnapKit in Frameworks */,
 				ECA425CB29234C4F004DFDAF /* RxRelay in Frameworks */,
+				772577DC2934924E008273A7 /* RxGesture in Frameworks */,
 				1DDE6DAB87E9F15EAEAD8A1B /* Pods_FogFog_iOS.framework in Frameworks */,
+				772577D929349212008273A7 /* RxKeyboard in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -667,6 +671,8 @@
 				ECA425C829234C4F004DFDAF /* RxCocoa */,
 				ECA425CA29234C4F004DFDAF /* RxRelay */,
 				ECA425CC29234C4F004DFDAF /* RxSwift */,
+				772577D829349212008273A7 /* RxKeyboard */,
+				772577DB2934924E008273A7 /* RxGesture */,
 			);
 			productName = "FogFog-iOS";
 			productReference = ECA4252929224DB8004DFDAF /* FogFog-iOS.app */;
@@ -749,6 +755,8 @@
 				ECA425A2292346BF004DFDAF /* XCRemoteSwiftPackageReference "Kingfisher" */,
 				ECA425B029234744004DFDAF /* XCRemoteSwiftPackageReference "Moya" */,
 				ECA425C729234C4F004DFDAF /* XCRemoteSwiftPackageReference "RxSwift" */,
+				772577D729349212008273A7 /* XCRemoteSwiftPackageReference "RxKeyboard" */,
+				772577DA2934924D008273A7 /* XCRemoteSwiftPackageReference "RxGesture" */,
 			);
 			productRefGroup = ECA4252A29224DB8004DFDAF /* Products */;
 			projectDirPath = "";
@@ -1321,6 +1329,22 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		772577D729349212008273A7 /* XCRemoteSwiftPackageReference "RxKeyboard" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/RxSwiftCommunity/RxKeyboard.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.0.0;
+			};
+		};
+		772577DA2934924D008273A7 /* XCRemoteSwiftPackageReference "RxGesture" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/RxSwiftCommunity/RxGesture.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 4.0.0;
+			};
+		};
 		ECA4259C292346A2004DFDAF /* XCRemoteSwiftPackageReference "Then" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/devxoul/Then.git";
@@ -1364,6 +1388,16 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		772577D829349212008273A7 /* RxKeyboard */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 772577D729349212008273A7 /* XCRemoteSwiftPackageReference "RxKeyboard" */;
+			productName = RxKeyboard;
+		};
+		772577DB2934924E008273A7 /* RxGesture */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 772577DA2934924D008273A7 /* XCRemoteSwiftPackageReference "RxGesture" */;
+			productName = RxGesture;
+		};
 		ECA4259D292346A2004DFDAF /* Then */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = ECA4259C292346A2004DFDAF /* XCRemoteSwiftPackageReference "Then" */;
