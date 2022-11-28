@@ -15,11 +15,11 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
 
         guard let windowScene = (scene as? UIWindowScene) else { return }
-        let navigationController = UINavigationController()
-        self.appCoordinator = ImplAppCoordinator(navigationController)
-        self.appCoordinator?.start()
+        // let navigationController = UINavigationController()
+        // self.appCoordinator = ImplAppCoordinator(navigationController)
+        // self.appCoordinator?.start()
         self.window = UIWindow(windowScene: windowScene)
-        self.window?.rootViewController = navigationController
+        self.window?.rootViewController = RoadPopUpViewController(viewModel: RoadPopUpViewModel())
         self.window?.makeKeyAndVisible()
     }
 }

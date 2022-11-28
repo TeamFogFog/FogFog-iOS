@@ -27,4 +27,7 @@ public enum FogImage {
     static let wordMark = UIImage(named: "wordmark")!
     static let deleteTextIcon = UIImage(named: "iconDeletetext")!
     static let errorIcon = UIImage(named: "inputTextIocnNotice")!
+    static let popupMap = UIImage(named: "iconPopupMap")!
+    static let speechBubbleBig = UIImage(named: "speechBubbleBig")!
+    static let btnX = UIImage(named: "btnX")!
 }
