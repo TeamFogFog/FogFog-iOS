@@ -8,7 +8,9 @@
 import UIKit
 
 import RxCocoa
+import RxGesture
 import RxSwift
+import RxKeyboard
 import SnapKit
 import Then
 
@@ -28,7 +30,6 @@ final class MakeNicknameViewController: BaseViewController {
     private lazy var input = MakeNicknameViewModel.Input(didNicknameTextFieldChange: nicknameTextField.rx.text.orEmpty.asObservable())
     private lazy var output = viewModel.transform(input: input)
     
-    
     // MARK: Init
     init(viewModel: MakeNicknameViewModel) {
         self.viewModel = viewModel
@@ -44,7 +45,8 @@ final class MakeNicknameViewController: BaseViewController {
         super.viewDidLoad()
         
         bind()
-        addTapGesture()
+        hideKeyboard()
+        updateConfirmButtonLayout()
     }
     
     // MARK: UI
@@ -145,13 +147,25 @@ final class MakeNicknameViewController: BaseViewController {
 // MARK: - Keyboard
 extension MakeNicknameViewController {
     
-    private func addTapGesture() {
-        let tapGesture = UITapGestureRecognizer(target: self, action: #selector(hideKeyboard(_:)))
-        view.addGestureRecognizer(tapGesture)
+    private func hideKeyboard() {
+        view.rx.tapGesture()
+            .when(.recognized)
+            .subscribe { [weak self] _ in
+                self?.view.endEditing(true)
+            }
+            .disposed(by: disposeBag)
     }
-
-    @objc
-    private func hideKeyboard(_ sender: Any) {
-        view.endEditing(true)
+    
+    private func updateConfirmButtonLayout() {
+        RxKeyboard.instance.visibleHeight
+            .drive(onNext: { [unowned self] keyboardHeight in
+                let height = keyboardHeight > 0 ? keyboardHeight - view.safeAreaInsets.bottom : 0
+                
+                confirmButton.snp.updateConstraints {
+                    $0.bottom.equalTo(self.view.safeAreaLayoutGuide).inset(height)
+                }
+                view.layoutIfNeeded()
+            })
+            .disposed(by: disposeBag)
     }
 }
