@@ -34,7 +34,7 @@ final class MakeNicknameViewModel: ViewModelType {
         
         input.didNicknameTextFieldChange
             .subscribe(onNext: { text in
-                output.nickname.accept(self.checkMaxLength(text))
+                output.nickname.accept(self.checkMaxLength(text: text))
                 output.isValid.accept(self.checkNicknameValidation(text))
             })
             .disposed(by: disposeBag)
@@ -46,8 +46,8 @@ final class MakeNicknameViewModel: ViewModelType {
 extension MakeNicknameViewModel {
     
     /// 최대 8글자로 제한하는 메서드
-    private func checkMaxLength(_ text: String) -> String {
-        if text.count > 8 {
+    private func checkMaxLength(text: String, maxLength: Int = 8) -> String {
+        if text.count > maxLength {
             let index = text.index(text.startIndex, offsetBy: 8)
             return String(text[..<index])
         } else {
@@ -59,6 +59,6 @@ extension MakeNicknameViewModel {
     private func checkNicknameValidation(_ text: String) -> Bool {
         
         // TODO: 닉네임 검사 로직 수정 예정
-        return text != "닉네임" ? true : false
+        return text != "닉네임"
     }
 }

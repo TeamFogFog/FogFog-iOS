@@ -50,7 +50,7 @@ final class FogNavigationView: BaseView {
 extension FogNavigationView {
     
     /// 타이틀 설정 메서드
-    func setTitleLabel(title: String) {
+    func setTitle(_ title: String) {
         titleLabel.text = title
     }
 }

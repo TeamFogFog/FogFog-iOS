@@ -51,7 +51,7 @@ final class MakeNicknameViewController: BaseViewController {
     override func setStyle() {
         view.backgroundColor = .white
         backView.backgroundColor = .grayBlack
-        naviView.setTitleLabel(title: "닉네임 설정")
+        naviView.setTitle("닉네임 설정")
         [errorImageView, errorLabel].forEach { $0.isHidden = true }
         
         nicknameTextField.do {
@@ -136,11 +136,7 @@ final class MakeNicknameViewController: BaseViewController {
             .asDriver(onErrorJustReturn: false)
             .drive(onNext: { [weak self] result in
                 [self?.errorImageView, self?.errorLabel].forEach { $0?.isHidden = result }
-                if result {
-                    self?.nicknameTextField.setBoderColor(color: .fogBlue)
-                } else {
-                    self?.nicknameTextField.setBoderColor(color: .etcRed)
-                }
+                self?.nicknameTextField.setBoderColor(color: result ? .fogBlue : .etcRed)
             })
             .disposed(by: disposeBag)
     }
