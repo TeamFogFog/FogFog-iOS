@@ -41,6 +41,7 @@
 		BD46305C292A25B300E9E9C2 /* BottomDetailRootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD46305B292A25B300E9E9C2 /* BottomDetailRootView.swift */; };
 		BD4B550F292A29EC00ECFD04 /* SmokePlace.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD4B550E292A29EC00ECFD04 /* SmokePlace.swift */; };
 		BDC20F9A293B446D00B9A2E7 /* SplashViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDC20F99293B446D00B9A2E7 /* SplashViewController.swift */; };
+		BDC20F9D293B44B600B9A2E7 /* FogToast.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDC20F9C293B44B600B9A2E7 /* FogToast.swift */; };
 		BDC50ECB292A07B2002378C6 /* GoogleMap.plist in Resources */ = {isa = PBXBuildFile; fileRef = BDC50ECA292A07B2002378C6 /* GoogleMap.plist */; };
 		BDC50ED2292A07EB002378C6 /* BottomDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDC50ED1292A07EB002378C6 /* BottomDetailViewModel.swift */; };
 		BDC50ED6292A09BD002378C6 /* BaseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDC50ED5292A09BD002378C6 /* BaseView.swift */; };
@@ -130,6 +131,7 @@
 		BD46305B292A25B300E9E9C2 /* BottomDetailRootView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BottomDetailRootView.swift; sourceTree = "<group>"; };
 		BD4B550E292A29EC00ECFD04 /* SmokePlace.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SmokePlace.swift; sourceTree = "<group>"; };
 		BDC20F99293B446D00B9A2E7 /* SplashViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashViewController.swift; sourceTree = "<group>"; };
+		BDC20F9C293B44B600B9A2E7 /* FogToast.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FogToast.swift; sourceTree = "<group>"; };
 		BDC50ECA292A07B2002378C6 /* GoogleMap.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = GoogleMap.plist; sourceTree = "<group>"; };
 		BDC50ED1292A07EB002378C6 /* BottomDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BottomDetailViewModel.swift; sourceTree = "<group>"; };
 		BDC50ED5292A09BD002378C6 /* BaseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseView.swift; sourceTree = "<group>"; };
@@ -315,6 +317,14 @@
 			path = View;
 			sourceTree = "<group>";
 		};
+		BDC20F9B293B44A000B9A2E7 /* FogToast */ = {
+			isa = PBXGroup;
+			children = (
+				BDC20F9C293B44B600B9A2E7 /* FogToast.swift */,
+			);
+			path = FogToast;
+			sourceTree = "<group>";
+		};
 		BDC50ECD292A07CD002378C6 /* View */ = {
 			isa = PBXGroup;
 			children = (
@@ -477,6 +487,7 @@
 		ECA4256629225303004DFDAF /* UIComponents */ = {
 			isa = PBXGroup;
 			children = (
+				BDC20F9B293B44A000B9A2E7 /* FogToast */,
 				BD347C61292FD4F1009F52BA /* FogButton */,
 				BD347C56292FD1A9009F52BA /* RoadPopUp */,
 				7761D4F5292F3749003971DC /* FogNavigationView.swift */,
@@ -987,6 +998,7 @@
 				ECA425782922545C004DFDAF /* MapViewController.swift in Sources */,
 				BD347C63292FEA15009F52BA /* RoadPopUpView.swift in Sources */,
 				ECA425D72924DA66004DFDAF /* Bundle + Extension.swift in Sources */,
+				BDC20F9D293B44B600B9A2E7 /* FogToast.swift in Sources */,
 				ECA425E429262A37004DFDAF /* ImplMapCoordinator.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
