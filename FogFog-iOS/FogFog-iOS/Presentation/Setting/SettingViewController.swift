@@ -35,12 +35,14 @@ final class SettingViewController: BaseViewController {
     // MARK: Life Cycle
     override func viewDidLoad() {
         super.viewDidLoad()
-    
+        
+        registerCell()
     }
     
     // MARK: UI
     override func setStyle() {
-        view.backgroundColor = .grayGray10
+        view.backgroundColor = .white
+        
         naviView.setTitle("설정")
         
         logoutButton.do {
@@ -49,6 +51,15 @@ final class SettingViewController: BaseViewController {
             $0.titleLabel?.font = .pretendardM(14)
             $0.backgroundColor = .grayGray10
         }
+        
+        settingTableView.do {
+            $0.separatorStyle = .none
+            $0.backgroundColor = .white
+            $0.rowHeight = UITableView.automaticDimension
+            $0.isScrollEnabled = false
+        }
+        
+        bindSettingTableView()
     }
     
     override func setLayout() {
@@ -68,5 +79,40 @@ final class SettingViewController: BaseViewController {
             $0.leading.trailing.bottom.equalToSuperview()
             $0.height.equalTo(64)
         }
+    }
+    
+    private func bindSettingTableView() {
+        let list = Observable.just(["", "약관 및 정책", "서비스 이용약관", "개인정보 처리 방침", "위치기반서비스 이용약관", "기타", "회원 탈퇴"])
+        
+        list.bind(to: settingTableView.rx.items) { (tableView, index, item) in
+            let indexPath = IndexPath(row: index, section: 0)
+            guard let editNicknameCell = tableView.dequeueReusableCell(withIdentifier: SettingNicknameTableViewCell.className, for: indexPath) as? SettingNicknameTableViewCell,
+                  let titleCell = tableView.dequeueReusableCell(withIdentifier: SettingTitleTableViewCell.className, for: indexPath) as? SettingTitleTableViewCell,
+                  let settingCell = tableView.dequeueReusableCell(withIdentifier: SettingListTableViewCell.className, for: indexPath) as? SettingListTableViewCell else { return UITableViewCell() }
+            
+            switch indexPath.row {
+            case 0:
+                return editNicknameCell
+            case 1:
+                titleCell.lineView.isHidden = true
+                titleCell.setData(title: item)
+                return titleCell
+            case 5:
+                titleCell.setData(title: item)
+                return titleCell
+            default:
+                settingCell.setData(title: item)
+                return settingCell
+            }
+        }
+        .disposed(by: disposeBag)
+        
+    }
+    
+    // MARK: Custom Methods
+    private func registerCell() {
+        settingTableView.register(SettingNicknameTableViewCell.self, forCellReuseIdentifier: SettingNicknameTableViewCell.className)
+        settingTableView.register(SettingTitleTableViewCell.self, forCellReuseIdentifier: SettingTitleTableViewCell.className)
+        settingTableView.register(SettingListTableViewCell.self, forCellReuseIdentifier: SettingListTableViewCell.className)
     }
 }
