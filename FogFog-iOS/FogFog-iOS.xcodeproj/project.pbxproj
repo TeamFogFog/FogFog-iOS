@@ -17,6 +17,7 @@
 		77650202295448AE002BF7AD /* SettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77650201295448AE002BF7AD /* SettingViewController.swift */; };
 		7765020429544937002BF7AD /* SettingViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7765020329544937002BF7AD /* SettingViewModel.swift */; };
 		77650210295462D7002BF7AD /* UIViewController + Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7765020F295462D7002BF7AD /* UIViewController + Extension.swift */; };
+		77650212295463B8002BF7AD /* BaseTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77650211295463B8002BF7AD /* BaseTableViewCell.swift */; };
 		77D32D41292A0EDD006E6314 /* ViewModelType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77D32D40292A0EDD006E6314 /* ViewModelType.swift */; };
 		77D32D43292CD6A3006E6314 /* SideBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77D32D42292CD6A2006E6314 /* SideBarView.swift */; };
 		77E70F462930951100F55CD7 /* UITextField + Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77E70F452930951100F55CD7 /* UITextField + Extension.swift */; };
@@ -115,6 +116,7 @@
 		77650201295448AE002BF7AD /* SettingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingViewController.swift; sourceTree = "<group>"; };
 		7765020329544937002BF7AD /* SettingViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingViewModel.swift; sourceTree = "<group>"; };
 		7765020F295462D7002BF7AD /* UIViewController + Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController + Extension.swift"; sourceTree = "<group>"; };
+		77650211295463B8002BF7AD /* BaseTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseTableViewCell.swift; sourceTree = "<group>"; };
 		77D32D40292A0EDD006E6314 /* ViewModelType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModelType.swift; sourceTree = "<group>"; };
 		77D32D42292CD6A2006E6314 /* SideBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideBarView.swift; sourceTree = "<group>"; };
 		77E70F452930951100F55CD7 /* UITextField + Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITextField + Extension.swift"; sourceTree = "<group>"; };
@@ -444,6 +446,7 @@
 			children = (
 				ECA4257D292254C6004DFDAF /* BaseViewController.swift */,
 				BDC50ED5292A09BD002378C6 /* BaseView.swift */,
+				77650211295463B8002BF7AD /* BaseTableViewCell.swift */,
 			);
 			path = Base;
 			sourceTree = "<group>";
@@ -986,6 +989,7 @@
 				ECA4257E292254C6004DFDAF /* BaseViewController.swift in Sources */,
 				7761D4F6292F3749003971DC /* FogNavigationView.swift in Sources */,
 				77650202295448AE002BF7AD /* SettingViewController.swift in Sources */,
+				77650212295463B8002BF7AD /* BaseTableViewCell.swift in Sources */,
 				ECA425782922545C004DFDAF /* MapViewController.swift in Sources */,
 				BD347C63292FEA15009F52BA /* RoadPopUpView.swift in Sources */,
 				ECA425D72924DA66004DFDAF /* Bundle + Extension.swift in Sources */,
