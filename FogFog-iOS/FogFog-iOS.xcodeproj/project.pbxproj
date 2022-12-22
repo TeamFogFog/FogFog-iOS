@@ -15,6 +15,7 @@
 		7761D4F4292F3471003971DC /* MakeNicknameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7761D4F3292F3471003971DC /* MakeNicknameViewController.swift */; };
 		7761D4F6292F3749003971DC /* FogNavigationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7761D4F5292F3749003971DC /* FogNavigationView.swift */; };
 		77650202295448AE002BF7AD /* SettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77650201295448AE002BF7AD /* SettingViewController.swift */; };
+		77650210295462D7002BF7AD /* UIViewController + Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7765020F295462D7002BF7AD /* UIViewController + Extension.swift */; };
 		77D32D41292A0EDD006E6314 /* ViewModelType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77D32D40292A0EDD006E6314 /* ViewModelType.swift */; };
 		77D32D43292CD6A3006E6314 /* SideBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77D32D42292CD6A2006E6314 /* SideBarView.swift */; };
 		77E70F462930951100F55CD7 /* UITextField + Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77E70F452930951100F55CD7 /* UITextField + Extension.swift */; };
@@ -111,6 +112,7 @@
 		7761D4F3292F3471003971DC /* MakeNicknameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MakeNicknameViewController.swift; sourceTree = "<group>"; };
 		7761D4F5292F3749003971DC /* FogNavigationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FogNavigationView.swift; sourceTree = "<group>"; };
 		77650201295448AE002BF7AD /* SettingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingViewController.swift; sourceTree = "<group>"; };
+		7765020F295462D7002BF7AD /* UIViewController + Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController + Extension.swift"; sourceTree = "<group>"; };
 		77D32D40292A0EDD006E6314 /* ViewModelType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModelType.swift; sourceTree = "<group>"; };
 		77D32D42292CD6A2006E6314 /* SideBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideBarView.swift; sourceTree = "<group>"; };
 		77E70F452930951100F55CD7 /* UITextField + Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITextField + Extension.swift"; sourceTree = "<group>"; };
@@ -553,6 +555,7 @@
 				77F1D82E2927F2CC00F31D0C /* Adjusted + Extension.swift */,
 				77E70F452930951100F55CD7 /* UITextField + Extension.swift */,
 				77E70F4729309A6D00F55CD7 /* UILabel + Extension.swift */,
+				7765020F295462D7002BF7AD /* UIViewController + Extension.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -942,6 +945,7 @@
 				77F1D82F2927F2CC00F31D0C /* Adjusted + Extension.swift in Sources */,
 				ECA4257629225450004DFDAF /* SplashViewController.swift in Sources */,
 				77E70F4A2930D0FA00F55CD7 /* MakeNicknameViewModel.swift in Sources */,
+				77650210295462D7002BF7AD /* UIViewController + Extension.swift in Sources */,
 				ECA425DA29253155004DFDAF /* Coordinator.swift in Sources */,
 				ECA425F4292634A6004DFDAF /* LoginViewController.swift in Sources */,
 				ECA425CF292382AD004DFDAF /* NavigationView.swift in Sources */,
