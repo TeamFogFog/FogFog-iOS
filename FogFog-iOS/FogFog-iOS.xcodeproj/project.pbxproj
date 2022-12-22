@@ -277,6 +277,42 @@
 			path = ViewController;
 			sourceTree = "<group>";
 		};
+		7765020B295453BB002BF7AD /* Setting */ = {
+			isa = PBXGroup;
+			children = (
+				776502192954ADA8002BF7AD /* ViewController */,
+				7765021A2954ADB4002BF7AD /* ViewModel */,
+				7765020C295461AC002BF7AD /* Cell */,
+			);
+			path = Setting;
+			sourceTree = "<group>";
+		};
+		7765020C295461AC002BF7AD /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				7765020D29546239002BF7AD /* SettingListTableViewCell.swift */,
+				77650215295487A7002BF7AD /* SettingNicknameTableViewCell.swift */,
+				776502172954A3BA002BF7AD /* SettingTitleTableViewCell.swift */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		776502192954ADA8002BF7AD /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				77650201295448AE002BF7AD /* SettingViewController.swift */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		7765021A2954ADB4002BF7AD /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				7765020329544937002BF7AD /* SettingViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
 		77D32D3F292A0EC7006E6314 /* Protocol */ = {
 			isa = PBXGroup;
 			children = (
@@ -409,6 +445,7 @@
 				ECA425F129263486004DFDAF /* Login */,
 				ECA4256A29225355004DFDAF /* Map */,
 				ECA425692922534E004DFDAF /* BottomDetailView */,
+				7765020B295453BB002BF7AD /* Setting */,
 				ECA4256829225346004DFDAF /* SideBar */,
 			);
 			path = Presentation;
