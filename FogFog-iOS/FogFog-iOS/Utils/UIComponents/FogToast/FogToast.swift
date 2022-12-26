@@ -22,6 +22,11 @@ final class FogToast: BaseView {
     init(style: FogToastStyle = FogToastStyle.default) {
         super.init(frame: .zero)
         self.style = style
+        print("FogToast init")
+    }
+    
+    deinit {
+        print("FogToast Deinit")
     }
 
     override func setStyle() {
@@ -73,38 +78,34 @@ extension FogToast {
                     $0.top.equalTo(viewController.view.safeAreaLayoutGuide).offset(-size.height * 2)
                 }
                 
-                DispatchQueue.main.asyncAfter(
-                    deadline: DispatchTime.now(),
-                    execute: {
-                        self.snp.updateConstraints {
-                            $0.top.equalTo(viewController.view.safeAreaLayoutGuide).inset(16)
-                        }
-                        
-                        UIView.animate(withDuration: 0.5) {
-                            viewController.view.layoutIfNeeded()
-                        } completion: { _ in
-                            completion()
-                        }
-                    })
+                DispatchQueue.main.async {
+                    self.snp.updateConstraints {
+                        $0.top.equalTo(viewController.view.safeAreaLayoutGuide).inset(16)
+                    }
+                    
+                    UIView.animate(withDuration: 0.5) {
+                        viewController.view.layoutIfNeeded()
+                    } completion: { _ in
+                        completion()
+                    }
+                }
                 
             case .bottomToTop:
                 self.snp.makeConstraints {
                     $0.bottom.equalTo(viewController.view.safeAreaLayoutGuide).offset(size.height * 2)
                 }
                 
-                DispatchQueue.main.asyncAfter(
-                    deadline: DispatchTime.now(),
-                    execute: {
-                        self.snp.updateConstraints {
-                            $0.bottom.equalTo(viewController.view.safeAreaLayoutGuide).inset(16)
-                        }
-                        
-                        UIView.animate(withDuration: 0.5) {
-                            viewController.view.layoutIfNeeded()
-                        } completion: { _ in
-                            completion()
-                        }
-                    })
+                DispatchQueue.main.async {
+                    self.snp.updateConstraints {
+                        $0.bottom.equalTo(viewController.view.safeAreaLayoutGuide).inset(16)
+                    }
+                    
+                    UIView.animate(withDuration: 0.5) {
+                        viewController.view.layoutIfNeeded()
+                    } completion: { _ in
+                        completion()
+                    }
+                }
             }
             
             if !self.style.isMaintained {
