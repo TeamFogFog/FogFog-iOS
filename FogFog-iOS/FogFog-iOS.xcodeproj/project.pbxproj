@@ -47,6 +47,8 @@
 		BD347C65292FEB08009F52BA /* RoadPopUpViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD347C64292FEB08009F52BA /* RoadPopUpViewModel.swift */; };
 		BD46305C292A25B300E9E9C2 /* BottomDetailRootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD46305B292A25B300E9E9C2 /* BottomDetailRootView.swift */; };
 		BD4B550F292A29EC00ECFD04 /* SmokePlace.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD4B550E292A29EC00ECFD04 /* SmokePlace.swift */; };
+		BDC20F9A293B446D00B9A2E7 /* SplashViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDC20F99293B446D00B9A2E7 /* SplashViewController.swift */; };
+		BDC20F9D293B44B600B9A2E7 /* FogToast.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDC20F9C293B44B600B9A2E7 /* FogToast.swift */; };
 		BDC50ECB292A07B2002378C6 /* GoogleMap.plist in Resources */ = {isa = PBXBuildFile; fileRef = BDC50ECA292A07B2002378C6 /* GoogleMap.plist */; };
 		BDC50ED2292A07EB002378C6 /* BottomDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDC50ED1292A07EB002378C6 /* BottomDetailViewModel.swift */; };
 		BDC50ED6292A09BD002378C6 /* BaseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDC50ED5292A09BD002378C6 /* BaseView.swift */; };
@@ -60,7 +62,6 @@
 		ECA4255029224DBB004DFDAF /* FogFog_iOSUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECA4254F29224DBB004DFDAF /* FogFog_iOSUITestsLaunchTests.swift */; };
 		ECA4257229225409004DFDAF /* Image.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ECA4257129225409004DFDAF /* Image.xcassets */; };
 		ECA425742922543B004DFDAF /* Color.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ECA425732922543B004DFDAF /* Color.xcassets */; };
-		ECA4257629225450004DFDAF /* SplashViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECA4257529225450004DFDAF /* SplashViewController.swift */; };
 		ECA425782922545C004DFDAF /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECA425772922545C004DFDAF /* MapViewController.swift */; };
 		ECA4257A292254A8004DFDAF /* BottomDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECA42579292254A8004DFDAF /* BottomDetailViewController.swift */; };
 		ECA4257C292254B0004DFDAF /* SideBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECA4257B292254B0004DFDAF /* SideBarViewController.swift */; };
@@ -143,6 +144,8 @@
 		BD347C64292FEB08009F52BA /* RoadPopUpViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoadPopUpViewModel.swift; sourceTree = "<group>"; };
 		BD46305B292A25B300E9E9C2 /* BottomDetailRootView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BottomDetailRootView.swift; sourceTree = "<group>"; };
 		BD4B550E292A29EC00ECFD04 /* SmokePlace.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SmokePlace.swift; sourceTree = "<group>"; };
+		BDC20F99293B446D00B9A2E7 /* SplashViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashViewController.swift; sourceTree = "<group>"; };
+		BDC20F9C293B44B600B9A2E7 /* FogToast.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FogToast.swift; sourceTree = "<group>"; };
 		BDC50ECA292A07B2002378C6 /* GoogleMap.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = GoogleMap.plist; sourceTree = "<group>"; };
 		BDC50ED1292A07EB002378C6 /* BottomDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BottomDetailViewModel.swift; sourceTree = "<group>"; };
 		BDC50ED5292A09BD002378C6 /* BaseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseView.swift; sourceTree = "<group>"; };
@@ -162,7 +165,6 @@
 		ECA4254F29224DBB004DFDAF /* FogFog_iOSUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FogFog_iOSUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		ECA4257129225409004DFDAF /* Image.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Image.xcassets; sourceTree = "<group>"; };
 		ECA425732922543B004DFDAF /* Color.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Color.xcassets; sourceTree = "<group>"; };
-		ECA4257529225450004DFDAF /* SplashViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = SplashViewController.swift; path = "FogFog-iOS/Presentation/BottomDetailView/SplashViewController.swift"; sourceTree = SOURCE_ROOT; };
 		ECA425772922545C004DFDAF /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 		ECA42579292254A8004DFDAF /* BottomDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BottomDetailViewController.swift; sourceTree = "<group>"; };
 		ECA4257B292254B0004DFDAF /* SideBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideBarViewController.swift; sourceTree = "<group>"; };
@@ -349,6 +351,30 @@
 			path = Place;
 			sourceTree = "<group>";
 		};
+		BDC20F97293B446000B9A2E7 /* Splash */ = {
+			isa = PBXGroup;
+			children = (
+				BDC20F98293B446300B9A2E7 /* View */,
+			);
+			path = Splash;
+			sourceTree = "<group>";
+		};
+		BDC20F98293B446300B9A2E7 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				BDC20F99293B446D00B9A2E7 /* SplashViewController.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		BDC20F9B293B44A000B9A2E7 /* FogToast */ = {
+			isa = PBXGroup;
+			children = (
+				BDC20F9C293B44B600B9A2E7 /* FogToast.swift */,
+			);
+			path = FogToast;
+			sourceTree = "<group>";
+		};
 		BDC50ECD292A07CD002378C6 /* View */ = {
 			isa = PBXGroup;
 			children = (
@@ -440,8 +466,8 @@
 		ECA4255F2922528B004DFDAF /* Presentation */ = {
 			isa = PBXGroup;
 			children = (
+				BDC20F97293B446000B9A2E7 /* Splash */,
 				ECA425F229263495004DFDAF /* Common */,
-				ECA425672922533A004DFDAF /* Splash */,
 				ECA425F129263486004DFDAF /* Login */,
 				ECA4256A29225355004DFDAF /* Map */,
 				ECA425692922534E004DFDAF /* BottomDetailView */,
@@ -513,20 +539,13 @@
 		ECA4256629225303004DFDAF /* UIComponents */ = {
 			isa = PBXGroup;
 			children = (
+				BDC20F9B293B44A000B9A2E7 /* FogToast */,
 				BD347C61292FD4F1009F52BA /* FogButton */,
 				BD347C56292FD1A9009F52BA /* RoadPopUp */,
 				7761D4F5292F3749003971DC /* FogNavigationView.swift */,
 				77F899DD29308C6000806896 /* FogTextField.swift */,
 			);
 			path = UIComponents;
-			sourceTree = "<group>";
-		};
-		ECA425672922533A004DFDAF /* Splash */ = {
-			isa = PBXGroup;
-			children = (
-				ECA4257529225450004DFDAF /* SplashViewController.swift */,
-			);
-			path = Splash;
 			sourceTree = "<group>";
 		};
 		ECA4256829225346004DFDAF /* SideBar */ = {
@@ -1033,12 +1052,14 @@
 				77D32D43292CD6A3006E6314 /* SideBarView.swift in Sources */,
 				BD347C60292FD4C8009F52BA /* FogButton.swift in Sources */,
 				ECA4257E292254C6004DFDAF /* BaseViewController.swift in Sources */,
+				BDC20F9A293B446D00B9A2E7 /* SplashViewController.swift in Sources */,
 				7761D4F6292F3749003971DC /* FogNavigationView.swift in Sources */,
 				77650202295448AE002BF7AD /* SettingViewController.swift in Sources */,
 				77650212295463B8002BF7AD /* BaseTableViewCell.swift in Sources */,
 				ECA425782922545C004DFDAF /* MapViewController.swift in Sources */,
 				BD347C63292FEA15009F52BA /* RoadPopUpView.swift in Sources */,
 				ECA425D72924DA66004DFDAF /* Bundle + Extension.swift in Sources */,
+				BDC20F9D293B44B600B9A2E7 /* FogToast.swift in Sources */,
 				ECA425E429262A37004DFDAF /* ImplMapCoordinator.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
