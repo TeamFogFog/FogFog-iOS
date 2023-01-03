@@ -14,6 +14,13 @@
 		772577DC2934924E008273A7 /* RxGesture in Frameworks */ = {isa = PBXBuildFile; productRef = 772577DB2934924E008273A7 /* RxGesture */; };
 		7761D4F4292F3471003971DC /* MakeNicknameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7761D4F3292F3471003971DC /* MakeNicknameViewController.swift */; };
 		7761D4F6292F3749003971DC /* FogNavigationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7761D4F5292F3749003971DC /* FogNavigationView.swift */; };
+		77650202295448AE002BF7AD /* SettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77650201295448AE002BF7AD /* SettingViewController.swift */; };
+		7765020429544937002BF7AD /* SettingViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7765020329544937002BF7AD /* SettingViewModel.swift */; };
+		7765020E29546239002BF7AD /* SettingListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7765020D29546239002BF7AD /* SettingListTableViewCell.swift */; };
+		77650210295462D7002BF7AD /* UIViewController + Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7765020F295462D7002BF7AD /* UIViewController + Extension.swift */; };
+		77650212295463B8002BF7AD /* BaseTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77650211295463B8002BF7AD /* BaseTableViewCell.swift */; };
+		77650216295487A7002BF7AD /* SettingNicknameTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77650215295487A7002BF7AD /* SettingNicknameTableViewCell.swift */; };
+		776502182954A3BA002BF7AD /* SettingTitleTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 776502172954A3BA002BF7AD /* SettingTitleTableViewCell.swift */; };
 		77D32D41292A0EDD006E6314 /* ViewModelType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77D32D40292A0EDD006E6314 /* ViewModelType.swift */; };
 		77D32D43292CD6A3006E6314 /* SideBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77D32D42292CD6A2006E6314 /* SideBarView.swift */; };
 		77E70F462930951100F55CD7 /* UITextField + Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77E70F452930951100F55CD7 /* UITextField + Extension.swift */; };
@@ -110,6 +117,13 @@
 		568E5A05A08D8D049D3D8E62 /* Pods-FogFog-iOSTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FogFog-iOSTests.release.xcconfig"; path = "Target Support Files/Pods-FogFog-iOSTests/Pods-FogFog-iOSTests.release.xcconfig"; sourceTree = "<group>"; };
 		7761D4F3292F3471003971DC /* MakeNicknameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MakeNicknameViewController.swift; sourceTree = "<group>"; };
 		7761D4F5292F3749003971DC /* FogNavigationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FogNavigationView.swift; sourceTree = "<group>"; };
+		77650201295448AE002BF7AD /* SettingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingViewController.swift; sourceTree = "<group>"; };
+		7765020329544937002BF7AD /* SettingViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingViewModel.swift; sourceTree = "<group>"; };
+		7765020D29546239002BF7AD /* SettingListTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingListTableViewCell.swift; sourceTree = "<group>"; };
+		7765020F295462D7002BF7AD /* UIViewController + Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController + Extension.swift"; sourceTree = "<group>"; };
+		77650211295463B8002BF7AD /* BaseTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseTableViewCell.swift; sourceTree = "<group>"; };
+		77650215295487A7002BF7AD /* SettingNicknameTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingNicknameTableViewCell.swift; sourceTree = "<group>"; };
+		776502172954A3BA002BF7AD /* SettingTitleTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingTitleTableViewCell.swift; sourceTree = "<group>"; };
 		77D32D40292A0EDD006E6314 /* ViewModelType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModelType.swift; sourceTree = "<group>"; };
 		77D32D42292CD6A2006E6314 /* SideBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideBarView.swift; sourceTree = "<group>"; };
 		77E70F452930951100F55CD7 /* UITextField + Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITextField + Extension.swift"; sourceTree = "<group>"; };
@@ -263,6 +277,42 @@
 				7761D4F3292F3471003971DC /* MakeNicknameViewController.swift */,
 			);
 			path = ViewController;
+			sourceTree = "<group>";
+		};
+		7765020B295453BB002BF7AD /* Setting */ = {
+			isa = PBXGroup;
+			children = (
+				776502192954ADA8002BF7AD /* ViewController */,
+				7765021A2954ADB4002BF7AD /* ViewModel */,
+				7765020C295461AC002BF7AD /* Cell */,
+			);
+			path = Setting;
+			sourceTree = "<group>";
+		};
+		7765020C295461AC002BF7AD /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				7765020D29546239002BF7AD /* SettingListTableViewCell.swift */,
+				77650215295487A7002BF7AD /* SettingNicknameTableViewCell.swift */,
+				776502172954A3BA002BF7AD /* SettingTitleTableViewCell.swift */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		776502192954ADA8002BF7AD /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				77650201295448AE002BF7AD /* SettingViewController.swift */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		7765021A2954ADB4002BF7AD /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				7765020329544937002BF7AD /* SettingViewModel.swift */,
+			);
+			path = ViewModel;
 			sourceTree = "<group>";
 		};
 		77D32D3F292A0EC7006E6314 /* Protocol */ = {
@@ -421,6 +471,7 @@
 				ECA425F129263486004DFDAF /* Login */,
 				ECA4256A29225355004DFDAF /* Map */,
 				ECA425692922534E004DFDAF /* BottomDetailView */,
+				7765020B295453BB002BF7AD /* Setting */,
 				ECA4256829225346004DFDAF /* SideBar */,
 			);
 			path = Presentation;
@@ -464,6 +515,7 @@
 			children = (
 				ECA4257D292254C6004DFDAF /* BaseViewController.swift */,
 				BDC50ED5292A09BD002378C6 /* BaseView.swift */,
+				77650211295463B8002BF7AD /* BaseTableViewCell.swift */,
 			);
 			path = Base;
 			sourceTree = "<group>";
@@ -570,6 +622,7 @@
 				77F1D82E2927F2CC00F31D0C /* Adjusted + Extension.swift */,
 				77E70F452930951100F55CD7 /* UITextField + Extension.swift */,
 				77E70F4729309A6D00F55CD7 /* UILabel + Extension.swift */,
+				7765020F295462D7002BF7AD /* UIViewController + Extension.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -956,8 +1009,13 @@
 			files = (
 				ECA4259929229BD9004DFDAF /* UIFont + Extension.swift in Sources */,
 				BD347C58292FD1BC009F52BA /* RoadPopUpViewController.swift in Sources */,
+				7765020429544937002BF7AD /* SettingViewModel.swift in Sources */,
 				77F1D82F2927F2CC00F31D0C /* Adjusted + Extension.swift in Sources */,
+				77650216295487A7002BF7AD /* SettingNicknameTableViewCell.swift in Sources */,
+				ECA4257629225450004DFDAF /* SplashViewController.swift in Sources */,
 				77E70F4A2930D0FA00F55CD7 /* MakeNicknameViewModel.swift in Sources */,
+				77650210295462D7002BF7AD /* UIViewController + Extension.swift in Sources */,
+				7765020E29546239002BF7AD /* SettingListTableViewCell.swift in Sources */,
 				ECA425DA29253155004DFDAF /* Coordinator.swift in Sources */,
 				ECA425F4292634A6004DFDAF /* LoginViewController.swift in Sources */,
 				ECA425CF292382AD004DFDAF /* NavigationView.swift in Sources */,
@@ -988,6 +1046,7 @@
 				77D32D41292A0EDD006E6314 /* ViewModelType.swift in Sources */,
 				ECA425E2292532CA004DFDAF /* ImplAppCoordinator.swift in Sources */,
 				ECA4252F29224DB8004DFDAF /* SceneDelegate.swift in Sources */,
+				776502182954A3BA002BF7AD /* SettingTitleTableViewCell.swift in Sources */,
 				ECA425EC29262CF8004DFDAF /* MapViewModel.swift in Sources */,
 				7761D4F4292F3471003971DC /* MakeNicknameViewController.swift in Sources */,
 				77D32D43292CD6A3006E6314 /* SideBarView.swift in Sources */,
@@ -995,6 +1054,8 @@
 				ECA4257E292254C6004DFDAF /* BaseViewController.swift in Sources */,
 				BDC20F9A293B446D00B9A2E7 /* SplashViewController.swift in Sources */,
 				7761D4F6292F3749003971DC /* FogNavigationView.swift in Sources */,
+				77650202295448AE002BF7AD /* SettingViewController.swift in Sources */,
+				77650212295463B8002BF7AD /* BaseTableViewCell.swift in Sources */,
 				ECA425782922545C004DFDAF /* MapViewController.swift in Sources */,
 				BD347C63292FEA15009F52BA /* RoadPopUpView.swift in Sources */,
 				ECA425D72924DA66004DFDAF /* Bundle + Extension.swift in Sources */,
