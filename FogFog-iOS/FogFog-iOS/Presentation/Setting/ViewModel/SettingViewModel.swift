@@ -13,6 +13,11 @@ import RxSwift
 final class SettingViewModel: ViewModelType {
     
     var disposeBag = DisposeBag()
+    private weak var coordinator: SettingCoordinator?
+    
+    init(coordinator: SettingCoordinator?) {
+        self.coordinator = coordinator
+    }
     
     struct Input {
         
