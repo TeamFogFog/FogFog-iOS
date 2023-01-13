@@ -64,7 +64,6 @@
 		ECA425742922543B004DFDAF /* Color.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ECA425732922543B004DFDAF /* Color.xcassets */; };
 		ECA425782922545C004DFDAF /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECA425772922545C004DFDAF /* MapViewController.swift */; };
 		ECA4257A292254A8004DFDAF /* BottomDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECA42579292254A8004DFDAF /* BottomDetailViewController.swift */; };
-		ECA4257C292254B0004DFDAF /* SideBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECA4257B292254B0004DFDAF /* SideBarViewController.swift */; };
 		ECA4257E292254C6004DFDAF /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECA4257D292254C6004DFDAF /* BaseViewController.swift */; };
 		ECA4259729229B15004DFDAF /* FogFont.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECA4259629229B15004DFDAF /* FogFont.swift */; };
 		ECA4259929229BD9004DFDAF /* UIFont + Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECA4259829229BD9004DFDAF /* UIFont + Extension.swift */; };
@@ -167,7 +166,6 @@
 		ECA425732922543B004DFDAF /* Color.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Color.xcassets; sourceTree = "<group>"; };
 		ECA425772922545C004DFDAF /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 		ECA42579292254A8004DFDAF /* BottomDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BottomDetailViewController.swift; sourceTree = "<group>"; };
-		ECA4257B292254B0004DFDAF /* SideBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideBarViewController.swift; sourceTree = "<group>"; };
 		ECA4257D292254C6004DFDAF /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		ECA4258129225A41004DFDAF /* .gitkeep */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitkeep; sourceTree = "<group>"; };
 		ECA4258729225A7D004DFDAF /* .gitkeep */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitkeep; sourceTree = "<group>"; };
@@ -551,7 +549,6 @@
 		ECA4256829225346004DFDAF /* SideBar */ = {
 			isa = PBXGroup;
 			children = (
-				ECA4257B292254B0004DFDAF /* SideBarViewController.swift */,
 				77D32D42292CD6A2006E6314 /* SideBarView.swift */,
 			);
 			path = SideBar;
@@ -1012,7 +1009,6 @@
 				7765020429544937002BF7AD /* SettingViewModel.swift in Sources */,
 				77F1D82F2927F2CC00F31D0C /* Adjusted + Extension.swift in Sources */,
 				77650216295487A7002BF7AD /* SettingNicknameTableViewCell.swift in Sources */,
-				ECA4257629225450004DFDAF /* SplashViewController.swift in Sources */,
 				77E70F4A2930D0FA00F55CD7 /* MakeNicknameViewModel.swift in Sources */,
 				77650210295462D7002BF7AD /* UIViewController + Extension.swift in Sources */,
 				7765020E29546239002BF7AD /* SettingListTableViewCell.swift in Sources */,
@@ -1024,7 +1020,6 @@
 				ECA425E0292532B7004DFDAF /* AppCoordinator.swift in Sources */,
 				ECA425E629262A42004DFDAF /* ImplLoginCoordinator.swift in Sources */,
 				ECA425DC29253259004DFDAF /* CoordinatorFinishDelegate.swift in Sources */,
-				ECA4257C292254B0004DFDAF /* SideBarViewController.swift in Sources */,
 				ECA4252D29224DB8004DFDAF /* AppDelegate.swift in Sources */,
 				ECA425EA29262A80004DFDAF /* LoginCoordinator.swift in Sources */,
 				ECA425DE29253292004DFDAF /* CoordinatorCase.swift in Sources */,
