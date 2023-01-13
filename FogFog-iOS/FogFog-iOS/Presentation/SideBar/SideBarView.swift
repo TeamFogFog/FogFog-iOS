@@ -17,7 +17,7 @@ final class SideBarView: BaseView {
     private let logoImageView = UIImageView()
     private let titleLabel = UILabel()
     private let nicknameLabel = UILabel()
-    private let settingButton = UIButton()
+    let settingButton = UIButton()
     private let mapSettingContainerView = UIView()
     private let mapLogoImageView = UIImageView()
     private let mapSettingTitleLabel = UILabel()

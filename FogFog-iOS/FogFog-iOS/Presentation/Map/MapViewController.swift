@@ -27,8 +27,6 @@ final class MapViewController: BaseViewController {
     private var currentLocation: CLLocation!
     
     private var viewModel: MapViewModel
-    private lazy var input = MapViewModel.Input(tapMenuButton: navigationView.menuButton.rx.tap.asSignal(), tapBlurEffectView: tapBlurEffectView.asSignal())
-    private lazy var output = viewModel.transform(input: input)
     private let tapBlurEffectView = PublishRelay<Void>()
     private let disposeBag = DisposeBag()
     
@@ -93,11 +91,21 @@ final class MapViewController: BaseViewController {
 extension MapViewController {
     
     private func bind() {
+        let input = MapViewModel.Input(
+            tapMenuButton: navigationView.menuButton.rx.tap.asSignal(),
+            tapBlurEffectView: tapBlurEffectView.asSignal(),
+            tapSettingButton: sideBarView.settingButton.rx.tap.asSignal())
+        let output = viewModel.transform(input: input)
+        
         output.isVisible
             .asDriver()
             .drive { [weak self] state in
                 self?.setSideBarViewLayout(isVisible: state)
             }
+            .disposed(by: disposeBag)
+        
+        output.didSettingButtonTapped
+            .emit()
             .disposed(by: disposeBag)
     }
 }

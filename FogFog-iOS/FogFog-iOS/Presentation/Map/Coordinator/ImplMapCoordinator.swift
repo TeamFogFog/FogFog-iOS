@@ -19,20 +19,23 @@ final class ImplMapCoordinator: MapCoordinator {
     }
     
     func start() {
-        
         showMapViewController()
     }
 
     func showMapViewController() {
-        
         let mapViewModel = MapViewModel(coordinator: self)
         let mapViewController = MapViewController(viewModel: mapViewModel)
         changeAnimation()
         navigationController.viewControllers = [mapViewController]
     }
     
+    func connectSettingCoordinator() {
+        let settingCoordinator = ImplSettingCoordinator(self.navigationController)
+        settingCoordinator.start()
+        self.childCoordinators.append(settingCoordinator)
+    }
+    
     func finish() {
-        
         finishDelegate?
             .didFinish(childCoordinator: self)
     }
