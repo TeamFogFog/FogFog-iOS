@@ -31,12 +31,21 @@ final class ImplMapCoordinator: MapCoordinator {
     
     func connectSettingCoordinator() {
         let settingCoordinator = ImplSettingCoordinator(self.navigationController)
-        settingCoordinator.start()
+        settingCoordinator.finishDelegate = self
         self.childCoordinators.append(settingCoordinator)
+        settingCoordinator.start()
     }
     
     func finish() {
-        finishDelegate?
-            .didFinish(childCoordinator: self)
+        finishDelegate?.didFinish(childCoordinator: self)
+    }
+}
+
+// MARK: - CoordinatorFinishDelegate
+extension ImplMapCoordinator: CoordinatorFinishDelegate {
+    
+    func didFinish(childCoordinator: Coordinator) {
+        self.childCoordinators = self.childCoordinators.filter { $0.type != childCoordinator.type }
+        childCoordinator.navigationController.popToRootViewController(animated: true)
     }
 }

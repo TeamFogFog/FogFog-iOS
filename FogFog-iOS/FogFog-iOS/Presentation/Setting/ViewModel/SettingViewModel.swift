@@ -20,15 +20,23 @@ final class SettingViewModel: ViewModelType {
     }
     
     struct Input {
-        
+        let tapBackButton: Signal<Void>
     }
     
     struct Output {
-    
+        let didBackButtonTapped: Signal<Void>
     }
     
     func transform(input: Input) -> Output {
-        let output = Output()
+        let didBackButtonTapped = PublishRelay<Void>()
+        let output = Output(didBackButtonTapped: didBackButtonTapped.asSignal())
+        
+        input.tapBackButton
+            .emit(onNext: { _ in
+                self.coordinator?.finish()
+                didBackButtonTapped.accept(Void())
+            })
+            .disposed(by: disposeBag)
         
         return output
     }

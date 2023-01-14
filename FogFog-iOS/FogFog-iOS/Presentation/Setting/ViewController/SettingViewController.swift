@@ -37,6 +37,7 @@ final class SettingViewController: BaseViewController {
         super.viewDidLoad()
         
         registerCell()
+        bind()
     }
     
     // MARK: UI
@@ -114,5 +115,18 @@ final class SettingViewController: BaseViewController {
         settingTableView.register(SettingNicknameTableViewCell.self, forCellReuseIdentifier: SettingNicknameTableViewCell.className)
         settingTableView.register(SettingTitleTableViewCell.self, forCellReuseIdentifier: SettingTitleTableViewCell.className)
         settingTableView.register(SettingListTableViewCell.self, forCellReuseIdentifier: SettingListTableViewCell.className)
+    }
+}
+
+// MARK: - Bind
+extension SettingViewController {
+    
+    private func bind() {
+        let input = SettingViewModel.Input(tapBackButton: naviView.backButtonDidTap())
+        let output = viewModel.transform(input: input)
+        
+        output.didBackButtonTapped
+            .emit()
+            .disposed(by: disposeBag)
     }
 }
