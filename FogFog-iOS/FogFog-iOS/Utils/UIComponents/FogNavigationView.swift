@@ -7,6 +7,7 @@
 
 import UIKit
 
+import RxCocoa
 import SnapKit
 import Then
 
@@ -52,5 +53,10 @@ extension FogNavigationView {
     /// 타이틀 설정 메서드
     func setTitle(_ title: String) {
         titleLabel.text = title
+    }
+    
+    // 뒤로가기 버튼 터치 이벤트 방출하는 메서드
+    func backButtonDidTap() -> Signal<Void> {
+        return backButton.rx.tap.asSignal()
     }
 }
