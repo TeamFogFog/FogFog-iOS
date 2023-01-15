@@ -1,5 +1,5 @@
 //
-//  ImplLoginCoordinator.swift
+//  DefaultLoginCoordinator.swift
 //  FogFog-iOS
 //
 //  Created by 김승찬 on 2022/11/17.
@@ -7,7 +7,7 @@
 
 import UIKit
 
-final class ImplLoginCoordinator: LoginCoordinator {
+final class DefaultLoginCoordinator: LoginCoordinator {
     
     weak var finishDelegate: CoordinatorFinishDelegate?
     var navigationController: UINavigationController
@@ -29,7 +29,7 @@ final class ImplLoginCoordinator: LoginCoordinator {
     
     func connectMapCoordinator() {
         
-        let mapCoordinator = ImplMapCoordinator(self.navigationController)
+        let mapCoordinator = DefaultMapCoordinator(self.navigationController)
         mapCoordinator.start()
         self.childCoordinators.append(mapCoordinator)
     }

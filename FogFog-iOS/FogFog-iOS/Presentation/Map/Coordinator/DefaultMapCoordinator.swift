@@ -1,5 +1,5 @@
 //
-//  ImplMapCoordinator.swift
+//  DefaultMapCoordinator.swift
 //  FogFog-iOS
 //
 //  Created by 김승찬 on 2022/11/17.
@@ -7,7 +7,7 @@
 
 import UIKit
 
-final class ImplMapCoordinator: MapCoordinator {
+final class DefaultMapCoordinator: MapCoordinator {
  
     weak var finishDelegate: CoordinatorFinishDelegate?
     var navigationController: UINavigationController
@@ -30,7 +30,7 @@ final class ImplMapCoordinator: MapCoordinator {
     }
     
     func connectSettingCoordinator() {
-        let settingCoordinator = ImplSettingCoordinator(self.navigationController)
+        let settingCoordinator = DefaultSettingCoordinator(self.navigationController)
         settingCoordinator.finishDelegate = self
         self.childCoordinators.append(settingCoordinator)
         settingCoordinator.start()
@@ -42,7 +42,7 @@ final class ImplMapCoordinator: MapCoordinator {
 }
 
 // MARK: - CoordinatorFinishDelegate
-extension ImplMapCoordinator: CoordinatorFinishDelegate {
+extension DefaultMapCoordinator: CoordinatorFinishDelegate {
     
     func didFinish(childCoordinator: Coordinator) {
         self.childCoordinators = self.childCoordinators.filter { $0.type != childCoordinator.type }

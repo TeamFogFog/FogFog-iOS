@@ -1,5 +1,5 @@
 //
-//  ImplSettingCoordinator.swift
+//  DefaultSettingCoordinator.swift
 //  FogFog-iOS
 //
 //  Created by EUNJU on 2023/01/14.
@@ -7,7 +7,7 @@
 
 import UIKit
 
-final class ImplSettingCoordinator: SettingCoordinator {
+final class DefaultSettingCoordinator: SettingCoordinator {
     
     weak var finishDelegate: CoordinatorFinishDelegate?
     var navigationController: UINavigationController
