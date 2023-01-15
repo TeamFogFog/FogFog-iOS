@@ -23,15 +23,18 @@ final class MapViewModel: ViewModelType {
     struct Input {
         let tapMenuButton: Signal<Void>
         let tapBlurEffectView: Signal<Void>
+        let tapSettingButton: Signal<Void>
     }
     
     struct Output {
         let isVisible: Driver<Bool>
+        let didSettingButtonTapped: Signal<Void>
     }
         
     func transform(input: Input) -> Output {
-        
         let sideBarState = PublishRelay<Bool>()
+        let didSettingButtonTapped = PublishRelay<Void>()
+        let output = Output(isVisible: sideBarState.asDriver(onErrorJustReturn: false), didSettingButtonTapped: didSettingButtonTapped.asSignal())
         
         input.tapMenuButton
             .emit(onNext: { _ in
@@ -45,6 +48,13 @@ final class MapViewModel: ViewModelType {
             })
             .disposed(by: disposeBag)
         
-        return Output(isVisible: sideBarState.asDriver(onErrorJustReturn: false))
+        input.tapSettingButton
+            .emit(onNext: { _ in
+                self.coordinator?.connectSettingCoordinator()
+                didSettingButtonTapped.accept(Void())
+            })
+            .disposed(by: disposeBag)
+        
+        return output
     }
 }

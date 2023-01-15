@@ -21,6 +21,8 @@
 		77650212295463B8002BF7AD /* BaseTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77650211295463B8002BF7AD /* BaseTableViewCell.swift */; };
 		77650216295487A7002BF7AD /* SettingNicknameTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77650215295487A7002BF7AD /* SettingNicknameTableViewCell.swift */; };
 		776502182954A3BA002BF7AD /* SettingTitleTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 776502172954A3BA002BF7AD /* SettingTitleTableViewCell.swift */; };
+		77A99D6A2971AFDC0037FCAD /* SettingCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77A99D692971AFDC0037FCAD /* SettingCoordinator.swift */; };
+		77A99D6C2971B0220037FCAD /* DefaultSettingCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77A99D6B2971B0220037FCAD /* DefaultSettingCoordinator.swift */; };
 		77D32D41292A0EDD006E6314 /* ViewModelType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77D32D40292A0EDD006E6314 /* ViewModelType.swift */; };
 		77D32D43292CD6A3006E6314 /* SideBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77D32D42292CD6A2006E6314 /* SideBarView.swift */; };
 		77E70F462930951100F55CD7 /* UITextField + Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77E70F452930951100F55CD7 /* UITextField + Extension.swift */; };
@@ -64,7 +66,6 @@
 		ECA425742922543B004DFDAF /* Color.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ECA425732922543B004DFDAF /* Color.xcassets */; };
 		ECA425782922545C004DFDAF /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECA425772922545C004DFDAF /* MapViewController.swift */; };
 		ECA4257A292254A8004DFDAF /* BottomDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECA42579292254A8004DFDAF /* BottomDetailViewController.swift */; };
-		ECA4257C292254B0004DFDAF /* SideBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECA4257B292254B0004DFDAF /* SideBarViewController.swift */; };
 		ECA4257E292254C6004DFDAF /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECA4257D292254C6004DFDAF /* BaseViewController.swift */; };
 		ECA4259729229B15004DFDAF /* FogFont.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECA4259629229B15004DFDAF /* FogFont.swift */; };
 		ECA4259929229BD9004DFDAF /* UIFont + Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECA4259829229BD9004DFDAF /* UIFont + Extension.swift */; };
@@ -83,9 +84,9 @@
 		ECA425DC29253259004DFDAF /* CoordinatorFinishDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECA425DB29253259004DFDAF /* CoordinatorFinishDelegate.swift */; };
 		ECA425DE29253292004DFDAF /* CoordinatorCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECA425DD29253292004DFDAF /* CoordinatorCase.swift */; };
 		ECA425E0292532B7004DFDAF /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECA425DF292532B7004DFDAF /* AppCoordinator.swift */; };
-		ECA425E2292532CA004DFDAF /* ImplAppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECA425E1292532CA004DFDAF /* ImplAppCoordinator.swift */; };
-		ECA425E429262A37004DFDAF /* ImplMapCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECA425E329262A37004DFDAF /* ImplMapCoordinator.swift */; };
-		ECA425E629262A42004DFDAF /* ImplLoginCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECA425E529262A42004DFDAF /* ImplLoginCoordinator.swift */; };
+		ECA425E2292532CA004DFDAF /* DefaultAppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECA425E1292532CA004DFDAF /* DefaultAppCoordinator.swift */; };
+		ECA425E429262A37004DFDAF /* DefaultMapCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECA425E329262A37004DFDAF /* DefaultMapCoordinator.swift */; };
+		ECA425E629262A42004DFDAF /* DefaultLoginCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECA425E529262A42004DFDAF /* DefaultLoginCoordinator.swift */; };
 		ECA425E829262A78004DFDAF /* MapCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECA425E729262A78004DFDAF /* MapCoordinator.swift */; };
 		ECA425EA29262A80004DFDAF /* LoginCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECA425E929262A80004DFDAF /* LoginCoordinator.swift */; };
 		ECA425EC29262CF8004DFDAF /* MapViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECA425EB29262CF7004DFDAF /* MapViewModel.swift */; };
@@ -124,6 +125,8 @@
 		77650211295463B8002BF7AD /* BaseTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseTableViewCell.swift; sourceTree = "<group>"; };
 		77650215295487A7002BF7AD /* SettingNicknameTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingNicknameTableViewCell.swift; sourceTree = "<group>"; };
 		776502172954A3BA002BF7AD /* SettingTitleTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingTitleTableViewCell.swift; sourceTree = "<group>"; };
+		77A99D692971AFDC0037FCAD /* SettingCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingCoordinator.swift; sourceTree = "<group>"; };
+		77A99D6B2971B0220037FCAD /* DefaultSettingCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultSettingCoordinator.swift; sourceTree = "<group>"; };
 		77D32D40292A0EDD006E6314 /* ViewModelType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModelType.swift; sourceTree = "<group>"; };
 		77D32D42292CD6A2006E6314 /* SideBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideBarView.swift; sourceTree = "<group>"; };
 		77E70F452930951100F55CD7 /* UITextField + Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITextField + Extension.swift"; sourceTree = "<group>"; };
@@ -167,7 +170,6 @@
 		ECA425732922543B004DFDAF /* Color.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Color.xcassets; sourceTree = "<group>"; };
 		ECA425772922545C004DFDAF /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 		ECA42579292254A8004DFDAF /* BottomDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BottomDetailViewController.swift; sourceTree = "<group>"; };
-		ECA4257B292254B0004DFDAF /* SideBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideBarViewController.swift; sourceTree = "<group>"; };
 		ECA4257D292254C6004DFDAF /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		ECA4258129225A41004DFDAF /* .gitkeep */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitkeep; sourceTree = "<group>"; };
 		ECA4258729225A7D004DFDAF /* .gitkeep */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitkeep; sourceTree = "<group>"; };
@@ -190,9 +192,9 @@
 		ECA425DB29253259004DFDAF /* CoordinatorFinishDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoordinatorFinishDelegate.swift; sourceTree = "<group>"; };
 		ECA425DD29253292004DFDAF /* CoordinatorCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoordinatorCase.swift; sourceTree = "<group>"; };
 		ECA425DF292532B7004DFDAF /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
-		ECA425E1292532CA004DFDAF /* ImplAppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImplAppCoordinator.swift; sourceTree = "<group>"; };
-		ECA425E329262A37004DFDAF /* ImplMapCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImplMapCoordinator.swift; sourceTree = "<group>"; };
-		ECA425E529262A42004DFDAF /* ImplLoginCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImplLoginCoordinator.swift; sourceTree = "<group>"; };
+		ECA425E1292532CA004DFDAF /* DefaultAppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultAppCoordinator.swift; sourceTree = "<group>"; };
+		ECA425E329262A37004DFDAF /* DefaultMapCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultMapCoordinator.swift; sourceTree = "<group>"; };
+		ECA425E529262A42004DFDAF /* DefaultLoginCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultLoginCoordinator.swift; sourceTree = "<group>"; };
 		ECA425E729262A78004DFDAF /* MapCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapCoordinator.swift; sourceTree = "<group>"; };
 		ECA425E929262A80004DFDAF /* LoginCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginCoordinator.swift; sourceTree = "<group>"; };
 		ECA425EB29262CF7004DFDAF /* MapViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewModel.swift; sourceTree = "<group>"; };
@@ -282,6 +284,7 @@
 		7765020B295453BB002BF7AD /* Setting */ = {
 			isa = PBXGroup;
 			children = (
+				77A99D672971AFB30037FCAD /* Coordinator */,
 				776502192954ADA8002BF7AD /* ViewController */,
 				7765021A2954ADB4002BF7AD /* ViewModel */,
 				7765020C295461AC002BF7AD /* Cell */,
@@ -313,6 +316,23 @@
 				7765020329544937002BF7AD /* SettingViewModel.swift */,
 			);
 			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		77A99D672971AFB30037FCAD /* Coordinator */ = {
+			isa = PBXGroup;
+			children = (
+				77A99D6B2971B0220037FCAD /* DefaultSettingCoordinator.swift */,
+				77A99D682971AFCA0037FCAD /* Protocol */,
+			);
+			path = Coordinator;
+			sourceTree = "<group>";
+		};
+		77A99D682971AFCA0037FCAD /* Protocol */ = {
+			isa = PBXGroup;
+			children = (
+				77A99D692971AFDC0037FCAD /* SettingCoordinator.swift */,
+			);
+			path = Protocol;
 			sourceTree = "<group>";
 		};
 		77D32D3F292A0EC7006E6314 /* Protocol */ = {
@@ -551,7 +571,6 @@
 		ECA4256829225346004DFDAF /* SideBar */ = {
 			isa = PBXGroup;
 			children = (
-				ECA4257B292254B0004DFDAF /* SideBarViewController.swift */,
 				77D32D42292CD6A2006E6314 /* SideBarView.swift */,
 			);
 			path = SideBar;
@@ -630,7 +649,7 @@
 		ECA425ED292633FA004DFDAF /* Coordinator */ = {
 			isa = PBXGroup;
 			children = (
-				ECA425E1292532CA004DFDAF /* ImplAppCoordinator.swift */,
+				ECA425E1292532CA004DFDAF /* DefaultAppCoordinator.swift */,
 				ECA425EF29263439004DFDAF /* Delegate */,
 				ECA425EE29263428004DFDAF /* Protocol */,
 			);
@@ -684,7 +703,7 @@
 		ECA425F729263537004DFDAF /* Coordinator */ = {
 			isa = PBXGroup;
 			children = (
-				ECA425E529262A42004DFDAF /* ImplLoginCoordinator.swift */,
+				ECA425E529262A42004DFDAF /* DefaultLoginCoordinator.swift */,
 				ECA425F829263548004DFDAF /* Protocol */,
 			);
 			path = Coordinator;
@@ -701,7 +720,7 @@
 		ECA425F929263562004DFDAF /* Coordinator */ = {
 			isa = PBXGroup;
 			children = (
-				ECA425E329262A37004DFDAF /* ImplMapCoordinator.swift */,
+				ECA425E329262A37004DFDAF /* DefaultMapCoordinator.swift */,
 				ECA425FA29263567004DFDAF /* Protocol */,
 			);
 			path = Coordinator;
@@ -1012,7 +1031,7 @@
 				7765020429544937002BF7AD /* SettingViewModel.swift in Sources */,
 				77F1D82F2927F2CC00F31D0C /* Adjusted + Extension.swift in Sources */,
 				77650216295487A7002BF7AD /* SettingNicknameTableViewCell.swift in Sources */,
-				ECA4257629225450004DFDAF /* SplashViewController.swift in Sources */,
+				77A99D6C2971B0220037FCAD /* DefaultSettingCoordinator.swift in Sources */,
 				77E70F4A2930D0FA00F55CD7 /* MakeNicknameViewModel.swift in Sources */,
 				77650210295462D7002BF7AD /* UIViewController + Extension.swift in Sources */,
 				7765020E29546239002BF7AD /* SettingListTableViewCell.swift in Sources */,
@@ -1022,15 +1041,15 @@
 				77F899DE29308C6000806896 /* FogTextField.swift in Sources */,
 				BD347C65292FEB08009F52BA /* RoadPopUpViewModel.swift in Sources */,
 				ECA425E0292532B7004DFDAF /* AppCoordinator.swift in Sources */,
-				ECA425E629262A42004DFDAF /* ImplLoginCoordinator.swift in Sources */,
+				ECA425E629262A42004DFDAF /* DefaultLoginCoordinator.swift in Sources */,
 				ECA425DC29253259004DFDAF /* CoordinatorFinishDelegate.swift in Sources */,
-				ECA4257C292254B0004DFDAF /* SideBarViewController.swift in Sources */,
 				ECA4252D29224DB8004DFDAF /* AppDelegate.swift in Sources */,
 				ECA425EA29262A80004DFDAF /* LoginCoordinator.swift in Sources */,
 				ECA425DE29253292004DFDAF /* CoordinatorCase.swift in Sources */,
 				BD46305C292A25B300E9E9C2 /* BottomDetailRootView.swift in Sources */,
 				BD4B550F292A29EC00ECFD04 /* SmokePlace.swift in Sources */,
 				ECA425F6292634C9004DFDAF /* LoginViewModel.swift in Sources */,
+				77A99D6A2971AFDC0037FCAD /* SettingCoordinator.swift in Sources */,
 				ECA4259729229B15004DFDAF /* FogFont.swift in Sources */,
 				BDC50ED2292A07EB002378C6 /* BottomDetailViewModel.swift in Sources */,
 				BD347C5A292FD226009F52BA /* ExMapType.swift in Sources */,
@@ -1044,7 +1063,7 @@
 				ECA425E829262A78004DFDAF /* MapCoordinator.swift in Sources */,
 				77E70F4829309A6D00F55CD7 /* UILabel + Extension.swift in Sources */,
 				77D32D41292A0EDD006E6314 /* ViewModelType.swift in Sources */,
-				ECA425E2292532CA004DFDAF /* ImplAppCoordinator.swift in Sources */,
+				ECA425E2292532CA004DFDAF /* DefaultAppCoordinator.swift in Sources */,
 				ECA4252F29224DB8004DFDAF /* SceneDelegate.swift in Sources */,
 				776502182954A3BA002BF7AD /* SettingTitleTableViewCell.swift in Sources */,
 				ECA425EC29262CF8004DFDAF /* MapViewModel.swift in Sources */,
@@ -1060,7 +1079,7 @@
 				BD347C63292FEA15009F52BA /* RoadPopUpView.swift in Sources */,
 				ECA425D72924DA66004DFDAF /* Bundle + Extension.swift in Sources */,
 				BDC20F9D293B44B600B9A2E7 /* FogToast.swift in Sources */,
-				ECA425E429262A37004DFDAF /* ImplMapCoordinator.swift in Sources */,
+				ECA425E429262A37004DFDAF /* DefaultMapCoordinator.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

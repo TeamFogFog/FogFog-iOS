@@ -11,4 +11,5 @@ enum CoordinatorCase {
     case app
     case login
     case map
+    case setting
 }
