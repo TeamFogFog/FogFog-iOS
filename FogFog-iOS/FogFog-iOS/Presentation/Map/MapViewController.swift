@@ -99,8 +99,8 @@ extension MapViewController {
         
         output.isVisible
             .asDriver()
-            .drive { [weak self] state in
-                self?.setSideBarViewLayout(isVisible: state)
+            .drive(with: self) { owner, state in
+                owner.setSideBarViewLayout(isVisible: state)
             }
             .disposed(by: disposeBag)
         
