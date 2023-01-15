@@ -15,7 +15,7 @@ import Then
 final class SettingViewController: BaseViewController {
 
     // MARK: Properties
-    private let naviView = FogNavigationView()
+    private let navigationView = FogNavigationView()
     private let settingTableView = UITableView()
     private let logoutButton = UIButton()
     
@@ -44,7 +44,7 @@ final class SettingViewController: BaseViewController {
     override func setStyle() {
         view.backgroundColor = .white
         
-        naviView.setTitle("설정")
+        navigationView.setTitle("설정")
         
         logoutButton.do {
             $0.setTitle("로그아웃", for: .normal)
@@ -64,15 +64,15 @@ final class SettingViewController: BaseViewController {
     }
     
     override func setLayout() {
-        view.addSubviews([naviView, settingTableView, logoutButton])
+        view.addSubviews([navigationView, settingTableView, logoutButton])
         
-        naviView.snp.makeConstraints {
+        navigationView.snp.makeConstraints {
             $0.top.leading.trailing.equalToSuperview()
             $0.height.equalTo(92)
         }
         
         settingTableView.snp.makeConstraints {
-            $0.top.equalTo(naviView.snp.bottom)
+            $0.top.equalTo(navigationView.snp.bottom)
             $0.leading.trailing.bottom.equalToSuperview()
         }
         
@@ -122,7 +122,7 @@ final class SettingViewController: BaseViewController {
 extension SettingViewController {
     
     private func bind() {
-        let input = SettingViewModel.Input(tapBackButton: naviView.backButtonDidTap())
+        let input = SettingViewModel.Input(tapBackButton: navigationView.backButtonDidTap())
         let output = viewModel.transform(input: input)
         
         output.didBackButtonTapped
