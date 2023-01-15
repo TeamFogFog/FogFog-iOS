@@ -40,6 +40,7 @@
 		BD347C65292FEB08009F52BA /* RoadPopUpViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD347C64292FEB08009F52BA /* RoadPopUpViewModel.swift */; };
 		BD46305C292A25B300E9E9C2 /* BottomDetailRootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD46305B292A25B300E9E9C2 /* BottomDetailRootView.swift */; };
 		BD4B550F292A29EC00ECFD04 /* SmokePlace.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD4B550E292A29EC00ECFD04 /* SmokePlace.swift */; };
+		BD4E13652973DAC400AEA757 /* NetworkError.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD4E13642973DAC400AEA757 /* NetworkError.swift */; };
 		BDC50ECB292A07B2002378C6 /* GoogleMap.plist in Resources */ = {isa = PBXBuildFile; fileRef = BDC50ECA292A07B2002378C6 /* GoogleMap.plist */; };
 		BDC50ED2292A07EB002378C6 /* BottomDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDC50ED1292A07EB002378C6 /* BottomDetailViewModel.swift */; };
 		BDC50ED6292A09BD002378C6 /* BaseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDC50ED5292A09BD002378C6 /* BaseView.swift */; };
@@ -129,6 +130,7 @@
 		BD347C64292FEB08009F52BA /* RoadPopUpViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoadPopUpViewModel.swift; sourceTree = "<group>"; };
 		BD46305B292A25B300E9E9C2 /* BottomDetailRootView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BottomDetailRootView.swift; sourceTree = "<group>"; };
 		BD4B550E292A29EC00ECFD04 /* SmokePlace.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SmokePlace.swift; sourceTree = "<group>"; };
+		BD4E13642973DAC400AEA757 /* NetworkError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkError.swift; sourceTree = "<group>"; };
 		BDC50ECA292A07B2002378C6 /* GoogleMap.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = GoogleMap.plist; sourceTree = "<group>"; };
 		BDC50ED1292A07EB002378C6 /* BottomDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BottomDetailViewModel.swift; sourceTree = "<group>"; };
 		BDC50ED5292A09BD002378C6 /* BaseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseView.swift; sourceTree = "<group>"; };
@@ -299,6 +301,14 @@
 			path = Place;
 			sourceTree = "<group>";
 		};
+		BD4E13632973DAA300AEA757 /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				BD4E13642973DAC400AEA757 /* NetworkError.swift */,
+			);
+			path = Networking;
+			sourceTree = "<group>";
+		};
 		BDC50ECD292A07CD002378C6 /* View */ = {
 			isa = PBXGroup;
 			children = (
@@ -342,6 +352,7 @@
 		ECA4252B29224DB8004DFDAF /* FogFog-iOS */ = {
 			isa = PBXGroup;
 			children = (
+				BD4E13632973DAA300AEA757 /* Networking */,
 				ECA4255D292251D8004DFDAF /* App */,
 				ECA42562292252AB004DFDAF /* Utils */,
 				ECA425612922529F004DFDAF /* Supports */,
@@ -960,6 +971,7 @@
 				BD347C5A292FD226009F52BA /* ExMapType.swift in Sources */,
 				77F1D82229269CC800F31D0C /* UIColor + Extension.swift in Sources */,
 				77F1D82429269E1C00F31D0C /* UIView + Extension.swift in Sources */,
+				BD4E13652973DAC400AEA757 /* NetworkError.swift in Sources */,
 				77E70F462930951100F55CD7 /* UITextField + Extension.swift in Sources */,
 				BDC50ED6292A09BD002378C6 /* BaseView.swift in Sources */,
 				ECA4257A292254A8004DFDAF /* BottomDetailViewController.swift in Sources */,
