@@ -44,6 +44,7 @@
 		BD90E9DC2976C02100C7CB6B /* CommonResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD90E9DB2976C02100C7CB6B /* CommonResponse.swift */; };
 		BD90E9DE2976C11E00C7CB6B /* FogAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD90E9DD2976C11E00C7CB6B /* FogAPI.swift */; };
 		BD90E9E02976C3EF00C7CB6B /* NetworkEnv.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD90E9DF2976C3EF00C7CB6B /* NetworkEnv.swift */; };
+		BD90E9E22976C4F800C7CB6B /* Networking.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD90E9E12976C4F800C7CB6B /* Networking.swift */; };
 		BDC50ECB292A07B2002378C6 /* GoogleMap.plist in Resources */ = {isa = PBXBuildFile; fileRef = BDC50ECA292A07B2002378C6 /* GoogleMap.plist */; };
 		BDC50ED2292A07EB002378C6 /* BottomDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDC50ED1292A07EB002378C6 /* BottomDetailViewModel.swift */; };
 		BDC50ED6292A09BD002378C6 /* BaseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDC50ED5292A09BD002378C6 /* BaseView.swift */; };
@@ -137,6 +138,7 @@
 		BD90E9DB2976C02100C7CB6B /* CommonResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommonResponse.swift; sourceTree = "<group>"; };
 		BD90E9DD2976C11E00C7CB6B /* FogAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FogAPI.swift; sourceTree = "<group>"; };
 		BD90E9DF2976C3EF00C7CB6B /* NetworkEnv.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkEnv.swift; sourceTree = "<group>"; };
+		BD90E9E12976C4F800C7CB6B /* Networking.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Networking.swift; sourceTree = "<group>"; };
 		BDC50ECA292A07B2002378C6 /* GoogleMap.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = GoogleMap.plist; sourceTree = "<group>"; };
 		BDC50ED1292A07EB002378C6 /* BottomDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BottomDetailViewModel.swift; sourceTree = "<group>"; };
 		BDC50ED5292A09BD002378C6 /* BaseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseView.swift; sourceTree = "<group>"; };
@@ -314,6 +316,7 @@
 				BD90E9DB2976C02100C7CB6B /* CommonResponse.swift */,
 				BD90E9DD2976C11E00C7CB6B /* FogAPI.swift */,
 				BD90E9DF2976C3EF00C7CB6B /* NetworkEnv.swift */,
+				BD90E9E12976C4F800C7CB6B /* Networking.swift */,
 			);
 			path = Networking;
 			sourceTree = "<group>";
@@ -976,6 +979,7 @@
 				BD46305C292A25B300E9E9C2 /* BottomDetailRootView.swift in Sources */,
 				BD4B550F292A29EC00ECFD04 /* SmokePlace.swift in Sources */,
 				ECA425F6292634C9004DFDAF /* LoginViewModel.swift in Sources */,
+				BD90E9E22976C4F800C7CB6B /* Networking.swift in Sources */,
 				ECA4259729229B15004DFDAF /* FogFont.swift in Sources */,
 				BDC50ED2292A07EB002378C6 /* BottomDetailViewModel.swift in Sources */,
 				BD90E9DC2976C02100C7CB6B /* CommonResponse.swift in Sources */,
