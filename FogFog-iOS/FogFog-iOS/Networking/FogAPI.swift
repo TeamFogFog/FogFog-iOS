@@ -36,7 +36,7 @@ protocol FogAPI: TargetType {
 
 extension FogAPI {
     var baseURL: URL {
-        return URL(string: "http://fogfogdev-env-1.eba-9u3ghscu.ap-northeast-2.elasticbeanstalk.com")!
+        return URL(string: NetworkEnv.baseURL)!
     }
     
     var path: String {
@@ -50,7 +50,7 @@ extension FogAPI {
     var headers: [String : String]? {
         switch self {
         default:
-            return ["Content-Type": "application/json"]
+            return NetworkEnv.HTTPHeaderFields.default
         }
     }
 }
