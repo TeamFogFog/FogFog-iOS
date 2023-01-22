@@ -12,25 +12,55 @@ import Moya
 protocol Networking {
     associatedtype API: FogAPI
     
-    func request(_ api: API) -> Single<Response>
+    func request(_ api: API, file: StaticString, function: StaticString, line: UInt) -> Single<Response>
+}
+
+extension Networking {
+    
+    func request(
+        _ api: API,
+        file: StaticString = #file,
+        function: StaticString = #function,
+        line: UInt = #line
+    ) -> Single<Response> {
+        self.request(api, file: file, function: function, line: line)
+    }
 }
 
 final class NetworkProvider<API: FogAPI>: Networking {
+
+    private let provider: MoyaProvider<API>
     
-    private let provider = MoyaProvider<API>(plugins: [])
-    
+    init(plugins: [PluginType] = []) {
+        let session = MoyaProvider<API>.defaultAlamofireSession()
+        session.sessionConfiguration.timeoutIntervalForRequest = 10
+        
+        self.provider = MoyaProvider(session: session, plugins: plugins)
+    }
+
     func request(
-        _ api: API
+        _ api: API,
+        file: StaticString = #file,
+        function: StaticString = #function,
+        line: UInt = #line
     ) -> Single<Response> {
         let requestString = "\(api.urlPath)"
         return provider.rx.request(api)
             .filterSuccessfulStatusCodes()
             .do(
-                onSuccess: { value in
-                    print(value)
+                onSuccess: { response in
+                    print("SUCCESS: \(requestString) (\(response.statusCode))")
                 },
                 onError: { error in
-                    print(error)
+                    if let error = error as? MoyaError {
+                        switch error {
+                        case .statusCode(let response):
+                            if response.statusCode == 401 {
+                                // Unauthorized - token refresh
+                            }
+                        default: break
+                        }
+                    }
                 },
                 onSubscribed: {
                     print("REQUEST: \(requestString)")

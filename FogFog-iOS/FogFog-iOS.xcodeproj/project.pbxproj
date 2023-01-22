@@ -312,10 +312,10 @@
 		BD4E13632973DAA300AEA757 /* Networking */ = {
 			isa = PBXGroup;
 			children = (
-				BD4E13642973DAC400AEA757 /* NetworkError.swift */,
-				BD90E9DB2976C02100C7CB6B /* CommonResponse.swift */,
 				BD90E9DD2976C11E00C7CB6B /* FogAPI.swift */,
+				BD90E9DB2976C02100C7CB6B /* CommonResponse.swift */,
 				BD90E9DF2976C3EF00C7CB6B /* NetworkEnv.swift */,
+				BD4E13642973DAC400AEA757 /* NetworkError.swift */,
 				BD90E9E12976C4F800C7CB6B /* Networking.swift */,
 			);
 			path = Networking;
