@@ -10,8 +10,8 @@ import Foundation
 @frozen
 enum NetworkError: Int {
     case invalidRequest = 400
-    case invalidToken   = 401
-    case unauthorized   = 403
+    case unauthorized   = 401
+    case forbidden      = 403
     case notFound       = 404
     case serverError    = 500
 }

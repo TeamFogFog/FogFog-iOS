@@ -32,6 +32,7 @@
 		77F1D82D2926AAE800F31D0C /* Pretendard-Thin.otf in Resources */ = {isa = PBXBuildFile; fileRef = ECA4259429229A05004DFDAF /* Pretendard-Thin.otf */; };
 		77F1D82F2927F2CC00F31D0C /* Adjusted + Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77F1D82E2927F2CC00F31D0C /* Adjusted + Extension.swift */; };
 		77F899DE29308C6000806896 /* FogTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77F899DD29308C6000806896 /* FogTextField.swift */; };
+		BD2D276B297D17E400984B97 /* UserAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD2D276A297D17E400984B97 /* UserAPI.swift */; };
 		BD347C58292FD1BC009F52BA /* RoadPopUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD347C57292FD1BC009F52BA /* RoadPopUpViewController.swift */; };
 		BD347C5A292FD226009F52BA /* ExMapType.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD347C59292FD226009F52BA /* ExMapType.swift */; };
 		BD347C5E292FD2BE009F52BA /* FogButtonStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD347C5D292FD2BE009F52BA /* FogButtonStyle.swift */; };
@@ -126,6 +127,7 @@
 		848DD0928406FC10714344E4 /* Pods_FogFog_iOSTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FogFog_iOSTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		888CEAED3234D2B94DAA26DB /* Pods-FogFog-iOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FogFog-iOS.release.xcconfig"; path = "Target Support Files/Pods-FogFog-iOS/Pods-FogFog-iOS.release.xcconfig"; sourceTree = "<group>"; };
 		A9F085CD5FE1A63DDBE5140E /* Pods-FogFog-iOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FogFog-iOS.debug.xcconfig"; path = "Target Support Files/Pods-FogFog-iOS/Pods-FogFog-iOS.debug.xcconfig"; sourceTree = "<group>"; };
+		BD2D276A297D17E400984B97 /* UserAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserAPI.swift; sourceTree = "<group>"; };
 		BD347C57292FD1BC009F52BA /* RoadPopUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoadPopUpViewController.swift; sourceTree = "<group>"; };
 		BD347C59292FD226009F52BA /* ExMapType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExMapType.swift; sourceTree = "<group>"; };
 		BD347C5D292FD2BE009F52BA /* FogButtonStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FogButtonStyle.swift; sourceTree = "<group>"; };
@@ -317,6 +319,7 @@
 				BD90E9DF2976C3EF00C7CB6B /* NetworkEnv.swift */,
 				BD4E13642973DAC400AEA757 /* NetworkError.swift */,
 				BD90E9E12976C4F800C7CB6B /* Networking.swift */,
+				BD2D276A297D17E400984B97 /* UserAPI.swift */,
 			);
 			path = Networking;
 			sourceTree = "<group>";
@@ -996,6 +999,7 @@
 				ECA425E829262A78004DFDAF /* MapCoordinator.swift in Sources */,
 				77E70F4829309A6D00F55CD7 /* UILabel + Extension.swift in Sources */,
 				77D32D41292A0EDD006E6314 /* ViewModelType.swift in Sources */,
+				BD2D276B297D17E400984B97 /* UserAPI.swift in Sources */,
 				ECA425E2292532CA004DFDAF /* ImplAppCoordinator.swift in Sources */,
 				ECA4252F29224DB8004DFDAF /* SceneDelegate.swift in Sources */,
 				ECA425EC29262CF8004DFDAF /* MapViewModel.swift in Sources */,

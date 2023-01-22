@@ -12,7 +12,7 @@ import Moya
 enum FogDomain {
     case auth(path: String)
     case maps
-    case users(path: String)
+    case users
 }
 
 extension FogDomain {
@@ -22,8 +22,8 @@ extension FogDomain {
             return "/auth/\(path)"
         case .maps:
             return "/maps"
-        case let .users(path):
-            return "/users/\(path)"
+        case .users:
+            return "/users"
         }
     }
 }
@@ -32,6 +32,7 @@ protocol FogAPI: TargetType {
     var domain: FogDomain { get }
     var urlPath: String { get }
     var error: [Int: NetworkError]? { get }
+    var parameters: [String: String]? { get }
 }
 
 extension FogAPI {
@@ -52,5 +53,12 @@ extension FogAPI {
         default:
             return NetworkEnv.HTTPHeaderFields.default
         }
+    }
+
+    var task: Task {
+        if let parameters = parameters {
+            return .requestParameters(parameters: parameters, encoding: JSONEncoding.default)
+        }
+        return .requestPlain
     }
 }

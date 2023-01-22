@@ -16,4 +16,8 @@ extension NetworkEnv {
     enum HTTPHeaderFields {
         static let `default`: [String: String] = ["Content-Type": "application/json"]
     }
+    
+    enum Params {
+        static var accessToken: [String: String] = ["accessToken": ""]
+    }
 }
