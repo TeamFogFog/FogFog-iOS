@@ -314,14 +314,30 @@
 		BD4E13632973DAA300AEA757 /* Networking */ = {
 			isa = PBXGroup;
 			children = (
-				BD90E9DD2976C11E00C7CB6B /* FogAPI.swift */,
-				BD90E9DB2976C02100C7CB6B /* CommonResponse.swift */,
 				BD90E9DF2976C3EF00C7CB6B /* NetworkEnv.swift */,
 				BD4E13642973DAC400AEA757 /* NetworkError.swift */,
 				BD90E9E12976C4F800C7CB6B /* Networking.swift */,
-				BD2D276A297D17E400984B97 /* UserAPI.swift */,
+				BDB152C0297E6834002E477F /* APIs */,
+				BDB152C1297E6840002E477F /* Models */,
 			);
 			path = Networking;
+			sourceTree = "<group>";
+		};
+		BDB152C0297E6834002E477F /* APIs */ = {
+			isa = PBXGroup;
+			children = (
+				BD90E9DD2976C11E00C7CB6B /* FogAPI.swift */,
+				BD2D276A297D17E400984B97 /* UserAPI.swift */,
+			);
+			path = APIs;
+			sourceTree = "<group>";
+		};
+		BDB152C1297E6840002E477F /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				BD90E9DB2976C02100C7CB6B /* CommonResponse.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 		BDC50ECD292A07CD002378C6 /* View */ = {
@@ -367,13 +383,13 @@
 		ECA4252B29224DB8004DFDAF /* FogFog-iOS */ = {
 			isa = PBXGroup;
 			children = (
-				BD4E13632973DAA300AEA757 /* Networking */,
 				ECA4255D292251D8004DFDAF /* App */,
-				ECA42562292252AB004DFDAF /* Utils */,
-				ECA425612922529F004DFDAF /* Supports */,
-				ECA4256029225297004DFDAF /* Resources */,
-				ECA4255F2922528B004DFDAF /* Presentation */,
 				ECA4255E292251E0004DFDAF /* Models */,
+				BD4E13632973DAA300AEA757 /* Networking */,
+				ECA4255F2922528B004DFDAF /* Presentation */,
+				ECA4256029225297004DFDAF /* Resources */,
+				ECA425612922529F004DFDAF /* Supports */,
+				ECA42562292252AB004DFDAF /* Utils */,
 			);
 			path = "FogFog-iOS";
 			sourceTree = "<group>";
