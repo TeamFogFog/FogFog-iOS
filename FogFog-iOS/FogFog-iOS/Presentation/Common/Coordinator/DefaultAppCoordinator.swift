@@ -1,5 +1,5 @@
 //
-//  ImplAppCoordinator.swift
+//  DefaultAppCoordinator.swift
 //  FogFog-iOS
 //
 //  Created by 김승찬 on 2022/11/17.
@@ -7,7 +7,7 @@
 
 import UIKit
 
-final class ImplAppCoordinator: AppCoordinator {
+final class DefaultAppCoordinator: AppCoordinator {
 
     weak var finishDelegate: CoordinatorFinishDelegate?
     var navigationController: UINavigationController
@@ -33,7 +33,7 @@ final class ImplAppCoordinator: AppCoordinator {
     
     func showLoginFlow() {
         
-        let loginCoordinator = ImplLoginCoordinator(self.navigationController)
+        let loginCoordinator = DefaultLoginCoordinator(self.navigationController)
         loginCoordinator.finishDelegate = self
         loginCoordinator.start()
         childCoordinators.append(loginCoordinator)
@@ -41,14 +41,14 @@ final class ImplAppCoordinator: AppCoordinator {
     
     func showMapFlow() {
         
-        let mapCoordinator = ImplMapCoordinator(self.navigationController)
+        let mapCoordinator = DefaultMapCoordinator(self.navigationController)
         mapCoordinator.finishDelegate = self
         mapCoordinator.start()
         childCoordinators.append(mapCoordinator)
     }
 }
 
-extension ImplAppCoordinator: CoordinatorFinishDelegate {
+extension DefaultAppCoordinator: CoordinatorFinishDelegate {
 
     func didFinish(childCoordinator: Coordinator) {
         

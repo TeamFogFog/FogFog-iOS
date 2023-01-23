@@ -30,4 +30,5 @@ public enum FogImage {
     static let popupMap = UIImage(named: "iconPopupMap")!
     static let speechBubbleBig = UIImage(named: "speechBubbleBig")!
     static let btnX = UIImage(named: "btnX")!
+    static let btnPen = UIImage(named: "btnPen")!
 }

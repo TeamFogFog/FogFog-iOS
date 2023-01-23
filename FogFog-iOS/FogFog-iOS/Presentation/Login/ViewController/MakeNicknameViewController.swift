@@ -129,17 +129,17 @@ final class MakeNicknameViewController: BaseViewController {
     private func bind() {
         output.nickname
             .asDriver(onErrorJustReturn: "")
-            .drive(onNext: { [weak self] nickname in
-                self?.nicknameTextField.text = nickname
-            })
+            .drive(with: self) { owner, nickname in
+                owner.nicknameTextField.text = nickname
+            }
             .disposed(by: disposeBag)
         
         output.isValid
             .asDriver(onErrorJustReturn: false)
-            .drive(onNext: { [weak self] result in
-                [self?.errorImageView, self?.errorLabel].forEach { $0?.isHidden = result }
-                self?.nicknameTextField.setBoderColor(color: result ? .fogBlue : .etcRed)
-            })
+            .drive(with: self) { owner, result in
+                [owner.errorImageView, owner.errorLabel].forEach { $0?.isHidden = result }
+                owner.nicknameTextField.setBoderColor(color: result ? .fogBlue : .etcRed)
+            }
             .disposed(by: disposeBag)
     }
 }

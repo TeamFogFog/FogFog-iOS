@@ -9,15 +9,21 @@ import UIKit
 
 extension UIView {
     
+    static var className: String {
+        NSStringFromClass(self.classForCoder()).components(separatedBy: ".").last!
+    }
+    
+    var className: String {
+        NSStringFromClass(self.classForCoder).components(separatedBy: ".").last!
+    }
+    
     /// 다수의 뷰를 한번에 addSubview해주는 메서드
     func addSubviews(_ views: [UIView]) {
-        
         views.forEach { self.addSubview($0) }
     }
     
     /// UIView 의 모서리가 둥근 정도를 설정하는 메서드
     func makeRounded(cornerRadius: CGFloat?) {
-        
         if let cornerRadius = cornerRadius {
             self.layer.cornerRadius = cornerRadius
         } else {
@@ -29,7 +35,6 @@ extension UIView {
     
     /// gradient 설정 메서드
     func setGradient(_ color1: UIColor, _ color2: UIColor) {
-        
         let gradient = CAGradientLayer()
         
         gradient.colors = [color1.cgColor, color2.cgColor]
@@ -43,7 +48,6 @@ extension UIView {
     
     /// UIView의 그림자를 설정하는 메서드
     func addShadow(offset: CGSize, color: UIColor, opacity: Float, radius: CGFloat) {
-        
         self.layer.masksToBounds = false
         self.layer.shadowColor = color.cgColor
         self.layer.shadowOffset = offset

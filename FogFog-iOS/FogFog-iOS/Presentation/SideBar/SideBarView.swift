@@ -7,6 +7,7 @@
 
 import UIKit
 
+import RxCocoa
 import SnapKit
 import Then
 
@@ -231,5 +232,14 @@ final class SideBarView: BaseView {
             $0.height.equalTo(12)
             $0.width.equalTo(45)
         }
+    }
+}
+
+// MARK: - Custom Methods
+extension SideBarView {
+    
+    // 설정 버튼 터치 이벤트 방출하는 메서드
+    func settingButtonDidTap() -> Signal<Void> {
+        return settingButton.rx.tap.asSignal()
     }
 }
