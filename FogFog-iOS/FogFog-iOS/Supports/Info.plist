@@ -2,12 +2,6 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
-	<key>NSLocationAlwaysAndWhenInUseUsageDescription</key>
-	<string>위치 권한 체크</string>
-	<key>NSLocationWhenInUseUsageDescription</key>
-	<string>위치 권한 체크</string>
-	<key>NSLocationAlwaysUsageDescription</key>
-	<string>위치 권한 체크</string>
 	<key>UIAppFonts</key>
 	<array>
 		<string>Pretendard-Bold.otf</string>
