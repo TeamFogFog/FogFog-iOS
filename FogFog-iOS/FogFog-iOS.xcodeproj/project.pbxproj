@@ -1314,7 +1314,7 @@
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = 397WA8BG8W;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "FogFog-iOS/Supports/Info.plist";
 				INFOPLIST_KEY_NSLocationAlwaysAndWhenInUseUsageDescription = "위치 권한 체크";
@@ -1348,7 +1348,7 @@
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = 397WA8BG8W;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "FogFog-iOS/Supports/Info.plist";
 				INFOPLIST_KEY_NSLocationAlwaysAndWhenInUseUsageDescription = "위치 권한 체크";
