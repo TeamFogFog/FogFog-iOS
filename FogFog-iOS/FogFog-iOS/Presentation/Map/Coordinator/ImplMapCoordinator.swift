@@ -25,7 +25,9 @@ final class ImplMapCoordinator: MapCoordinator {
 
     func showMapViewController() {
         
-        let mapViewModel = MapViewModel(coordinator: self)
+        let locationService = DefaultLocationService()
+        
+        let mapViewModel = MapViewModel(coordinator: self, locationService: locationService)
         let mapViewController = MapViewController(viewModel: mapViewModel)
         changeAnimation()
         navigationController.viewControllers = [mapViewController]
