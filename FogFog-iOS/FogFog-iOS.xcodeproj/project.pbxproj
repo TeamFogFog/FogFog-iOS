@@ -69,6 +69,8 @@
 		ECA425EC29262CF8004DFDAF /* MapViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECA425EB29262CF7004DFDAF /* MapViewModel.swift */; };
 		ECA425F4292634A6004DFDAF /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECA425F3292634A5004DFDAF /* LoginViewController.swift */; };
 		ECA425F6292634C9004DFDAF /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECA425F5292634C9004DFDAF /* LoginViewModel.swift */; };
+		ECE7DAA629D0195A00F7351B /* DefaultLocationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECE7DAA529D0195A00F7351B /* DefaultLocationService.swift */; };
+		ECE7DAA829D01B1F00F7351B /* LocationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECE7DAA729D01B1F00F7351B /* LocationService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -157,6 +159,8 @@
 		ECA425EB29262CF7004DFDAF /* MapViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewModel.swift; sourceTree = "<group>"; };
 		ECA425F3292634A5004DFDAF /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		ECA425F5292634C9004DFDAF /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
+		ECE7DAA529D0195A00F7351B /* DefaultLocationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultLocationService.swift; sourceTree = "<group>"; };
+		ECE7DAA729D01B1F00F7351B /* LocationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationService.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -434,6 +438,8 @@
 				ECA425772922545C004DFDAF /* MapViewController.swift */,
 				ECA425CE292382AD004DFDAF /* NavigationView.swift */,
 				ECA425EB29262CF7004DFDAF /* MapViewModel.swift */,
+				ECE7DAA729D01B1F00F7351B /* LocationService.swift */,
+				ECE7DAA529D0195A00F7351B /* DefaultLocationService.swift */,
 			);
 			path = Map;
 			sourceTree = "<group>";
@@ -863,6 +869,7 @@
 			files = (
 				ECA4259929229BD9004DFDAF /* UIFont + Extension.swift in Sources */,
 				77F1D82F2927F2CC00F31D0C /* Adjusted + Extension.swift in Sources */,
+				ECE7DAA629D0195A00F7351B /* DefaultLocationService.swift in Sources */,
 				ECA4257629225450004DFDAF /* SplashViewController.swift in Sources */,
 				ECA425DA29253155004DFDAF /* Coordinator.swift in Sources */,
 				ECA425F4292634A6004DFDAF /* LoginViewController.swift in Sources */,
@@ -881,6 +888,7 @@
 				BDC50ED2292A07EB002378C6 /* BottomDetailViewModel.swift in Sources */,
 				77F1D82229269CC800F31D0C /* UIColor + Extension.swift in Sources */,
 				77F1D82429269E1C00F31D0C /* UIView + Extension.swift in Sources */,
+				ECE7DAA829D01B1F00F7351B /* LocationService.swift in Sources */,
 				BDC50ED6292A09BD002378C6 /* BaseView.swift in Sources */,
 				ECA4257A292254A8004DFDAF /* BottomDetailViewController.swift in Sources */,
 				ECA4259B2922A4A6004DFDAF /* FogImage.swift in Sources */,
@@ -1062,9 +1070,11 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_IDENTITY = "Apple Development";
-				CODE_SIGN_STYLE = Automatic;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_STYLE = Manual;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = W7P3R7ZL78;
+				DEVELOPMENT_TEAM = "";
+				"DEVELOPMENT_TEAM[sdk=iphoneos*]" = 397WA8BG8W;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "FogFog-iOS/Supports/Info.plist";
 				INFOPLIST_KEY_NSLocationAlwaysAndWhenInUseUsageDescription = "위치 권한 체크";
@@ -1079,9 +1089,10 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.FogFog-iOS";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.fogfog.FogFog-iOS";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
+				"PROVISIONING_PROFILE_SPECIFIER[sdk=iphoneos*]" = FogFog_Debug;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -1095,9 +1106,11 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_IDENTITY = "Apple Development";
-				CODE_SIGN_STYLE = Automatic;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_STYLE = Manual;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = W7P3R7ZL78;
+				DEVELOPMENT_TEAM = "";
+				"DEVELOPMENT_TEAM[sdk=iphoneos*]" = 397WA8BG8W;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "FogFog-iOS/Supports/Info.plist";
 				INFOPLIST_KEY_NSLocationAlwaysAndWhenInUseUsageDescription = "위치 권한 체크";
@@ -1112,9 +1125,10 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.FogFog-iOS";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.fogfog.FogFog-iOS";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
+				"PROVISIONING_PROFILE_SPECIFIER[sdk=iphoneos*]" = FogFog_Debug;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
