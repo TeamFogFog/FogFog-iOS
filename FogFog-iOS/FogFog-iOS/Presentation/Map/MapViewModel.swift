@@ -18,7 +18,7 @@ enum LocationAuthorizationStatus {
 
 final class MapViewModel: ViewModelType {
     
-    var authorizationStatus = BehaviorSubject<LocationAuthorizationStatus?>(value: nil)
+    var authorizationStatus = PublishSubject<LocationAuthorizationStatus?>()
     var userLocation = PublishSubject<CLLocation>()
     var disposeBag = DisposeBag()
     
@@ -32,8 +32,8 @@ final class MapViewModel: ViewModelType {
     
     struct Input {
         let viewDidLoad: Observable<Void>
-        let tapMenuButton: Signal<Void>
-        let tapBlurEffectView: Signal<Void>
+        let tapMenuButton: Observable<Void>
+        let tapBlurEffectView: Observable<Void>
     }
     
     struct Output {
@@ -55,15 +55,15 @@ final class MapViewModel: ViewModelType {
             .disposed(by: disposeBag)
         
         input.tapMenuButton
-            .emit(onNext: { _ in
+            .subscribe { _ in
                 sideBarState.accept(true)
-            })
+            }
             .disposed(by: disposeBag)
         
         input.tapBlurEffectView
-            .emit(onNext: { _ in
+            .subscribe { _ in
                 sideBarState.accept(false)
-            })
+            }
             .disposed(by: disposeBag)
         
         self.userLocation
@@ -105,7 +105,6 @@ private extension MapViewModel {
             .withUnretained(self)
             .subscribe(onNext: { owner, location in
                 owner.userLocation.onNext(location)
-                print("location", location)
             })
             .disposed(by: self.disposeBag)
     }

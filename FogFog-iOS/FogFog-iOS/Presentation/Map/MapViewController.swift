@@ -28,8 +28,8 @@ final class MapViewController: BaseViewController {
     
     private var viewModel: MapViewModel
     private lazy var input = MapViewModel.Input(viewDidLoad: Observable.just(()),
-                                                tapMenuButton: navigationView.menuButton.rx.tap.asSignal(),
-                                                tapBlurEffectView: tapBlurEffectView.asSignal())
+                                                tapMenuButton: navigationView.menuButton.rx.tap.asObservable(),
+                                                tapBlurEffectView: tapBlurEffectView.asObservable())
     private lazy var output = viewModel.transform(input: input)
     private let tapBlurEffectView = PublishRelay<Void>()
     private let disposeBag = DisposeBag()
@@ -117,9 +117,9 @@ private extension MapViewController {
         
         output.currentUserLocation
             .asDriver()
-            .drive(onNext: { coordinator in
+            .drive { coordinator in
                 self.move(at: coordinator)
-            })
+            }
             .disposed(by: disposeBag)
     }
 }
