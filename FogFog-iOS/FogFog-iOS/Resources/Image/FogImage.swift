@@ -23,4 +23,5 @@ public enum FogImage {
     static let btnNotice = UIImage(named: "btnNotice")!
     static let btnSet = UIImage(named: "btnSet")!
     static let placeMarker = UIImage(named: "fluentLocation16Filled")!
+    static let pinInactive = UIImage(named: "pinInactive")!
 }
