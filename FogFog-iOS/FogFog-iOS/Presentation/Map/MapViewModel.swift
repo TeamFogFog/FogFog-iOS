@@ -7,8 +7,9 @@
 
 import UIKit
 
-import RxSwift
 import RxCocoa
+import RxSwift
+import Moya
 
 final class MapViewModel: ViewModelType {
     
@@ -21,20 +22,31 @@ final class MapViewModel: ViewModelType {
     }
     
     struct Input {
+        let viewDidLoad: Signal<Void>
         let tapMenuButton: Signal<Void>
         let tapBlurEffectView: Signal<Void>
         let tapSettingButton: Signal<Void>
     }
     
     struct Output {
+        let userNickname: BehaviorSubject<String>
         let isVisible: Driver<Bool>
         let didSettingButtonTapped: Signal<Void>
     }
+    
+    let userNickname = BehaviorSubject<String>(value: "")
         
     func transform(input: Input) -> Output {
         let sideBarState = PublishRelay<Bool>()
         let didSettingButtonTapped = PublishRelay<Void>()
-        let output = Output(isVisible: sideBarState.asDriver(onErrorJustReturn: false), didSettingButtonTapped: didSettingButtonTapped.asSignal())
+        let output = Output(userNickname: userNickname, isVisible: sideBarState.asDriver(onErrorJustReturn: false), didSettingButtonTapped: didSettingButtonTapped.asSignal())
+        
+        input.viewDidLoad
+            .emit(onNext: { _ in
+                // TODO: 유저아이디 추후 변경 예정 (로그인 후 UserDefaults에 저장된 값으로)
+                self.getUserNicknameAPI(userId: 2)
+            })
+            .disposed(by: disposeBag)
         
         input.tapMenuButton
             .emit(onNext: { _ in
@@ -56,5 +68,25 @@ final class MapViewModel: ViewModelType {
             .disposed(by: disposeBag)
         
         return output
+    }
+}
+
+// MARK: - Network
+extension MapViewModel {
+    func getUserNicknameAPI(userId: Int) {
+        UserAPIService.shared.getUserNickname(userId: userId)
+            .subscribe(onSuccess: { result in
+                self.userNickname.onNext(result.nickname)
+            }, onFailure: { error in
+                if let networkError = error as? NetworkError {
+                    switch networkError {
+                    case .unauthorized:
+                        print("unauthorized")
+                    default:
+                        print("network error")
+                    }
+                }
+            })
+            .disposed(by: disposeBag)
     }
 }

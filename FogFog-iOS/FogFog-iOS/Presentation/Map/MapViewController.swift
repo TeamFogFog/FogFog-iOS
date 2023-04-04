@@ -92,6 +92,7 @@ extension MapViewController {
     
     private func bind() {
         let input = MapViewModel.Input(
+            viewDidLoad: Signal<Void>.just(()),
             tapMenuButton: navigationView.menuButton.rx.tap.asSignal(),
             tapBlurEffectView: tapBlurEffectView.asSignal(),
             tapSettingButton: sideBarView.settingButtonDidTap())
@@ -106,6 +107,12 @@ extension MapViewController {
         
         output.didSettingButtonTapped
             .emit()
+            .disposed(by: disposeBag)
+        
+        output.userNickname
+            .subscribe(onNext: { result in
+                self.sideBarView.nicknameLabel.text = result
+            })
             .disposed(by: disposeBag)
     }
 }
