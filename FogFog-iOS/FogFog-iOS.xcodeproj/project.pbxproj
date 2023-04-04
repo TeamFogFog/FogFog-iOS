@@ -23,6 +23,7 @@
 		776502182954A3BA002BF7AD /* SettingTitleTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 776502172954A3BA002BF7AD /* SettingTitleTableViewCell.swift */; };
 		77A99D6A2971AFDC0037FCAD /* SettingCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77A99D692971AFDC0037FCAD /* SettingCoordinator.swift */; };
 		77A99D6C2971B0220037FCAD /* DefaultSettingCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77A99D6B2971B0220037FCAD /* DefaultSettingCoordinator.swift */; };
+		77CB027B29D02FA1006817E5 /* UserAPIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77CB027A29D02FA1006817E5 /* UserAPIService.swift */; };
 		77D32D41292A0EDD006E6314 /* ViewModelType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77D32D40292A0EDD006E6314 /* ViewModelType.swift */; };
 		77D32D43292CD6A3006E6314 /* SideBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77D32D42292CD6A2006E6314 /* SideBarView.swift */; };
 		77E70F462930951100F55CD7 /* UITextField + Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77E70F452930951100F55CD7 /* UITextField + Extension.swift */; };
@@ -134,6 +135,7 @@
 		776502172954A3BA002BF7AD /* SettingTitleTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingTitleTableViewCell.swift; sourceTree = "<group>"; };
 		77A99D692971AFDC0037FCAD /* SettingCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingCoordinator.swift; sourceTree = "<group>"; };
 		77A99D6B2971B0220037FCAD /* DefaultSettingCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultSettingCoordinator.swift; sourceTree = "<group>"; };
+		77CB027A29D02FA1006817E5 /* UserAPIService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserAPIService.swift; sourceTree = "<group>"; };
 		77D32D40292A0EDD006E6314 /* ViewModelType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModelType.swift; sourceTree = "<group>"; };
 		77D32D42292CD6A2006E6314 /* SideBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideBarView.swift; sourceTree = "<group>"; };
 		77E70F452930951100F55CD7 /* UITextField + Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITextField + Extension.swift"; sourceTree = "<group>"; };
@@ -350,6 +352,14 @@
 			path = Protocol;
 			sourceTree = "<group>";
 		};
+		77CB027929D02BCF006817E5 /* APIServices */ = {
+			isa = PBXGroup;
+			children = (
+				77CB027A29D02FA1006817E5 /* UserAPIService.swift */,
+			);
+			path = APIServices;
+			sourceTree = "<group>";
+		};
 		77D32D3F292A0EC7006E6314 /* Protocol */ = {
 			isa = PBXGroup;
 			children = (
@@ -389,6 +399,7 @@
 		BD4E13632973DAA300AEA757 /* Networking */ = {
 			isa = PBXGroup;
 			children = (
+				77CB027929D02BCF006817E5 /* APIServices */,
 				BD90E9DF2976C3EF00C7CB6B /* NetworkEnv.swift */,
 				BD4E13642973DAC400AEA757 /* NetworkError.swift */,
 				BD90E9E12976C4F800C7CB6B /* Networking.swift */,
@@ -1137,6 +1148,7 @@
 				BDC20F9A293B446D00B9A2E7 /* SplashViewController.swift in Sources */,
 				7761D4F6292F3749003971DC /* FogNavigationView.swift in Sources */,
 				77650202295448AE002BF7AD /* SettingViewController.swift in Sources */,
+				77CB027B29D02FA1006817E5 /* UserAPIService.swift in Sources */,
 				77650212295463B8002BF7AD /* BaseTableViewCell.swift in Sources */,
 				ECA425782922545C004DFDAF /* MapViewController.swift in Sources */,
 				BD347C63292FEA15009F52BA /* RoadPopUpView.swift in Sources */,
