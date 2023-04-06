@@ -76,7 +76,7 @@ extension MapViewModel {
     func getUserNicknameAPI(userId: Int) {
         UserAPIService.shared.getUserNickname(userId: userId)
             .subscribe(onSuccess: { result in
-                self.userNickname.onNext(result.nickname)
+                self.userNickname.onNext(result?.nickname ?? "")
             }, onFailure: { error in
                 if let networkError = error as? NetworkError {
                     switch networkError {
