@@ -23,7 +23,7 @@
 		776502182954A3BA002BF7AD /* SettingTitleTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 776502172954A3BA002BF7AD /* SettingTitleTableViewCell.swift */; };
 		77A99D6A2971AFDC0037FCAD /* SettingCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77A99D692971AFDC0037FCAD /* SettingCoordinator.swift */; };
 		77A99D6C2971B0220037FCAD /* DefaultSettingCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77A99D6B2971B0220037FCAD /* DefaultSettingCoordinator.swift */; };
-		77CB027829D02863006817E5 /* NicknameResModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77CB027729D02863006817E5 /* NicknameResModel.swift */; };
+		77CB027829D02863006817E5 /* NicknameResponseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77CB027729D02863006817E5 /* NicknameResponseModel.swift */; };
 		77CB027B29D02FA1006817E5 /* UserAPIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77CB027A29D02FA1006817E5 /* UserAPIService.swift */; };
 		77CB027F29DEAE57006817E5 /* RxMoya + Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77CB027E29DEAE57006817E5 /* RxMoya + Extension.swift */; };
 		77D32D41292A0EDD006E6314 /* ViewModelType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77D32D40292A0EDD006E6314 /* ViewModelType.swift */; };
@@ -137,7 +137,7 @@
 		776502172954A3BA002BF7AD /* SettingTitleTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingTitleTableViewCell.swift; sourceTree = "<group>"; };
 		77A99D692971AFDC0037FCAD /* SettingCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingCoordinator.swift; sourceTree = "<group>"; };
 		77A99D6B2971B0220037FCAD /* DefaultSettingCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultSettingCoordinator.swift; sourceTree = "<group>"; };
-		77CB027729D02863006817E5 /* NicknameResModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NicknameResModel.swift; sourceTree = "<group>"; };
+		77CB027729D02863006817E5 /* NicknameResponseModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NicknameResponseModel.swift; sourceTree = "<group>"; };
 		77CB027A29D02FA1006817E5 /* UserAPIService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserAPIService.swift; sourceTree = "<group>"; };
 		77CB027E29DEAE57006817E5 /* RxMoya + Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "RxMoya + Extension.swift"; sourceTree = "<group>"; };
 		77D32D40292A0EDD006E6314 /* ViewModelType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModelType.swift; sourceTree = "<group>"; };
@@ -434,7 +434,7 @@
 			isa = PBXGroup;
 			children = (
 				BD90E9DB2976C02100C7CB6B /* CommonResponse.swift */,
-				77CB027729D02863006817E5 /* NicknameResModel.swift */,
+				77CB027729D02863006817E5 /* NicknameResponseModel.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -1153,7 +1153,7 @@
 				BD347C60292FD4C8009F52BA /* FogButton.swift in Sources */,
 				ECA4257E292254C6004DFDAF /* BaseViewController.swift in Sources */,
 				BDC20F9A293B446D00B9A2E7 /* SplashViewController.swift in Sources */,
-				77CB027829D02863006817E5 /* NicknameResModel.swift in Sources */,
+				77CB027829D02863006817E5 /* NicknameResponseModel.swift in Sources */,
 				7761D4F6292F3749003971DC /* FogNavigationView.swift in Sources */,
 				77650202295448AE002BF7AD /* SettingViewController.swift in Sources */,
 				77CB027B29D02FA1006817E5 /* UserAPIService.swift in Sources */,

@@ -20,8 +20,8 @@ class UserAPIService: Networking {
     private init() {}
     
     // 유저 닉네임 조회
-    func getUserNickname(userId: Int) -> Single<NicknameResModel?> {
+    func getUserNickname(userId: Int) -> Single<NicknameResponseModel?> {
         return provider.request(.getNickname(userId: userId))
-            .map(NicknameResModel.self)
+            .map(NicknameResponseModel.self)
     }
 }

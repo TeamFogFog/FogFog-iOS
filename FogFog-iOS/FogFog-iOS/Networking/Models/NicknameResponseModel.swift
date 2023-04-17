@@ -7,6 +7,6 @@
 
 import Foundation
 
-struct NicknameResModel: Codable {
+struct NicknameResponseModel: Codable {
     let nickname: String
 }
