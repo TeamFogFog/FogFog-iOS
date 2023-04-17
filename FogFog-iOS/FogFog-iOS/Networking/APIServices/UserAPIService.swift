@@ -17,6 +17,8 @@ class UserAPIService: Networking {
     static let shared = UserAPIService()
     var provider = NetworkProvider<API>()
     
+    private init() {}
+    
     // 유저 닉네임 조회
     func getUserNickname(userId: Int) -> Single<NicknameResModel?> {
         return provider.request(.getNickname(userId: userId))
