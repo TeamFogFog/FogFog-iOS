@@ -1,5 +1,5 @@
 //
-//  BottomDetailViewController.swift
+//  SmokingAreaDetailViewController.swift
 //  FogFog-iOS
 //
 //  Created by 김승찬 on 2022/11/14.
@@ -10,10 +10,10 @@ import UIKit
 import SnapKit
 import Then
 
-final class BottomDetailViewController: BaseViewController {
+final class SmokingAreaDetailViewController: BaseViewController {
     
     // MARK: Properties
-    private let rootView = BottomDetailRootView()
+    private let rootView = SmokeAreaDetailView()
     private weak var viewModel: MapViewModel?
     
     // MARK: Initializers

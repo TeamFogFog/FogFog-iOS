@@ -51,8 +51,8 @@
 		BD347C60292FD4C8009F52BA /* FogButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD347C5F292FD4C8009F52BA /* FogButton.swift */; };
 		BD347C63292FEA15009F52BA /* RoadPopUpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD347C62292FEA15009F52BA /* RoadPopUpView.swift */; };
 		BD347C65292FEB08009F52BA /* RoadPopUpViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD347C64292FEB08009F52BA /* RoadPopUpViewModel.swift */; };
-		BD46305C292A25B300E9E9C2 /* BottomDetailRootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD46305B292A25B300E9E9C2 /* BottomDetailRootView.swift */; };
-		BD4B550F292A29EC00ECFD04 /* SmokePlace.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD4B550E292A29EC00ECFD04 /* SmokePlace.swift */; };
+		BD46305C292A25B300E9E9C2 /* SmokingAreaDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD46305B292A25B300E9E9C2 /* SmokingAreaDetailView.swift */; };
+		BD4B550F292A29EC00ECFD04 /* SmokingArea.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD4B550E292A29EC00ECFD04 /* SmokingArea.swift */; };
 		BD4E13652973DAC400AEA757 /* NetworkError.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD4E13642973DAC400AEA757 /* NetworkError.swift */; };
 		BD90E9DC2976C02100C7CB6B /* CommonResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD90E9DB2976C02100C7CB6B /* CommonResponse.swift */; };
 		BD90E9DE2976C11E00C7CB6B /* FogAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD90E9DD2976C11E00C7CB6B /* FogAPI.swift */; };
@@ -62,7 +62,7 @@
 		BDC20F9A293B446D00B9A2E7 /* SplashViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDC20F99293B446D00B9A2E7 /* SplashViewController.swift */; };
 		BDC20F9D293B44B600B9A2E7 /* FogToast.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDC20F9C293B44B600B9A2E7 /* FogToast.swift */; };
 		BDC50ECB292A07B2002378C6 /* GoogleMap.plist in Resources */ = {isa = PBXBuildFile; fileRef = BDC50ECA292A07B2002378C6 /* GoogleMap.plist */; };
-		BDC50ED2292A07EB002378C6 /* BottomDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDC50ED1292A07EB002378C6 /* BottomDetailViewModel.swift */; };
+		BDC50ED2292A07EB002378C6 /* SmokingAreaDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDC50ED1292A07EB002378C6 /* SmokingAreaDetailViewModel.swift */; };
 		BDC50ED6292A09BD002378C6 /* BaseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDC50ED5292A09BD002378C6 /* BaseView.swift */; };
 		BDEA50D129261C6600110982 /* .swiftlint.yml in Resources */ = {isa = PBXBuildFile; fileRef = BDEA50D029261C6600110982 /* .swiftlint.yml */; };
 		ECA4252D29224DB8004DFDAF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECA4252C29224DB8004DFDAF /* AppDelegate.swift */; };
@@ -75,7 +75,7 @@
 		ECA4257229225409004DFDAF /* Image.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ECA4257129225409004DFDAF /* Image.xcassets */; };
 		ECA425742922543B004DFDAF /* Color.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ECA425732922543B004DFDAF /* Color.xcassets */; };
 		ECA425782922545C004DFDAF /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECA425772922545C004DFDAF /* MapViewController.swift */; };
-		ECA4257A292254A8004DFDAF /* BottomDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECA42579292254A8004DFDAF /* BottomDetailViewController.swift */; };
+		ECA4257A292254A8004DFDAF /* SmokingAreaDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECA42579292254A8004DFDAF /* SmokingAreaDetailViewController.swift */; };
 		ECA4257E292254C6004DFDAF /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECA4257D292254C6004DFDAF /* BaseViewController.swift */; };
 		ECA4259729229B15004DFDAF /* FogFont.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECA4259629229B15004DFDAF /* FogFont.swift */; };
 		ECA4259929229BD9004DFDAF /* UIFont + Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECA4259829229BD9004DFDAF /* UIFont + Extension.swift */; };
@@ -159,8 +159,8 @@
 		BD347C5F292FD4C8009F52BA /* FogButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FogButton.swift; sourceTree = "<group>"; };
 		BD347C62292FEA15009F52BA /* RoadPopUpView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoadPopUpView.swift; sourceTree = "<group>"; };
 		BD347C64292FEB08009F52BA /* RoadPopUpViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoadPopUpViewModel.swift; sourceTree = "<group>"; };
-		BD46305B292A25B300E9E9C2 /* BottomDetailRootView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BottomDetailRootView.swift; sourceTree = "<group>"; };
-		BD4B550E292A29EC00ECFD04 /* SmokePlace.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SmokePlace.swift; sourceTree = "<group>"; };
+		BD46305B292A25B300E9E9C2 /* SmokingAreaDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SmokingAreaDetailView.swift; sourceTree = "<group>"; };
+		BD4B550E292A29EC00ECFD04 /* SmokingArea.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SmokingArea.swift; sourceTree = "<group>"; };
 		BD4E13642973DAC400AEA757 /* NetworkError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkError.swift; sourceTree = "<group>"; };
 		BD90E9DB2976C02100C7CB6B /* CommonResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommonResponse.swift; sourceTree = "<group>"; };
 		BD90E9DD2976C11E00C7CB6B /* FogAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FogAPI.swift; sourceTree = "<group>"; };
@@ -171,7 +171,7 @@
 		BDC20F99293B446D00B9A2E7 /* SplashViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashViewController.swift; sourceTree = "<group>"; };
 		BDC20F9C293B44B600B9A2E7 /* FogToast.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FogToast.swift; sourceTree = "<group>"; };
 		BDC50ECA292A07B2002378C6 /* GoogleMap.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = GoogleMap.plist; sourceTree = "<group>"; };
-		BDC50ED1292A07EB002378C6 /* BottomDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BottomDetailViewModel.swift; sourceTree = "<group>"; };
+		BDC50ED1292A07EB002378C6 /* SmokingAreaDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SmokingAreaDetailViewModel.swift; sourceTree = "<group>"; };
 		BDC50ED5292A09BD002378C6 /* BaseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseView.swift; sourceTree = "<group>"; };
 		BDEA50D029261C6600110982 /* .swiftlint.yml */ = {isa = PBXFileReference; lastKnownFileType = text.yaml; path = .swiftlint.yml; sourceTree = "<group>"; };
 		D67B489E657987D4A7AD92C7 /* Pods_FogFog_iOS_FogFog_iOSUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FogFog_iOS_FogFog_iOSUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -190,7 +190,7 @@
 		ECA4257129225409004DFDAF /* Image.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Image.xcassets; sourceTree = "<group>"; };
 		ECA425732922543B004DFDAF /* Color.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Color.xcassets; sourceTree = "<group>"; };
 		ECA425772922545C004DFDAF /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
-		ECA42579292254A8004DFDAF /* BottomDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BottomDetailViewController.swift; sourceTree = "<group>"; };
+		ECA42579292254A8004DFDAF /* SmokingAreaDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SmokingAreaDetailViewController.swift; sourceTree = "<group>"; };
 		ECA4257D292254C6004DFDAF /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		ECA4258129225A41004DFDAF /* .gitkeep */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitkeep; sourceTree = "<group>"; };
 		ECA4258729225A7D004DFDAF /* .gitkeep */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitkeep; sourceTree = "<group>"; };
@@ -394,7 +394,7 @@
 		BD4B550D292A29AA00ECFD04 /* Place */ = {
 			isa = PBXGroup;
 			children = (
-				BD4B550E292A29EC00ECFD04 /* SmokePlace.swift */,
+				BD4B550E292A29EC00ECFD04 /* SmokingArea.swift */,
 			);
 			path = Place;
 			sourceTree = "<group>";
@@ -465,8 +465,8 @@
 		BDC50ECD292A07CD002378C6 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				BD46305B292A25B300E9E9C2 /* BottomDetailRootView.swift */,
-				ECA42579292254A8004DFDAF /* BottomDetailViewController.swift */,
+				BD46305B292A25B300E9E9C2 /* SmokingAreaDetailView.swift */,
+				ECA42579292254A8004DFDAF /* SmokingAreaDetailViewController.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -474,7 +474,7 @@
 		BDC50ECE292A07D0002378C6 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
-				BDC50ED1292A07EB002378C6 /* BottomDetailViewModel.swift */,
+				BDC50ED1292A07EB002378C6 /* SmokingAreaDetailViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -559,7 +559,7 @@
 				ECA425F229263495004DFDAF /* Common */,
 				ECA425F129263486004DFDAF /* Login */,
 				ECA4256A29225355004DFDAF /* Map */,
-				ECA425692922534E004DFDAF /* BottomDetailView */,
+				ECA425692922534E004DFDAF /* SmokingArea */,
 				7765020B295453BB002BF7AD /* Setting */,
 				ECA4256829225346004DFDAF /* SideBar */,
 			);
@@ -645,13 +645,13 @@
 			path = SideBar;
 			sourceTree = "<group>";
 		};
-		ECA425692922534E004DFDAF /* BottomDetailView */ = {
+		ECA425692922534E004DFDAF /* SmokingArea */ = {
 			isa = PBXGroup;
 			children = (
 				BDC50ECE292A07D0002378C6 /* ViewModel */,
 				BDC50ECD292A07CD002378C6 /* View */,
 			);
-			path = BottomDetailView;
+			path = SmokingArea;
 			sourceTree = "<group>";
 		};
 		ECA4256A29225355004DFDAF /* Map */ = {
@@ -1118,13 +1118,13 @@
 				ECA425DE29253292004DFDAF /* CoordinatorCase.swift in Sources */,
 				BD9AA41829929ABD00D4E7CE /* AppleLoginManager.swift in Sources */,
 				BD90E9E02976C3EF00C7CB6B /* NetworkEnv.swift in Sources */,
-				BD46305C292A25B300E9E9C2 /* BottomDetailRootView.swift in Sources */,
-				BD4B550F292A29EC00ECFD04 /* SmokePlace.swift in Sources */,
+				BD46305C292A25B300E9E9C2 /* SmokingAreaDetailView.swift in Sources */,
+				BD4B550F292A29EC00ECFD04 /* SmokingArea.swift in Sources */,
 				ECA425F6292634C9004DFDAF /* LoginViewModel.swift in Sources */,
 				BD90E9E22976C4F800C7CB6B /* Networking.swift in Sources */,
 				77A99D6A2971AFDC0037FCAD /* SettingCoordinator.swift in Sources */,
 				ECA4259729229B15004DFDAF /* FogFont.swift in Sources */,
-				BDC50ED2292A07EB002378C6 /* BottomDetailViewModel.swift in Sources */,
+				BDC50ED2292A07EB002378C6 /* SmokingAreaDetailViewModel.swift in Sources */,
 				77CB027F29DEAE57006817E5 /* RxMoya + Extension.swift in Sources */,
 				BD90E9DC2976C02100C7CB6B /* CommonResponse.swift in Sources */,
 				BD347C5A292FD226009F52BA /* ExMapType.swift in Sources */,
@@ -1134,7 +1134,7 @@
 				77E70F462930951100F55CD7 /* UITextField + Extension.swift in Sources */,
 				BDC50ED6292A09BD002378C6 /* BaseView.swift in Sources */,
 				BD90E9DE2976C11E00C7CB6B /* FogAPI.swift in Sources */,
-				ECA4257A292254A8004DFDAF /* BottomDetailViewController.swift in Sources */,
+				ECA4257A292254A8004DFDAF /* SmokingAreaDetailViewController.swift in Sources */,
 				BD347C5E292FD2BE009F52BA /* FogButtonStyle.swift in Sources */,
 				ECA4259B2922A4A6004DFDAF /* FogImage.swift in Sources */,
 				ECA425E829262A78004DFDAF /* MapCoordinator.swift in Sources */,

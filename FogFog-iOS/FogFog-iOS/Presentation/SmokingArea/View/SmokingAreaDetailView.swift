@@ -1,5 +1,5 @@
 //
-//  BottomDetailRootView.swift
+//  SmokingAreaDetailView.swift
 //  FogFog-iOS
 //
 //  Created by taekki on 2022/11/20.
@@ -7,7 +7,7 @@
 
 import UIKit
 
-final class BottomDetailRootView: BaseView {
+final class SmokingAreaDetailView: BaseView {
     
     // MARK: Literals
     private enum Literals {
@@ -181,7 +181,7 @@ final class BottomDetailRootView: BaseView {
     }
 }
 
-extension BottomDetailRootView {
+extension SmokeAreaDetailView {
     
     func showBottomSheet(withDuration duration: Double = 0.3) {
         let movement = Metrics.bottomSheetBottom
