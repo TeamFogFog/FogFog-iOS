@@ -194,7 +194,6 @@
 		ECA4257D292254C6004DFDAF /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		ECA4258129225A41004DFDAF /* .gitkeep */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitkeep; sourceTree = "<group>"; };
 		ECA4258729225A7D004DFDAF /* .gitkeep */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitkeep; sourceTree = "<group>"; };
-		ECA4258B29225A92004DFDAF /* .gitkeep */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitkeep; sourceTree = "<group>"; };
 		ECA4258D29229A05004DFDAF /* Pretendard-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Pretendard-Regular.otf"; sourceTree = "<group>"; };
 		ECA4258E29229A05004DFDAF /* Pretendard-Light.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Pretendard-Light.otf"; sourceTree = "<group>"; };
 		ECA4258F29229A05004DFDAF /* Pretendard-ExtraBold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Pretendard-ExtraBold.otf"; sourceTree = "<group>"; };
@@ -549,7 +548,6 @@
 			isa = PBXGroup;
 			children = (
 				BD4B550D292A29AA00ECFD04 /* Place */,
-				ECA4258B29225A92004DFDAF /* .gitkeep */,
 			);
 			path = Models;
 			sourceTree = "<group>";
