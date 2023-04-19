@@ -10,6 +10,7 @@ import Moya
 enum UserAPI {
     case preferredMap(userId: String)
     case withdrawal(userId: String)
+    case getNickname(userId: Int)
 }
 
 extension UserAPI: FogAPI {
@@ -24,6 +25,8 @@ extension UserAPI: FogAPI {
             return "/\(userId)/preffered-map"
         case .withdrawal(let userId):
             return "/\(userId)"
+        case .getNickname(let userId):
+            return "/\(userId)/nickname"
         }
     }
     
@@ -33,21 +36,21 @@ extension UserAPI: FogAPI {
             return .patch
         case .withdrawal:
             return .delete
+        case .getNickname:
+            return .get
         }
     }
     
     var parameters: [String: String]? {
         switch self {
-        case .preferredMap, .withdrawal:
+        case .preferredMap, .withdrawal, .getNickname:
             return nil
         }
     }
     
     var error: [Int : NetworkError]? {
         switch self {
-        case .preferredMap:
-            return nil
-        case .withdrawal:
+        case .preferredMap, .withdrawal, .getNickname:
             return nil
         /*
          case .nickname:
