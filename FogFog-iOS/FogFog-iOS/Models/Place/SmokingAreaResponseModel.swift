@@ -1,5 +1,5 @@
 //
-//  SmokingArea.swift
+//  SmokingAreaResponseModel.swift
 //  FogFog-iOS
 //
 //  Created by taekki on 2022/11/20.
@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct SmokingArea: Decodable {
+struct SmokingAreaResponseModel: Decodable {
     let name: String
     let address: String
     let imageURLString: String
