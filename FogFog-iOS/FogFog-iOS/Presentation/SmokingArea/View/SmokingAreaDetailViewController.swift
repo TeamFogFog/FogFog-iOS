@@ -63,21 +63,6 @@ class SmokingAreaDetailViewController: BaseViewController {
     }
 }
 
-enum BottomViewType {
-    case cardView
-    case messageView
-    
-    var view: any Presentable {
-        switch self {
-        case .cardView:
-            return SmokingAreaCardView()
-        
-        case .messageView:
-            return SmokingAreaMessageView()
-        }
-    }
-}
-
 extension UIViewController {
     
     func showBottomView(_ withContents: some Contents, _ viewType: BottomViewType) {

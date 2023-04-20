@@ -58,6 +58,7 @@
 		BD5D0D7629F1310800190471 /* SmokingAreaCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD5D0D7529F1310800190471 /* SmokingAreaCardView.swift */; };
 		BD5D0D7829F1395400190471 /* Contents.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD5D0D7729F1395400190471 /* Contents.swift */; };
 		BD5D0D7C29F14FDC00190471 /* SmokingAreaMessageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD5D0D7B29F14FDC00190471 /* SmokingAreaMessageView.swift */; };
+		BD5D0D7F29F15E3A00190471 /* BottomViewType.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD5D0D7E29F15E3A00190471 /* BottomViewType.swift */; };
 		BD90E9DC2976C02100C7CB6B /* CommonResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD90E9DB2976C02100C7CB6B /* CommonResponse.swift */; };
 		BD90E9DE2976C11E00C7CB6B /* FogAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD90E9DD2976C11E00C7CB6B /* FogAPI.swift */; };
 		BD90E9E02976C3EF00C7CB6B /* NetworkEnv.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD90E9DF2976C3EF00C7CB6B /* NetworkEnv.swift */; };
@@ -170,6 +171,7 @@
 		BD5D0D7529F1310800190471 /* SmokingAreaCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SmokingAreaCardView.swift; sourceTree = "<group>"; };
 		BD5D0D7729F1395400190471 /* Contents.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Contents.swift; sourceTree = "<group>"; };
 		BD5D0D7B29F14FDC00190471 /* SmokingAreaMessageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SmokingAreaMessageView.swift; sourceTree = "<group>"; };
+		BD5D0D7E29F15E3A00190471 /* BottomViewType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BottomViewType.swift; sourceTree = "<group>"; };
 		BD90E9DB2976C02100C7CB6B /* CommonResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommonResponse.swift; sourceTree = "<group>"; };
 		BD90E9DD2976C11E00C7CB6B /* FogAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FogAPI.swift; sourceTree = "<group>"; };
 		BD90E9DF2976C3EF00C7CB6B /* NetworkEnv.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkEnv.swift; sourceTree = "<group>"; };
@@ -437,6 +439,14 @@
 			path = Protocol;
 			sourceTree = "<group>";
 		};
+		BD5D0D7D29F15E2800190471 /* BottomView */ = {
+			isa = PBXGroup;
+			children = (
+				BD5D0D7E29F15E3A00190471 /* BottomViewType.swift */,
+			);
+			path = BottomView;
+			sourceTree = "<group>";
+		};
 		BD9AA41629929AB200D4E7CE /* Manager */ = {
 			isa = PBXGroup;
 			children = (
@@ -573,6 +583,7 @@
 		ECA4255E292251E0004DFDAF /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				BD5D0D7D29F15E2800190471 /* BottomView */,
 				BD5D0D6E29F12DFF00190471 /* Message */,
 				BD4B550D292A29AA00ECFD04 /* Place */,
 			);
@@ -1172,6 +1183,7 @@
 				77D32D41292A0EDD006E6314 /* ViewModelType.swift in Sources */,
 				BD2D276B297D17E400984B97 /* UserAPI.swift in Sources */,
 				ECA425E2292532CA004DFDAF /* DefaultAppCoordinator.swift in Sources */,
+				BD5D0D7F29F15E3A00190471 /* BottomViewType.swift in Sources */,
 				ECA425E2292532CA004DFDAF /* DefaultAppCoordinator.swift in Sources */,
 				ECA4252F29224DB8004DFDAF /* SceneDelegate.swift in Sources */,
 				776502182954A3BA002BF7AD /* SettingTitleTableViewCell.swift in Sources */,
