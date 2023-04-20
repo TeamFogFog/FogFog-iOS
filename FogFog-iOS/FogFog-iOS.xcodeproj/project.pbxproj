@@ -54,6 +54,8 @@
 		BD4B550F292A29EC00ECFD04 /* SmokingAreaResponseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD4B550E292A29EC00ECFD04 /* SmokingAreaResponseModel.swift */; };
 		BD4E13652973DAC400AEA757 /* NetworkError.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD4E13642973DAC400AEA757 /* NetworkError.swift */; };
 		BD5D0D7029F12E0600190471 /* MessageModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD5D0D6F29F12E0600190471 /* MessageModel.swift */; };
+		BD5D0D7429F1302F00190471 /* Presentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD5D0D7329F1302F00190471 /* Presentable.swift */; };
+		BD5D0D7829F1395400190471 /* Contents.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD5D0D7729F1395400190471 /* Contents.swift */; };
 		BD90E9DC2976C02100C7CB6B /* CommonResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD90E9DB2976C02100C7CB6B /* CommonResponse.swift */; };
 		BD90E9DE2976C11E00C7CB6B /* FogAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD90E9DD2976C11E00C7CB6B /* FogAPI.swift */; };
 		BD90E9E02976C3EF00C7CB6B /* NetworkEnv.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD90E9DF2976C3EF00C7CB6B /* NetworkEnv.swift */; };
@@ -162,6 +164,8 @@
 		BD4B550E292A29EC00ECFD04 /* SmokingAreaResponseModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SmokingAreaResponseModel.swift; sourceTree = "<group>"; };
 		BD4E13642973DAC400AEA757 /* NetworkError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkError.swift; sourceTree = "<group>"; };
 		BD5D0D6F29F12E0600190471 /* MessageModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageModel.swift; sourceTree = "<group>"; };
+		BD5D0D7329F1302F00190471 /* Presentable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Presentable.swift; sourceTree = "<group>"; };
+		BD5D0D7729F1395400190471 /* Contents.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Contents.swift; sourceTree = "<group>"; };
 		BD90E9DB2976C02100C7CB6B /* CommonResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommonResponse.swift; sourceTree = "<group>"; };
 		BD90E9DD2976C11E00C7CB6B /* FogAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FogAPI.swift; sourceTree = "<group>"; };
 		BD90E9DF2976C3EF00C7CB6B /* NetworkEnv.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkEnv.swift; sourceTree = "<group>"; };
@@ -420,6 +424,15 @@
 			path = Message;
 			sourceTree = "<group>";
 		};
+		BD5D0D7229F1301D00190471 /* Protocol */ = {
+			isa = PBXGroup;
+			children = (
+				BD5D0D7329F1302F00190471 /* Presentable.swift */,
+				BD5D0D7729F1395400190471 /* Contents.swift */,
+			);
+			path = Protocol;
+			sourceTree = "<group>";
+		};
 		BD9AA41629929AB200D4E7CE /* Manager */ = {
 			isa = PBXGroup;
 			children = (
@@ -656,6 +669,7 @@
 		ECA425692922534E004DFDAF /* SmokingArea */ = {
 			isa = PBXGroup;
 			children = (
+				BD5D0D7229F1301D00190471 /* Protocol */,
 				BDC50ECE292A07D0002378C6 /* ViewModel */,
 				BDC50ECD292A07CD002378C6 /* View */,
 			);
@@ -1146,6 +1160,7 @@
 				BD347C5E292FD2BE009F52BA /* FogButtonStyle.swift in Sources */,
 				ECA4259B2922A4A6004DFDAF /* FogImage.swift in Sources */,
 				ECA425E829262A78004DFDAF /* MapCoordinator.swift in Sources */,
+				BD5D0D7829F1395400190471 /* Contents.swift in Sources */,
 				77E70F4829309A6D00F55CD7 /* UILabel + Extension.swift in Sources */,
 				77D32D41292A0EDD006E6314 /* ViewModelType.swift in Sources */,
 				BD2D276B297D17E400984B97 /* UserAPI.swift in Sources */,
@@ -1167,6 +1182,7 @@
 				ECA425782922545C004DFDAF /* MapViewController.swift in Sources */,
 				BD347C63292FEA15009F52BA /* RoadPopUpView.swift in Sources */,
 				ECA425D72924DA66004DFDAF /* Bundle + Extension.swift in Sources */,
+				BD5D0D7429F1302F00190471 /* Presentable.swift in Sources */,
 				BDC20F9D293B44B600B9A2E7 /* FogToast.swift in Sources */,
 				ECA425E429262A37004DFDAF /* DefaultMapCoordinator.swift in Sources */,
 			);
