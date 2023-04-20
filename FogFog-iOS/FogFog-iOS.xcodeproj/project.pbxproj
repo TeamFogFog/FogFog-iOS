@@ -1182,7 +1182,6 @@
 				77E70F4829309A6D00F55CD7 /* UILabel + Extension.swift in Sources */,
 				77D32D41292A0EDD006E6314 /* ViewModelType.swift in Sources */,
 				BD2D276B297D17E400984B97 /* UserAPI.swift in Sources */,
-				ECA425E2292532CA004DFDAF /* DefaultAppCoordinator.swift in Sources */,
 				BD5D0D7F29F15E3A00190471 /* BottomViewType.swift in Sources */,
 				ECA425E2292532CA004DFDAF /* DefaultAppCoordinator.swift in Sources */,
 				ECA4252F29224DB8004DFDAF /* SceneDelegate.swift in Sources */,
