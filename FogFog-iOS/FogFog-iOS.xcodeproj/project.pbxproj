@@ -413,9 +413,7 @@
 			isa = PBXGroup;
 			children = (
 				77CB027929D02BCF006817E5 /* APIServices */,
-				BD90E9DF2976C3EF00C7CB6B /* NetworkEnv.swift */,
-				BD4E13642973DAC400AEA757 /* NetworkError.swift */,
-				BD90E9E12976C4F800C7CB6B /* Networking.swift */,
+				BD5D0D8029F15FFA00190471 /* Foundation */,
 				BDB152C0297E6834002E477F /* APIs */,
 				BDB152C1297E6840002E477F /* Models */,
 			);
@@ -445,6 +443,16 @@
 				BD5D0D7E29F15E3A00190471 /* BottomViewType.swift */,
 			);
 			path = BottomView;
+			sourceTree = "<group>";
+		};
+		BD5D0D8029F15FFA00190471 /* Foundation */ = {
+			isa = PBXGroup;
+			children = (
+				BD90E9DF2976C3EF00C7CB6B /* NetworkEnv.swift */,
+				BD4E13642973DAC400AEA757 /* NetworkError.swift */,
+				BD90E9E12976C4F800C7CB6B /* Networking.swift */,
+			);
+			path = Foundation;
 			sourceTree = "<group>";
 		};
 		BD9AA41629929AB200D4E7CE /* Manager */ = {
