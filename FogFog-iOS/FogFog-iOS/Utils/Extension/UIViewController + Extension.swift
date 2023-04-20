@@ -17,3 +17,15 @@ extension UIViewController {
         NSStringFromClass(self.classForCoder).components(separatedBy: ".").last!
     }
 }
+
+extension UIViewController {
+    
+    func showBottomView(_ withContents: some Contents, _ viewType: BottomViewType) {
+        let viewController = SmokingAreaDetailViewController(contents: withContents, contentsView: viewType.view)
+        viewController.modalPresentationStyle = .overFullScreen
+        viewController.view.backgroundColor = .clear
+        present(viewController, animated: false) {
+            viewController.show()
+        }
+    }
+}

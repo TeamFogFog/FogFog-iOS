@@ -62,15 +62,3 @@ class SmokingAreaDetailViewController: BaseViewController {
         contentsView.show(withMovement: viewHeight + bottomMargin, withDuration: 0.3)
     }
 }
-
-extension UIViewController {
-    
-    func showBottomView(_ withContents: some Contents, _ viewType: BottomViewType) {
-        let viewController = SmokingAreaDetailViewController(contents: withContents, contentsView: viewType.view)
-        viewController.modalPresentationStyle = .overFullScreen
-        viewController.view.backgroundColor = .clear
-        present(viewController, animated: false) {
-            viewController.show()
-        }
-    }
-}
