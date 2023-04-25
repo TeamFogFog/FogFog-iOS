@@ -13,7 +13,6 @@ protocol Presentable {
     func viewHeight() -> CGFloat
     func bind(_ content: Contents)    // 데이터 바인딩
     func show(withMovement: CGFloat, withDuration: CGFloat) // 위로 올리는 메소드
-    func hide(withMovement: CGFloat, withDuration: CGFloat) // 아래로 내리는 메소드
 }
 
 extension Presentable where Self: UIView {
@@ -23,15 +22,6 @@ extension Presentable where Self: UIView {
             $0.bottom.equalToSuperview().inset(withMovement)
         }
 
-        guard let superview else { fatalError("Has not superview") }
-        UIView.animate(withDuration: withDuration, animations: superview.layoutIfNeeded)
-    }
-    
-    func hide(withMovement: CGFloat, withDuration: CGFloat) {
-        self.snp.updateConstraints {
-            $0.bottom.equalToSuperview().inset(withMovement)
-        }
-        
         guard let superview else { fatalError("Has not superview") }
         UIView.animate(withDuration: withDuration, animations: superview.layoutIfNeeded)
     }
