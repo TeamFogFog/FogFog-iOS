@@ -80,7 +80,6 @@
 		ECA4257229225409004DFDAF /* Image.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ECA4257129225409004DFDAF /* Image.xcassets */; };
 		ECA425742922543B004DFDAF /* Color.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ECA425732922543B004DFDAF /* Color.xcassets */; };
 		ECA425782922545C004DFDAF /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECA425772922545C004DFDAF /* MapViewController.swift */; };
-		ECA4257A292254A8004DFDAF /* SmokingAreaDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECA42579292254A8004DFDAF /* SmokingAreaDetailViewController.swift */; };
 		ECA4257E292254C6004DFDAF /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECA4257D292254C6004DFDAF /* BaseViewController.swift */; };
 		ECA4259729229B15004DFDAF /* FogFont.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECA4259629229B15004DFDAF /* FogFont.swift */; };
 		ECA4259929229BD9004DFDAF /* UIFont + Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECA4259829229BD9004DFDAF /* UIFont + Extension.swift */; };
@@ -200,7 +199,6 @@
 		ECA4257129225409004DFDAF /* Image.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Image.xcassets; sourceTree = "<group>"; };
 		ECA425732922543B004DFDAF /* Color.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Color.xcassets; sourceTree = "<group>"; };
 		ECA425772922545C004DFDAF /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
-		ECA42579292254A8004DFDAF /* SmokingAreaDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SmokingAreaDetailViewController.swift; sourceTree = "<group>"; };
 		ECA4257D292254C6004DFDAF /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		ECA4258129225A41004DFDAF /* .gitkeep */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitkeep; sourceTree = "<group>"; };
 		ECA4258729225A7D004DFDAF /* .gitkeep */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitkeep; sourceTree = "<group>"; };
@@ -508,7 +506,6 @@
 		BDC50ECD292A07CD002378C6 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				ECA42579292254A8004DFDAF /* SmokingAreaDetailViewController.swift */,
 				BD5D0D7529F1310800190471 /* SmokingAreaCardView.swift */,
 				BD5D0D7B29F14FDC00190471 /* SmokingAreaMessageView.swift */,
 			);
@@ -1181,7 +1178,6 @@
 				77E70F462930951100F55CD7 /* UITextField + Extension.swift in Sources */,
 				BDC50ED6292A09BD002378C6 /* BaseView.swift in Sources */,
 				BD90E9DE2976C11E00C7CB6B /* FogAPI.swift in Sources */,
-				ECA4257A292254A8004DFDAF /* SmokingAreaDetailViewController.swift in Sources */,
 				BD5D0D7029F12E0600190471 /* MessageModel.swift in Sources */,
 				BD347C5E292FD2BE009F52BA /* FogButtonStyle.swift in Sources */,
 				ECA4259B2922A4A6004DFDAF /* FogImage.swift in Sources */,
