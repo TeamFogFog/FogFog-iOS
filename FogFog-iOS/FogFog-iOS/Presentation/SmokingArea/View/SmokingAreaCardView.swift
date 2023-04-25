@@ -80,6 +80,10 @@ final class SmokingAreaCardView: BaseView, Presentable {
             $0.contentHorizontalAlignment = .left
             $0.titleLabel?.font = .pretendardR(14)
         }
+        
+        reportButton.do {
+            $0.setImage(FogImage.siren, for: .normal)
+        }
 
         findRouteButton.do {
             $0.titleLabel?.font = .pretendardB(18)
