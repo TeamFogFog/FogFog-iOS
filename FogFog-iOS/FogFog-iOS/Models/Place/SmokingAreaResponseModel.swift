@@ -20,6 +20,13 @@ struct SmokingAreaResponseModel: Decodable {
         case distance
     }
     
+    init(name: String, address: String, imageURLString: String, distance: String) {
+        self.name = name
+        self.address = address
+        self.imageURLString = imageURLString
+        self.distance = distance
+    }
+    
     init(from decoder: Decoder) throws {
         let container = try decoder.container(keyedBy: CodingKeys.self)
         self.name = try container.decode(String.self, forKey: .name)
