@@ -34,6 +34,7 @@ final class SmokingAreaCardView: BaseView, Presentable {
     private let locationButton = UIButton()
     private let reportButton = UIButton()
     private let findRouteButton = UIButton()
+    private let moveLocationButton = UIButton()
     
     override func setStyle() {
         super.setStyle()
@@ -92,6 +93,11 @@ final class SmokingAreaCardView: BaseView, Presentable {
             $0.backgroundColor = .black
             $0.makeRounded(cornerRadius: 12)
         }
+        
+        moveLocationButton.do {
+            $0.setImage(FogImage.locationInactive, for: .normal)
+            $0.contentMode = .scaleAspectFill
+        }
     }
     
     override func setLayout() {
@@ -111,7 +117,8 @@ final class SmokingAreaCardView: BaseView, Presentable {
             locationMarkerImageView,
             locationButton,
             reportButton,
-            findRouteButton
+            findRouteButton,
+            moveLocationButton
         ])
         
         // 이미지
@@ -164,6 +171,12 @@ final class SmokingAreaCardView: BaseView, Presentable {
             $0.directionalHorizontalEdges.equalToSuperview().inset(13.adjusted)
             $0.bottom.equalToSuperview().inset(14.adjustedH)
             $0.height.equalTo(54.adjustedH)
+        }
+        
+        moveLocationButton.snp.makeConstraints {
+            $0.size.equalTo(62.adjustedH)
+            $0.leading.equalTo(containerView.snp.leading).offset(-8.adjusted)
+            $0.bottom.equalTo(imageBackgroundView.snp.top).offset(-31.adjustedH)
         }
     }
     
