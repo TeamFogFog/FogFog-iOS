@@ -65,7 +65,7 @@ extension UIViewController {
         addBottomView(cardView, belowSubview: belowSubview)
 
         let bottomMargin = 49.adjustedH
-        DispatchQueue.main.async {
+        DispatchQueue.main.asyncAfter(deadline: .now() + 0.05) {
             cardView.show(withMovement: cardView.viewHeight() + bottomMargin, withDuration: withDuration)
         }
     }
@@ -81,7 +81,7 @@ extension UIViewController {
         addBottomView(messageView, belowSubview: belowSubview)
 
         let bottomMargin = 49.adjustedH
-        DispatchQueue.main.async {
+        DispatchQueue.main.asyncAfter(deadline: .now() + 0.05) {
             messageView.show(withMovement: messageView.viewHeight() + bottomMargin, withDuration: withDuration)
         }
     }
