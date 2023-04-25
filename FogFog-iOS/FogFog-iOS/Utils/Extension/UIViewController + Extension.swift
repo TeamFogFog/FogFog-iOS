@@ -56,7 +56,7 @@ extension UIViewController {
 
     // 흡연 구역 카드 뷰 보여주기 메소드
     func showCardView(
-        _ content: SmokingAreaResponseModel,
+        _ content: Contents,
         belowSubview: UIView? = nil,
         withDuration: TimeInterval = 0.5
     ) {
@@ -72,7 +72,7 @@ extension UIViewController {
     
     // 흡연 구역 메시지 뷰(= 토스트 뷰) 보여주기 메소드
     func showMessageView(
-        _ content: MessageModel,
+        _ content: Contents,
         belowSubview: UIView? = nil,
         withDuration: TimeInterval = 0.5
     ) {
