@@ -11,7 +11,7 @@ public enum FogImage {
 
     static let logo = UIImage(named: "ic_fogfog")!
     static let hamburger = UIImage(named: "ic_ham")!
-    static let location = UIImage(named: "ic_location")!
+    static let locationInactive = UIImage(named: "loca_inactive")!
     static let minus = UIImage(named: "ic_minus")!
     static let plus = UIImage(named: "ic_plus")!
     static let check = UIImage(named: "btnCheck")
@@ -31,4 +31,5 @@ public enum FogImage {
     static let speechBubbleBig = UIImage(named: "speechBubbleBig")!
     static let btnX = UIImage(named: "btnX")!
     static let btnPen = UIImage(named: "btnPen")!
+    static let siren = UIImage(named: "ic_siren")
 }
