@@ -52,6 +52,9 @@
 		BD347C63292FEA15009F52BA /* RoadPopUpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD347C62292FEA15009F52BA /* RoadPopUpView.swift */; };
 		BD347C65292FEB08009F52BA /* RoadPopUpViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD347C64292FEB08009F52BA /* RoadPopUpViewModel.swift */; };
 		BD4B550F292A29EC00ECFD04 /* SmokingAreaResponseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD4B550E292A29EC00ECFD04 /* SmokingAreaResponseModel.swift */; };
+		BD4D62A92A1A0FB200532778 /* RxKakaoSDKAuth in Frameworks */ = {isa = PBXBuildFile; productRef = BD4D62A82A1A0FB200532778 /* RxKakaoSDKAuth */; };
+		BD4D62AB2A1A0FB200532778 /* RxKakaoSDKCommon in Frameworks */ = {isa = PBXBuildFile; productRef = BD4D62AA2A1A0FB200532778 /* RxKakaoSDKCommon */; };
+		BD4D62AD2A1A0FB200532778 /* RxKakaoSDKUser in Frameworks */ = {isa = PBXBuildFile; productRef = BD4D62AC2A1A0FB200532778 /* RxKakaoSDKUser */; };
 		BD4E13652973DAC400AEA757 /* NetworkError.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD4E13642973DAC400AEA757 /* NetworkError.swift */; };
 		BD5D0D7029F12E0600190471 /* MessageModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD5D0D6F29F12E0600190471 /* MessageModel.swift */; };
 		BD5D0D7429F1302F00190471 /* Presentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD5D0D7329F1302F00190471 /* Presentable.swift */; };
@@ -237,7 +240,9 @@
 			files = (
 				ECA425CD29234C4F004DFDAF /* RxSwift in Frameworks */,
 				ECA425B229234744004DFDAF /* Moya in Frameworks */,
+				BD4D62AB2A1A0FB200532778 /* RxKakaoSDKCommon in Frameworks */,
 				ECA425A4292346BF004DFDAF /* Kingfisher in Frameworks */,
+				BD4D62A92A1A0FB200532778 /* RxKakaoSDKAuth in Frameworks */,
 				ECA4259E292346A2004DFDAF /* Then in Frameworks */,
 				ECA425C929234C4F004DFDAF /* RxCocoa in Frameworks */,
 				ECA425B429234744004DFDAF /* RxMoya in Frameworks */,
@@ -245,6 +250,7 @@
 				ECA425CB29234C4F004DFDAF /* RxRelay in Frameworks */,
 				772577DC2934924E008273A7 /* RxGesture in Frameworks */,
 				1DDE6DAB87E9F15EAEAD8A1B /* Pods_FogFog_iOS.framework in Frameworks */,
+				BD4D62AD2A1A0FB200532778 /* RxKakaoSDKUser in Frameworks */,
 				772577D929349212008273A7 /* RxKeyboard in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -878,6 +884,9 @@
 				ECA425CC29234C4F004DFDAF /* RxSwift */,
 				772577D829349212008273A7 /* RxKeyboard */,
 				772577DB2934924E008273A7 /* RxGesture */,
+				BD4D62A82A1A0FB200532778 /* RxKakaoSDKAuth */,
+				BD4D62AA2A1A0FB200532778 /* RxKakaoSDKCommon */,
+				BD4D62AC2A1A0FB200532778 /* RxKakaoSDKUser */,
 			);
 			productName = "FogFog-iOS";
 			productReference = ECA4252929224DB8004DFDAF /* FogFog-iOS.app */;
@@ -962,6 +971,7 @@
 				ECA425C729234C4F004DFDAF /* XCRemoteSwiftPackageReference "RxSwift" */,
 				772577D729349212008273A7 /* XCRemoteSwiftPackageReference "RxKeyboard" */,
 				772577DA2934924D008273A7 /* XCRemoteSwiftPackageReference "RxGesture" */,
+				BD4D62A72A1A0FB200532778 /* XCRemoteSwiftPackageReference "kakao-ios-sdk-rx" */,
 			);
 			productRefGroup = ECA4252A29224DB8004DFDAF /* Products */;
 			projectDirPath = "";
@@ -1575,6 +1585,14 @@
 				minimumVersion = 4.0.0;
 			};
 		};
+		BD4D62A72A1A0FB200532778 /* XCRemoteSwiftPackageReference "kakao-ios-sdk-rx" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/kakao/kakao-ios-sdk-rx";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.0.0;
+			};
+		};
 		ECA4259C292346A2004DFDAF /* XCRemoteSwiftPackageReference "Then" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/devxoul/Then.git";
@@ -1627,6 +1645,21 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 772577DA2934924D008273A7 /* XCRemoteSwiftPackageReference "RxGesture" */;
 			productName = RxGesture;
+		};
+		BD4D62A82A1A0FB200532778 /* RxKakaoSDKAuth */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = BD4D62A72A1A0FB200532778 /* XCRemoteSwiftPackageReference "kakao-ios-sdk-rx" */;
+			productName = RxKakaoSDKAuth;
+		};
+		BD4D62AA2A1A0FB200532778 /* RxKakaoSDKCommon */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = BD4D62A72A1A0FB200532778 /* XCRemoteSwiftPackageReference "kakao-ios-sdk-rx" */;
+			productName = RxKakaoSDKCommon;
+		};
+		BD4D62AC2A1A0FB200532778 /* RxKakaoSDKUser */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = BD4D62A72A1A0FB200532778 /* XCRemoteSwiftPackageReference "kakao-ios-sdk-rx" */;
+			productName = RxKakaoSDKUser;
 		};
 		ECA4259D292346A2004DFDAF /* Then */ = {
 			isa = XCSwiftPackageProductDependency;
