@@ -72,6 +72,7 @@
 		BDC50ECB292A07B2002378C6 /* GoogleMap.plist in Resources */ = {isa = PBXBuildFile; fileRef = BDC50ECA292A07B2002378C6 /* GoogleMap.plist */; };
 		BDC50ED2292A07EB002378C6 /* SmokingAreaDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDC50ED1292A07EB002378C6 /* SmokingAreaDetailViewModel.swift */; };
 		BDC50ED6292A09BD002378C6 /* BaseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDC50ED5292A09BD002378C6 /* BaseView.swift */; };
+		BDDAA3912A249D090055859E /* Config.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDDAA3902A249D090055859E /* Config.swift */; };
 		BDEA50D129261C6600110982 /* .swiftlint.yml in Resources */ = {isa = PBXBuildFile; fileRef = BDEA50D029261C6600110982 /* .swiftlint.yml */; };
 		ECA4252D29224DB8004DFDAF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECA4252C29224DB8004DFDAF /* AppDelegate.swift */; };
 		ECA4252F29224DB8004DFDAF /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECA4252E29224DB8004DFDAF /* SceneDelegate.swift */; };
@@ -185,6 +186,8 @@
 		BDC50ECA292A07B2002378C6 /* GoogleMap.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = GoogleMap.plist; sourceTree = "<group>"; };
 		BDC50ED1292A07EB002378C6 /* SmokingAreaDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SmokingAreaDetailViewModel.swift; sourceTree = "<group>"; };
 		BDC50ED5292A09BD002378C6 /* BaseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseView.swift; sourceTree = "<group>"; };
+		BDDAA38F2A249B550055859E /* Config.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Config.xcconfig; sourceTree = "<group>"; };
+		BDDAA3902A249D090055859E /* Config.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Config.swift; sourceTree = "<group>"; };
 		BDEA50D029261C6600110982 /* .swiftlint.yml */ = {isa = PBXFileReference; lastKnownFileType = text.yaml; path = .swiftlint.yml; sourceTree = "<group>"; };
 		D67B489E657987D4A7AD92C7 /* Pods_FogFog_iOS_FogFog_iOSUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FogFog_iOS_FogFog_iOSUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DABD884BD50346C82E3C3CA3 /* Pods-FogFog-iOS-FogFog-iOSUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FogFog-iOS-FogFog-iOSUITests.release.xcconfig"; path = "Target Support Files/Pods-FogFog-iOS-FogFog-iOSUITests/Pods-FogFog-iOS-FogFog-iOSUITests.release.xcconfig"; sourceTree = "<group>"; };
@@ -631,6 +634,7 @@
 			children = (
 				ECA4253A29224DBB004DFDAF /* Info.plist */,
 				BDC50ECA292A07B2002378C6 /* GoogleMap.plist */,
+				BDDAA38F2A249B550055859E /* Config.xcconfig */,
 			);
 			path = Supports;
 			sourceTree = "<group>";
@@ -797,6 +801,7 @@
 			isa = PBXGroup;
 			children = (
 				ECA425DD29253292004DFDAF /* CoordinatorCase.swift */,
+				BDDAA3902A249D090055859E /* Config.swift */,
 			);
 			path = Contstant;
 			sourceTree = "<group>";
@@ -1217,6 +1222,7 @@
 				BD5D0D7429F1302F00190471 /* Presentable.swift in Sources */,
 				BDC20F9D293B44B600B9A2E7 /* FogToast.swift in Sources */,
 				BD5D0D7629F1310800190471 /* SmokingAreaCardView.swift in Sources */,
+				BDDAA3912A249D090055859E /* Config.swift in Sources */,
 				ECA425E429262A37004DFDAF /* DefaultMapCoordinator.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1267,6 +1273,7 @@
 /* Begin XCBuildConfiguration section */
 		ECA4255129224DBB004DFDAF /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = BDDAA38F2A249B550055859E /* Config.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ANALYZER_NONNULL = YES;
@@ -1327,6 +1334,7 @@
 		};
 		ECA4255229224DBB004DFDAF /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = BDDAA38F2A249B550055859E /* Config.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ANALYZER_NONNULL = YES;
