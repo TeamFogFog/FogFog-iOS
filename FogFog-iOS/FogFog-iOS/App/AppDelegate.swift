@@ -8,6 +8,9 @@
 import UIKit
 
 import GoogleMaps
+import RxKakaoSDKAuth
+import KakaoSDKAuth
+import RxKakaoSDKCommon
 import KakaoSDKCommon
 
 @main
@@ -22,6 +25,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // MARK: - 카카오 SDK 초기화
         RxKakaoSDK.initSDK(appKey: Config.kakaoNativeAppKey)
         return true
+    }
+    
+    func application(_ app: UIApplication, open url: URL, options: [UIApplication.OpenURLOptionsKey : Any] = [:]) -> Bool {
+        if (AuthApi.isKakaoTalkLoginUrl(url)) {
+            return AuthController.rx.handleOpenUrl(url: url)
+        }
+
+        return false
     }
 }
 
