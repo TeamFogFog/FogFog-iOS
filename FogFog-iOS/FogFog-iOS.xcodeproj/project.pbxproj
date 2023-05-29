@@ -55,6 +55,7 @@
 		BD4D62A92A1A0FB200532778 /* RxKakaoSDKAuth in Frameworks */ = {isa = PBXBuildFile; productRef = BD4D62A82A1A0FB200532778 /* RxKakaoSDKAuth */; };
 		BD4D62AB2A1A0FB200532778 /* RxKakaoSDKCommon in Frameworks */ = {isa = PBXBuildFile; productRef = BD4D62AA2A1A0FB200532778 /* RxKakaoSDKCommon */; };
 		BD4D62AD2A1A0FB200532778 /* RxKakaoSDKUser in Frameworks */ = {isa = PBXBuildFile; productRef = BD4D62AC2A1A0FB200532778 /* RxKakaoSDKUser */; };
+		BD4D62AF2A1A100B00532778 /* KakaoOAuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD4D62AE2A1A100B00532778 /* KakaoOAuthService.swift */; };
 		BD4E13652973DAC400AEA757 /* NetworkError.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD4E13642973DAC400AEA757 /* NetworkError.swift */; };
 		BD5D0D7029F12E0600190471 /* MessageModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD5D0D6F29F12E0600190471 /* MessageModel.swift */; };
 		BD5D0D7429F1302F00190471 /* Presentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD5D0D7329F1302F00190471 /* Presentable.swift */; };
@@ -73,6 +74,10 @@
 		BDC50ED2292A07EB002378C6 /* SmokingAreaDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDC50ED1292A07EB002378C6 /* SmokingAreaDetailViewModel.swift */; };
 		BDC50ED6292A09BD002378C6 /* BaseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDC50ED5292A09BD002378C6 /* BaseView.swift */; };
 		BDDAA3912A249D090055859E /* Config.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDDAA3902A249D090055859E /* Config.swift */; };
+		BDDAA3932A24B9D00055859E /* OAuthServiceType.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDDAA3922A24B9D00055859E /* OAuthServiceType.swift */; };
+		BDDAA3952A24BA130055859E /* OAuthAuthentication.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDDAA3942A24BA130055859E /* OAuthAuthentication.swift */; };
+		BDDAA3972A24BC120055859E /* OAuthProviderType.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDDAA3962A24BC120055859E /* OAuthProviderType.swift */; };
+		BDE3EEB22A1D124300632662 /* OAuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDE3EEB12A1D124300632662 /* OAuthService.swift */; };
 		BDEA50D129261C6600110982 /* .swiftlint.yml in Resources */ = {isa = PBXBuildFile; fileRef = BDEA50D029261C6600110982 /* .swiftlint.yml */; };
 		ECA4252D29224DB8004DFDAF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECA4252C29224DB8004DFDAF /* AppDelegate.swift */; };
 		ECA4252F29224DB8004DFDAF /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECA4252E29224DB8004DFDAF /* SceneDelegate.swift */; };
@@ -168,6 +173,7 @@
 		BD347C62292FEA15009F52BA /* RoadPopUpView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoadPopUpView.swift; sourceTree = "<group>"; };
 		BD347C64292FEB08009F52BA /* RoadPopUpViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoadPopUpViewModel.swift; sourceTree = "<group>"; };
 		BD4B550E292A29EC00ECFD04 /* SmokingAreaResponseModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SmokingAreaResponseModel.swift; sourceTree = "<group>"; };
+		BD4D62AE2A1A100B00532778 /* KakaoOAuthService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KakaoOAuthService.swift; sourceTree = "<group>"; };
 		BD4E13642973DAC400AEA757 /* NetworkError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkError.swift; sourceTree = "<group>"; };
 		BD5D0D6F29F12E0600190471 /* MessageModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageModel.swift; sourceTree = "<group>"; };
 		BD5D0D7329F1302F00190471 /* Presentable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Presentable.swift; sourceTree = "<group>"; };
@@ -188,6 +194,10 @@
 		BDC50ED5292A09BD002378C6 /* BaseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseView.swift; sourceTree = "<group>"; };
 		BDDAA38F2A249B550055859E /* Config.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Config.xcconfig; sourceTree = "<group>"; };
 		BDDAA3902A249D090055859E /* Config.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Config.swift; sourceTree = "<group>"; };
+		BDDAA3922A24B9D00055859E /* OAuthServiceType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OAuthServiceType.swift; sourceTree = "<group>"; };
+		BDDAA3942A24BA130055859E /* OAuthAuthentication.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OAuthAuthentication.swift; sourceTree = "<group>"; };
+		BDDAA3962A24BC120055859E /* OAuthProviderType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OAuthProviderType.swift; sourceTree = "<group>"; };
+		BDE3EEB12A1D124300632662 /* OAuthService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OAuthService.swift; sourceTree = "<group>"; };
 		BDEA50D029261C6600110982 /* .swiftlint.yml */ = {isa = PBXFileReference; lastKnownFileType = text.yaml; path = .swiftlint.yml; sourceTree = "<group>"; };
 		D67B489E657987D4A7AD92C7 /* Pods_FogFog_iOS_FogFog_iOSUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FogFog_iOS_FogFog_iOSUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DABD884BD50346C82E3C3CA3 /* Pods-FogFog-iOS-FogFog-iOSUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FogFog-iOS-FogFog-iOSUITests.release.xcconfig"; path = "Target Support Files/Pods-FogFog-iOS-FogFog-iOSUITests/Pods-FogFog-iOS-FogFog-iOSUITests.release.xcconfig"; sourceTree = "<group>"; };
@@ -529,6 +539,18 @@
 			path = ViewModel;
 			sourceTree = "<group>";
 		};
+		BDE3EEB02A1D10DC00632662 /* OAuth */ = {
+			isa = PBXGroup;
+			children = (
+				BD4D62AE2A1A100B00532778 /* KakaoOAuthService.swift */,
+				BDDAA3942A24BA130055859E /* OAuthAuthentication.swift */,
+				BDDAA3962A24BC120055859E /* OAuthProviderType.swift */,
+				BDE3EEB12A1D124300632662 /* OAuthService.swift */,
+				BDDAA3922A24B9D00055859E /* OAuthServiceType.swift */,
+			);
+			path = OAuth;
+			sourceTree = "<group>";
+		};
 		ECA4252029224DB8004DFDAF = {
 			isa = PBXGroup;
 			children = (
@@ -556,10 +578,11 @@
 			isa = PBXGroup;
 			children = (
 				BD9AA41529929A7A00D4E7CE /* FogFog-iOS.entitlements */,
-				BD9AA41629929AB200D4E7CE /* Manager */,
 				ECA4255D292251D8004DFDAF /* App */,
+				BD9AA41629929AB200D4E7CE /* Manager */,
 				ECA4255E292251E0004DFDAF /* Models */,
 				BD4E13632973DAA300AEA757 /* Networking */,
+				BDE3EEB02A1D10DC00632662 /* OAuth */,
 				ECA4255F2922528B004DFDAF /* Presentation */,
 				ECA4256029225297004DFDAF /* Resources */,
 				ECA425612922529F004DFDAF /* Supports */,
@@ -1162,8 +1185,10 @@
 				BD5D0D7C29F14FDC00190471 /* SmokingAreaMessageView.swift in Sources */,
 				77650216295487A7002BF7AD /* SettingNicknameTableViewCell.swift in Sources */,
 				77A99D6C2971B0220037FCAD /* DefaultSettingCoordinator.swift in Sources */,
+				BD4D62AF2A1A100B00532778 /* KakaoOAuthService.swift in Sources */,
 				77E70F4A2930D0FA00F55CD7 /* MakeNicknameViewModel.swift in Sources */,
 				77650210295462D7002BF7AD /* UIViewController + Extension.swift in Sources */,
+				BDDAA3952A24BA130055859E /* OAuthAuthentication.swift in Sources */,
 				7765020E29546239002BF7AD /* SettingListTableViewCell.swift in Sources */,
 				ECA425DA29253155004DFDAF /* Coordinator.swift in Sources */,
 				ECA425F4292634A6004DFDAF /* LoginViewController.swift in Sources */,
@@ -1181,10 +1206,13 @@
 				BD4B550F292A29EC00ECFD04 /* SmokingAreaResponseModel.swift in Sources */,
 				ECA425F6292634C9004DFDAF /* LoginViewModel.swift in Sources */,
 				BD90E9E22976C4F800C7CB6B /* Networking.swift in Sources */,
+				BDE3EEB22A1D124300632662 /* OAuthService.swift in Sources */,
 				77A99D6A2971AFDC0037FCAD /* SettingCoordinator.swift in Sources */,
+				BDDAA3932A24B9D00055859E /* OAuthServiceType.swift in Sources */,
 				ECA4259729229B15004DFDAF /* FogFont.swift in Sources */,
 				BDC50ED2292A07EB002378C6 /* SmokingAreaDetailViewModel.swift in Sources */,
 				77CB027F29DEAE57006817E5 /* RxMoya + Extension.swift in Sources */,
+				BDDAA3972A24BC120055859E /* OAuthProviderType.swift in Sources */,
 				BD90E9DC2976C02100C7CB6B /* CommonResponse.swift in Sources */,
 				BD347C5A292FD226009F52BA /* ExMapType.swift in Sources */,
 				77F1D82229269CC800F31D0C /* UIColor + Extension.swift in Sources */,
