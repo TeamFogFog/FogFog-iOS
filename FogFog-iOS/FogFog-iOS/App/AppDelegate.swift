@@ -20,7 +20,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         GMSServices.provideAPIKey(Bundle.main.apiKey)
         
         // MARK: - 카카오 SDK 초기화
-        KakaoSDK.initSDK(appKey: Config.kakaoNativeAppKey)
+        RxKakaoSDK.initSDK(appKey: Config.kakaoNativeAppKey)
         return true
     }
 }
