@@ -16,7 +16,7 @@ final class KakaoOAuthService: OAuthServiceType {
     private let disposeBag = DisposeBag()
     
     func authorize() -> Single<OAuthAuthentication> {
-        return self.login().map { .init(oauthType: .kakao, token: $0.accessToken) }
+        return login().map { OAuthAuthentication(oauthType: .kakao, kakaoAccessToken: $0.accessToken) }
     }
 
     private func login() -> Single<OAuthToken> {

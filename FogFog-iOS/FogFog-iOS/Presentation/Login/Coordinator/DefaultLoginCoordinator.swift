@@ -24,10 +24,11 @@ final class DefaultLoginCoordinator: LoginCoordinator {
     
     func showLoginViewController() {
         let coordinator = DefaultLoginCoordinator(navigationController)
-        let kakao = KakaoOAuthService()
-        let oAuthService = OAuthService(oAuthService: kakao)
-        let dependency = LoginViewModel.Dependency(coordinator: coordinator, oAuthService: oAuthService)
-        let viewModel = LoginViewModel(dependency: dependency)
+        let viewModel = LoginViewModel(coordinator: coordinator) { oauthProviderType in
+            let oauthService = oauthProviderType.servive
+            let authService = AuthAPIService(oauthService: oauthService)
+            return authService
+        }
         let loginViewController = LoginViewController(viewModel: viewModel)
         navigationController.pushViewController(loginViewController, animated: false)
     }

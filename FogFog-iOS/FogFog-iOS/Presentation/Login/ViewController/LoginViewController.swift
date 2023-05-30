@@ -7,6 +7,8 @@
 
 import UIKit
 
+import RxSwift
+
 final class LoginViewController: BaseViewController {
     
     // MARK: Properties
@@ -21,7 +23,8 @@ final class LoginViewController: BaseViewController {
     private let kakaoButton = UIButton()
     private let appleButton = UIButton()
     
-    private weak var viewModel: LoginViewModel?
+    private let viewModel: LoginViewModel
+    private let disposeBag = DisposeBag()
     
     // MARK: Init
     init(viewModel: LoginViewModel) {
@@ -36,6 +39,15 @@ final class LoginViewController: BaseViewController {
     // MARK: Life Cycle
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        let input = LoginViewModel.Input(kakaoButtonDidTap: kakaoButton.rx.tap.asObservable())
+        let output = viewModel.transform(input: input)
+        
+        output.loginResult
+            .drive { msg in
+                print("로그인 메시지 \(msg)")
+            }
+            .disposed(by: disposeBag)
     }
     
     // MARK: UI
