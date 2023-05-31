@@ -44,7 +44,7 @@ final class MapViewModel: ViewModelType {
         input.viewDidLoad
             .emit(onNext: { _ in
                 // TODO: 유저아이디 추후 변경 예정 (로그인 후 UserDefaults에 저장된 값으로)
-                self.getUserNicknameAPI(userId: 2)
+                self.getUserNicknameAPI(userId: 13)
             })
             .disposed(by: disposeBag)
         
@@ -78,6 +78,7 @@ extension MapViewModel {
         UserAPIService.shared.getUserNickname(userId: userId)
             .subscribe(onSuccess: { result in
                 self.userNickname.onNext(result?.nickname ?? "")
+                UserDefaults.standard.set(result?.nickname, forKey: UserDefaults.Keys.nickname)
             }, onFailure: { error in
                 if let networkError = error as? NetworkError {
                     switch networkError {
