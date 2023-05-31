@@ -11,6 +11,7 @@ enum UserAPI {
     case preferredMap(userId: String)
     case withdrawal(userId: String)
     case getNickname(userId: Int)
+    case editNickname(userId: Int, nickname: String)
 }
 
 extension UserAPI: FogAPI {
@@ -25,14 +26,14 @@ extension UserAPI: FogAPI {
             return "/\(userId)/preffered-map"
         case .withdrawal(let userId):
             return "/\(userId)"
-        case .getNickname(let userId):
+        case .getNickname(let userId), .editNickname(let userId, _):
             return "/\(userId)/nickname"
         }
     }
     
     var method: Method {
         switch self {
-        case .preferredMap:
+        case .preferredMap, .editNickname:
             return .patch
         case .withdrawal:
             return .delete
@@ -45,12 +46,14 @@ extension UserAPI: FogAPI {
         switch self {
         case .preferredMap, .withdrawal, .getNickname:
             return nil
+        case .editNickname(_, let nickname):
+            return ["nickname": nickname]
         }
     }
     
-    var error: [Int : NetworkError]? {
+    var error: [Int: NetworkError]? {
         switch self {
-        case .preferredMap, .withdrawal, .getNickname:
+        case .preferredMap, .withdrawal, .getNickname, .editNickname:
             return nil
         /*
          case .nickname:
