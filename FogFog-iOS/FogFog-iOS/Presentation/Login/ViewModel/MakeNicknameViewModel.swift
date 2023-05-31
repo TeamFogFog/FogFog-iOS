@@ -22,24 +22,34 @@ final class MakeNicknameViewModel: ViewModelType {
     
     struct Input {
         let didNicknameTextFieldChange: Observable<String>
+        let tapConfirmButton: Signal<Void>
         let tapBackButton: Signal<Void>
     }
     
     struct Output {
         let didBackButtonTapped: Signal<Void>
+        let didConfirmButtonTapped: Signal<Void>
         let isValid = PublishRelay<Bool>()
-        let nickname = PublishRelay<String>()
+        let nickname = BehaviorRelay<String>(value: "")
     }
     
     func transform(input: Input) -> Output {
         let didBackButtonTapped = PublishRelay<Void>()
-        let output = Output(didBackButtonTapped: didBackButtonTapped.asSignal())
+        let didConfirmButtonTapped = PublishRelay<Void>()
+        let output = Output(didBackButtonTapped: didBackButtonTapped.asSignal(), didConfirmButtonTapped: didConfirmButtonTapped.asSignal())
         
         input.didNicknameTextFieldChange
             .subscribe(onNext: { text in
                 output.nickname.accept(self.checkMaxLength(text: text))
-                output.isValid.accept(self.checkNicknameValidation(text))
             })
+            .disposed(by: disposeBag)
+        
+        input.tapConfirmButton
+            .withUnretained(self)
+            .emit { owner, _ in
+                owner.editUserNicknameAPI(userId: 13, nickname: output.nickname.value)
+                didBackButtonTapped.accept(Void())
+            }
             .disposed(by: disposeBag)
         
         input.tapBackButton
@@ -65,11 +75,24 @@ extension MakeNicknameViewModel {
             return text
         }
     }
-    
-    /// 닉네임 유효성 검사 메서드
-    private func checkNicknameValidation(_ text: String) -> Bool {
-        
-        // TODO: 닉네임 검사 로직 수정 예정
-        return text != "닉네임"
+}
+
+// MARK: - Network
+extension MakeNicknameViewModel {
+    func editUserNicknameAPI(userId: Int, nickname: String) {
+        UserAPIService.shared.editUserNickname(userId: userId, nickname: nickname)
+            .subscribe(onSuccess: { result in
+                UserDefaults.standard.set(result?.nickname, forKey: UserDefaults.Keys.nickname)
+            }, onFailure: { error in
+                if let networkError = error as? NetworkError {
+                    switch networkError {
+                    case .unauthorized:
+                        print("unauthorized")
+                    default:
+                        print("network error")
+                    }
+                }
+            })
+            .disposed(by: disposeBag)
     }
 }

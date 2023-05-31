@@ -125,7 +125,7 @@ final class MakeNicknameViewController: BaseViewController {
     }
     
     private func bind() {
-        let input = MakeNicknameViewModel.Input(didNicknameTextFieldChange: nicknameTextField.rx.text.orEmpty.asObservable(), tapBackButton: naviView.backButtonDidTap())
+        let input = MakeNicknameViewModel.Input(didNicknameTextFieldChange: nicknameTextField.rx.text.orEmpty.asObservable(), tapConfirmButton: confirmButton.rx.tap.asSignal(), tapBackButton: naviView.backButtonDidTap())
         let output = viewModel.transform(input: input)
         
         output.nickname
@@ -141,6 +141,10 @@ final class MakeNicknameViewController: BaseViewController {
                 [owner.errorImageView, owner.errorLabel].forEach { $0?.isHidden = result }
                 owner.nicknameTextField.setBoderColor(color: result ? .fogBlue : .etcRed)
             }
+            .disposed(by: disposeBag)
+        
+        output.didConfirmButtonTapped
+            .emit()
             .disposed(by: disposeBag)
         
         output.didBackButtonTapped
