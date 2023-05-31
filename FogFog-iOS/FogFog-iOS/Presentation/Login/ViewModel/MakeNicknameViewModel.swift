@@ -22,21 +22,32 @@ final class MakeNicknameViewModel: ViewModelType {
     
     struct Input {
         let didNicknameTextFieldChange: Observable<String>
+        let tapBackButton: Signal<Void>
     }
     
     struct Output {
+        let didBackButtonTapped: Signal<Void>
         let isValid = PublishRelay<Bool>()
         let nickname = PublishRelay<String>()
     }
     
     func transform(input: Input) -> Output {
-        let output = Output()
+        let didBackButtonTapped = PublishRelay<Void>()
+        let output = Output(didBackButtonTapped: didBackButtonTapped.asSignal())
         
         input.didNicknameTextFieldChange
             .subscribe(onNext: { text in
                 output.nickname.accept(self.checkMaxLength(text: text))
                 output.isValid.accept(self.checkNicknameValidation(text))
             })
+            .disposed(by: disposeBag)
+        
+        input.tapBackButton
+            .withUnretained(self)
+            .emit { owner, _ in
+                owner.coordinator?.navigationController.popViewController(animated: true)
+                didBackButtonTapped.accept(Void())
+            }
             .disposed(by: disposeBag)
         
         return output

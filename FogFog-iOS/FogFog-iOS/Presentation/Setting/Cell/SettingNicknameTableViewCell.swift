@@ -7,6 +7,8 @@
 
 import UIKit
 
+import RxCocoa
+import RxSwift
 import SnapKit
 import Then
 
@@ -57,5 +59,13 @@ final class SettingNicknameTableViewCell: BaseTableViewCell {
             $0.centerY.equalTo(nicknameLabel.snp.centerY)
         }
     }
-    
+}
+
+// MARK: - Custom Methods
+extension SettingNicknameTableViewCell {
+
+    // 닉네임 수정 버튼 터치 이벤트 방출 메서드
+    func editNicknameButtonDidTap() -> Signal<Void> {
+        return editNicknameButton.rx.tap.asSignal()
+    }
 }

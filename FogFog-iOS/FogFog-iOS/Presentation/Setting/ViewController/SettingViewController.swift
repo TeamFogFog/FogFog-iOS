@@ -37,7 +37,6 @@ final class SettingViewController: BaseViewController {
         super.viewDidLoad()
         
         registerCell()
-        bind()
     }
     
     // MARK: UI
@@ -93,6 +92,17 @@ final class SettingViewController: BaseViewController {
             
             switch indexPath.row {
             case 0:
+                let input = SettingViewModel.Input(tapBackButton: self.navigationView.backButtonDidTap(), tapEditNicknameButton: editNicknameCell.editNicknameButtonDidTap())
+                let output = self.viewModel.transform(input: input)
+                
+                output.didBackButtonTapped
+                    .emit()
+                    .disposed(by: self.disposeBag)
+                
+                output.didEditNicknameButtonTapped
+                    .emit()
+                    .disposed(by: self.disposeBag)
+                
                 return editNicknameCell
             case 1:
                 titleCell.lineView.isHidden = true
@@ -115,18 +125,5 @@ final class SettingViewController: BaseViewController {
         settingTableView.register(SettingNicknameTableViewCell.self, forCellReuseIdentifier: SettingNicknameTableViewCell.className)
         settingTableView.register(SettingTitleTableViewCell.self, forCellReuseIdentifier: SettingTitleTableViewCell.className)
         settingTableView.register(SettingListTableViewCell.self, forCellReuseIdentifier: SettingListTableViewCell.className)
-    }
-}
-
-// MARK: - Bind
-extension SettingViewController {
-    
-    private func bind() {
-        let input = SettingViewModel.Input(tapBackButton: navigationView.backButtonDidTap())
-        let output = viewModel.transform(input: input)
-        
-        output.didBackButtonTapped
-            .emit()
-            .disposed(by: disposeBag)
     }
 }

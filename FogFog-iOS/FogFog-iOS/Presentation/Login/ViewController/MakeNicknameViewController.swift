@@ -27,8 +27,6 @@ final class MakeNicknameViewController: BaseViewController {
     
     private let viewModel: MakeNicknameViewModel
     private let disposeBag = DisposeBag()
-    private lazy var input = MakeNicknameViewModel.Input(didNicknameTextFieldChange: nicknameTextField.rx.text.orEmpty.asObservable())
-    private lazy var output = viewModel.transform(input: input)
     
     // MARK: Init
     init(viewModel: MakeNicknameViewModel) {
@@ -127,6 +125,9 @@ final class MakeNicknameViewController: BaseViewController {
     }
     
     private func bind() {
+        let input = MakeNicknameViewModel.Input(didNicknameTextFieldChange: nicknameTextField.rx.text.orEmpty.asObservable(), tapBackButton: naviView.backButtonDidTap())
+        let output = viewModel.transform(input: input)
+        
         output.nickname
             .asDriver(onErrorJustReturn: "")
             .drive(with: self) { owner, nickname in
@@ -140,6 +141,10 @@ final class MakeNicknameViewController: BaseViewController {
                 [owner.errorImageView, owner.errorLabel].forEach { $0?.isHidden = result }
                 owner.nicknameTextField.setBoderColor(color: result ? .fogBlue : .etcRed)
             }
+            .disposed(by: disposeBag)
+        
+        output.didBackButtonTapped
+            .emit()
             .disposed(by: disposeBag)
     }
 }
