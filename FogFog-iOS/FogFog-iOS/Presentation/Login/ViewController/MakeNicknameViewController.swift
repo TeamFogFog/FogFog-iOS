@@ -24,6 +24,7 @@ final class MakeNicknameViewController: BaseViewController {
     private let backView = UIView()
     private let errorImageView = UIImageView()
     private let errorLabel = UILabel()
+    var naviTitle = "닉네임 설정"
     
     private let viewModel: MakeNicknameViewModel
     private let disposeBag = DisposeBag()
@@ -51,7 +52,7 @@ final class MakeNicknameViewController: BaseViewController {
     override func setStyle() {
         view.backgroundColor = .white
         backView.backgroundColor = .grayBlack
-        naviView.setTitle("닉네임 설정")
+        naviView.setTitle(naviTitle)
         [errorImageView, errorLabel].forEach { $0.isHidden = true }
         
         nicknameTextField.do {
