@@ -21,6 +21,7 @@
 		77650212295463B8002BF7AD /* BaseTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77650211295463B8002BF7AD /* BaseTableViewCell.swift */; };
 		77650216295487A7002BF7AD /* SettingNicknameTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77650215295487A7002BF7AD /* SettingNicknameTableViewCell.swift */; };
 		776502182954A3BA002BF7AD /* SettingTitleTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 776502172954A3BA002BF7AD /* SettingTitleTableViewCell.swift */; };
+		777ECFEC2A26F4490009E302 /* UserDefaults + Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 777ECFEB2A26F4490009E302 /* UserDefaults + Extension.swift */; };
 		77A99D6A2971AFDC0037FCAD /* SettingCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77A99D692971AFDC0037FCAD /* SettingCoordinator.swift */; };
 		77A99D6C2971B0220037FCAD /* DefaultSettingCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77A99D6B2971B0220037FCAD /* DefaultSettingCoordinator.swift */; };
 		77CB027829D02863006817E5 /* NicknameResponseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77CB027729D02863006817E5 /* NicknameResponseModel.swift */; };
@@ -139,6 +140,7 @@
 		77650211295463B8002BF7AD /* BaseTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseTableViewCell.swift; sourceTree = "<group>"; };
 		77650215295487A7002BF7AD /* SettingNicknameTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingNicknameTableViewCell.swift; sourceTree = "<group>"; };
 		776502172954A3BA002BF7AD /* SettingTitleTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingTitleTableViewCell.swift; sourceTree = "<group>"; };
+		777ECFEB2A26F4490009E302 /* UserDefaults + Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UserDefaults + Extension.swift"; sourceTree = "<group>"; };
 		77A99D692971AFDC0037FCAD /* SettingCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingCoordinator.swift; sourceTree = "<group>"; };
 		77A99D6B2971B0220037FCAD /* DefaultSettingCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultSettingCoordinator.swift; sourceTree = "<group>"; };
 		77CB027729D02863006817E5 /* NicknameResponseModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NicknameResponseModel.swift; sourceTree = "<group>"; };
@@ -756,6 +758,7 @@
 				77E70F452930951100F55CD7 /* UITextField + Extension.swift */,
 				77E70F4729309A6D00F55CD7 /* UILabel + Extension.swift */,
 				7765020F295462D7002BF7AD /* UIViewController + Extension.swift */,
+				777ECFEB2A26F4490009E302 /* UserDefaults + Extension.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -1173,6 +1176,7 @@
 				BD90E9DC2976C02100C7CB6B /* CommonResponse.swift in Sources */,
 				BD347C5A292FD226009F52BA /* ExMapType.swift in Sources */,
 				77F1D82229269CC800F31D0C /* UIColor + Extension.swift in Sources */,
+				777ECFEC2A26F4490009E302 /* UserDefaults + Extension.swift in Sources */,
 				77F1D82429269E1C00F31D0C /* UIView + Extension.swift in Sources */,
 				BD4E13652973DAC400AEA757 /* NetworkError.swift in Sources */,
 				77E70F462930951100F55CD7 /* UITextField + Extension.swift in Sources */,
