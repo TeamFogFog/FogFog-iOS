@@ -48,7 +48,6 @@ final class MakeNicknameViewModel: ViewModelType {
             .withUnretained(self)
             .emit { owner, _ in
                 owner.editUserNicknameAPI(userId: 13, nickname: output.nickname.value)
-                didBackButtonTapped.accept(Void())
             }
             .disposed(by: disposeBag)
         
@@ -56,7 +55,6 @@ final class MakeNicknameViewModel: ViewModelType {
             .withUnretained(self)
             .emit { owner, _ in
                 owner.coordinator?.navigationController.popViewController(animated: true)
-                didBackButtonTapped.accept(Void())
             }
             .disposed(by: disposeBag)
         

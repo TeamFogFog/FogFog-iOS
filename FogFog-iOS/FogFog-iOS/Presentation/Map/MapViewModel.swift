@@ -64,7 +64,6 @@ final class MapViewModel: ViewModelType {
             .withUnretained(self)
             .emit { owner, _ in
                 owner.coordinator?.connectSettingCoordinator()
-                didSettingButtonTapped.accept(Void())
             }
             .disposed(by: disposeBag)
         

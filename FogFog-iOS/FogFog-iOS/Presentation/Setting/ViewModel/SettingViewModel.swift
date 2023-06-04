@@ -39,7 +39,6 @@ final class SettingViewModel: ViewModelType {
             .withUnretained(self)
             .emit { owner, _ in
                 owner.coordinator?.finish()
-                didBackButtonTapped.accept(Void())
             }
             .disposed(by: disposeBag)
         
@@ -47,7 +46,6 @@ final class SettingViewModel: ViewModelType {
             .withUnretained(self)
             .emit { owner, _ in
                 owner.coordinator?.connectLoginCoordinator()
-                didEditNicknameButtonTapped.accept(Void())
             }
             .disposed(by: disposeBag)
         
