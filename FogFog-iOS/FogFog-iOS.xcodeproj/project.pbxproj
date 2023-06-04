@@ -22,6 +22,7 @@
 		77650216295487A7002BF7AD /* SettingNicknameTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77650215295487A7002BF7AD /* SettingNicknameTableViewCell.swift */; };
 		776502182954A3BA002BF7AD /* SettingTitleTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 776502172954A3BA002BF7AD /* SettingTitleTableViewCell.swift */; };
 		777ECFEC2A26F4490009E302 /* UserDefaults + Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 777ECFEB2A26F4490009E302 /* UserDefaults + Extension.swift */; };
+		777ECFEF2A2C575B0009E302 /* UserDefault.swift in Sources */ = {isa = PBXBuildFile; fileRef = 777ECFEE2A2C575B0009E302 /* UserDefault.swift */; };
 		77A99D6A2971AFDC0037FCAD /* SettingCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77A99D692971AFDC0037FCAD /* SettingCoordinator.swift */; };
 		77A99D6C2971B0220037FCAD /* DefaultSettingCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77A99D6B2971B0220037FCAD /* DefaultSettingCoordinator.swift */; };
 		77CB027829D02863006817E5 /* NicknameResponseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77CB027729D02863006817E5 /* NicknameResponseModel.swift */; };
@@ -141,6 +142,7 @@
 		77650215295487A7002BF7AD /* SettingNicknameTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingNicknameTableViewCell.swift; sourceTree = "<group>"; };
 		776502172954A3BA002BF7AD /* SettingTitleTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingTitleTableViewCell.swift; sourceTree = "<group>"; };
 		777ECFEB2A26F4490009E302 /* UserDefaults + Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UserDefaults + Extension.swift"; sourceTree = "<group>"; };
+		777ECFEE2A2C575B0009E302 /* UserDefault.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefault.swift; sourceTree = "<group>"; };
 		77A99D692971AFDC0037FCAD /* SettingCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingCoordinator.swift; sourceTree = "<group>"; };
 		77A99D6B2971B0220037FCAD /* DefaultSettingCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultSettingCoordinator.swift; sourceTree = "<group>"; };
 		77CB027729D02863006817E5 /* NicknameResponseModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NicknameResponseModel.swift; sourceTree = "<group>"; };
@@ -794,6 +796,7 @@
 			isa = PBXGroup;
 			children = (
 				ECA425DD29253292004DFDAF /* CoordinatorCase.swift */,
+				777ECFEE2A2C575B0009E302 /* UserDefault.swift */,
 			);
 			path = Contstant;
 			sourceTree = "<group>";
@@ -1165,6 +1168,7 @@
 				ECA425EA29262A80004DFDAF /* LoginCoordinator.swift in Sources */,
 				ECA425DE29253292004DFDAF /* CoordinatorCase.swift in Sources */,
 				BD9AA41829929ABD00D4E7CE /* AppleLoginManager.swift in Sources */,
+				777ECFEF2A2C575B0009E302 /* UserDefault.swift in Sources */,
 				BD90E9E02976C3EF00C7CB6B /* NetworkEnv.swift in Sources */,
 				BD4B550F292A29EC00ECFD04 /* SmokingAreaResponseModel.swift in Sources */,
 				ECA425F6292634C9004DFDAF /* LoginViewModel.swift in Sources */,
