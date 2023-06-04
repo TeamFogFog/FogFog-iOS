@@ -24,11 +24,10 @@ final class MakeNicknameViewController: BaseViewController {
     private let backView = UIView()
     private let errorImageView = UIImageView()
     private let errorLabel = UILabel()
+    var naviTitle = "닉네임 설정"
     
     private let viewModel: MakeNicknameViewModel
     private let disposeBag = DisposeBag()
-    private lazy var input = MakeNicknameViewModel.Input(didNicknameTextFieldChange: nicknameTextField.rx.text.orEmpty.asObservable())
-    private lazy var output = viewModel.transform(input: input)
     
     // MARK: Init
     init(viewModel: MakeNicknameViewModel) {
@@ -53,7 +52,7 @@ final class MakeNicknameViewController: BaseViewController {
     override func setStyle() {
         view.backgroundColor = .white
         backView.backgroundColor = .grayBlack
-        naviView.setTitle("닉네임 설정")
+        naviView.setTitle(naviTitle)
         [errorImageView, errorLabel].forEach { $0.isHidden = true }
         
         nicknameTextField.do {
@@ -127,6 +126,9 @@ final class MakeNicknameViewController: BaseViewController {
     }
     
     private func bind() {
+        let input = MakeNicknameViewModel.Input(didNicknameTextFieldChange: nicknameTextField.rx.text.orEmpty.asObservable(), tapConfirmButton: confirmButton.rx.tap.asSignal(), tapBackButton: naviView.backButtonDidTap())
+        let output = viewModel.transform(input: input)
+        
         output.nickname
             .asDriver(onErrorJustReturn: "")
             .drive(with: self) { owner, nickname in
@@ -140,6 +142,14 @@ final class MakeNicknameViewController: BaseViewController {
                 [owner.errorImageView, owner.errorLabel].forEach { $0?.isHidden = result }
                 owner.nicknameTextField.setBoderColor(color: result ? .fogBlue : .etcRed)
             }
+            .disposed(by: disposeBag)
+        
+        output.didConfirmButtonTapped
+            .emit()
+            .disposed(by: disposeBag)
+        
+        output.didBackButtonTapped
+            .emit()
             .disposed(by: disposeBag)
     }
 }

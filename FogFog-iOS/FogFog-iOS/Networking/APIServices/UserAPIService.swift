@@ -24,4 +24,10 @@ class UserAPIService: Networking {
         return provider.request(.getNickname(userId: userId))
             .map(NicknameResponseModel.self)
     }
+    
+    // 유저 닉네임 수정
+    func editUserNickname(userId: Int, nickname: String) -> Single<NicknameResponseModel?> {
+        return provider.request(.editNickname(userId: userId, nickname: nickname))
+            .map(NicknameResponseModel.self)
+    }
 }

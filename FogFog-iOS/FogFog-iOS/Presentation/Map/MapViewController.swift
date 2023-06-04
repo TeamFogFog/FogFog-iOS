@@ -149,7 +149,7 @@ extension MapViewController {
         
         if let touch = touches.first,
            touch.view == self.blurEffectView {
-            self.tapBlurEffectView.accept(Void())
+            self.tapBlurEffectView.accept(())
         }
     }
 }

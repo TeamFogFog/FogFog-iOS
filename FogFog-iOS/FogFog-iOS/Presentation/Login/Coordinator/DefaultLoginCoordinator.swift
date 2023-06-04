@@ -33,6 +33,13 @@ final class DefaultLoginCoordinator: LoginCoordinator {
         navigationController.pushViewController(loginViewController, animated: false)
     }
     
+    func showMakeNicknameViewController() {
+        let makeNicknameViewModel = MakeNicknameViewModel(coordinator: self)
+        let makeNicknameController = MakeNicknameViewController(viewModel: makeNicknameViewModel)
+        navigationController.pushViewController(makeNicknameController, animated: true)
+        makeNicknameController.naviTitle = "닉네임 수정"
+    }
+    
     func connectMapCoordinator() {
         let mapCoordinator = DefaultMapCoordinator(self.navigationController)
         mapCoordinator.start()
@@ -40,6 +47,7 @@ final class DefaultLoginCoordinator: LoginCoordinator {
     }
     
     func finish() {
-        finishDelegate?.didFinish(childCoordinator: self)
+        finishDelegate?
+            .didFinish(childCoordinator: self)
     }
 }

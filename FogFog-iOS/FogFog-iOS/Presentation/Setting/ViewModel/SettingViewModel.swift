@@ -21,21 +21,32 @@ final class SettingViewModel: ViewModelType {
     
     struct Input {
         let tapBackButton: Signal<Void>
+        let tapEditNicknameButton: Signal<Void>
     }
     
     struct Output {
         let didBackButtonTapped: Signal<Void>
+        let didEditNicknameButtonTapped: Signal<Void>
     }
     
     func transform(input: Input) -> Output {
         let didBackButtonTapped = PublishRelay<Void>()
-        let output = Output(didBackButtonTapped: didBackButtonTapped.asSignal())
+        let didEditNicknameButtonTapped = PublishRelay<Void>()
+        let output = Output(didBackButtonTapped: didBackButtonTapped.asSignal(),
+                            didEditNicknameButtonTapped: didEditNicknameButtonTapped.asSignal())
         
         input.tapBackButton
-            .emit(onNext: { _ in
-                self.coordinator?.finish()
-                didBackButtonTapped.accept(Void())
-            })
+            .withUnretained(self)
+            .emit { owner, _ in
+                owner.coordinator?.finish()
+            }
+            .disposed(by: disposeBag)
+        
+        input.tapEditNicknameButton
+            .withUnretained(self)
+            .emit { owner, _ in
+                owner.coordinator?.connectLoginCoordinator()
+            }
             .disposed(by: disposeBag)
         
         return output
