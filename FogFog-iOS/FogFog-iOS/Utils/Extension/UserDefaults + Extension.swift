@@ -9,7 +9,6 @@ import Foundation
 
 extension UserDefaults {
     
-    enum Keys {
-        static let nickname = "nickname"
-    }
+    @UserDefault<String>(key: "nickname")
+    static var nickname
 }
