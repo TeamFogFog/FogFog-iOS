@@ -80,7 +80,7 @@ extension MakeNicknameViewModel {
     func editUserNicknameAPI(userId: Int, nickname: String) {
         UserAPIService.shared.editUserNickname(userId: userId, nickname: nickname)
             .subscribe(onSuccess: { result in
-                UserDefaults.standard.set(result?.nickname, forKey: UserDefaults.Keys.nickname)
+                UserDefaults.nickname = result?.nickname
             }, onFailure: { error in
                 if let networkError = error as? NetworkError {
                     switch networkError {
