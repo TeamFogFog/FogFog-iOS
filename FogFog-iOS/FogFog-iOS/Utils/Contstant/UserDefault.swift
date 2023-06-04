@@ -10,7 +10,7 @@ import Foundation
 @propertyWrapper
 struct UserDefault<T> {
     
-    let key: String
+    private let key: String
     
     init(key: String) {
         self.key = key
