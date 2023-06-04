@@ -54,6 +54,10 @@
 		BD347C63292FEA15009F52BA /* RoadPopUpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD347C62292FEA15009F52BA /* RoadPopUpView.swift */; };
 		BD347C65292FEB08009F52BA /* RoadPopUpViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD347C64292FEB08009F52BA /* RoadPopUpViewModel.swift */; };
 		BD4B550F292A29EC00ECFD04 /* SmokingAreaResponseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD4B550E292A29EC00ECFD04 /* SmokingAreaResponseModel.swift */; };
+		BD4D62A92A1A0FB200532778 /* RxKakaoSDKAuth in Frameworks */ = {isa = PBXBuildFile; productRef = BD4D62A82A1A0FB200532778 /* RxKakaoSDKAuth */; };
+		BD4D62AB2A1A0FB200532778 /* RxKakaoSDKCommon in Frameworks */ = {isa = PBXBuildFile; productRef = BD4D62AA2A1A0FB200532778 /* RxKakaoSDKCommon */; };
+		BD4D62AD2A1A0FB200532778 /* RxKakaoSDKUser in Frameworks */ = {isa = PBXBuildFile; productRef = BD4D62AC2A1A0FB200532778 /* RxKakaoSDKUser */; };
+		BD4D62AF2A1A100B00532778 /* KakaoOAuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD4D62AE2A1A100B00532778 /* KakaoOAuthService.swift */; };
 		BD4E13652973DAC400AEA757 /* NetworkError.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD4E13642973DAC400AEA757 /* NetworkError.swift */; };
 		BD5D0D7029F12E0600190471 /* MessageModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD5D0D6F29F12E0600190471 /* MessageModel.swift */; };
 		BD5D0D7429F1302F00190471 /* Presentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD5D0D7329F1302F00190471 /* Presentable.swift */; };
@@ -66,11 +70,18 @@
 		BD90E9E02976C3EF00C7CB6B /* NetworkEnv.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD90E9DF2976C3EF00C7CB6B /* NetworkEnv.swift */; };
 		BD90E9E22976C4F800C7CB6B /* Networking.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD90E9E12976C4F800C7CB6B /* Networking.swift */; };
 		BD9AA41829929ABD00D4E7CE /* AppleLoginManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD9AA41729929ABD00D4E7CE /* AppleLoginManager.swift */; };
+		BDC0D0832A2600D9003D770E /* AuthAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDC0D0822A2600D9003D770E /* AuthAPI.swift */; };
+		BDC0D0852A26035D003D770E /* AuthAPIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDC0D0842A26035D003D770E /* AuthAPIService.swift */; };
 		BDC20F9A293B446D00B9A2E7 /* SplashViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDC20F99293B446D00B9A2E7 /* SplashViewController.swift */; };
 		BDC20F9D293B44B600B9A2E7 /* FogToast.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDC20F9C293B44B600B9A2E7 /* FogToast.swift */; };
 		BDC50ECB292A07B2002378C6 /* GoogleMap.plist in Resources */ = {isa = PBXBuildFile; fileRef = BDC50ECA292A07B2002378C6 /* GoogleMap.plist */; };
 		BDC50ED2292A07EB002378C6 /* SmokingAreaDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDC50ED1292A07EB002378C6 /* SmokingAreaDetailViewModel.swift */; };
 		BDC50ED6292A09BD002378C6 /* BaseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDC50ED5292A09BD002378C6 /* BaseView.swift */; };
+		BDDAA3912A249D090055859E /* Config.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDDAA3902A249D090055859E /* Config.swift */; };
+		BDDAA3932A24B9D00055859E /* OAuthServiceType.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDDAA3922A24B9D00055859E /* OAuthServiceType.swift */; };
+		BDDAA3952A24BA130055859E /* OAuthAuthentication.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDDAA3942A24BA130055859E /* OAuthAuthentication.swift */; };
+		BDDAA3972A24BC120055859E /* OAuthProviderType.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDDAA3962A24BC120055859E /* OAuthProviderType.swift */; };
+		BDE3EEB22A1D124300632662 /* OAuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDE3EEB12A1D124300632662 /* OAuthService.swift */; };
 		BDEA50D129261C6600110982 /* .swiftlint.yml in Resources */ = {isa = PBXBuildFile; fileRef = BDEA50D029261C6600110982 /* .swiftlint.yml */; };
 		ECA4252D29224DB8004DFDAF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECA4252C29224DB8004DFDAF /* AppDelegate.swift */; };
 		ECA4252F29224DB8004DFDAF /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECA4252E29224DB8004DFDAF /* SceneDelegate.swift */; };
@@ -168,6 +179,7 @@
 		BD347C62292FEA15009F52BA /* RoadPopUpView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoadPopUpView.swift; sourceTree = "<group>"; };
 		BD347C64292FEB08009F52BA /* RoadPopUpViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoadPopUpViewModel.swift; sourceTree = "<group>"; };
 		BD4B550E292A29EC00ECFD04 /* SmokingAreaResponseModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SmokingAreaResponseModel.swift; sourceTree = "<group>"; };
+		BD4D62AE2A1A100B00532778 /* KakaoOAuthService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KakaoOAuthService.swift; sourceTree = "<group>"; };
 		BD4E13642973DAC400AEA757 /* NetworkError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkError.swift; sourceTree = "<group>"; };
 		BD5D0D6F29F12E0600190471 /* MessageModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageModel.swift; sourceTree = "<group>"; };
 		BD5D0D7329F1302F00190471 /* Presentable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Presentable.swift; sourceTree = "<group>"; };
@@ -181,11 +193,19 @@
 		BD90E9E12976C4F800C7CB6B /* Networking.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Networking.swift; sourceTree = "<group>"; };
 		BD9AA41529929A7A00D4E7CE /* FogFog-iOS.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "FogFog-iOS.entitlements"; sourceTree = "<group>"; };
 		BD9AA41729929ABD00D4E7CE /* AppleLoginManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppleLoginManager.swift; sourceTree = "<group>"; };
+		BDC0D0822A2600D9003D770E /* AuthAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthAPI.swift; sourceTree = "<group>"; };
+		BDC0D0842A26035D003D770E /* AuthAPIService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthAPIService.swift; sourceTree = "<group>"; };
 		BDC20F99293B446D00B9A2E7 /* SplashViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashViewController.swift; sourceTree = "<group>"; };
 		BDC20F9C293B44B600B9A2E7 /* FogToast.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FogToast.swift; sourceTree = "<group>"; };
 		BDC50ECA292A07B2002378C6 /* GoogleMap.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = GoogleMap.plist; sourceTree = "<group>"; };
 		BDC50ED1292A07EB002378C6 /* SmokingAreaDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SmokingAreaDetailViewModel.swift; sourceTree = "<group>"; };
 		BDC50ED5292A09BD002378C6 /* BaseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseView.swift; sourceTree = "<group>"; };
+		BDDAA38F2A249B550055859E /* Config.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Config.xcconfig; sourceTree = "<group>"; };
+		BDDAA3902A249D090055859E /* Config.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Config.swift; sourceTree = "<group>"; };
+		BDDAA3922A24B9D00055859E /* OAuthServiceType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OAuthServiceType.swift; sourceTree = "<group>"; };
+		BDDAA3942A24BA130055859E /* OAuthAuthentication.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OAuthAuthentication.swift; sourceTree = "<group>"; };
+		BDDAA3962A24BC120055859E /* OAuthProviderType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OAuthProviderType.swift; sourceTree = "<group>"; };
+		BDE3EEB12A1D124300632662 /* OAuthService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OAuthService.swift; sourceTree = "<group>"; };
 		BDEA50D029261C6600110982 /* .swiftlint.yml */ = {isa = PBXFileReference; lastKnownFileType = text.yaml; path = .swiftlint.yml; sourceTree = "<group>"; };
 		D67B489E657987D4A7AD92C7 /* Pods_FogFog_iOS_FogFog_iOSUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FogFog_iOS_FogFog_iOSUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DABD884BD50346C82E3C3CA3 /* Pods-FogFog-iOS-FogFog-iOSUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FogFog-iOS-FogFog-iOSUITests.release.xcconfig"; path = "Target Support Files/Pods-FogFog-iOS-FogFog-iOSUITests/Pods-FogFog-iOS-FogFog-iOSUITests.release.xcconfig"; sourceTree = "<group>"; };
@@ -241,7 +261,9 @@
 			files = (
 				ECA425CD29234C4F004DFDAF /* RxSwift in Frameworks */,
 				ECA425B229234744004DFDAF /* Moya in Frameworks */,
+				BD4D62AB2A1A0FB200532778 /* RxKakaoSDKCommon in Frameworks */,
 				ECA425A4292346BF004DFDAF /* Kingfisher in Frameworks */,
+				BD4D62A92A1A0FB200532778 /* RxKakaoSDKAuth in Frameworks */,
 				ECA4259E292346A2004DFDAF /* Then in Frameworks */,
 				ECA425C929234C4F004DFDAF /* RxCocoa in Frameworks */,
 				ECA425B429234744004DFDAF /* RxMoya in Frameworks */,
@@ -249,6 +271,7 @@
 				ECA425CB29234C4F004DFDAF /* RxRelay in Frameworks */,
 				772577DC2934924E008273A7 /* RxGesture in Frameworks */,
 				1DDE6DAB87E9F15EAEAD8A1B /* Pods_FogFog_iOS.framework in Frameworks */,
+				BD4D62AD2A1A0FB200532778 /* RxKakaoSDKUser in Frameworks */,
 				772577D929349212008273A7 /* RxKeyboard in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -371,6 +394,7 @@
 			isa = PBXGroup;
 			children = (
 				77CB027A29D02FA1006817E5 /* UserAPIService.swift */,
+				BDC0D0842A26035D003D770E /* AuthAPIService.swift */,
 			);
 			path = APIServices;
 			sourceTree = "<group>";
@@ -470,6 +494,7 @@
 			children = (
 				BD90E9DD2976C11E00C7CB6B /* FogAPI.swift */,
 				BD2D276A297D17E400984B97 /* UserAPI.swift */,
+				BDC0D0822A2600D9003D770E /* AuthAPI.swift */,
 			);
 			path = APIs;
 			sourceTree = "<group>";
@@ -524,6 +549,18 @@
 			path = ViewModel;
 			sourceTree = "<group>";
 		};
+		BDE3EEB02A1D10DC00632662 /* OAuth */ = {
+			isa = PBXGroup;
+			children = (
+				BD4D62AE2A1A100B00532778 /* KakaoOAuthService.swift */,
+				BDDAA3942A24BA130055859E /* OAuthAuthentication.swift */,
+				BDDAA3962A24BC120055859E /* OAuthProviderType.swift */,
+				BDE3EEB12A1D124300632662 /* OAuthService.swift */,
+				BDDAA3922A24B9D00055859E /* OAuthServiceType.swift */,
+			);
+			path = OAuth;
+			sourceTree = "<group>";
+		};
 		ECA4252029224DB8004DFDAF = {
 			isa = PBXGroup;
 			children = (
@@ -551,10 +588,11 @@
 			isa = PBXGroup;
 			children = (
 				BD9AA41529929A7A00D4E7CE /* FogFog-iOS.entitlements */,
-				BD9AA41629929AB200D4E7CE /* Manager */,
 				ECA4255D292251D8004DFDAF /* App */,
+				BD9AA41629929AB200D4E7CE /* Manager */,
 				ECA4255E292251E0004DFDAF /* Models */,
 				BD4E13632973DAA300AEA757 /* Networking */,
+				BDE3EEB02A1D10DC00632662 /* OAuth */,
 				ECA4255F2922528B004DFDAF /* Presentation */,
 				ECA4256029225297004DFDAF /* Resources */,
 				ECA425612922529F004DFDAF /* Supports */,
@@ -629,6 +667,7 @@
 			children = (
 				ECA4253A29224DBB004DFDAF /* Info.plist */,
 				BDC50ECA292A07B2002378C6 /* GoogleMap.plist */,
+				BDDAA38F2A249B550055859E /* Config.xcconfig */,
 			);
 			path = Supports;
 			sourceTree = "<group>";
@@ -797,6 +836,7 @@
 			children = (
 				ECA425DD29253292004DFDAF /* CoordinatorCase.swift */,
 				777ECFEE2A2C575B0009E302 /* UserDefault.swift */,
+				BDDAA3902A249D090055859E /* Config.swift */,
 			);
 			path = Contstant;
 			sourceTree = "<group>";
@@ -884,6 +924,9 @@
 				ECA425CC29234C4F004DFDAF /* RxSwift */,
 				772577D829349212008273A7 /* RxKeyboard */,
 				772577DB2934924E008273A7 /* RxGesture */,
+				BD4D62A82A1A0FB200532778 /* RxKakaoSDKAuth */,
+				BD4D62AA2A1A0FB200532778 /* RxKakaoSDKCommon */,
+				BD4D62AC2A1A0FB200532778 /* RxKakaoSDKUser */,
 			);
 			productName = "FogFog-iOS";
 			productReference = ECA4252929224DB8004DFDAF /* FogFog-iOS.app */;
@@ -968,6 +1011,7 @@
 				ECA425C729234C4F004DFDAF /* XCRemoteSwiftPackageReference "RxSwift" */,
 				772577D729349212008273A7 /* XCRemoteSwiftPackageReference "RxKeyboard" */,
 				772577DA2934924D008273A7 /* XCRemoteSwiftPackageReference "RxGesture" */,
+				BD4D62A72A1A0FB200532778 /* XCRemoteSwiftPackageReference "kakao-ios-sdk-rx" */,
 			);
 			productRefGroup = ECA4252A29224DB8004DFDAF /* Products */;
 			projectDirPath = "";
@@ -1150,16 +1194,20 @@
 				BD347C58292FD1BC009F52BA /* RoadPopUpViewController.swift in Sources */,
 				7765020429544937002BF7AD /* SettingViewModel.swift in Sources */,
 				77F1D82F2927F2CC00F31D0C /* Adjusted + Extension.swift in Sources */,
+				BDC0D0852A26035D003D770E /* AuthAPIService.swift in Sources */,
 				BD5D0D7C29F14FDC00190471 /* SmokingAreaMessageView.swift in Sources */,
 				77650216295487A7002BF7AD /* SettingNicknameTableViewCell.swift in Sources */,
 				77A99D6C2971B0220037FCAD /* DefaultSettingCoordinator.swift in Sources */,
+				BD4D62AF2A1A100B00532778 /* KakaoOAuthService.swift in Sources */,
 				77E70F4A2930D0FA00F55CD7 /* MakeNicknameViewModel.swift in Sources */,
 				77650210295462D7002BF7AD /* UIViewController + Extension.swift in Sources */,
+				BDDAA3952A24BA130055859E /* OAuthAuthentication.swift in Sources */,
 				7765020E29546239002BF7AD /* SettingListTableViewCell.swift in Sources */,
 				ECA425DA29253155004DFDAF /* Coordinator.swift in Sources */,
 				ECA425F4292634A6004DFDAF /* LoginViewController.swift in Sources */,
 				ECA425CF292382AD004DFDAF /* NavigationView.swift in Sources */,
 				77F899DE29308C6000806896 /* FogTextField.swift in Sources */,
+				BDC0D0832A2600D9003D770E /* AuthAPI.swift in Sources */,
 				BD347C65292FEB08009F52BA /* RoadPopUpViewModel.swift in Sources */,
 				ECA425E0292532B7004DFDAF /* AppCoordinator.swift in Sources */,
 				ECA425E629262A42004DFDAF /* DefaultLoginCoordinator.swift in Sources */,
@@ -1173,10 +1221,13 @@
 				BD4B550F292A29EC00ECFD04 /* SmokingAreaResponseModel.swift in Sources */,
 				ECA425F6292634C9004DFDAF /* LoginViewModel.swift in Sources */,
 				BD90E9E22976C4F800C7CB6B /* Networking.swift in Sources */,
+				BDE3EEB22A1D124300632662 /* OAuthService.swift in Sources */,
 				77A99D6A2971AFDC0037FCAD /* SettingCoordinator.swift in Sources */,
+				BDDAA3932A24B9D00055859E /* OAuthServiceType.swift in Sources */,
 				ECA4259729229B15004DFDAF /* FogFont.swift in Sources */,
 				BDC50ED2292A07EB002378C6 /* SmokingAreaDetailViewModel.swift in Sources */,
 				77CB027F29DEAE57006817E5 /* RxMoya + Extension.swift in Sources */,
+				BDDAA3972A24BC120055859E /* OAuthProviderType.swift in Sources */,
 				BD90E9DC2976C02100C7CB6B /* CommonResponse.swift in Sources */,
 				BD347C5A292FD226009F52BA /* ExMapType.swift in Sources */,
 				77F1D82229269CC800F31D0C /* UIColor + Extension.swift in Sources */,
@@ -1215,6 +1266,7 @@
 				BD5D0D7429F1302F00190471 /* Presentable.swift in Sources */,
 				BDC20F9D293B44B600B9A2E7 /* FogToast.swift in Sources */,
 				BD5D0D7629F1310800190471 /* SmokingAreaCardView.swift in Sources */,
+				BDDAA3912A249D090055859E /* Config.swift in Sources */,
 				ECA425E429262A37004DFDAF /* DefaultMapCoordinator.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1265,6 +1317,7 @@
 /* Begin XCBuildConfiguration section */
 		ECA4255129224DBB004DFDAF /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = BDDAA38F2A249B550055859E /* Config.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ANALYZER_NONNULL = YES;
@@ -1325,6 +1378,7 @@
 		};
 		ECA4255229224DBB004DFDAF /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = BDDAA38F2A249B550055859E /* Config.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ANALYZER_NONNULL = YES;
@@ -1395,8 +1449,8 @@
 				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "위치 권한 체크";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -1405,9 +1459,13 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.fogfog.FogFog-iOS";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
+				"PROVISIONING_PROFILE_SPECIFIER[sdk=iphoneos*]" = FogFog_Debug;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = YES;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -1429,8 +1487,8 @@
 				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "위치 권한 체크";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -1439,9 +1497,13 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.fogfog.FogFog-iOS";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
+				"PROVISIONING_PROFILE_SPECIFIER[sdk=iphoneos*]" = FogFog_Release;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = YES;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
@@ -1583,6 +1645,14 @@
 				minimumVersion = 4.0.0;
 			};
 		};
+		BD4D62A72A1A0FB200532778 /* XCRemoteSwiftPackageReference "kakao-ios-sdk-rx" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/kakao/kakao-ios-sdk-rx";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.0.0;
+			};
+		};
 		ECA4259C292346A2004DFDAF /* XCRemoteSwiftPackageReference "Then" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/devxoul/Then.git";
@@ -1635,6 +1705,21 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 772577DA2934924D008273A7 /* XCRemoteSwiftPackageReference "RxGesture" */;
 			productName = RxGesture;
+		};
+		BD4D62A82A1A0FB200532778 /* RxKakaoSDKAuth */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = BD4D62A72A1A0FB200532778 /* XCRemoteSwiftPackageReference "kakao-ios-sdk-rx" */;
+			productName = RxKakaoSDKAuth;
+		};
+		BD4D62AA2A1A0FB200532778 /* RxKakaoSDKCommon */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = BD4D62A72A1A0FB200532778 /* XCRemoteSwiftPackageReference "kakao-ios-sdk-rx" */;
+			productName = RxKakaoSDKCommon;
+		};
+		BD4D62AC2A1A0FB200532778 /* RxKakaoSDKUser */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = BD4D62A72A1A0FB200532778 /* XCRemoteSwiftPackageReference "kakao-ios-sdk-rx" */;
+			productName = RxKakaoSDKUser;
 		};
 		ECA4259D292346A2004DFDAF /* Then */ = {
 			isa = XCSwiftPackageProductDependency;

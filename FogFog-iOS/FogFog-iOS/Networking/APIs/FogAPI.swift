@@ -11,7 +11,7 @@ import Moya
 
 /// FogFog 도메인
 enum FogDomain {
-    case auth(path: String)
+    case auth
     case maps
     case users
 }
@@ -56,13 +56,13 @@ extension FogAPI {
         return .successCodes
     }
     
-    var headers: [String : String]? {
+    var headers: [String: String]? {
         switch self {
         default:
             return NetworkEnv.HTTPHeaderFields.default
         }
     }
-
+    
     var task: Task {
         if let parameters = parameters {
             return .requestParameters(parameters: parameters, encoding: JSONEncoding.default)
