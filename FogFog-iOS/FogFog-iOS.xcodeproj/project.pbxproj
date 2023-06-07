@@ -528,6 +528,7 @@
 			isa = PBXGroup;
 			children = (
 				BDB6E1F92A30546D00AE6228 /* Published+Rx.swift */,
+				777ECFEE2A2C575B0009E302 /* UserDefault.swift */,
 			);
 			path = Wrapper;
 			sourceTree = "<group>";
@@ -860,7 +861,6 @@
 			isa = PBXGroup;
 			children = (
 				ECA425DD29253292004DFDAF /* CoordinatorCase.swift */,
-				777ECFEE2A2C575B0009E302 /* UserDefault.swift */,
 				BDDAA3902A249D090055859E /* Config.swift */,
 			);
 			path = Contstant;
