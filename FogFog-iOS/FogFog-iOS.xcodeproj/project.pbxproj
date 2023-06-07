@@ -70,6 +70,7 @@
 		BD90E9E02976C3EF00C7CB6B /* NetworkEnv.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD90E9DF2976C3EF00C7CB6B /* NetworkEnv.swift */; };
 		BD90E9E22976C4F800C7CB6B /* Networking.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD90E9E12976C4F800C7CB6B /* Networking.swift */; };
 		BD9AA41829929ABD00D4E7CE /* AppleLoginManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD9AA41729929ABD00D4E7CE /* AppleLoginManager.swift */; };
+		BDB6E1FA2A30546D00AE6228 /* Published+Rx.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDB6E1F92A30546D00AE6228 /* Published+Rx.swift */; };
 		BDC0D0832A2600D9003D770E /* AuthAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDC0D0822A2600D9003D770E /* AuthAPI.swift */; };
 		BDC0D0852A26035D003D770E /* AuthAPIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDC0D0842A26035D003D770E /* AuthAPIService.swift */; };
 		BDC20F9A293B446D00B9A2E7 /* SplashViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDC20F99293B446D00B9A2E7 /* SplashViewController.swift */; };
@@ -193,6 +194,7 @@
 		BD90E9E12976C4F800C7CB6B /* Networking.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Networking.swift; sourceTree = "<group>"; };
 		BD9AA41529929A7A00D4E7CE /* FogFog-iOS.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "FogFog-iOS.entitlements"; sourceTree = "<group>"; };
 		BD9AA41729929ABD00D4E7CE /* AppleLoginManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppleLoginManager.swift; sourceTree = "<group>"; };
+		BDB6E1F92A30546D00AE6228 /* Published+Rx.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Published+Rx.swift"; sourceTree = "<group>"; };
 		BDC0D0822A2600D9003D770E /* AuthAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthAPI.swift; sourceTree = "<group>"; };
 		BDC0D0842A26035D003D770E /* AuthAPIService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthAPIService.swift; sourceTree = "<group>"; };
 		BDC20F99293B446D00B9A2E7 /* SplashViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashViewController.swift; sourceTree = "<group>"; };
@@ -675,6 +677,7 @@
 		ECA42562292252AB004DFDAF /* Utils */ = {
 			isa = PBXGroup;
 			children = (
+				BDB6E1F82A30545900AE6228 /* Wrapper */,
 				ECA425F029263461004DFDAF /* Contstant */,
 				ECA42563292252BC004DFDAF /* Base */,
 				ECA42565292252E7004DFDAF /* Logging */,
@@ -1203,6 +1206,7 @@
 				77650210295462D7002BF7AD /* UIViewController + Extension.swift in Sources */,
 				BDDAA3952A24BA130055859E /* OAuthAuthentication.swift in Sources */,
 				7765020E29546239002BF7AD /* SettingListTableViewCell.swift in Sources */,
+				BDB6E1FA2A30546D00AE6228 /* Published+Rx.swift in Sources */,
 				ECA425DA29253155004DFDAF /* Coordinator.swift in Sources */,
 				ECA425F4292634A6004DFDAF /* LoginViewController.swift in Sources */,
 				ECA425CF292382AD004DFDAF /* NavigationView.swift in Sources */,
