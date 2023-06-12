@@ -70,6 +70,9 @@
 		BD90E9E02976C3EF00C7CB6B /* NetworkEnv.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD90E9DF2976C3EF00C7CB6B /* NetworkEnv.swift */; };
 		BD90E9E22976C4F800C7CB6B /* Networking.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD90E9E12976C4F800C7CB6B /* Networking.swift */; };
 		BD9AA41829929ABD00D4E7CE /* AppleLoginManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD9AA41729929ABD00D4E7CE /* AppleLoginManager.swift */; };
+		BDB6E1F52A30383700AE6228 /* NetworkMonitor.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDB6E1F42A30383700AE6228 /* NetworkMonitor.swift */; };
+		BDB6E1F72A30511C00AE6228 /* NetworkConnectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDB6E1F62A30511C00AE6228 /* NetworkConnectionView.swift */; };
+		BDB6E1FA2A30546D00AE6228 /* Published+Rx.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDB6E1F92A30546D00AE6228 /* Published+Rx.swift */; };
 		BDC0D0832A2600D9003D770E /* AuthAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDC0D0822A2600D9003D770E /* AuthAPI.swift */; };
 		BDC0D0852A26035D003D770E /* AuthAPIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDC0D0842A26035D003D770E /* AuthAPIService.swift */; };
 		BDC20F9A293B446D00B9A2E7 /* SplashViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDC20F99293B446D00B9A2E7 /* SplashViewController.swift */; };
@@ -193,6 +196,9 @@
 		BD90E9E12976C4F800C7CB6B /* Networking.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Networking.swift; sourceTree = "<group>"; };
 		BD9AA41529929A7A00D4E7CE /* FogFog-iOS.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "FogFog-iOS.entitlements"; sourceTree = "<group>"; };
 		BD9AA41729929ABD00D4E7CE /* AppleLoginManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppleLoginManager.swift; sourceTree = "<group>"; };
+		BDB6E1F42A30383700AE6228 /* NetworkMonitor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkMonitor.swift; sourceTree = "<group>"; };
+		BDB6E1F62A30511C00AE6228 /* NetworkConnectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkConnectionView.swift; sourceTree = "<group>"; };
+		BDB6E1F92A30546D00AE6228 /* Published+Rx.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Published+Rx.swift"; sourceTree = "<group>"; };
 		BDC0D0822A2600D9003D770E /* AuthAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthAPI.swift; sourceTree = "<group>"; };
 		BDC0D0842A26035D003D770E /* AuthAPIService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthAPIService.swift; sourceTree = "<group>"; };
 		BDC20F99293B446D00B9A2E7 /* SplashViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashViewController.swift; sourceTree = "<group>"; };
@@ -438,6 +444,7 @@
 		BD4E13632973DAA300AEA757 /* Networking */ = {
 			isa = PBXGroup;
 			children = (
+				BDB6E1F32A30382C00AE6228 /* Monitoring */,
 				77CB027929D02BCF006817E5 /* APIServices */,
 				BD5D0D8029F15FFA00190471 /* Foundation */,
 				BDB152C0297E6834002E477F /* APIs */,
@@ -506,6 +513,24 @@
 				77CB027729D02863006817E5 /* NicknameResponseModel.swift */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		BDB6E1F32A30382C00AE6228 /* Monitoring */ = {
+			isa = PBXGroup;
+			children = (
+				BDB6E1F42A30383700AE6228 /* NetworkMonitor.swift */,
+				BDB6E1F62A30511C00AE6228 /* NetworkConnectionView.swift */,
+			);
+			path = Monitoring;
+			sourceTree = "<group>";
+		};
+		BDB6E1F82A30545900AE6228 /* Wrapper */ = {
+			isa = PBXGroup;
+			children = (
+				BDB6E1F92A30546D00AE6228 /* Published+Rx.swift */,
+				777ECFEE2A2C575B0009E302 /* UserDefault.swift */,
+			);
+			path = Wrapper;
 			sourceTree = "<group>";
 		};
 		BDC20F97293B446000B9A2E7 /* Splash */ = {
@@ -675,6 +700,7 @@
 		ECA42562292252AB004DFDAF /* Utils */ = {
 			isa = PBXGroup;
 			children = (
+				BDB6E1F82A30545900AE6228 /* Wrapper */,
 				ECA425F029263461004DFDAF /* Contstant */,
 				ECA42563292252BC004DFDAF /* Base */,
 				ECA42565292252E7004DFDAF /* Logging */,
@@ -835,7 +861,6 @@
 			isa = PBXGroup;
 			children = (
 				ECA425DD29253292004DFDAF /* CoordinatorCase.swift */,
-				777ECFEE2A2C575B0009E302 /* UserDefault.swift */,
 				BDDAA3902A249D090055859E /* Config.swift */,
 			);
 			path = Contstant;
@@ -1203,6 +1228,7 @@
 				77650210295462D7002BF7AD /* UIViewController + Extension.swift in Sources */,
 				BDDAA3952A24BA130055859E /* OAuthAuthentication.swift in Sources */,
 				7765020E29546239002BF7AD /* SettingListTableViewCell.swift in Sources */,
+				BDB6E1FA2A30546D00AE6228 /* Published+Rx.swift in Sources */,
 				ECA425DA29253155004DFDAF /* Coordinator.swift in Sources */,
 				ECA425F4292634A6004DFDAF /* LoginViewController.swift in Sources */,
 				ECA425CF292382AD004DFDAF /* NavigationView.swift in Sources */,
@@ -1227,6 +1253,7 @@
 				ECA4259729229B15004DFDAF /* FogFont.swift in Sources */,
 				BDC50ED2292A07EB002378C6 /* SmokingAreaDetailViewModel.swift in Sources */,
 				77CB027F29DEAE57006817E5 /* RxMoya + Extension.swift in Sources */,
+				BDB6E1F52A30383700AE6228 /* NetworkMonitor.swift in Sources */,
 				BDDAA3972A24BC120055859E /* OAuthProviderType.swift in Sources */,
 				BD90E9DC2976C02100C7CB6B /* CommonResponse.swift in Sources */,
 				BD347C5A292FD226009F52BA /* ExMapType.swift in Sources */,
@@ -1248,6 +1275,7 @@
 				BD5D0D7F29F15E3A00190471 /* BottomViewType.swift in Sources */,
 				ECA425E2292532CA004DFDAF /* DefaultAppCoordinator.swift in Sources */,
 				ECA4252F29224DB8004DFDAF /* SceneDelegate.swift in Sources */,
+				BDB6E1F72A30511C00AE6228 /* NetworkConnectionView.swift in Sources */,
 				776502182954A3BA002BF7AD /* SettingTitleTableViewCell.swift in Sources */,
 				ECA425EC29262CF8004DFDAF /* MapViewModel.swift in Sources */,
 				7761D4F4292F3471003971DC /* MakeNicknameViewController.swift in Sources */,
