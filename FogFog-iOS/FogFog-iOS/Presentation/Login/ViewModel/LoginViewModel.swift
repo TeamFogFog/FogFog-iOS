@@ -14,6 +14,7 @@ final class LoginViewModel: ViewModelType {
 
     struct Input {
         let kakaoButtonDidTap: Observable<Void>
+        let appleButtonDidTap: Observable<Void>
     }
     
     struct Output {
@@ -42,6 +43,15 @@ final class LoginViewModel: ViewModelType {
         
         input.kakaoButtonDidTap
             .flatMap(loginWithKakao)
+            .subscribe { _ in
+                result.onNext("success!")
+            } onError: { error in
+                result.onNext("error: \(error.localizedDescription)")
+            }
+            .disposed(by: disposeBag)
+        
+        input.appleButtonDidTap
+            .flatMap(loginWithApple)
             .subscribe { _ in
                 result.onNext("success!")
             } onError: { error in

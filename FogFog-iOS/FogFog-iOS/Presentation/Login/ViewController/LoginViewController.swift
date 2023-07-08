@@ -7,6 +7,7 @@
 
 import UIKit
 
+import AuthenticationServices
 import RxSwift
 
 final class LoginViewController: BaseViewController {
@@ -40,14 +41,7 @@ final class LoginViewController: BaseViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        let input = LoginViewModel.Input(kakaoButtonDidTap: kakaoButton.rx.tap.asObservable())
-        let output = viewModel.transform(input: input)
-        
-        output.loginResult
-            .drive { msg in
-                print("로그인 메시지 \(msg)")
-            }
-            .disposed(by: disposeBag)
+        bind()
     }
     
     // MARK: UI
@@ -183,5 +177,21 @@ final class LoginViewController: BaseViewController {
             $0.height.equalTo(54)
             $0.bottom.equalToSuperview().inset(70)
         }
+    }
+}
+
+// MARK: - Bind
+extension LoginViewController {
+    
+    private func bind() {
+        let input = LoginViewModel.Input(kakaoButtonDidTap: kakaoButton.rx.tap.asObservable(),
+                                         appleButtonDidTap: appleButton.rx.tap.asObservable())
+        let output = viewModel.transform(input: input)
+
+        output.loginResult
+            .drive { msg in
+                print("로그인 메시지 \(msg)")
+            }
+            .disposed(by: disposeBag)
     }
 }
