@@ -23,6 +23,7 @@
 		776502182954A3BA002BF7AD /* SettingTitleTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 776502172954A3BA002BF7AD /* SettingTitleTableViewCell.swift */; };
 		777ECFEC2A26F4490009E302 /* UserDefaults + Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 777ECFEB2A26F4490009E302 /* UserDefaults + Extension.swift */; };
 		777ECFEF2A2C575B0009E302 /* UserDefault.swift in Sources */ = {isa = PBXBuildFile; fileRef = 777ECFEE2A2C575B0009E302 /* UserDefault.swift */; };
+		779672AF2A58034E003064A8 /* ASAuthorizationControllerProxy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 779672AE2A58034E003064A8 /* ASAuthorizationControllerProxy.swift */; };
 		77A99D6A2971AFDC0037FCAD /* SettingCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77A99D692971AFDC0037FCAD /* SettingCoordinator.swift */; };
 		77A99D6C2971B0220037FCAD /* DefaultSettingCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77A99D6B2971B0220037FCAD /* DefaultSettingCoordinator.swift */; };
 		77CB027829D02863006817E5 /* NicknameResponseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77CB027729D02863006817E5 /* NicknameResponseModel.swift */; };
@@ -157,6 +158,7 @@
 		776502172954A3BA002BF7AD /* SettingTitleTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingTitleTableViewCell.swift; sourceTree = "<group>"; };
 		777ECFEB2A26F4490009E302 /* UserDefaults + Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UserDefaults + Extension.swift"; sourceTree = "<group>"; };
 		777ECFEE2A2C575B0009E302 /* UserDefault.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefault.swift; sourceTree = "<group>"; };
+		779672AE2A58034E003064A8 /* ASAuthorizationControllerProxy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ASAuthorizationControllerProxy.swift; sourceTree = "<group>"; };
 		77A99D692971AFDC0037FCAD /* SettingCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingCoordinator.swift; sourceTree = "<group>"; };
 		77A99D6B2971B0220037FCAD /* DefaultSettingCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultSettingCoordinator.swift; sourceTree = "<group>"; };
 		77CB027729D02863006817E5 /* NicknameResponseModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NicknameResponseModel.swift; sourceTree = "<group>"; };
@@ -379,6 +381,15 @@
 			path = ViewModel;
 			sourceTree = "<group>";
 		};
+		779672B62A59B019003064A8 /* AppleLogin */ = {
+			isa = PBXGroup;
+			children = (
+				BD9AA41729929ABD00D4E7CE /* AppleLoginManager.swift */,
+				779672AE2A58034E003064A8 /* ASAuthorizationControllerProxy.swift */,
+			);
+			path = AppleLogin;
+			sourceTree = "<group>";
+		};
 		77A99D672971AFB30037FCAD /* Coordinator */ = {
 			isa = PBXGroup;
 			children = (
@@ -491,7 +502,7 @@
 		BD9AA41629929AB200D4E7CE /* Manager */ = {
 			isa = PBXGroup;
 			children = (
-				BD9AA41729929ABD00D4E7CE /* AppleLoginManager.swift */,
+				779672B62A59B019003064A8 /* AppleLogin */,
 			);
 			path = Manager;
 			sourceTree = "<group>";
@@ -1246,6 +1257,7 @@
 				BD90E9E02976C3EF00C7CB6B /* NetworkEnv.swift in Sources */,
 				BD4B550F292A29EC00ECFD04 /* SmokingAreaResponseModel.swift in Sources */,
 				ECA425F6292634C9004DFDAF /* LoginViewModel.swift in Sources */,
+				779672AF2A58034E003064A8 /* ASAuthorizationControllerProxy.swift in Sources */,
 				BD90E9E22976C4F800C7CB6B /* Networking.swift in Sources */,
 				BDE3EEB22A1D124300632662 /* OAuthService.swift in Sources */,
 				77A99D6A2971AFDC0037FCAD /* SettingCoordinator.swift in Sources */,

@@ -6,6 +6,8 @@
 //
 
 import AuthenticationServices
+import RxCocoa
+import RxSwift
 
 /// AppleUser
 ///
@@ -14,14 +16,8 @@ import AuthenticationServices
 /// - origin: 애플 원본 Credential
 struct AppleUser {
     var id: String
+    var code: String
     var email: String
-    var origin: Any
-    
-    init(credential: ASAuthorizationAppleIDCredential) {
-        self.id = credential.user
-        self.email = credential.email ?? ""
-        self.origin = credential
-    }
 }
 
 /// 애플 로그인 매니저
@@ -29,7 +25,6 @@ final class AppleLoginManager: NSObject {
     
     // 클래스 간 순환 참조 방지
     private weak var viewController: UIViewController?
-    var loggedIn: ((_ status: Bool, _ message: String, _ user: AppleUser?) -> Void)?
     
     override init() {
         super.init()
@@ -40,22 +35,19 @@ final class AppleLoginManager: NSObject {
         self.viewController = viewController
     }
     
-    convenience init(with button: UIButton, from viewController: UIViewController) {
-        self.init()
-        button.addTarget(self, action: #selector(handleAuthorizationAppleIDButtonPress), for: .touchUpInside)
-        self.viewController = viewController
-    }
-    
-    // 로그인 버튼 클릭 시 로직 수행
-    @objc func handleAuthorizationAppleIDButtonPress() {
+    // 로그인 버튼 클릭 시 로직 수행 (request를 보내줄 controller를 생성)
+    func handleAuthorizationAppleIDButtonPress() -> Observable<ASAuthorization> {
         let appleIDProvider = ASAuthorizationAppleIDProvider()
         let request = appleIDProvider.createRequest()
         request.requestedScopes = [.fullName, .email]
         
         let authorizationController = ASAuthorizationController(authorizationRequests: [request])
-        authorizationController.delegate = self
-        authorizationController.presentationContextProvider = self
+        let proxy = ASAuthorizationControllerProxy.proxy(for: authorizationController)
+
+        authorizationController.presentationContextProvider = proxy
         authorizationController.performRequests()
+        
+        return proxy.didComplete
     }
     
     // 애플 로그인 상태 확인
@@ -82,35 +74,5 @@ final class AppleLoginManager: NSObject {
                 break
             }
         }
-    }
-}
-
-// MARK: ASAuthorizationControllerDelegate
-extension AppleLoginManager: ASAuthorizationControllerDelegate {
-    
-    // Apple 로그인 성공
-    func authorizationController(controller: ASAuthorizationController, didCompleteWithAuthorization authorization: ASAuthorization) {
-        switch authorization.credential {
-        case let appleIDCredential as ASAuthorizationAppleIDCredential:
-            let appleUser = AppleUser(credential: appleIDCredential)
-            loggedIn?(true, "", appleUser)
-            
-        default:
-            loggedIn?(false, "Apple credential is not found", nil)
-        }
-    }
-    
-    // Apple 로그인 실패
-    func authorizationController(controller: ASAuthorizationController, didCompleteWithError error: Error) {
-        loggedIn?(false, error.localizedDescription, nil)
-    }
-}
-
-// MARK: ASWebAuthenticationPresentationContextProviding
-extension AppleLoginManager: ASAuthorizationControllerPresentationContextProviding {
-    
-    // Apple 로그인 모달 시트
-    func presentationAnchor(for controller: ASAuthorizationController) -> ASPresentationAnchor {
-        return viewController!.view.window!
     }
 }
