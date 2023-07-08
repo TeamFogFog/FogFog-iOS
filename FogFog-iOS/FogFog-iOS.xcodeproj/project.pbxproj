@@ -23,6 +23,7 @@
 		776502182954A3BA002BF7AD /* SettingTitleTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 776502172954A3BA002BF7AD /* SettingTitleTableViewCell.swift */; };
 		777ECFEC2A26F4490009E302 /* UserDefaults + Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 777ECFEB2A26F4490009E302 /* UserDefaults + Extension.swift */; };
 		777ECFEF2A2C575B0009E302 /* UserDefault.swift in Sources */ = {isa = PBXBuildFile; fileRef = 777ECFEE2A2C575B0009E302 /* UserDefault.swift */; };
+		779672AD2A53D699003064A8 /* AppleOAuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 779672AC2A53D699003064A8 /* AppleOAuthService.swift */; };
 		779672AF2A58034E003064A8 /* ASAuthorizationControllerProxy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 779672AE2A58034E003064A8 /* ASAuthorizationControllerProxy.swift */; };
 		77A99D6A2971AFDC0037FCAD /* SettingCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77A99D692971AFDC0037FCAD /* SettingCoordinator.swift */; };
 		77A99D6C2971B0220037FCAD /* DefaultSettingCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77A99D6B2971B0220037FCAD /* DefaultSettingCoordinator.swift */; };
@@ -158,6 +159,7 @@
 		776502172954A3BA002BF7AD /* SettingTitleTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingTitleTableViewCell.swift; sourceTree = "<group>"; };
 		777ECFEB2A26F4490009E302 /* UserDefaults + Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UserDefaults + Extension.swift"; sourceTree = "<group>"; };
 		777ECFEE2A2C575B0009E302 /* UserDefault.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefault.swift; sourceTree = "<group>"; };
+		779672AC2A53D699003064A8 /* AppleOAuthService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppleOAuthService.swift; sourceTree = "<group>"; };
 		779672AE2A58034E003064A8 /* ASAuthorizationControllerProxy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ASAuthorizationControllerProxy.swift; sourceTree = "<group>"; };
 		77A99D692971AFDC0037FCAD /* SettingCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingCoordinator.swift; sourceTree = "<group>"; };
 		77A99D6B2971B0220037FCAD /* DefaultSettingCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultSettingCoordinator.swift; sourceTree = "<group>"; };
@@ -588,6 +590,7 @@
 		BDE3EEB02A1D10DC00632662 /* OAuth */ = {
 			isa = PBXGroup;
 			children = (
+				779672AC2A53D699003064A8 /* AppleOAuthService.swift */,
 				BD4D62AE2A1A100B00532778 /* KakaoOAuthService.swift */,
 				BDDAA3942A24BA130055859E /* OAuthAuthentication.swift */,
 				BDDAA3962A24BC120055859E /* OAuthProviderType.swift */,
@@ -1242,6 +1245,7 @@
 				BDB6E1FA2A30546D00AE6228 /* Published+Rx.swift in Sources */,
 				ECA425DA29253155004DFDAF /* Coordinator.swift in Sources */,
 				ECA425F4292634A6004DFDAF /* LoginViewController.swift in Sources */,
+				779672AD2A53D699003064A8 /* AppleOAuthService.swift in Sources */,
 				ECA425CF292382AD004DFDAF /* NavigationView.swift in Sources */,
 				77F899DE29308C6000806896 /* FogTextField.swift in Sources */,
 				BDC0D0832A2600D9003D770E /* AuthAPI.swift in Sources */,
