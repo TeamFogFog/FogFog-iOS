@@ -9,30 +9,11 @@ import AuthenticationServices
 import RxCocoa
 import RxSwift
 
-/// AppleUser
-///
-/// - id: 애플 idToken(로그인/회원가입 시 사용)
-/// - email: 이메일
-/// - origin: 애플 원본 Credential
-struct AppleUser {
-    var id: String
-    var code: String
-    var email: String
-}
-
 /// 애플 로그인 매니저
 final class AppleLoginManager: NSObject {
     
-    // 클래스 간 순환 참조 방지
-    private weak var viewController: UIViewController?
-    
     override init() {
         super.init()
-    }
-    
-    convenience init(from viewController: UIViewController) {
-        self.init()
-        self.viewController = viewController
     }
     
     // 로그인 버튼 클릭 시 로직 수행 (request를 보내줄 controller를 생성)

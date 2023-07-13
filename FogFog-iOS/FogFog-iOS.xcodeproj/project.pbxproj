@@ -30,6 +30,7 @@
 		77CB027829D02863006817E5 /* NicknameResponseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77CB027729D02863006817E5 /* NicknameResponseModel.swift */; };
 		77CB027B29D02FA1006817E5 /* UserAPIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77CB027A29D02FA1006817E5 /* UserAPIService.swift */; };
 		77CB027F29DEAE57006817E5 /* RxMoya + Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77CB027E29DEAE57006817E5 /* RxMoya + Extension.swift */; };
+		77CB2CC52A5FE59900C68748 /* AppleUserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77CB2CC42A5FE59900C68748 /* AppleUserModel.swift */; };
 		77D32D41292A0EDD006E6314 /* ViewModelType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77D32D40292A0EDD006E6314 /* ViewModelType.swift */; };
 		77D32D43292CD6A3006E6314 /* SideBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77D32D42292CD6A2006E6314 /* SideBarView.swift */; };
 		77E70F462930951100F55CD7 /* UITextField + Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77E70F452930951100F55CD7 /* UITextField + Extension.swift */; };
@@ -166,6 +167,7 @@
 		77CB027729D02863006817E5 /* NicknameResponseModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NicknameResponseModel.swift; sourceTree = "<group>"; };
 		77CB027A29D02FA1006817E5 /* UserAPIService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserAPIService.swift; sourceTree = "<group>"; };
 		77CB027E29DEAE57006817E5 /* RxMoya + Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "RxMoya + Extension.swift"; sourceTree = "<group>"; };
+		77CB2CC42A5FE59900C68748 /* AppleUserModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppleUserModel.swift; sourceTree = "<group>"; };
 		77D32D40292A0EDD006E6314 /* ViewModelType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModelType.swift; sourceTree = "<group>"; };
 		77D32D42292CD6A2006E6314 /* SideBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideBarView.swift; sourceTree = "<group>"; };
 		77E70F452930951100F55CD7 /* UITextField + Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITextField + Extension.swift"; sourceTree = "<group>"; };
@@ -416,6 +418,14 @@
 				BDC0D0842A26035D003D770E /* AuthAPIService.swift */,
 			);
 			path = APIServices;
+			sourceTree = "<group>";
+		};
+		77CB2CC32A5FE57400C68748 /* User */ = {
+			isa = PBXGroup;
+			children = (
+				77CB2CC42A5FE59900C68748 /* AppleUserModel.swift */,
+			);
+			path = User;
 			sourceTree = "<group>";
 		};
 		77D32D3F292A0EC7006E6314 /* Protocol */ = {
@@ -669,6 +679,7 @@
 		ECA4255E292251E0004DFDAF /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				77CB2CC32A5FE57400C68748 /* User */,
 				BD5D0D7D29F15E2800190471 /* BottomView */,
 				BD5D0D6E29F12DFF00190471 /* Message */,
 				BD4B550D292A29AA00ECFD04 /* Place */,
@@ -1272,6 +1283,7 @@
 				BDB6E1F52A30383700AE6228 /* NetworkMonitor.swift in Sources */,
 				BDDAA3972A24BC120055859E /* OAuthProviderType.swift in Sources */,
 				BD90E9DC2976C02100C7CB6B /* CommonResponse.swift in Sources */,
+				77CB2CC52A5FE59900C68748 /* AppleUserModel.swift in Sources */,
 				BD347C5A292FD226009F52BA /* ExMapType.swift in Sources */,
 				77F1D82229269CC800F31D0C /* UIColor + Extension.swift in Sources */,
 				777ECFEC2A26F4490009E302 /* UserDefaults + Extension.swift in Sources */,

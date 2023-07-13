@@ -11,12 +11,10 @@ import AuthenticationServices
 import RxCocoa
 import RxSwift
 
-@available(iOS 13.0, *)
 extension ASAuthorizationController: HasDelegate {
     public typealias Delegate = ASAuthorizationControllerDelegate
 }
 
-@available(iOS 13.0, *)
 class ASAuthorizationControllerProxy: DelegateProxy<ASAuthorizationController, ASAuthorizationControllerDelegate>, DelegateProxyType, ASAuthorizationControllerDelegate, ASAuthorizationControllerPresentationContextProviding {
     var presentationWindow: UIWindow = UIWindow()
 
@@ -30,7 +28,7 @@ class ASAuthorizationControllerProxy: DelegateProxy<ASAuthorizationController, A
     }
 
     // MARK: Proxy Subject
-    internal lazy var didComplete = PublishSubject<ASAuthorization>()
+    lazy var didComplete = PublishSubject<ASAuthorization>()
 
     // MARK: ASAuthorizationControllerDelegate
     func authorizationController(controller: ASAuthorizationController, didCompleteWithAuthorization authorization: ASAuthorization) {
