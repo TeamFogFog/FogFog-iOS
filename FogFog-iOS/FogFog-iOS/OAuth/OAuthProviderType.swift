@@ -20,8 +20,8 @@ enum OAuthProviderType: String, Hashable, CaseIterable {
         switch self {
         case .kakao:
             return KakaoOAuthService()
-        default:
-            return KakaoOAuthService()
+        case .apple:
+            return AppleOAuthService()
         }
     }
 }
