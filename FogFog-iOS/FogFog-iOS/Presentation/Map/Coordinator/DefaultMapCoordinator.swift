@@ -23,7 +23,7 @@ final class DefaultMapCoordinator: MapCoordinator {
     }
 
     func showMapViewController() {
-        let mapViewModel = MapViewModel(coordinator: self)
+        let mapViewModel = MapViewModel(coordinator: self, locationService: DefaultLocationService())
         let mapViewController = MapViewController(viewModel: mapViewModel)
         changeAnimation()
         navigationController.viewControllers = [mapViewController]
