@@ -80,7 +80,6 @@
 		BDC0D0852A26035D003D770E /* AuthAPIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDC0D0842A26035D003D770E /* AuthAPIService.swift */; };
 		BDC20F9A293B446D00B9A2E7 /* SplashViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDC20F99293B446D00B9A2E7 /* SplashViewController.swift */; };
 		BDC20F9D293B44B600B9A2E7 /* FogToast.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDC20F9C293B44B600B9A2E7 /* FogToast.swift */; };
-		BDC50ECB292A07B2002378C6 /* GoogleMap.plist in Resources */ = {isa = PBXBuildFile; fileRef = BDC50ECA292A07B2002378C6 /* GoogleMap.plist */; };
 		BDC50ED2292A07EB002378C6 /* SmokingAreaDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDC50ED1292A07EB002378C6 /* SmokingAreaDetailViewModel.swift */; };
 		BDC50ED6292A09BD002378C6 /* BaseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDC50ED5292A09BD002378C6 /* BaseView.swift */; };
 		BDDAA3912A249D090055859E /* Config.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDDAA3902A249D090055859E /* Config.swift */; };
@@ -89,6 +88,10 @@
 		BDDAA3972A24BC120055859E /* OAuthProviderType.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDDAA3962A24BC120055859E /* OAuthProviderType.swift */; };
 		BDE3EEB22A1D124300632662 /* OAuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDE3EEB12A1D124300632662 /* OAuthService.swift */; };
 		BDEA50D129261C6600110982 /* .swiftlint.yml in Resources */ = {isa = PBXBuildFile; fileRef = BDEA50D029261C6600110982 /* .swiftlint.yml */; };
+		EC15622D2A6D77F500163875 /* Config.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = EC15622C2A6D77F500163875 /* Config.xcconfig */; };
+		EC15622F2A6D78C800163875 /* GoogleMap.plist in Resources */ = {isa = PBXBuildFile; fileRef = EC15622E2A6D78C800163875 /* GoogleMap.plist */; };
+		EC1562312A6D7D8200163875 /* LocationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC1562302A6D7D8200163875 /* LocationService.swift */; };
+		EC1562332A6D7D8A00163875 /* DefaultLoactionService.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC1562322A6D7D8A00163875 /* DefaultLoactionService.swift */; };
 		ECA4252D29224DB8004DFDAF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECA4252C29224DB8004DFDAF /* AppDelegate.swift */; };
 		ECA4252F29224DB8004DFDAF /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECA4252E29224DB8004DFDAF /* SceneDelegate.swift */; };
 		ECA4253629224DBB004DFDAF /* Asset.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ECA4253529224DBB004DFDAF /* Asset.xcassets */; };
@@ -209,10 +212,8 @@
 		BDC0D0842A26035D003D770E /* AuthAPIService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthAPIService.swift; sourceTree = "<group>"; };
 		BDC20F99293B446D00B9A2E7 /* SplashViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashViewController.swift; sourceTree = "<group>"; };
 		BDC20F9C293B44B600B9A2E7 /* FogToast.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FogToast.swift; sourceTree = "<group>"; };
-		BDC50ECA292A07B2002378C6 /* GoogleMap.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = GoogleMap.plist; sourceTree = "<group>"; };
 		BDC50ED1292A07EB002378C6 /* SmokingAreaDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SmokingAreaDetailViewModel.swift; sourceTree = "<group>"; };
 		BDC50ED5292A09BD002378C6 /* BaseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseView.swift; sourceTree = "<group>"; };
-		BDDAA38F2A249B550055859E /* Config.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Config.xcconfig; sourceTree = "<group>"; };
 		BDDAA3902A249D090055859E /* Config.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Config.swift; sourceTree = "<group>"; };
 		BDDAA3922A24B9D00055859E /* OAuthServiceType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OAuthServiceType.swift; sourceTree = "<group>"; };
 		BDDAA3942A24BA130055859E /* OAuthAuthentication.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OAuthAuthentication.swift; sourceTree = "<group>"; };
@@ -221,6 +222,10 @@
 		BDEA50D029261C6600110982 /* .swiftlint.yml */ = {isa = PBXFileReference; lastKnownFileType = text.yaml; path = .swiftlint.yml; sourceTree = "<group>"; };
 		D67B489E657987D4A7AD92C7 /* Pods_FogFog_iOS_FogFog_iOSUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FogFog_iOS_FogFog_iOSUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DABD884BD50346C82E3C3CA3 /* Pods-FogFog-iOS-FogFog-iOSUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FogFog-iOS-FogFog-iOSUITests.release.xcconfig"; path = "Target Support Files/Pods-FogFog-iOS-FogFog-iOSUITests/Pods-FogFog-iOS-FogFog-iOSUITests.release.xcconfig"; sourceTree = "<group>"; };
+		EC15622C2A6D77F500163875 /* Config.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = Config.xcconfig; sourceTree = "<group>"; };
+		EC15622E2A6D78C800163875 /* GoogleMap.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = GoogleMap.plist; sourceTree = "<group>"; };
+		EC1562302A6D7D8200163875 /* LocationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationService.swift; sourceTree = "<group>"; };
+		EC1562322A6D7D8A00163875 /* DefaultLoactionService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultLoactionService.swift; sourceTree = "<group>"; };
 		ECA4252929224DB8004DFDAF /* FogFog-iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "FogFog-iOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		ECA4252C29224DB8004DFDAF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		ECA4252E29224DB8004DFDAF /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -716,8 +721,8 @@
 			isa = PBXGroup;
 			children = (
 				ECA4253A29224DBB004DFDAF /* Info.plist */,
-				BDC50ECA292A07B2002378C6 /* GoogleMap.plist */,
-				BDDAA38F2A249B550055859E /* Config.xcconfig */,
+				EC15622C2A6D77F500163875 /* Config.xcconfig */,
+				EC15622E2A6D78C800163875 /* GoogleMap.plist */,
 			);
 			path = Supports;
 			sourceTree = "<group>";
@@ -799,6 +804,8 @@
 				ECA425772922545C004DFDAF /* MapViewController.swift */,
 				ECA425CE292382AD004DFDAF /* NavigationView.swift */,
 				ECA425EB29262CF7004DFDAF /* MapViewModel.swift */,
+				EC1562302A6D7D8200163875 /* LocationService.swift */,
+				EC1562322A6D7D8A00163875 /* DefaultLoactionService.swift */,
 			);
 			path = Map;
 			sourceTree = "<group>";
@@ -1081,15 +1088,16 @@
 			files = (
 				BDEA50D129261C6600110982 /* .swiftlint.yml in Resources */,
 				77F1D8262926AAD600F31D0C /* Pretendard-Bold.otf in Resources */,
+				EC15622F2A6D78C800163875 /* GoogleMap.plist in Resources */,
 				77F1D8282926AADB00F31D0C /* Pretendard-ExtraLight.otf in Resources */,
 				77F1D8272926AAD900F31D0C /* Pretendard-ExtraBold.otf in Resources */,
+				EC15622D2A6D77F500163875 /* Config.xcconfig in Resources */,
 				77F1D82B2926AAE200F31D0C /* Pretendard-Regular.otf in Resources */,
 				77F1D82D2926AAE800F31D0C /* Pretendard-Thin.otf in Resources */,
 				77F1D8292926AADD00F31D0C /* Pretendard-Light.otf in Resources */,
 				ECA4253929224DBB004DFDAF /* LaunchScreen.storyboard in Resources */,
 				ECA425742922543B004DFDAF /* Color.xcassets in Resources */,
 				77F1D82C2926AAE500F31D0C /* Pretendard-SemiBold.otf in Resources */,
-				BDC50ECB292A07B2002378C6 /* GoogleMap.plist in Resources */,
 				ECA4257229225409004DFDAF /* Image.xcassets in Resources */,
 				77F1D8252926AAD300F31D0C /* Pretendard-Black.otf in Resources */,
 				ECA4253629224DBB004DFDAF /* Asset.xcassets in Resources */,
@@ -1272,6 +1280,7 @@
 				BD90E9E02976C3EF00C7CB6B /* NetworkEnv.swift in Sources */,
 				BD4B550F292A29EC00ECFD04 /* SmokingAreaResponseModel.swift in Sources */,
 				ECA425F6292634C9004DFDAF /* LoginViewModel.swift in Sources */,
+				EC1562312A6D7D8200163875 /* LocationService.swift in Sources */,
 				779672AF2A58034E003064A8 /* ASAuthorizationControllerProxy.swift in Sources */,
 				BD90E9E22976C4F800C7CB6B /* Networking.swift in Sources */,
 				BDE3EEB22A1D124300632662 /* OAuthService.swift in Sources */,
@@ -1319,6 +1328,7 @@
 				ECA425782922545C004DFDAF /* MapViewController.swift in Sources */,
 				BD347C63292FEA15009F52BA /* RoadPopUpView.swift in Sources */,
 				ECA425D72924DA66004DFDAF /* Bundle + Extension.swift in Sources */,
+				EC1562332A6D7D8A00163875 /* DefaultLoactionService.swift in Sources */,
 				BD5D0D7429F1302F00190471 /* Presentable.swift in Sources */,
 				BDC20F9D293B44B600B9A2E7 /* FogToast.swift in Sources */,
 				BD5D0D7629F1310800190471 /* SmokingAreaCardView.swift in Sources */,
@@ -1373,7 +1383,6 @@
 /* Begin XCBuildConfiguration section */
 		ECA4255129224DBB004DFDAF /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = BDDAA38F2A249B550055859E /* Config.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ANALYZER_NONNULL = YES;
@@ -1434,7 +1443,6 @@
 		};
 		ECA4255229224DBB004DFDAF /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = BDDAA38F2A249B550055859E /* Config.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ANALYZER_NONNULL = YES;
