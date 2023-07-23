@@ -5,25 +5,34 @@
 //  Created by 김승찬 on 2022/11/17.
 //
 
-import UIKit
+import CoreLocation
 
 import RxCocoa
 import RxSwift
 import Moya
 
+@frozen
+enum LocationAuthorizationStatus {
+    case allowed, disallowed, notDetermined
+}
+
 final class MapViewModel: ViewModelType {
     
     var disposeBag = DisposeBag()
+    var authorizationStatus = PublishSubject<LocationAuthorizationStatus?>()
+    var userLocation = PublishSubject<CLLocation>()
     
     private weak var coordinator: MapCoordinator?
+    private let locationService: LocationService
     
-    init(coordinator: MapCoordinator?) {
+    init(coordinator: MapCoordinator?, locationService: LocationService) {
         self.coordinator = coordinator
+        self.locationService = locationService
     }
     
     struct Input {
         let viewDidLoad: Signal<Void>
-        let tapMenuButton: Signal<Void>
+        let tapMenuButton: Observable<Void>
         let tapBlurEffectView: Signal<Void>
         let tapSettingButton: Signal<Void>
     }
@@ -32,24 +41,33 @@ final class MapViewModel: ViewModelType {
         let userNickname: BehaviorSubject<String>
         let isVisible: Driver<Bool>
         let didSettingButtonTapped: Signal<Void>
+        let currentUserLocation: Driver<CLLocationCoordinate2D>
     }
     
     let userNickname = BehaviorSubject<String>(value: "")
-        
+    
     func transform(input: Input) -> Output {
         let sideBarState = PublishRelay<Bool>()
         let didSettingButtonTapped = PublishRelay<Void>()
-        let output = Output(userNickname: userNickname, isVisible: sideBarState.asDriver(onErrorJustReturn: false), didSettingButtonTapped: didSettingButtonTapped.asSignal())
+        let currentUserLocation = PublishRelay<CLLocationCoordinate2D>()
+        
+        let output = Output(userNickname: userNickname,
+                            isVisible: sideBarState.asDriver(onErrorJustReturn: false),
+                            didSettingButtonTapped: didSettingButtonTapped.asSignal(),
+                            currentUserLocation: currentUserLocation.asDriver(onErrorJustReturn: CLLocationCoordinate2D(latitude: 20, longitude: 20)))
         
         input.viewDidLoad
-            .emit(onNext: { _ in
+            .withUnretained(self)
+            .emit(onNext: { owner, _ in
                 // TODO: 유저아이디 추후 변경 예정 (로그인 후 UserDefaults에 저장된 값으로)
-                self.getUserNicknameAPI(userId: 13)
+                owner.getUserNicknameAPI(userId: 13)
+                owner.checkAuthorization()
+                owner.observeUserLocation()
             })
             .disposed(by: disposeBag)
         
         input.tapMenuButton
-            .emit(onNext: { _ in
+            .subscribe(onNext: { _ in
                 sideBarState.accept(true)
             })
             .disposed(by: disposeBag)
@@ -67,7 +85,45 @@ final class MapViewModel: ViewModelType {
             }
             .disposed(by: disposeBag)
         
+        self.userLocation
+            .map({ $0.coordinate })
+            .bind(to: currentUserLocation)
+            .disposed(by: disposeBag)
+        
         return output
+    }
+}
+
+private extension MapViewModel {
+    
+    func checkAuthorization() {
+        self.locationService.observeUpdatedAuthorization()
+            .withUnretained(self)
+            .subscribe(onNext: { owner, status in
+                switch status {
+                case .authorizedAlways, .authorizedWhenInUse:
+                    owner.authorizationStatus.onNext(.allowed)
+                    owner.locationService.start()
+                case .notDetermined:
+                    owner.authorizationStatus.onNext(.notDetermined)
+                    owner.locationService.requestAuthorization()
+                case .denied, .restricted:
+                    owner.authorizationStatus.onNext(.disallowed)
+                @unknown default:
+                    owner.authorizationStatus.onNext(nil)
+                }
+            })
+            .disposed(by: disposeBag)
+    }
+    
+    func observeUserLocation() {
+        return self.locationService.observeUpdatedLocation()
+            .compactMap({ $0.last })
+            .withUnretained(self)
+            .subscribe(onNext: { owner, location in
+                owner.userLocation.onNext(location)
+            })
+            .disposed(by: self.disposeBag)
     }
 }
 
