@@ -7,13 +7,20 @@
 
 import UIKit
 
+import RxSwift
+import RxCocoa
 import SnapKit
 import Then
 
 final class NavigationView: UIView {
     
     private lazy var logoImageView = UIImageView()
-    lazy var menuButton = UIButton()
+    private let menuButtonTapped = PublishSubject<Void>()
+    private lazy var menuButton = UIButton(frame: .zero,
+                                           primaryAction: UIAction(handler: { [weak self] _ in
+        guard let self else { return }
+          self.menuButtonTapped.onNext(())
+    }))
     
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -58,5 +65,11 @@ final class NavigationView: UIView {
             $0.centerY.equalTo(logoImageView.snp.centerY)
             $0.size.equalTo(30)
         }
+    }
+}
+
+extension NavigationView {
+    public var menuButtonObservable: Observable<Void> {
+        return menuButtonTapped.asObservable()
     }
 }
