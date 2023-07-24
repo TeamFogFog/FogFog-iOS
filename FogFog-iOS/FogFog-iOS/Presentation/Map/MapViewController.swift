@@ -91,7 +91,7 @@ extension MapViewController {
     private func bind() {
         let input = MapViewModel.Input(
             viewDidLoad: Signal<Void>.just(()),
-            tapMenuButton: navigationView.menuButtonObservable,
+            tapMenuButton: navigationView.rx.menuButtonTapped,
             tapBlurEffectView: tapBlurEffectView.asSignal(),
             tapSettingButton: sideBarView.settingButtonDidTap())
         let output = viewModel.transform(input: input)
@@ -115,8 +115,8 @@ extension MapViewController {
         
         output.currentUserLocation
             .asDriver()
-            .drive { coordinator in
-                self.move(at: coordinator)
+            .drive { coordinates in
+                self.move(at: coordinates)
             }
             .disposed(by: disposeBag)
     }

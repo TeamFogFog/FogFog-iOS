@@ -32,7 +32,7 @@ final class MapViewModel: ViewModelType {
     
     struct Input {
         let viewDidLoad: Signal<Void>
-        let tapMenuButton: Observable<Void>
+        let tapMenuButton: ControlEvent<Void>
         let tapBlurEffectView: Signal<Void>
         let tapSettingButton: Signal<Void>
     }

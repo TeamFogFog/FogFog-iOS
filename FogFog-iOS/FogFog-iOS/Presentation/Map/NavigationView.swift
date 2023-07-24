@@ -15,12 +15,7 @@ import Then
 final class NavigationView: UIView {
     
     private lazy var logoImageView = UIImageView()
-    private let menuButtonTapped = PublishSubject<Void>()
-    private lazy var menuButton = UIButton(frame: .zero,
-                                           primaryAction: UIAction(handler: { [weak self] _ in
-        guard let self else { return }
-          self.menuButtonTapped.onNext(())
-    }))
+    fileprivate lazy var menuButton = UIButton()
     
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -68,8 +63,8 @@ final class NavigationView: UIView {
     }
 }
 
-extension NavigationView {
-    public var menuButtonObservable: Observable<Void> {
-        return menuButtonTapped.asObservable()
+extension Reactive where Base: NavigationView {
+    var menuButtonTapped: ControlEvent<Void> {
+        base.menuButton.rx.tap
     }
 }
