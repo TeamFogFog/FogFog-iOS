@@ -7,13 +7,15 @@
 
 import UIKit
 
+import RxSwift
+import RxCocoa
 import SnapKit
 import Then
 
 final class NavigationView: UIView {
     
     private lazy var logoImageView = UIImageView()
-    lazy var menuButton = UIButton()
+    fileprivate lazy var menuButton = UIButton()
     
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -58,5 +60,11 @@ final class NavigationView: UIView {
             $0.centerY.equalTo(logoImageView.snp.centerY)
             $0.size.equalTo(30)
         }
+    }
+}
+
+extension Reactive where Base: NavigationView {
+    var menuButtonTapped: ControlEvent<Void> {
+        base.menuButton.rx.tap
     }
 }

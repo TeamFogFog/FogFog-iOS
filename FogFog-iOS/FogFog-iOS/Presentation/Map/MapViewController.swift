@@ -20,11 +20,9 @@ final class MapViewController: BaseViewController {
     private lazy var navigationView = NavigationView()
     private lazy var sideBarView = SideBarView()
     private var blurEffectView: UIVisualEffectView!
-    private let camera = GMSCameraPosition(latitude: 37.54330366639085, longitude: 127.04455548501139, zoom: 12)
+   
     private var mapView = GMSMapView()
     private var myMarker = GMSMarker()
-    private var locationManager = CLLocationManager()
-    private var currentLocation: CLLocation!
     
     private var viewModel: MapViewModel
     private let tapBlurEffectView = PublishRelay<Void>()
@@ -47,14 +45,14 @@ final class MapViewController: BaseViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        assignDelegation()
+
+        makeMarker()
         bind()
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-     
+        
         setLocation()
     }
     
@@ -93,7 +91,7 @@ extension MapViewController {
     private func bind() {
         let input = MapViewModel.Input(
             viewDidLoad: Signal<Void>.just(()),
-            tapMenuButton: navigationView.menuButton.rx.tap.asSignal(),
+            tapMenuButton: navigationView.rx.menuButtonTapped,
             tapBlurEffectView: tapBlurEffectView.asSignal(),
             tapSettingButton: sideBarView.settingButtonDidTap())
         let output = viewModel.transform(input: input)
@@ -114,21 +112,17 @@ extension MapViewController {
                 self.sideBarView.nicknameLabel.text = result
             })
             .disposed(by: disposeBag)
+        
+        output.currentUserLocation
+            .asDriver()
+            .drive { coordinates in
+                self.move(at: coordinates)
+            }
+            .disposed(by: disposeBag)
     }
 }
-
 // MARK: - Custom Methods
 extension MapViewController {
-    
-    private func assignDelegation() {
-        locationManager.delegate = self
-    }
-    
-    private func setLocation() {
-        mapView.isMyLocationEnabled = true
-        locationManager.startUpdatingLocation()
-        move(at: locationManager.location?.coordinate)
-    }
     
     private func setSideBarViewLayout(isVisible: Bool = false) {
         blurEffectView.isHidden = !isVisible
@@ -154,60 +148,16 @@ extension MapViewController {
     }
 }
 
-// MARK: - CLLocationManagerDelegate
-extension MapViewController: CLLocationManagerDelegate {
-    
-    func checkCurrentLocationAuthorization(authorizationStatus: CLAuthorizationStatus) {
-        switch authorizationStatus {
-        case .notDetermined:
-            print("notDetermined")
-        case .restricted, .denied:
-            print("restricted")
-        case .authorizedAlways, .authorizedWhenInUse:
-            print("authorizedAlways")
-        @unknown default:
-            print("unknown")
-        }
-        
-        if #available(iOS 14.0, *) {
-            let accuracyState = locationManager.accuracyAuthorization
-            switch accuracyState {
-            case .fullAccuracy:
-                print("full")
-            case .reducedAccuracy:
-                print("reduced")
-            @unknown default:
-                print("Unknown")
-            }
-        }
+private extension MapViewController {
+    func setLocation() {
+        mapView.isMyLocationEnabled = true
     }
     
-    func checkUserLocationServicesAuthorization() {
-        // iOS 14부터는 정확도 설정이 들어감
-        // 시스템 설정을 다르게 해줌
-        let authorizationStatus: CLAuthorizationStatus
-        
-        if #available(iOS 14, *) {
-            authorizationStatus = locationManager.authorizationStatus
-        } else {
-            authorizationStatus = CLLocationManager.authorizationStatus()
-        }
-        
-        if CLLocationManager.locationServicesEnabled() {
-            checkCurrentLocationAuthorization(authorizationStatus: authorizationStatus)
-        } else {
-            print("위치 권한 켜주세요")
-        }
-    }
-    
-    // iOS14 이상: 앱이 위치 관리자를 생성하고, 승인 상태가 변경이 될 때 대리자에게 승인 상태를 알려줌
-    func locationManagerDidChangeAuthorization(_ manager: CLLocationManager) {
-        checkUserLocationServicesAuthorization()
-    }
-    
-    // iOS14 미만: 앱이 위치 관리자를 생성하고, 승인 상태가 변경이 될 때 대리자에게 승인 상태를 알려줌
-    func locationManager(_ manager: CLLocationManager, didChangeAuthorization status: CLAuthorizationStatus) {
-        checkUserLocationServicesAuthorization()
+    func makeMarker() {
+        let mapCenter = CLLocationCoordinate2DMake(37.57039821, 126.98914393)
+        let marker = GMSMarker(position: mapCenter)
+        marker.icon = FogImage.placeMarker
+        marker.map = mapView
     }
     
     func distance(from: CLLocationCoordinate2D) -> CLLocationDistance {
