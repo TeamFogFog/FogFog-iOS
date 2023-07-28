@@ -24,15 +24,15 @@ final class DefaultAppCoordinator: AppCoordinator {
     
     func start() {
         
-        /// 토큰이 UserDefaults에 저장되어 있을 때, 앱의 시작점을 mapFlow로 아니면 loginFlow로
-        /// UserDefaultsManager.token.isEmpty ? showLoginFlow() : showMapFlow()
-        /// 일단 MapViewController로 연결
-        
-        showMapFlow()
+        // 앱의 시작점 설정(keychain의 accessToken 저장 여부 확인)
+        if KeyChain.read(key: KeyChain.Keys.accessToken) != nil {
+            showMapFlow()
+        } else {
+            showLoginFlow()
+        }
     }
     
     func showLoginFlow() {
-        
         let loginCoordinator = DefaultLoginCoordinator(self.navigationController)
         loginCoordinator.finishDelegate = self
         loginCoordinator.start()
@@ -40,7 +40,6 @@ final class DefaultAppCoordinator: AppCoordinator {
     }
     
     func showMapFlow() {
-        
         let mapCoordinator = DefaultMapCoordinator(self.navigationController)
         mapCoordinator.finishDelegate = self
         mapCoordinator.start()
