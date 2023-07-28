@@ -43,15 +43,19 @@ final class AuthAPIService: Networking, AuthAPIServiceType {
         return oauthService
             .authorize()
             .do { oauthAuthentication in
-                // 성공 시 토큰 저장 --> keychain
+                #if DEBUG
                 print("✨ OAuth 인증 성공) \(oauthAuthentication)")
+                #endif
+                
+                let authType = oauthAuthentication.oauthType == .apple ? "apple" : "kakao"
+                KeyChain.create(key: KeyChain.Keys.socialType, data: authType)
             }
             .map { $0.toSignInRequestDTO() }
             .flatMap(signIn)
             .do { dto in
-                print("🎉 로그인/회원가입 성공) \(dto?.id ?? -1) 유저님 환영합니다.")
-                print("🎉 액세스 토큰 \(dto?.accessToken ?? "")")
-                print("🎉 리프레시 토큰 \(dto?.refreshToken ?? "")")
+                UserDefaults.userId = dto?.id ?? -1
+                KeyChain.create(key: KeyChain.Keys.accessToken, data: dto?.accessToken ?? "")
+                KeyChain.create(key: KeyChain.Keys.refreshToken, data: dto?.refreshToken ?? "")
             }
             .map { _ in () }
     }
