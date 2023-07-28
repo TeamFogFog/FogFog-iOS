@@ -45,6 +45,7 @@ final class LoginViewModel: ViewModelType {
             .flatMap(loginWithKakao)
             .subscribe { _ in
                 result.onNext("success!")
+                self.coordinator.showMakeNicknameViewController("닉네임 설정")
             } onError: { error in
                 result.onNext("error: \(error.localizedDescription)")
             }
@@ -54,6 +55,7 @@ final class LoginViewModel: ViewModelType {
             .flatMap(loginWithApple)
             .subscribe { _ in
                 result.onNext("success!")
+                self.coordinator.showMakeNicknameViewController("닉네임 설정")
             } onError: { error in
                 result.onNext("error: \(error.localizedDescription)")
             }

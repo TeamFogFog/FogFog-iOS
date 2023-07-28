@@ -29,7 +29,7 @@ final class DefaultSettingCoordinator: SettingCoordinator {
         let loginCoordinator = DefaultLoginCoordinator(self.navigationController)
         loginCoordinator.finishDelegate = self
         self.childCoordinators.append(loginCoordinator)
-        loginCoordinator.showMakeNicknameViewController()
+        loginCoordinator.showMakeNicknameViewController("닉네임 수정")
     }
     
     func start() {
