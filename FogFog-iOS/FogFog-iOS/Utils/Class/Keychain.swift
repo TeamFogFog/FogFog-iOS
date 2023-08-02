@@ -1,5 +1,5 @@
 //
-//  KeyChain.swift
+//  Keychain.swift
 //  FogFog-iOS
 //
 //  Created by EUNJU on 2023/07/28.
@@ -8,10 +8,10 @@
 import Foundation
 import Security
 
-class KeyChain {
+final class Keychain {
     
     // Create
-    class func create(key: String, data: String) {
+    static func create(key: String, data: String) {
         let query: NSDictionary = [
             kSecClass: kSecClassGenericPassword,
             kSecAttrAccount: key,
@@ -24,7 +24,7 @@ class KeyChain {
     }
     
     // Read
-    class func read(key: String) -> String? {
+    static func read(key: String) -> String? {
         let query: NSDictionary = [
             kSecClass: kSecClassGenericPassword,
             kSecAttrAccount: key,
@@ -49,7 +49,7 @@ class KeyChain {
     }
     
     // Delete
-    class func delete(key: String) {
+    static func delete(key: String) {
         let query: NSDictionary = [
             kSecClass: kSecClassGenericPassword,
             kSecAttrAccount: key

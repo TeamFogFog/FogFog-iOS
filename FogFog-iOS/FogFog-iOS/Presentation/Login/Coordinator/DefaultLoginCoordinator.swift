@@ -33,11 +33,11 @@ final class DefaultLoginCoordinator: LoginCoordinator {
         navigationController.pushViewController(loginViewController, animated: false)
     }
     
-    func showMakeNicknameViewController(_ title: String) {
+    func showMakeNicknameViewController(to type: MakeNicknameViewType) {
         let makeNicknameViewModel = MakeNicknameViewModel(coordinator: self)
         let makeNicknameController = MakeNicknameViewController(viewModel: makeNicknameViewModel)
         navigationController.pushViewController(makeNicknameController, animated: true)
-        makeNicknameController.naviTitle = title
+        makeNicknameController.setNaviTitle(type)
     }
     
     func connectMapCoordinator() {

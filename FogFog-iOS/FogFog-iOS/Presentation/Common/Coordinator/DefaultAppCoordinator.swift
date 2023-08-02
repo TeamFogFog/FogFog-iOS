@@ -25,7 +25,7 @@ final class DefaultAppCoordinator: AppCoordinator {
     func start() {
         
         // 앱의 시작점 설정(keychain의 accessToken 저장 여부 확인)
-        if KeyChain.read(key: KeyChain.Keys.accessToken) != nil {
+        if Keychain.read(key: Keychain.Keys.accessToken) != nil {
             showMapFlow()
         } else {
             showLoginFlow()

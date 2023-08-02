@@ -17,7 +17,7 @@ extension NetworkEnv {
     enum HTTPHeaderFields {
         static let `default`: [String: String] = [
             "Content-Type": "application/json",
-            "Authorization": "Bearer \(KeyChain.read(key: KeyChain.Keys.accessToken) ?? "")"
+            "Authorization": "Bearer \(Keychain.read(key: Keychain.Keys.accessToken) ?? "")"
         ]
     }
 }

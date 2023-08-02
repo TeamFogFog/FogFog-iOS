@@ -47,15 +47,15 @@ final class AuthAPIService: Networking, AuthAPIServiceType {
                 print("✨ OAuth 인증 성공) \(oauthAuthentication)")
                 #endif
                 
-                let authType = oauthAuthentication.oauthType == .apple ? "apple" : "kakao"
-                KeyChain.create(key: KeyChain.Keys.socialType, data: authType)
+                let authType = oauthAuthentication.oauthType.rawValue
+                Keychain.create(key: Keychain.Keys.socialType, data: authType)
             }
             .map { $0.toSignInRequestDTO() }
             .flatMap(signIn)
             .do { dto in
                 UserDefaults.userId = dto?.id ?? -1
-                KeyChain.create(key: KeyChain.Keys.accessToken, data: dto?.accessToken ?? "")
-                KeyChain.create(key: KeyChain.Keys.refreshToken, data: dto?.refreshToken ?? "")
+                Keychain.create(key: Keychain.Keys.accessToken, data: dto?.accessToken ?? "")
+                Keychain.create(key: Keychain.Keys.refreshToken, data: dto?.refreshToken ?? "")
             }
             .map { _ in () }
     }
