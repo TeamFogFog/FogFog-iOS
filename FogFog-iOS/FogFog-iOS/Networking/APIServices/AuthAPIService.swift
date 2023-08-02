@@ -53,9 +53,16 @@ final class AuthAPIService: Networking, AuthAPIServiceType {
             .map { $0.toSignInRequestDTO() }
             .flatMap(signIn)
             .do { dto in
-                UserDefaults.userId = dto?.id ?? -1
-                Keychain.create(key: Keychain.Keys.accessToken, data: dto?.accessToken ?? "")
-                Keychain.create(key: Keychain.Keys.refreshToken, data: dto?.refreshToken ?? "")
+                if let dto {
+                    UserDefaults.userId = dto.id
+                    Keychain.create(key: Keychain.Keys.accessToken, data: dto.accessToken)
+                    Keychain.create(key: Keychain.Keys.refreshToken, data: dto.refreshToken)
+                } else {
+                    #if DEBUG
+                    print("포그포그 서버 인증 실패")
+                    #endif
+                    // TODO: 네트워크 오류 팝업 띄워주기
+                }
             }
             .map { _ in () }
     }
