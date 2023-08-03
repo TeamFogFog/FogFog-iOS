@@ -13,11 +13,11 @@ enum NetworkEnv {
 }
 
 extension NetworkEnv {
-    // TODO: AccessToken Keychain 또는 UserDefaults로 관리 + Value로 추가
+    
     enum HTTPHeaderFields {
         static let `default`: [String: String] = [
             "Content-Type": "application/json",
-            "Authorization": ""
+            "Authorization": "Bearer \(Keychain.read(key: Keychain.Keys.accessToken) ?? "")"
         ]
     }
 }

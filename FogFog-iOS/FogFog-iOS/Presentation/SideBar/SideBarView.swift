@@ -54,7 +54,7 @@ final class SideBarView: BaseView {
         }
         
         nicknameLabel.do {
-            $0.text = "유지인님"
+            $0.text = UserDefaults.nickname ?? ""
             $0.font = .pretendardB(20)
             $0.textColor = .grayBlack
             $0.textAlignment = .left

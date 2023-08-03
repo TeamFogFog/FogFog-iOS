@@ -43,15 +43,26 @@ final class AuthAPIService: Networking, AuthAPIServiceType {
         return oauthService
             .authorize()
             .do { oauthAuthentication in
-                // 성공 시 토큰 저장 --> keychain
+                #if DEBUG
                 print("✨ OAuth 인증 성공) \(oauthAuthentication)")
+                #endif
+                
+                let authType = oauthAuthentication.oauthType.rawValue
+                Keychain.create(key: Keychain.Keys.socialType, data: authType)
             }
             .map { $0.toSignInRequestDTO() }
             .flatMap(signIn)
             .do { dto in
-                print("🎉 로그인/회원가입 성공) \(dto?.id ?? -1) 유저님 환영합니다.")
-                print("🎉 액세스 토큰 \(dto?.accessToken ?? "")")
-                print("🎉 리프레시 토큰 \(dto?.refreshToken ?? "")")
+                if let dto {
+                    UserDefaults.userId = dto.id
+                    Keychain.create(key: Keychain.Keys.accessToken, data: dto.accessToken)
+                    Keychain.create(key: Keychain.Keys.refreshToken, data: dto.refreshToken)
+                } else {
+                    #if DEBUG
+                    print("포그포그 서버 인증 실패")
+                    #endif
+                    // TODO: 네트워크 오류 팝업 띄워주기
+                }
             }
             .map { _ in () }
     }

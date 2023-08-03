@@ -44,7 +44,7 @@ final class MapViewModel: ViewModelType {
         let currentUserLocation: Driver<CLLocationCoordinate2D>
     }
     
-    let userNickname = BehaviorSubject<String>(value: "")
+    let userNickname = BehaviorSubject<String>(value: UserDefaults.nickname ?? "")
     
     func transform(input: Input) -> Output {
         let sideBarState = PublishRelay<Bool>()
@@ -59,10 +59,11 @@ final class MapViewModel: ViewModelType {
         input.viewDidLoad
             .withUnretained(self)
             .emit(onNext: { owner, _ in
-                // TODO: 유저아이디 추후 변경 예정 (로그인 후 UserDefaults에 저장된 값으로)
-                owner.getUserNicknameAPI(userId: 13)
                 owner.checkAuthorization()
                 owner.observeUserLocation()
+                if UserDefaults.nickname == nil {
+                    owner.getUserNicknameAPI(userId: UserDefaults.userId ?? -1)
+                }
             })
             .disposed(by: disposeBag)
         

@@ -12,6 +12,8 @@
 		56E6DAD19F1058E2F6B779B7 /* Pods_FogFog_iOSTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 848DD0928406FC10714344E4 /* Pods_FogFog_iOSTests.framework */; };
 		772577D929349212008273A7 /* RxKeyboard in Frameworks */ = {isa = PBXBuildFile; productRef = 772577D829349212008273A7 /* RxKeyboard */; };
 		772577DC2934924E008273A7 /* RxGesture in Frameworks */ = {isa = PBXBuildFile; productRef = 772577DB2934924E008273A7 /* RxGesture */; };
+		775AC1972A735FE800A2A47E /* Keychain.swift in Sources */ = {isa = PBXBuildFile; fileRef = 775AC1962A735FE800A2A47E /* Keychain.swift */; };
+		775AC1992A7369C800A2A47E /* Keychain + Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 775AC1982A7369C800A2A47E /* Keychain + Extension.swift */; };
 		7761D4F4292F3471003971DC /* MakeNicknameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7761D4F3292F3471003971DC /* MakeNicknameViewController.swift */; };
 		7761D4F6292F3749003971DC /* FogNavigationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7761D4F5292F3749003971DC /* FogNavigationView.swift */; };
 		77650202295448AE002BF7AD /* SettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77650201295448AE002BF7AD /* SettingViewController.swift */; };
@@ -27,6 +29,7 @@
 		779672AF2A58034E003064A8 /* ASAuthorizationControllerProxy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 779672AE2A58034E003064A8 /* ASAuthorizationControllerProxy.swift */; };
 		77A99D6A2971AFDC0037FCAD /* SettingCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77A99D692971AFDC0037FCAD /* SettingCoordinator.swift */; };
 		77A99D6C2971B0220037FCAD /* DefaultSettingCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77A99D6B2971B0220037FCAD /* DefaultSettingCoordinator.swift */; };
+		77C3C1682A7AB3150079AF4C /* MakeNicknameViewType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77C3C1672A7AB3150079AF4C /* MakeNicknameViewType.swift */; };
 		77CB027829D02863006817E5 /* NicknameResponseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77CB027729D02863006817E5 /* NicknameResponseModel.swift */; };
 		77CB027B29D02FA1006817E5 /* UserAPIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77CB027A29D02FA1006817E5 /* UserAPIService.swift */; };
 		77CB027F29DEAE57006817E5 /* RxMoya + Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77CB027E29DEAE57006817E5 /* RxMoya + Extension.swift */; };
@@ -152,6 +155,8 @@
 		44BDDCB91FAFFFC51A0C1A4C /* Pods_FogFog_iOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FogFog_iOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		47D49EE273F775CA2202B593 /* Pods-FogFog-iOS-FogFog-iOSUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FogFog-iOS-FogFog-iOSUITests.debug.xcconfig"; path = "Target Support Files/Pods-FogFog-iOS-FogFog-iOSUITests/Pods-FogFog-iOS-FogFog-iOSUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		568E5A05A08D8D049D3D8E62 /* Pods-FogFog-iOSTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FogFog-iOSTests.release.xcconfig"; path = "Target Support Files/Pods-FogFog-iOSTests/Pods-FogFog-iOSTests.release.xcconfig"; sourceTree = "<group>"; };
+		775AC1962A735FE800A2A47E /* Keychain.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Keychain.swift; sourceTree = "<group>"; };
+		775AC1982A7369C800A2A47E /* Keychain + Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Keychain + Extension.swift"; sourceTree = "<group>"; };
 		7761D4F3292F3471003971DC /* MakeNicknameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MakeNicknameViewController.swift; sourceTree = "<group>"; };
 		7761D4F5292F3749003971DC /* FogNavigationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FogNavigationView.swift; sourceTree = "<group>"; };
 		77650201295448AE002BF7AD /* SettingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingViewController.swift; sourceTree = "<group>"; };
@@ -167,6 +172,7 @@
 		779672AE2A58034E003064A8 /* ASAuthorizationControllerProxy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ASAuthorizationControllerProxy.swift; sourceTree = "<group>"; };
 		77A99D692971AFDC0037FCAD /* SettingCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingCoordinator.swift; sourceTree = "<group>"; };
 		77A99D6B2971B0220037FCAD /* DefaultSettingCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultSettingCoordinator.swift; sourceTree = "<group>"; };
+		77C3C1672A7AB3150079AF4C /* MakeNicknameViewType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MakeNicknameViewType.swift; sourceTree = "<group>"; };
 		77CB027729D02863006817E5 /* NicknameResponseModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NicknameResponseModel.swift; sourceTree = "<group>"; };
 		77CB027A29D02FA1006817E5 /* UserAPIService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserAPIService.swift; sourceTree = "<group>"; };
 		77CB027E29DEAE57006817E5 /* RxMoya + Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "RxMoya + Extension.swift"; sourceTree = "<group>"; };
@@ -333,6 +339,14 @@
 				568E5A05A08D8D049D3D8E62 /* Pods-FogFog-iOSTests.release.xcconfig */,
 			);
 			path = Pods;
+			sourceTree = "<group>";
+		};
+		775AC1952A735FCC00A2A47E /* Class */ = {
+			isa = PBXGroup;
+			children = (
+				775AC1962A735FE800A2A47E /* Keychain.swift */,
+			);
+			path = Class;
 			sourceTree = "<group>";
 		};
 		7761D4F1292F33B2003971DC /* ViewModel */ = {
@@ -730,6 +744,7 @@
 		ECA42562292252AB004DFDAF /* Utils */ = {
 			isa = PBXGroup;
 			children = (
+				775AC1952A735FCC00A2A47E /* Class */,
 				BDB6E1F82A30545900AE6228 /* Wrapper */,
 				ECA425F029263461004DFDAF /* Contstant */,
 				ECA42563292252BC004DFDAF /* Base */,
@@ -858,6 +873,7 @@
 				77E70F4729309A6D00F55CD7 /* UILabel + Extension.swift */,
 				7765020F295462D7002BF7AD /* UIViewController + Extension.swift */,
 				777ECFEB2A26F4490009E302 /* UserDefaults + Extension.swift */,
+				775AC1982A7369C800A2A47E /* Keychain + Extension.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -904,6 +920,7 @@
 				7761D4F2292F3400003971DC /* ViewController */,
 				7761D4F1292F33B2003971DC /* ViewModel */,
 				ECA425F729263537004DFDAF /* Coordinator */,
+				77C3C1672A7AB3150079AF4C /* MakeNicknameViewType.swift */,
 			);
 			path = Login;
 			sourceTree = "<group>";
@@ -1253,6 +1270,7 @@
 				7765020429544937002BF7AD /* SettingViewModel.swift in Sources */,
 				77F1D82F2927F2CC00F31D0C /* Adjusted + Extension.swift in Sources */,
 				BDC0D0852A26035D003D770E /* AuthAPIService.swift in Sources */,
+				77C3C1682A7AB3150079AF4C /* MakeNicknameViewType.swift in Sources */,
 				BD5D0D7C29F14FDC00190471 /* SmokingAreaMessageView.swift in Sources */,
 				77650216295487A7002BF7AD /* SettingNicknameTableViewCell.swift in Sources */,
 				77A99D6C2971B0220037FCAD /* DefaultSettingCoordinator.swift in Sources */,
@@ -1294,6 +1312,7 @@
 				BD90E9DC2976C02100C7CB6B /* CommonResponse.swift in Sources */,
 				77CB2CC52A5FE59900C68748 /* AppleUserModel.swift in Sources */,
 				BD347C5A292FD226009F52BA /* ExMapType.swift in Sources */,
+				775AC1972A735FE800A2A47E /* Keychain.swift in Sources */,
 				77F1D82229269CC800F31D0C /* UIColor + Extension.swift in Sources */,
 				777ECFEC2A26F4490009E302 /* UserDefaults + Extension.swift in Sources */,
 				77F1D82429269E1C00F31D0C /* UIView + Extension.swift in Sources */,
@@ -1328,6 +1347,7 @@
 				ECA425782922545C004DFDAF /* MapViewController.swift in Sources */,
 				BD347C63292FEA15009F52BA /* RoadPopUpView.swift in Sources */,
 				ECA425D72924DA66004DFDAF /* Bundle + Extension.swift in Sources */,
+				775AC1992A7369C800A2A47E /* Keychain + Extension.swift in Sources */,
 				EC1562332A6D7D8A00163875 /* DefaultLoactionService.swift in Sources */,
 				BD5D0D7429F1302F00190471 /* Presentable.swift in Sources */,
 				BDC20F9D293B44B600B9A2E7 /* FogToast.swift in Sources */,
