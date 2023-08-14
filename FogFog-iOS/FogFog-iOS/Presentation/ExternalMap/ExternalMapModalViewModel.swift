@@ -11,57 +11,60 @@ import RxCocoa
 import RxSwift
 
 final class ExternalMapModalViewModel: ViewModelType {
-    
-    var disposeBag = DisposeBag()
+  
+  var disposeBag = DisposeBag()
+  
+  struct Input {
+    let kakaoMapButtonDidTap: ControlEvent<Void>
+    let googleMapButtonDidTap: ControlEvent<Void>
+    let naverMapButtonDidTap: ControlEvent<Void>
+    let confirmButtonDidTap: ControlEvent<Void>
+    let closeButtonDidTap: ControlEvent<Void>
+  }
+  
+  struct Output {
+    let selectedMap: PublishRelay<ExternalMapType>
+  }
+  
+  func transform(input: Input) -> Output {
+    let selectedMap = PublishRelay<ExternalMapType>()
 
-    struct Input {
-        let kakaoButtonTrigger: ControlEvent<Void>
-        let googleButtonTrigger: ControlEvent<Void>
-        let naverButtonTrigger: ControlEvent<Void>
-        let confirmButtonTrigger: ControlEvent<Void>
-        let closeButtonTrigger: ControlEvent<Void>
-    }
-    
-    struct Output {
-        let didSelectMap = PublishRelay<ExternalMapType>()
-        let didConfirm = PublishRelay<Void>()
-        let didCancel = PublishRelay<Void>()
-    }
-    
-    func transform(input: Input) -> Output {
-        let output = Output()
-        
-        input.kakaoButtonTrigger
-            .asSignal()
-            .map { .kakao }
-            .emit(to: output.didSelectMap)
-            .disposed(by: disposeBag)
-        
-        input.googleButtonTrigger
-            .asSignal()
-            .map { .google }
-            .emit(to: output.didSelectMap)
-            .disposed(by: disposeBag)
-        
-        input.naverButtonTrigger
-            .asSignal()
-            .map { .naver }
-            .emit(to: output.didSelectMap)
-            .disposed(by: disposeBag)
-        
-        // didSelectMap
-        // - 1) 맵 선택 정보 기기 자체에 저장
-        // - 2) 서버에 지도 선택 통신 요청
-        input.confirmButtonTrigger
-            .asSignal()
-            .emit(to: output.didConfirm)
-            .disposed(by: disposeBag)
+    input.kakaoMapButtonDidTap
+      .asSignal()
+      .map { ExternalMapType.kakao }
+      .emit(to: selectedMap)
+      .disposed(by: disposeBag)
 
-        input.closeButtonTrigger
-            .asSignal()
-            .emit(to: output.didCancel)
-            .disposed(by: disposeBag)
+    input.googleMapButtonDidTap
+      .asSignal()
+      .map { ExternalMapType.google }
+      .emit(to: selectedMap)
+      .disposed(by: disposeBag)
+    
+    input.naverMapButtonDidTap
+      .asSignal()
+      .map { ExternalMapType.naver }
+      .emit(to: selectedMap)
+      .disposed(by: disposeBag)
 
-        return output
-    }
+    input.confirmButtonDidTap
+      .withLatestFrom(selectedMap)
+      .withUnretained(self)
+      .flatMap { owner, mapType in
+        let userId = UserDefaults.userId ?? 13
+        let mapId = mapType.rawValue
+        return owner.setPreferredMap(userId: userId, mapId: mapId)
+      }
+      .subscribe()
+      .disposed(by: disposeBag)
+
+    return Output(selectedMap: selectedMap)
+  }
+  
+  func setPreferredMap(userId: Int, mapId: Int) -> Observable<Void> {
+    return UserAPIService.shared
+      .setPreferredMap(userId: userId, mapId: mapId)
+      .compactMap { _ in () }
+      .asObservable()
+  }
 }

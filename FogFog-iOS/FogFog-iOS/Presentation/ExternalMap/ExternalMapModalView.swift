@@ -67,7 +67,7 @@ final class ExternalMapModalView: BaseView {
   }()
   
   fileprivate let kakaoMapButton: FogButton = {
-    let button = FogButton(style: .selected)
+    let button = FogButton(style: .unselected)
     button.title = ExternalMapType.kakao.title
     button.makeRounded(cornerRadius: 12.adjusted)
     return button
