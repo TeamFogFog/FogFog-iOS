@@ -1,5 +1,5 @@
 //
-//  RoadPopUpView.swift
+//  ExternalMapModalView.swift
 //  FogFog-iOS
 //
 //  Created by taekki on 2022/11/25.
@@ -7,7 +7,7 @@
 
 import UIKit
 
-final class RoadPopUpView: BaseView {
+final class ExternalMapModalView: BaseView {
     
     // MARK: UI
     let dimmedView = UIView()
@@ -148,10 +148,10 @@ final class RoadPopUpView: BaseView {
 }
 
 // MARK: Private Methods
-extension RoadPopUpView {
+extension ExternalMapModalView {
     
     private func setStackView() {
-        ExMapType.allCases.forEach { type in
+        ExternalMapType.allCases.forEach { type in
             let button = FogButton(style: .unselected)
             button.title = type.title
             button.makeRounded(cornerRadius: buttonRadius.adjusted)
@@ -161,9 +161,9 @@ extension RoadPopUpView {
 }
 
 // MARK: Public Methods
-extension RoadPopUpView {
+extension ExternalMapModalView {
 
-    func select(to type: ExMapType) {
+    func select(to type: ExternalMapType) {
         for (index, button) in buttonStack.arrangedSubviews.enumerated() {
             guard let button = button as? FogButton else { return }
             button.style = index == type.rawValue ? .selected : .unselected

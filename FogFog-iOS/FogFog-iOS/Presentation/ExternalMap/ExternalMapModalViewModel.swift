@@ -1,5 +1,5 @@
 //
-//  RoadPopUpViewModel.swift
+//  ExternalMapModalViewModel.swift
 //  FogFog-iOS
 //
 //  Created by taekki on 2022/11/25.
@@ -10,7 +10,7 @@ import Foundation
 import RxCocoa
 import RxSwift
 
-final class RoadPopUpViewModel: ViewModelType {
+final class ExternalMapModalViewModel: ViewModelType {
     
     var disposeBag = DisposeBag()
 
@@ -23,7 +23,7 @@ final class RoadPopUpViewModel: ViewModelType {
     }
     
     struct Output {
-        let didSelectMap = PublishRelay<ExMapType>()
+        let didSelectMap = PublishRelay<ExternalMapType>()
         let didConfirm = PublishRelay<Void>()
         let didCancel = PublishRelay<Void>()
     }

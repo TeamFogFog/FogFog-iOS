@@ -1,5 +1,5 @@
 //
-//  RoadPopUpViewController.swift
+//  ExternalMapModalViewController.swift
 //  FogFog-iOS
 //
 //  Created by taekki on 2022/11/25.
@@ -10,10 +10,10 @@ import UIKit
 import RxCocoa
 import RxSwift
 
-final class RoadPopUpViewController: BaseViewController {
+final class ExternalMapModalViewController: BaseViewController {
     
     // MARK: Properties
-    private let rootView = RoadPopUpView()
+    private let rootView = ExternalMapModalView()
     private let viewModel: any ViewModelType
     private var disposeBag = DisposeBag()
     
@@ -34,7 +34,7 @@ final class RoadPopUpViewController: BaseViewController {
     }
 }
 
-extension RoadPopUpViewController {
+extension ExternalMapModalViewController {
     
     // MARK: - Bind
     func bind() {
@@ -44,8 +44,8 @@ extension RoadPopUpViewController {
             let naverButton = rootView.buttonStack.arrangedSubviews[2].subviews.first(where: { $0 is UIButton }) as? UIButton
         else { return }
 
-        guard let viewModel = viewModel as? RoadPopUpViewModel else { return }
-        let input = RoadPopUpViewModel.Input(
+        guard let viewModel = viewModel as? ExternalMapModalViewModel else { return }
+        let input = ExternalMapModalViewModel.Input(
             kakaoButtonTrigger: kakaoButton.rx.tap,
             googleButtonTrigger: googleButton.rx.tap,
             naverButtonTrigger: naverButton.rx.tap,
