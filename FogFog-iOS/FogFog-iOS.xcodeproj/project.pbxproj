@@ -58,7 +58,6 @@
 		BD347C5E292FD2BE009F52BA /* FogButtonStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD347C5D292FD2BE009F52BA /* FogButtonStyle.swift */; };
 		BD347C60292FD4C8009F52BA /* FogButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD347C5F292FD4C8009F52BA /* FogButton.swift */; };
 		BD347C63292FEA15009F52BA /* ExternalMapModalView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD347C62292FEA15009F52BA /* ExternalMapModalView.swift */; };
-		BD347C65292FEB08009F52BA /* ExternalMapModalViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD347C64292FEB08009F52BA /* ExternalMapModalViewModel.swift */; };
 		BD4B550F292A29EC00ECFD04 /* SmokingAreaResponseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD4B550E292A29EC00ECFD04 /* SmokingAreaResponseModel.swift */; };
 		BD4D62A92A1A0FB200532778 /* RxKakaoSDKAuth in Frameworks */ = {isa = PBXBuildFile; productRef = BD4D62A82A1A0FB200532778 /* RxKakaoSDKAuth */; };
 		BD4D62AB2A1A0FB200532778 /* RxKakaoSDKCommon in Frameworks */ = {isa = PBXBuildFile; productRef = BD4D62AA2A1A0FB200532778 /* RxKakaoSDKCommon */; };
@@ -71,6 +70,9 @@
 		BD5D0D7829F1395400190471 /* Contents.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD5D0D7729F1395400190471 /* Contents.swift */; };
 		BD5D0D7C29F14FDC00190471 /* SmokingAreaMessageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD5D0D7B29F14FDC00190471 /* SmokingAreaMessageView.swift */; };
 		BD5D0D7F29F15E3A00190471 /* BottomViewType.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD5D0D7E29F15E3A00190471 /* BottomViewType.swift */; };
+		BD834A5D2A8A068800A6DCBD /* PinLayout in Frameworks */ = {isa = PBXBuildFile; productRef = BD834A5C2A8A068800A6DCBD /* PinLayout */; };
+		BD834A602A8A069E00A6DCBD /* FlexLayout in Frameworks */ = {isa = PBXBuildFile; productRef = BD834A5F2A8A069E00A6DCBD /* FlexLayout */; };
+		BD834A622A8A073300A6DCBD /* ExternalMapModalViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD834A612A8A073300A6DCBD /* ExternalMapModalViewModel.swift */; };
 		BD90E9DC2976C02100C7CB6B /* CommonResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD90E9DB2976C02100C7CB6B /* CommonResponse.swift */; };
 		BD90E9DE2976C11E00C7CB6B /* FogAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD90E9DD2976C11E00C7CB6B /* FogAPI.swift */; };
 		BD90E9E02976C3EF00C7CB6B /* NetworkEnv.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD90E9DF2976C3EF00C7CB6B /* NetworkEnv.swift */; };
@@ -195,7 +197,6 @@
 		BD347C5D292FD2BE009F52BA /* FogButtonStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FogButtonStyle.swift; sourceTree = "<group>"; };
 		BD347C5F292FD4C8009F52BA /* FogButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FogButton.swift; sourceTree = "<group>"; };
 		BD347C62292FEA15009F52BA /* ExternalMapModalView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExternalMapModalView.swift; sourceTree = "<group>"; };
-		BD347C64292FEB08009F52BA /* ExternalMapModalViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExternalMapModalViewModel.swift; sourceTree = "<group>"; };
 		BD4B550E292A29EC00ECFD04 /* SmokingAreaResponseModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SmokingAreaResponseModel.swift; sourceTree = "<group>"; };
 		BD4D62AE2A1A100B00532778 /* KakaoOAuthService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KakaoOAuthService.swift; sourceTree = "<group>"; };
 		BD4E13642973DAC400AEA757 /* NetworkError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkError.swift; sourceTree = "<group>"; };
@@ -205,6 +206,7 @@
 		BD5D0D7729F1395400190471 /* Contents.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Contents.swift; sourceTree = "<group>"; };
 		BD5D0D7B29F14FDC00190471 /* SmokingAreaMessageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SmokingAreaMessageView.swift; sourceTree = "<group>"; };
 		BD5D0D7E29F15E3A00190471 /* BottomViewType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BottomViewType.swift; sourceTree = "<group>"; };
+		BD834A612A8A073300A6DCBD /* ExternalMapModalViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExternalMapModalViewModel.swift; sourceTree = "<group>"; };
 		BD90E9DB2976C02100C7CB6B /* CommonResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommonResponse.swift; sourceTree = "<group>"; };
 		BD90E9DD2976C11E00C7CB6B /* FogAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FogAPI.swift; sourceTree = "<group>"; };
 		BD90E9DF2976C3EF00C7CB6B /* NetworkEnv.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkEnv.swift; sourceTree = "<group>"; };
@@ -288,6 +290,8 @@
 				ECA425A4292346BF004DFDAF /* Kingfisher in Frameworks */,
 				BD4D62A92A1A0FB200532778 /* RxKakaoSDKAuth in Frameworks */,
 				ECA4259E292346A2004DFDAF /* Then in Frameworks */,
+				BD834A5D2A8A068800A6DCBD /* PinLayout in Frameworks */,
+				BD834A602A8A069E00A6DCBD /* FlexLayout in Frameworks */,
 				ECA425C929234C4F004DFDAF /* RxCocoa in Frameworks */,
 				ECA425B429234744004DFDAF /* RxMoya in Frameworks */,
 				ECA425A1292346B1004DFDAF /* SnapKit in Frameworks */,
@@ -458,10 +462,10 @@
 		BD347C56292FD1A9009F52BA /* ExternalMap */ = {
 			isa = PBXGroup;
 			children = (
-				BD347C59292FD226009F52BA /* ExternalMapType.swift */,
 				BD347C62292FEA15009F52BA /* ExternalMapModalView.swift */,
 				BD347C57292FD1BC009F52BA /* ExternalMapModalViewController.swift */,
-				BD347C64292FEB08009F52BA /* ExternalMapModalViewModel.swift */,
+				BD834A612A8A073300A6DCBD /* ExternalMapModalViewModel.swift */,
+				BD347C59292FD226009F52BA /* ExternalMapType.swift */,
 			);
 			path = ExternalMap;
 			sourceTree = "<group>";
@@ -1001,6 +1005,8 @@
 				BD4D62A82A1A0FB200532778 /* RxKakaoSDKAuth */,
 				BD4D62AA2A1A0FB200532778 /* RxKakaoSDKCommon */,
 				BD4D62AC2A1A0FB200532778 /* RxKakaoSDKUser */,
+				BD834A5C2A8A068800A6DCBD /* PinLayout */,
+				BD834A5F2A8A069E00A6DCBD /* FlexLayout */,
 			);
 			productName = "FogFog-iOS";
 			productReference = ECA4252929224DB8004DFDAF /* FogFog-iOS.app */;
@@ -1086,6 +1092,8 @@
 				772577D729349212008273A7 /* XCRemoteSwiftPackageReference "RxKeyboard" */,
 				772577DA2934924D008273A7 /* XCRemoteSwiftPackageReference "RxGesture" */,
 				BD4D62A72A1A0FB200532778 /* XCRemoteSwiftPackageReference "kakao-ios-sdk-rx" */,
+				BD834A5B2A8A068800A6DCBD /* XCRemoteSwiftPackageReference "PinLayout" */,
+				BD834A5E2A8A069E00A6DCBD /* XCRemoteSwiftPackageReference "FlexLayout" */,
 			);
 			productRefGroup = ECA4252A29224DB8004DFDAF /* Products */;
 			projectDirPath = "";
@@ -1286,8 +1294,8 @@
 				ECA425CF292382AD004DFDAF /* NavigationView.swift in Sources */,
 				77F899DE29308C6000806896 /* FogTextField.swift in Sources */,
 				BDC0D0832A2600D9003D770E /* AuthAPI.swift in Sources */,
-				BD347C65292FEB08009F52BA /* ExternalMapModalViewModel.swift in Sources */,
 				ECA425E0292532B7004DFDAF /* AppCoordinator.swift in Sources */,
+				BD834A622A8A073300A6DCBD /* ExternalMapModalViewModel.swift in Sources */,
 				ECA425E629262A42004DFDAF /* DefaultLoginCoordinator.swift in Sources */,
 				ECA425DC29253259004DFDAF /* CoordinatorFinishDelegate.swift in Sources */,
 				ECA4252D29224DB8004DFDAF /* AppDelegate.swift in Sources */,
@@ -1528,6 +1536,11 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = "";
 				"DEVELOPMENT_TEAM[sdk=iphoneos*]" = 397WA8BG8W;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"$(inherited)",
+					"COCOAPODS=1",
+					"FLEXLAYOUT_SWIFT_PACKAGE=1",
+				);
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "FogFog-iOS/Supports/Info.plist";
 				INFOPLIST_KEY_NSLocationAlwaysAndWhenInUseUsageDescription = "위치 권한 체크";
@@ -1568,6 +1581,11 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = "";
 				"DEVELOPMENT_TEAM[sdk=iphoneos*]" = 397WA8BG8W;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"$(inherited)",
+					"COCOAPODS=1",
+					"FLEXLAYOUT_SWIFT_PACKAGE=1",
+				);
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "FogFog-iOS/Supports/Info.plist";
 				INFOPLIST_KEY_NSLocationAlwaysAndWhenInUseUsageDescription = "위치 권한 체크";
@@ -1741,6 +1759,22 @@
 				minimumVersion = 2.0.0;
 			};
 		};
+		BD834A5B2A8A068800A6DCBD /* XCRemoteSwiftPackageReference "PinLayout" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/layoutBox/PinLayout.git";
+			requirement = {
+				kind = upToNextMinorVersion;
+				minimumVersion = 1.10.0;
+			};
+		};
+		BD834A5E2A8A069E00A6DCBD /* XCRemoteSwiftPackageReference "FlexLayout" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/layoutBox/FlexLayout.git";
+			requirement = {
+				kind = upToNextMinorVersion;
+				minimumVersion = 1.3.0;
+			};
+		};
 		ECA4259C292346A2004DFDAF /* XCRemoteSwiftPackageReference "Then" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/devxoul/Then.git";
@@ -1808,6 +1842,16 @@
 			isa = XCSwiftPackageProductDependency;
 			package = BD4D62A72A1A0FB200532778 /* XCRemoteSwiftPackageReference "kakao-ios-sdk-rx" */;
 			productName = RxKakaoSDKUser;
+		};
+		BD834A5C2A8A068800A6DCBD /* PinLayout */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = BD834A5B2A8A068800A6DCBD /* XCRemoteSwiftPackageReference "PinLayout" */;
+			productName = PinLayout;
+		};
+		BD834A5F2A8A069E00A6DCBD /* FlexLayout */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = BD834A5E2A8A069E00A6DCBD /* XCRemoteSwiftPackageReference "FlexLayout" */;
+			productName = FlexLayout;
 		};
 		ECA4259D292346A2004DFDAF /* Then */ = {
 			isa = XCSwiftPackageProductDependency;
