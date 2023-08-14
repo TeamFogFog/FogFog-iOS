@@ -7,6 +7,8 @@
 
 import UIKit
 
+import RxCocoa
+import RxSwift
 import FlexLayout
 import PinLayout
 
@@ -49,7 +51,7 @@ final class ExternalMapModalView: BaseView {
     return imageView
   }()
  
-  private let closeButton: UIView = {
+  fileprivate let closeButton: UIButton = {
     let button = UIButton()
     button.setImage(FogImage.btnX, for: .normal)
     button.contentMode = .scaleAspectFit
@@ -64,32 +66,34 @@ final class ExternalMapModalView: BaseView {
     return label
   }()
   
-  private let kakaoMapButton: FogButton = {
+  fileprivate let kakaoMapButton: FogButton = {
     let button = FogButton(style: .selected)
     button.title = ExternalMapType.kakao.title
     button.makeRounded(cornerRadius: 12.adjusted)
     return button
   }()
   
-  private let googleMapButton: FogButton = {
+  fileprivate let googleMapButton: FogButton = {
     let button = FogButton(style: .unselected)
     button.title = ExternalMapType.google.title
     button.makeRounded(cornerRadius: 12.adjusted)
     return button
   }()
   
-  private let naverMapButton: FogButton = {
+  fileprivate let naverMapButton: FogButton = {
     let button = FogButton(style: .unselected)
     button.title = ExternalMapType.naver.title
     button.makeRounded(cornerRadius: 12.adjusted)
     return button
   }()
   
-  private let confirmButton: FogButton = {
+  fileprivate let confirmButton: FogButton = {
     let button = FogButton(style: .normal)
     button.title = "확인"
     return button
   }()
+  
+  // MARK: - Layout
   
   override func setLayout() {
     addSubview(rootFlexContainer)
@@ -135,6 +139,51 @@ final class ExternalMapModalView: BaseView {
     bubbleImageView.pin.bottomCenter(to: popupIconImageView.anchor.topCenter).width(217.adjusted).height(57.adjustedH).marginBottom(7.adjustedH)
   }
 }
+
+// MARK: - Reactive Extension
+
+extension Reactive where Base: ExternalMapModalView {
+  var closeButtonDidTap: ControlEvent<Void> {
+    return base.closeButton.rx.tap
+  }
+  
+  var kakaoMapButtonDidTap: ControlEvent<Void> {
+    return base.kakaoMapButton.button.rx.tap
+  }
+  
+  var googleMapButtonDidTap: ControlEvent<Void> {
+    return base.googleMapButton.button.rx.tap
+  }
+  
+  var naverMapButtonDidTap: ControlEvent<Void> {
+    return base.naverMapButton.button.rx.tap
+  }
+  
+  var confirmButtonDidTap: ControlEvent<Void> {
+    return base.confirmButton.button.rx.tap
+  }
+  
+  var updateViews: Binder<ExternalMapType> {
+    return Binder(base) { base, externalMapType in
+      switch externalMapType {
+      case .kakao:
+        base.kakaoMapButton.style = .selected
+        base.googleMapButton.style = .unselected
+        base.naverMapButton.style = .unselected
+      case .google:
+        base.kakaoMapButton.style = .unselected
+        base.googleMapButton.style = .selected
+        base.naverMapButton.style = .unselected
+      case .naver:
+        base.kakaoMapButton.style = .unselected
+        base.googleMapButton.style = .unselected
+        base.naverMapButton.style = .selected
+      }
+    }
+  }
+}
+
+// MARK: - Preview
 
 #if DEBUG
 import SwiftUI
