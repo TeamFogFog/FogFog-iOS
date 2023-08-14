@@ -1411,6 +1411,7 @@
 /* Begin XCBuildConfiguration section */
 		ECA4255129224DBB004DFDAF /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = EC15622C2A6D77F500163875 /* Config.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ANALYZER_NONNULL = YES;
@@ -1471,6 +1472,7 @@
 		};
 		ECA4255229224DBB004DFDAF /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = EC15622C2A6D77F500163875 /* Config.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ANALYZER_NONNULL = YES;
