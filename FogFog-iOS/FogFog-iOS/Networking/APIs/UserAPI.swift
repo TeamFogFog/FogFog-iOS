@@ -8,7 +8,7 @@
 import Moya
 
 enum UserAPI {
-    case preferredMap(userId: String)
+    case preferredMap(userId: Int, mapId: Int)
     case withdrawal(userId: String)
     case getNickname(userId: Int)
     case editNickname(userId: Int, nickname: String)
@@ -22,8 +22,8 @@ extension UserAPI: FogAPI {
     
     var urlPath: String {
         switch self {
-        case .preferredMap(let userId):
-            return "/\(userId)/preffered-map"
+        case let .preferredMap(userId, _):
+            return "/\(userId)/preferred-map"
         case .withdrawal(let userId):
             return "/\(userId)"
         case .getNickname(let userId), .editNickname(let userId, _):
@@ -42,9 +42,12 @@ extension UserAPI: FogAPI {
         }
     }
     
-    var parameters: [String: String]? {
+    var parameters: [String: Any]? {
         switch self {
-        case .preferredMap, .withdrawal, .getNickname:
+        case let .preferredMap(_, mapId):
+          return ["preferredMap": mapId]
+          
+        case .withdrawal, .getNickname:
             return nil
         case .editNickname(_, let nickname):
             return ["nickname": nickname]

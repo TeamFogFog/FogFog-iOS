@@ -58,6 +58,7 @@
 		BD347C5E292FD2BE009F52BA /* FogButtonStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD347C5D292FD2BE009F52BA /* FogButtonStyle.swift */; };
 		BD347C60292FD4C8009F52BA /* FogButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD347C5F292FD4C8009F52BA /* FogButton.swift */; };
 		BD347C63292FEA15009F52BA /* ExternalMapModalView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD347C62292FEA15009F52BA /* ExternalMapModalView.swift */; };
+		BD4572142A8A404D009E9B3C /* EmptyData.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD4572132A8A404D009E9B3C /* EmptyData.swift */; };
 		BD4B550F292A29EC00ECFD04 /* SmokingAreaResponseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD4B550E292A29EC00ECFD04 /* SmokingAreaResponseModel.swift */; };
 		BD4D62A92A1A0FB200532778 /* RxKakaoSDKAuth in Frameworks */ = {isa = PBXBuildFile; productRef = BD4D62A82A1A0FB200532778 /* RxKakaoSDKAuth */; };
 		BD4D62AB2A1A0FB200532778 /* RxKakaoSDKCommon in Frameworks */ = {isa = PBXBuildFile; productRef = BD4D62AA2A1A0FB200532778 /* RxKakaoSDKCommon */; };
@@ -197,6 +198,7 @@
 		BD347C5D292FD2BE009F52BA /* FogButtonStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FogButtonStyle.swift; sourceTree = "<group>"; };
 		BD347C5F292FD4C8009F52BA /* FogButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FogButton.swift; sourceTree = "<group>"; };
 		BD347C62292FEA15009F52BA /* ExternalMapModalView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExternalMapModalView.swift; sourceTree = "<group>"; };
+		BD4572132A8A404D009E9B3C /* EmptyData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmptyData.swift; sourceTree = "<group>"; };
 		BD4B550E292A29EC00ECFD04 /* SmokingAreaResponseModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SmokingAreaResponseModel.swift; sourceTree = "<group>"; };
 		BD4D62AE2A1A100B00532778 /* KakaoOAuthService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KakaoOAuthService.swift; sourceTree = "<group>"; };
 		BD4E13642973DAC400AEA757 /* NetworkError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkError.swift; sourceTree = "<group>"; };
@@ -557,6 +559,7 @@
 			children = (
 				BD90E9DB2976C02100C7CB6B /* CommonResponse.swift */,
 				77CB027729D02863006817E5 /* NicknameResponseModel.swift */,
+				BD4572132A8A404D009E9B3C /* EmptyData.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -1282,6 +1285,7 @@
 				BD5D0D7C29F14FDC00190471 /* SmokingAreaMessageView.swift in Sources */,
 				77650216295487A7002BF7AD /* SettingNicknameTableViewCell.swift in Sources */,
 				77A99D6C2971B0220037FCAD /* DefaultSettingCoordinator.swift in Sources */,
+				BD4572142A8A404D009E9B3C /* EmptyData.swift in Sources */,
 				BD4D62AF2A1A100B00532778 /* KakaoOAuthService.swift in Sources */,
 				77E70F4A2930D0FA00F55CD7 /* MakeNicknameViewModel.swift in Sources */,
 				77650210295462D7002BF7AD /* UIViewController + Extension.swift in Sources */,

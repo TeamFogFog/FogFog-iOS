@@ -44,7 +44,7 @@ extension AuthAPI: FogAPI {
         }
     }
     
-    var parameters: [String: String]? {
+    var parameters: [String: Any]? {
         switch self {
         case let .signIn(request):
             return [
