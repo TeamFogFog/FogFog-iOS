@@ -30,6 +30,7 @@ final class ExternalMapModalViewController: BaseViewController {
   
   override func viewDidLoad() {
     super.viewDidLoad()
+
     bind(viewModel: viewModel)
   }
   
