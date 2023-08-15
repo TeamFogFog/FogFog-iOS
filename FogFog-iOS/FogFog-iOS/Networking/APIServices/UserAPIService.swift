@@ -30,4 +30,11 @@ class UserAPIService: Networking {
         return provider.request(.editNickname(userId: userId, nickname: nickname))
             .map(NicknameResponseModel.self)
     }
+  
+    // 선호 지도 설정
+    func setPreferredMap(userId: Int, mapId: Int) -> Single<EmptyData?> {
+      return provider
+          .request(.preferredMap(userId: userId, mapId: mapId))
+          .map(EmptyData.self)
+    }
 }

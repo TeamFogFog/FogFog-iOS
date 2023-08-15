@@ -40,7 +40,7 @@ protocol FogAPI: TargetType {
     var domain: FogDomain { get }
     var urlPath: String { get }
     var error: [Int: NetworkError]? { get }
-    var parameters: [String: String]? { get }
+    var parameters: [String: Any]? { get }
 }
 
 extension FogAPI {
