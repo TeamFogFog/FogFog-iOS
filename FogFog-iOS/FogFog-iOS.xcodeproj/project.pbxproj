@@ -14,6 +14,7 @@
 		772577DC2934924E008273A7 /* RxGesture in Frameworks */ = {isa = PBXBuildFile; productRef = 772577DB2934924E008273A7 /* RxGesture */; };
 		775AC1972A735FE800A2A47E /* Keychain.swift in Sources */ = {isa = PBXBuildFile; fileRef = 775AC1962A735FE800A2A47E /* Keychain.swift */; };
 		775AC1992A7369C800A2A47E /* Keychain + Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 775AC1982A7369C800A2A47E /* Keychain + Extension.swift */; };
+		775DB3752A8F40E800214C8F /* AuthInterceptor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 775DB3742A8F40E800214C8F /* AuthInterceptor.swift */; };
 		775DB37B2A91D65000214C8F /* ReissueAPIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 775DB37A2A91D65000214C8F /* ReissueAPIService.swift */; };
 		7761D4F4292F3471003971DC /* MakeNicknameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7761D4F3292F3471003971DC /* MakeNicknameViewController.swift */; };
 		7761D4F6292F3749003971DC /* FogNavigationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7761D4F5292F3749003971DC /* FogNavigationView.swift */; };
@@ -161,6 +162,7 @@
 		568E5A05A08D8D049D3D8E62 /* Pods-FogFog-iOSTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FogFog-iOSTests.release.xcconfig"; path = "Target Support Files/Pods-FogFog-iOSTests/Pods-FogFog-iOSTests.release.xcconfig"; sourceTree = "<group>"; };
 		775AC1962A735FE800A2A47E /* Keychain.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Keychain.swift; sourceTree = "<group>"; };
 		775AC1982A7369C800A2A47E /* Keychain + Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Keychain + Extension.swift"; sourceTree = "<group>"; };
+		775DB3742A8F40E800214C8F /* AuthInterceptor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthInterceptor.swift; sourceTree = "<group>"; };
 		775DB37A2A91D65000214C8F /* ReissueAPIService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReissueAPIService.swift; sourceTree = "<group>"; };
 		7761D4F3292F3471003971DC /* MakeNicknameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MakeNicknameViewController.swift; sourceTree = "<group>"; };
 		7761D4F5292F3749003971DC /* FogNavigationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FogNavigationView.swift; sourceTree = "<group>"; };
@@ -535,6 +537,7 @@
 				BD90E9DF2976C3EF00C7CB6B /* NetworkEnv.swift */,
 				BD4E13642973DAC400AEA757 /* NetworkError.swift */,
 				BD90E9E12976C4F800C7CB6B /* Networking.swift */,
+				775DB3742A8F40E800214C8F /* AuthInterceptor.swift */,
 			);
 			path = Foundation;
 			sourceTree = "<group>";
@@ -1287,6 +1290,7 @@
 				77C3C1682A7AB3150079AF4C /* MakeNicknameViewType.swift in Sources */,
 				BD5D0D7C29F14FDC00190471 /* SmokingAreaMessageView.swift in Sources */,
 				77650216295487A7002BF7AD /* SettingNicknameTableViewCell.swift in Sources */,
+				775DB3752A8F40E800214C8F /* AuthInterceptor.swift in Sources */,
 				77A99D6C2971B0220037FCAD /* DefaultSettingCoordinator.swift in Sources */,
 				BD4572142A8A404D009E9B3C /* EmptyData.swift in Sources */,
 				BD4D62AF2A1A100B00532778 /* KakaoOAuthService.swift in Sources */,
