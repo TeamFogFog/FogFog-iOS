@@ -16,7 +16,7 @@ enum OAuthProviderType: String, Hashable, CaseIterable {
     case kakao
     case apple
     
-    var servive: OAuthServiceType {
+    var service: OAuthServiceType {
         switch self {
         case .kakao:
             return KakaoOAuthService()
