@@ -17,11 +17,12 @@ struct SignInRequestDTO: Codable {
 struct SignInResponseDTO: Codable {
     let accessToken: String
     let refreshToken: String
-    let id: Int
+    let id: Int?
 }
 
 enum AuthAPI {
     case signIn(request: SignInRequestDTO)
+    case reissueToken
 }
 
 extension AuthAPI: FogAPI {
@@ -34,6 +35,8 @@ extension AuthAPI: FogAPI {
         switch self {
         case .signIn:
             return "/signin"
+        case .reissueToken:
+            return "/reissue/token"
         }
     }
     
@@ -41,6 +44,8 @@ extension AuthAPI: FogAPI {
         switch self {
         case .signIn:
             return .post
+        case .reissueToken:
+            return .get
         }
     }
     
@@ -53,12 +58,14 @@ extension AuthAPI: FogAPI {
                 "idToken": request.idToken ?? "",
                 "code": request.code ?? ""
             ]
+        case .reissueToken:
+            return nil
         }
     }
     
     var error: [Int: NetworkError]? {
         switch self {
-        case .signIn:
+        case .signIn, .reissueToken:
             return nil
         }
     }
