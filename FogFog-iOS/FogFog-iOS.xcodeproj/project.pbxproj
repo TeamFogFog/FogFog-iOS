@@ -14,6 +14,7 @@
 		772577DC2934924E008273A7 /* RxGesture in Frameworks */ = {isa = PBXBuildFile; productRef = 772577DB2934924E008273A7 /* RxGesture */; };
 		775AC1972A735FE800A2A47E /* Keychain.swift in Sources */ = {isa = PBXBuildFile; fileRef = 775AC1962A735FE800A2A47E /* Keychain.swift */; };
 		775AC1992A7369C800A2A47E /* Keychain + Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 775AC1982A7369C800A2A47E /* Keychain + Extension.swift */; };
+		775DB37B2A91D65000214C8F /* ReissueAPIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 775DB37A2A91D65000214C8F /* ReissueAPIService.swift */; };
 		7761D4F4292F3471003971DC /* MakeNicknameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7761D4F3292F3471003971DC /* MakeNicknameViewController.swift */; };
 		7761D4F6292F3749003971DC /* FogNavigationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7761D4F5292F3749003971DC /* FogNavigationView.swift */; };
 		77650202295448AE002BF7AD /* SettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77650201295448AE002BF7AD /* SettingViewController.swift */; };
@@ -160,6 +161,7 @@
 		568E5A05A08D8D049D3D8E62 /* Pods-FogFog-iOSTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FogFog-iOSTests.release.xcconfig"; path = "Target Support Files/Pods-FogFog-iOSTests/Pods-FogFog-iOSTests.release.xcconfig"; sourceTree = "<group>"; };
 		775AC1962A735FE800A2A47E /* Keychain.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Keychain.swift; sourceTree = "<group>"; };
 		775AC1982A7369C800A2A47E /* Keychain + Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Keychain + Extension.swift"; sourceTree = "<group>"; };
+		775DB37A2A91D65000214C8F /* ReissueAPIService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReissueAPIService.swift; sourceTree = "<group>"; };
 		7761D4F3292F3471003971DC /* MakeNicknameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MakeNicknameViewController.swift; sourceTree = "<group>"; };
 		7761D4F5292F3749003971DC /* FogNavigationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FogNavigationView.swift; sourceTree = "<group>"; };
 		77650201295448AE002BF7AD /* SettingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingViewController.swift; sourceTree = "<group>"; };
@@ -441,6 +443,7 @@
 			children = (
 				77CB027A29D02FA1006817E5 /* UserAPIService.swift */,
 				BDC0D0842A26035D003D770E /* AuthAPIService.swift */,
+				775DB37A2A91D65000214C8F /* ReissueAPIService.swift */,
 			);
 			path = APIServices;
 			sourceTree = "<group>";
@@ -1347,6 +1350,7 @@
 				776502182954A3BA002BF7AD /* SettingTitleTableViewCell.swift in Sources */,
 				ECA425EC29262CF8004DFDAF /* MapViewModel.swift in Sources */,
 				7761D4F4292F3471003971DC /* MakeNicknameViewController.swift in Sources */,
+				775DB37B2A91D65000214C8F /* ReissueAPIService.swift in Sources */,
 				77D32D43292CD6A3006E6314 /* SideBarView.swift in Sources */,
 				BD347C60292FD4C8009F52BA /* FogButton.swift in Sources */,
 				ECA4257E292254C6004DFDAF /* BaseViewController.swift in Sources */,
