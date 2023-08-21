@@ -18,20 +18,16 @@ protocol AuthAPIServiceType {
 final class AuthAPIService: Networking, AuthAPIServiceType {
     
     // MARK: - Type Alias
-    
     typealias API = AuthAPI
     
     // MARK: - Rx
-    
     private let disposeBag = DisposeBag()
     
     // MARK: - Property
-    
     private let provider = NetworkProvider<API>()
     private var oauthService: OAuthServiceType
     
     // MARK: - Initialization
-    
     init(oauthService: OAuthServiceType) {
         self.oauthService = oauthService
     }
