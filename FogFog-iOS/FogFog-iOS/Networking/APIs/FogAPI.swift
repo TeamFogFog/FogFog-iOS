@@ -57,10 +57,7 @@ extension FogAPI {
     }
     
     var headers: [String: String]? {
-        switch self {
-        default:
-            return NetworkEnv.HTTPHeaderFields.default
-        }
+        return .none
     }
     
     var task: Task {
