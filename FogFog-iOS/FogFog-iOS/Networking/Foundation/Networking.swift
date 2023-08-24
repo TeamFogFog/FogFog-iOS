@@ -30,9 +30,11 @@ extension Networking {
 final class NetworkProvider<API: FogAPI>: Networking {
 
     private let provider: MoyaProvider<API>
-    private let interceptor = AuthInterceptor()
+    private let interceptor: AuthInterceptor
+    private let reissueService = ReissueAPIService()
     
     init(plugins: [PluginType] = []) {
+        self.interceptor = AuthInterceptor(reissueAuth: reissueService)
         let session = Session(interceptor: interceptor)
         session.sessionConfiguration.timeoutIntervalForRequest = 10
         

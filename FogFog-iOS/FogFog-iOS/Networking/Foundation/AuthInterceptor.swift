@@ -13,7 +13,11 @@ import RxSwift
 final class AuthInterceptor: RequestInterceptor {
     
     private let disposeBag = DisposeBag()
-    private let reissueApiService = ReissueAPIService()
+    private let reissueAuth: Reissueable
+    
+    init(reissueAuth: Reissueable) {
+        self.reissueAuth = reissueAuth
+    }
  
     func adapt(_ urlRequest: URLRequest,
                for session: Session,
@@ -45,7 +49,7 @@ final class AuthInterceptor: RequestInterceptor {
         }
         
         // 토큰 재발급 요청
-        reissueApiService.reissueAuthentication()
+        reissueAuth.reissueAuthentication()
             .subscribe(onSuccess: { result in
                 Keychain.create(key: Keychain.Keys.accessToken, data: result?.accessToken ?? "")
                 Keychain.create(key: Keychain.Keys.refreshToken, data: result?.refreshToken ?? "")
