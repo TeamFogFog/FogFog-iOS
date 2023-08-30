@@ -19,6 +19,12 @@ final class ReissueAPIService: Networking {
     // MARK: - Property
     private let provider = NetworkProvider<API>()
     
+    // MARK: - Instance
+    static let shared = ReissueAPIService()
+    
+    // MARK: - Initialization
+    private init() {}
+    
     // MARK: - Custom Methods
     
     // 401 error 시 토큰 재발급 Request
