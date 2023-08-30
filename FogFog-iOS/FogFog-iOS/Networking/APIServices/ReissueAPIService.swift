@@ -11,11 +11,7 @@ import Moya
 import RxCocoa
 import RxSwift
 
-protocol Reissueable {
-    func reissueAuthentication() -> Single<SignInResponseDTO?>
-}
-
-final class ReissueAPIService: Networking, Reissueable {
+final class ReissueAPIService: Networking {
 
     // MARK: - Type Alias
     typealias API = AuthAPI
