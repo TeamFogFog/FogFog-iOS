@@ -11,13 +11,3 @@ enum NetworkEnv {
     // BaseURL
     static let baseURL = "http://fogfogdev-env-1.eba-9u3ghscu.ap-northeast-2.elasticbeanstalk.com"
 }
-
-extension NetworkEnv {
-    
-    enum HTTPHeaderFields {
-        static let `default`: [String: String] = [
-            "Content-Type": "application/json",
-            "Authorization": "Bearer \(Keychain.read(key: Keychain.Keys.accessToken) ?? "")"
-        ]
-    }
-}

@@ -30,14 +30,15 @@ extension Networking {
 final class NetworkProvider<API: FogAPI>: Networking {
 
     private let provider: MoyaProvider<API>
+    private let interceptor = AuthInterceptor()
     
     init(plugins: [PluginType] = []) {
-        let session = MoyaProvider<API>.defaultAlamofireSession()
+        let session = Session(interceptor: interceptor)
         session.sessionConfiguration.timeoutIntervalForRequest = 10
         
         self.provider = MoyaProvider(session: session, plugins: plugins)
     }
-
+    
     func request(
         _ api: API,
         file: StaticString = #file,
@@ -51,16 +52,8 @@ final class NetworkProvider<API: FogAPI>: Networking {
                 onSuccess: { response in
                     print("SUCCESS: \(requestString) (\(response.statusCode))")
                 },
-                onError: { error in
-                    if let error = error as? MoyaError {
-                        switch error {
-                        case .statusCode(let response):
-                            if response.statusCode == 401 {
-                                // Unauthorized - token refresh
-                            }
-                        default: break
-                        }
-                    }
+                onError: { _ in
+                    print("ERROR: \(requestString)")
                 },
                 onSubscribed: {
                     print("REQUEST: \(requestString)")
