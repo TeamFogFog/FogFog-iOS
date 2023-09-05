@@ -23,8 +23,7 @@ final class DefaultLoginCoordinator: LoginCoordinator {
     }
     
     func showLoginViewController() {
-        let coordinator = DefaultLoginCoordinator(navigationController)
-        let viewModel = LoginViewModel(coordinator: coordinator) { oauthProviderType in
+        let viewModel = LoginViewModel(coordinator: self) { oauthProviderType in
             let oauthService = oauthProviderType.service
             let authService = AuthAPIService(oauthService: oauthService)
             return authService

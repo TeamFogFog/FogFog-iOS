@@ -84,7 +84,7 @@ extension MakeNicknameViewModel {
             .subscribe(onSuccess: { result in
                 // 닉네임 등록 or 수정 성공 시 UserDefaults 값 갱신, 화면 전환
                 UserDefaults.nickname = result?.nickname
-                self.coordinator?.connectMapCoordinator()
+                self.coordinator?.finish()
             }, onFailure: { error in
                 if let networkError = error as? NetworkError {
                     switch networkError {
