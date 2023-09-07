@@ -18,7 +18,7 @@ final class SideBarView: BaseView {
     private let blueView = UIView()
     private let logoImageView = UIImageView()
     private let titleLabel = UILabel()
-    let nicknameLabel = UILabel()
+    private let nicknameLabel = UILabel()
     fileprivate let settingButton = UIButton()
     private let mapSettingContainerView = UIView()
     private let mapLogoImageView = UIImageView()
@@ -233,6 +233,15 @@ final class SideBarView: BaseView {
             $0.height.equalTo(12)
             $0.width.equalTo(45)
         }
+    }
+}
+
+// MARK - Custom Methods
+extension SideBarView {
+    
+    /// 닉네임 설정 메서드
+    func setNickname(_ nickname: String) {
+        nicknameLabel.text = nickname
     }
 }
 

@@ -109,7 +109,7 @@ extension MapViewController {
         
         output.userNickname
             .subscribe(onNext: { result in
-                self.sideBarView.nicknameLabel.text = result
+                self.sideBarView.setNickname(result)
             })
             .disposed(by: disposeBag)
         
