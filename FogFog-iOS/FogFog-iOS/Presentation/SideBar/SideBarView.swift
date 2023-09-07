@@ -236,7 +236,7 @@ final class SideBarView: BaseView {
     }
 }
 
-// MARK - Custom Methods
+// MARK: - Custom Methods
 extension SideBarView {
     
     /// 닉네임 설정 메서드
