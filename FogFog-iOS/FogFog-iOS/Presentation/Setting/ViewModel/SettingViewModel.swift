@@ -20,20 +20,31 @@ final class SettingViewModel: ViewModelType {
     }
     
     struct Input {
+        let viewWillAppear: ControlEvent<Bool>
         let tapBackButton: Signal<Void>
         let tapEditNicknameButton: Signal<Void>
     }
     
     struct Output {
+        let nickname: BehaviorSubject<String>
         let didBackButtonTapped: Signal<Void>
         let didEditNicknameButtonTapped: Signal<Void>
     }
     
+    let nickname = BehaviorSubject<String>(value: UserDefaults.nickname ?? "")
+    
     func transform(input: Input) -> Output {
         let didBackButtonTapped = PublishRelay<Void>()
         let didEditNicknameButtonTapped = PublishRelay<Void>()
-        let output = Output(didBackButtonTapped: didBackButtonTapped.asSignal(),
+        let output = Output(nickname: nickname,
+                            didBackButtonTapped: didBackButtonTapped.asSignal(),
                             didEditNicknameButtonTapped: didEditNicknameButtonTapped.asSignal())
+        
+        input.viewWillAppear
+            .subscribe(onNext: { _ in
+                self.nickname.onNext(UserDefaults.nickname ?? "")
+            })
+            .disposed(by: disposeBag)
         
         input.tapBackButton
             .withUnretained(self)

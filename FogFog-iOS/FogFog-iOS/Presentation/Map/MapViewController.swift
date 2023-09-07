@@ -90,7 +90,8 @@ extension MapViewController {
     
     private func bind() {
         let input = MapViewModel.Input(
-            viewDidLoad: Signal<Void>.just(()),
+            viewDidLoad: self.rx.viewDidLoad,
+            viewWillAppear: self.rx.viewWillAppear,
             tapMenuButton: navigationView.rx.menuButtonTapped,
             tapBlurEffectView: tapBlurEffectView.asSignal(),
             tapSettingButton: sideBarView.rx.settingButtonTapped)
