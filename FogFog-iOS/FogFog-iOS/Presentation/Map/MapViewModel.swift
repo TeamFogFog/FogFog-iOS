@@ -34,7 +34,7 @@ final class MapViewModel: ViewModelType {
         let viewDidLoad: Signal<Void>
         let tapMenuButton: ControlEvent<Void>
         let tapBlurEffectView: Signal<Void>
-        let tapSettingButton: Signal<Void>
+        let tapSettingButton: ControlEvent<Void>
     }
     
     struct Output {
@@ -80,10 +80,9 @@ final class MapViewModel: ViewModelType {
             .disposed(by: disposeBag)
         
         input.tapSettingButton
-            .withUnretained(self)
-            .emit { owner, _ in
-                owner.coordinator?.connectSettingCoordinator()
-            }
+            .subscribe(onNext: { _ in
+                self.coordinator?.connectSettingCoordinator()
+            })
             .disposed(by: disposeBag)
         
         self.userLocation

@@ -93,7 +93,7 @@ extension MapViewController {
             viewDidLoad: Signal<Void>.just(()),
             tapMenuButton: navigationView.rx.menuButtonTapped,
             tapBlurEffectView: tapBlurEffectView.asSignal(),
-            tapSettingButton: sideBarView.settingButtonDidTap())
+            tapSettingButton: sideBarView.rx.settingButtonTapped)
         let output = viewModel.transform(input: input)
         
         output.isVisible
