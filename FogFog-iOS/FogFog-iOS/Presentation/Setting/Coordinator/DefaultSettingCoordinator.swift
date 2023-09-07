@@ -42,6 +42,6 @@ extension DefaultSettingCoordinator: CoordinatorFinishDelegate {
     
     func didFinish(childCoordinator: Coordinator) {
         self.childCoordinators = self.childCoordinators.filter { $0.type != childCoordinator.type }
-        childCoordinator.navigationController.popToRootViewController(animated: true)
+        self.navigationController.popViewController(animated: true)
     }
 }
