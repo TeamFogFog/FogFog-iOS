@@ -58,18 +58,18 @@ final class MapViewModel: ViewModelType {
                             currentUserLocation: currentUserLocation.asDriver(onErrorJustReturn: CLLocationCoordinate2D(latitude: 20, longitude: 20)))
         
         input.viewDidLoad
-            .subscribe(onNext: { _ in
-                self.checkAuthorization()
-                self.observeUserLocation()
+            .subscribe(with: self, onNext: { owner, _ in
+                owner.checkAuthorization()
+                owner.observeUserLocation()
                 if UserDefaults.nickname == nil {
-                    self.getUserNicknameAPI(userId: UserDefaults.userId ?? -1)
+                    owner.getUserNicknameAPI(userId: UserDefaults.userId ?? -1)
                 }
             })
             .disposed(by: disposeBag)
         
         input.viewWillAppear
-            .subscribe(onNext: { _ in
-                self.userNickname.onNext(UserDefaults.nickname ?? "")
+            .subscribe(with: self, onNext: { owner, _ in
+                owner.userNickname.onNext(UserDefaults.nickname ?? "")
             })
             .disposed(by: disposeBag)
         
@@ -86,8 +86,8 @@ final class MapViewModel: ViewModelType {
             .disposed(by: disposeBag)
         
         input.tapSettingButton
-            .subscribe(onNext: { _ in
-                self.coordinator?.connectSettingCoordinator()
+            .subscribe(with: self, onNext: { owner, _ in
+                owner.coordinator?.connectSettingCoordinator()
             })
             .disposed(by: disposeBag)
         

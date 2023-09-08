@@ -41,8 +41,8 @@ final class SettingViewModel: ViewModelType {
                             didEditNicknameButtonTapped: didEditNicknameButtonTapped.asSignal())
         
         input.viewWillAppear
-            .subscribe(onNext: { _ in
-                self.nickname.onNext(UserDefaults.nickname ?? "")
+            .subscribe(with: self, onNext: { owner, _ in
+                owner.nickname.onNext(UserDefaults.nickname ?? "")
             })
             .disposed(by: disposeBag)
         
