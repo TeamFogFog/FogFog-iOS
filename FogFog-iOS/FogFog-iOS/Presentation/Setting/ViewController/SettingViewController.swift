@@ -92,7 +92,9 @@ final class SettingViewController: BaseViewController {
             
             switch indexPath.row {
             case 0:
-                let input = SettingViewModel.Input(tapBackButton: self.navigationView.backButtonDidTap(), tapEditNicknameButton: editNicknameCell.editNicknameButtonDidTap())
+                let input = SettingViewModel.Input(viewWillAppear: self.rx.viewWillAppear,
+                                                   tapBackButton: self.navigationView.backButtonDidTap(),
+                                                   tapEditNicknameButton: editNicknameCell.editNicknameButtonDidTap())
                 let output = self.viewModel.transform(input: input)
                 
                 output.didBackButtonTapped
@@ -101,6 +103,12 @@ final class SettingViewController: BaseViewController {
                 
                 output.didEditNicknameButtonTapped
                     .emit()
+                    .disposed(by: self.disposeBag)
+                
+                output.nickname
+                    .subscribe(onNext: { result in
+                        editNicknameCell.setNickname(result)
+                    })
                     .disposed(by: self.disposeBag)
                 
                 return editNicknameCell

@@ -8,6 +8,7 @@
 import UIKit
 
 import RxCocoa
+import RxSwift
 import SnapKit
 import Then
 
@@ -17,8 +18,8 @@ final class SideBarView: BaseView {
     private let blueView = UIView()
     private let logoImageView = UIImageView()
     private let titleLabel = UILabel()
-    let nicknameLabel = UILabel()
-    private let settingButton = UIButton()
+    private let nicknameLabel = UILabel()
+    fileprivate let settingButton = UIButton()
     private let mapSettingContainerView = UIView()
     private let mapLogoImageView = UIImageView()
     private let mapSettingTitleLabel = UILabel()
@@ -238,8 +239,15 @@ final class SideBarView: BaseView {
 // MARK: - Custom Methods
 extension SideBarView {
     
-    // 설정 버튼 터치 이벤트 방출하는 메서드
-    func settingButtonDidTap() -> Signal<Void> {
-        return settingButton.rx.tap.asSignal()
+    /// 닉네임 설정 메서드
+    func setNickname(_ nickname: String) {
+        nicknameLabel.text = nickname
+    }
+}
+
+// MARK: - Reactive
+extension Reactive where Base: SideBarView {
+    var settingButtonTapped: ControlEvent<Void> {
+        base.settingButton.rx.tap
     }
 }

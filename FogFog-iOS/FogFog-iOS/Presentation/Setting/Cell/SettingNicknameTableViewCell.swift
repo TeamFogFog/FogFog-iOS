@@ -63,9 +63,14 @@ final class SettingNicknameTableViewCell: BaseTableViewCell {
 
 // MARK: - Custom Methods
 extension SettingNicknameTableViewCell {
-
+    
     // 닉네임 수정 버튼 터치 이벤트 방출 메서드
     func editNicknameButtonDidTap() -> Signal<Void> {
         return editNicknameButton.rx.tap.asSignal()
+    }
+    
+    // 닉네임 설정 메서드
+    func setNickname(_ nickname: String) {
+        nicknameLabel.text = nickname
     }
 }

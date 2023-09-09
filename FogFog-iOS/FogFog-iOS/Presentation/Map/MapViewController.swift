@@ -90,10 +90,11 @@ extension MapViewController {
     
     private func bind() {
         let input = MapViewModel.Input(
-            viewDidLoad: Signal<Void>.just(()),
+            viewDidLoad: self.rx.viewDidLoad,
+            viewWillAppear: self.rx.viewWillAppear,
             tapMenuButton: navigationView.rx.menuButtonTapped,
             tapBlurEffectView: tapBlurEffectView.asSignal(),
-            tapSettingButton: sideBarView.settingButtonDidTap())
+            tapSettingButton: sideBarView.rx.settingButtonTapped)
         let output = viewModel.transform(input: input)
         
         output.isVisible
@@ -109,7 +110,7 @@ extension MapViewController {
         
         output.userNickname
             .subscribe(onNext: { result in
-                self.sideBarView.nicknameLabel.text = result
+                self.sideBarView.setNickname(result)
             })
             .disposed(by: disposeBag)
         

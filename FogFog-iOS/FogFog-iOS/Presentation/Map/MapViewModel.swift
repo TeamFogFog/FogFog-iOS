@@ -31,10 +31,11 @@ final class MapViewModel: ViewModelType {
     }
     
     struct Input {
-        let viewDidLoad: Signal<Void>
+        let viewDidLoad: ControlEvent<Void>
+        let viewWillAppear: ControlEvent<Bool>
         let tapMenuButton: ControlEvent<Void>
         let tapBlurEffectView: Signal<Void>
-        let tapSettingButton: Signal<Void>
+        let tapSettingButton: ControlEvent<Void>
     }
     
     struct Output {
@@ -57,13 +58,18 @@ final class MapViewModel: ViewModelType {
                             currentUserLocation: currentUserLocation.asDriver(onErrorJustReturn: CLLocationCoordinate2D(latitude: 20, longitude: 20)))
         
         input.viewDidLoad
-            .withUnretained(self)
-            .emit(onNext: { owner, _ in
+            .subscribe(with: self, onNext: { owner, _ in
                 owner.checkAuthorization()
                 owner.observeUserLocation()
                 if UserDefaults.nickname == nil {
                     owner.getUserNicknameAPI(userId: UserDefaults.userId ?? -1)
                 }
+            })
+            .disposed(by: disposeBag)
+        
+        input.viewWillAppear
+            .subscribe(with: self, onNext: { owner, _ in
+                owner.userNickname.onNext(UserDefaults.nickname ?? "")
             })
             .disposed(by: disposeBag)
         
@@ -80,10 +86,9 @@ final class MapViewModel: ViewModelType {
             .disposed(by: disposeBag)
         
         input.tapSettingButton
-            .withUnretained(self)
-            .emit { owner, _ in
+            .subscribe(with: self, onNext: { owner, _ in
                 owner.coordinator?.connectSettingCoordinator()
-            }
+            })
             .disposed(by: disposeBag)
         
         self.userLocation
