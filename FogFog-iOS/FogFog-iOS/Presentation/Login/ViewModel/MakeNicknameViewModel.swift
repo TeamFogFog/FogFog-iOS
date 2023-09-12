@@ -7,6 +7,7 @@
 
 import UIKit
 
+import Moya
 import RxSwift
 import RxCocoa
 
@@ -33,21 +34,21 @@ final class MakeNicknameViewModel: ViewModelType {
         let nickname = BehaviorRelay<String>(value: "")
     }
     
+    let output = Output(didBackButtonTapped: PublishRelay<Void>().asSignal(),
+                        didConfirmButtonTapped: PublishRelay<Void>().asSignal())
+    
     func transform(input: Input) -> Output {
-        let didBackButtonTapped = PublishRelay<Void>()
-        let didConfirmButtonTapped = PublishRelay<Void>()
-        let output = Output(didBackButtonTapped: didBackButtonTapped.asSignal(), didConfirmButtonTapped: didConfirmButtonTapped.asSignal())
-        
         input.didNicknameTextFieldChange
             .subscribe(onNext: { text in
-                output.nickname.accept(self.checkMaxLength(text: text))
+                self.output.isValid.accept(true)
+                self.output.nickname.accept(self.checkMaxLength(text: text))
             })
             .disposed(by: disposeBag)
         
         input.tapConfirmButton
             .withUnretained(self)
             .emit { owner, _ in
-                owner.editUserNicknameAPI(userId: 13, nickname: output.nickname.value)
+                owner.editUserNicknameAPI(userId: UserDefaults.userId ?? -1, nickname: self.output.nickname.value)
             }
             .disposed(by: disposeBag)
         
@@ -84,14 +85,20 @@ extension MakeNicknameViewModel {
             .subscribe(onSuccess: { result in
                 // 닉네임 등록 or 수정 성공 시 UserDefaults 값 갱신, 화면 전환
                 UserDefaults.nickname = result?.nickname
+                self.output.isValid.accept(true)
                 self.coordinator?.finish()
             }, onFailure: { error in
-                if let networkError = error as? NetworkError {
-                    switch networkError {
-                    case .unauthorized:
-                        print("unauthorized")
-                    default:
-                        print("network error")
+                if let moyaError = error as? MoyaError {
+                    if let statusCode = moyaError.response?.statusCode {
+                        let networkError = NetworkError(rawValue: statusCode)
+                        switch networkError {
+                        case .unauthorized:
+                            print("unauthorized")
+                        case .duplicated:
+                            self.output.isValid.accept(false)
+                        default:
+                            print("network error")
+                        }
                     }
                 }
             })
