@@ -41,6 +41,7 @@
 		77E70F462930951100F55CD7 /* UITextField + Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77E70F452930951100F55CD7 /* UITextField + Extension.swift */; };
 		77E70F4829309A6D00F55CD7 /* UILabel + Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77E70F4729309A6D00F55CD7 /* UILabel + Extension.swift */; };
 		77E70F4A2930D0FA00F55CD7 /* MakeNicknameViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77E70F492930D0FA00F55CD7 /* MakeNicknameViewModel.swift */; };
+		77EA71962AB0A0F4007C5CF3 /* Reactive + Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77EA71952AB0A0F4007C5CF3 /* Reactive + Extension.swift */; };
 		77F1D82229269CC800F31D0C /* UIColor + Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77F1D82129269CC800F31D0C /* UIColor + Extension.swift */; };
 		77F1D82429269E1C00F31D0C /* UIView + Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77F1D82329269E1C00F31D0C /* UIView + Extension.swift */; };
 		77F1D8252926AAD300F31D0C /* Pretendard-Black.otf in Resources */ = {isa = PBXBuildFile; fileRef = ECA4259029229A05004DFDAF /* Pretendard-Black.otf */; };
@@ -189,6 +190,7 @@
 		77E70F452930951100F55CD7 /* UITextField + Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITextField + Extension.swift"; sourceTree = "<group>"; };
 		77E70F4729309A6D00F55CD7 /* UILabel + Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UILabel + Extension.swift"; sourceTree = "<group>"; };
 		77E70F492930D0FA00F55CD7 /* MakeNicknameViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MakeNicknameViewModel.swift; sourceTree = "<group>"; };
+		77EA71952AB0A0F4007C5CF3 /* Reactive + Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Reactive + Extension.swift"; sourceTree = "<group>"; };
 		77F1D82129269CC800F31D0C /* UIColor + Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor + Extension.swift"; sourceTree = "<group>"; };
 		77F1D82329269E1C00F31D0C /* UIView + Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView + Extension.swift"; sourceTree = "<group>"; };
 		77F1D82E2927F2CC00F31D0C /* Adjusted + Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Adjusted + Extension.swift"; sourceTree = "<group>"; };
@@ -876,6 +878,7 @@
 		ECA4256F292253AF004DFDAF /* Extension */ = {
 			isa = PBXGroup;
 			children = (
+				77EA71952AB0A0F4007C5CF3 /* Reactive + Extension.swift */,
 				77CB027E29DEAE57006817E5 /* RxMoya + Extension.swift */,
 				ECA4259829229BD9004DFDAF /* UIFont + Extension.swift */,
 				ECA425D62924DA66004DFDAF /* Bundle + Extension.swift */,
@@ -1361,6 +1364,7 @@
 				BDC20F9A293B446D00B9A2E7 /* SplashViewController.swift in Sources */,
 				77CB027829D02863006817E5 /* NicknameResponseModel.swift in Sources */,
 				7761D4F6292F3749003971DC /* FogNavigationView.swift in Sources */,
+				77EA71962AB0A0F4007C5CF3 /* Reactive + Extension.swift in Sources */,
 				77650202295448AE002BF7AD /* SettingViewController.swift in Sources */,
 				77CB027B29D02FA1006817E5 /* UserAPIService.swift in Sources */,
 				77650212295463B8002BF7AD /* BaseTableViewCell.swift in Sources */,
