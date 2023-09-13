@@ -97,6 +97,10 @@
 		BDDAA3972A24BC120055859E /* OAuthProviderType.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDDAA3962A24BC120055859E /* OAuthProviderType.swift */; };
 		BDE3EEB22A1D124300632662 /* OAuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDE3EEB12A1D124300632662 /* OAuthService.swift */; };
 		BDEA50D129261C6600110982 /* .swiftlint.yml in Resources */ = {isa = PBXBuildFile; fileRef = BDEA50D029261C6600110982 /* .swiftlint.yml */; };
+		BDF434672AB1887C00FFAA45 /* MapAPIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDF434662AB1887C00FFAA45 /* MapAPIService.swift */; };
+		BDF434692AB1890300FFAA45 /* MapAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDF434682AB1890300FFAA45 /* MapAPI.swift */; };
+		BDF4346C2AB18FFC00FFAA45 /* Coordinates.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDF4346B2AB18FFC00FFAA45 /* Coordinates.swift */; };
+		BDF4346E2AB1900200FFAA45 /* SmokingAreaEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDF4346D2AB1900200FFAA45 /* SmokingAreaEntity.swift */; };
 		EC15622D2A6D77F500163875 /* Config.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = EC15622C2A6D77F500163875 /* Config.xcconfig */; };
 		EC15622F2A6D78C800163875 /* GoogleMap.plist in Resources */ = {isa = PBXBuildFile; fileRef = EC15622E2A6D78C800163875 /* GoogleMap.plist */; };
 		EC1562312A6D7D8200163875 /* LocationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC1562302A6D7D8200163875 /* LocationService.swift */; };
@@ -236,6 +240,10 @@
 		BDDAA3962A24BC120055859E /* OAuthProviderType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OAuthProviderType.swift; sourceTree = "<group>"; };
 		BDE3EEB12A1D124300632662 /* OAuthService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OAuthService.swift; sourceTree = "<group>"; };
 		BDEA50D029261C6600110982 /* .swiftlint.yml */ = {isa = PBXFileReference; lastKnownFileType = text.yaml; path = .swiftlint.yml; sourceTree = "<group>"; };
+		BDF434662AB1887C00FFAA45 /* MapAPIService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapAPIService.swift; sourceTree = "<group>"; };
+		BDF434682AB1890300FFAA45 /* MapAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapAPI.swift; sourceTree = "<group>"; };
+		BDF4346B2AB18FFC00FFAA45 /* Coordinates.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinates.swift; sourceTree = "<group>"; };
+		BDF4346D2AB1900200FFAA45 /* SmokingAreaEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SmokingAreaEntity.swift; sourceTree = "<group>"; };
 		D67B489E657987D4A7AD92C7 /* Pods_FogFog_iOS_FogFog_iOSUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FogFog_iOS_FogFog_iOSUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DABD884BD50346C82E3C3CA3 /* Pods-FogFog-iOS-FogFog-iOSUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FogFog-iOS-FogFog-iOSUITests.release.xcconfig"; path = "Target Support Files/Pods-FogFog-iOS-FogFog-iOSUITests/Pods-FogFog-iOS-FogFog-iOSUITests.release.xcconfig"; sourceTree = "<group>"; };
 		EC15622C2A6D77F500163875 /* Config.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = Config.xcconfig; sourceTree = "<group>"; };
@@ -448,6 +456,7 @@
 				77CB027A29D02FA1006817E5 /* UserAPIService.swift */,
 				BDC0D0842A26035D003D770E /* AuthAPIService.swift */,
 				775DB37A2A91D65000214C8F /* ReissueAPIService.swift */,
+				BDF434662AB1887C00FFAA45 /* MapAPIService.swift */,
 			);
 			path = APIServices;
 			sourceTree = "<group>";
@@ -558,6 +567,7 @@
 				BD90E9DD2976C11E00C7CB6B /* FogAPI.swift */,
 				BD2D276A297D17E400984B97 /* UserAPI.swift */,
 				BDC0D0822A2600D9003D770E /* AuthAPI.swift */,
+				BDF434682AB1890300FFAA45 /* MapAPI.swift */,
 			);
 			path = APIs;
 			sourceTree = "<group>";
@@ -644,6 +654,15 @@
 			path = OAuth;
 			sourceTree = "<group>";
 		};
+		BDF4346A2AB18FBE00FFAA45 /* Map */ = {
+			isa = PBXGroup;
+			children = (
+				BDF4346B2AB18FFC00FFAA45 /* Coordinates.swift */,
+				BDF4346D2AB1900200FFAA45 /* SmokingAreaEntity.swift */,
+			);
+			path = Map;
+			sourceTree = "<group>";
+		};
 		ECA4252029224DB8004DFDAF = {
 			isa = PBXGroup;
 			children = (
@@ -713,6 +732,7 @@
 		ECA4255E292251E0004DFDAF /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				BDF4346A2AB18FBE00FFAA45 /* Map */,
 				77CB2CC32A5FE57400C68748 /* User */,
 				BD5D0D7D29F15E2800190471 /* BottomView */,
 				BD5D0D6E29F12DFF00190471 /* Message */,
@@ -1292,6 +1312,7 @@
 				BDC0D0852A26035D003D770E /* AuthAPIService.swift in Sources */,
 				77C3C1682A7AB3150079AF4C /* MakeNicknameViewType.swift in Sources */,
 				BD5D0D7C29F14FDC00190471 /* SmokingAreaMessageView.swift in Sources */,
+				BDF434692AB1890300FFAA45 /* MapAPI.swift in Sources */,
 				77650216295487A7002BF7AD /* SettingNicknameTableViewCell.swift in Sources */,
 				775DB3752A8F40E800214C8F /* AuthInterceptor.swift in Sources */,
 				77A99D6C2971B0220037FCAD /* DefaultSettingCoordinator.swift in Sources */,
@@ -1302,6 +1323,7 @@
 				BDDAA3952A24BA130055859E /* OAuthAuthentication.swift in Sources */,
 				7765020E29546239002BF7AD /* SettingListTableViewCell.swift in Sources */,
 				BDB6E1FA2A30546D00AE6228 /* Published+Rx.swift in Sources */,
+				BDF4346C2AB18FFC00FFAA45 /* Coordinates.swift in Sources */,
 				ECA425DA29253155004DFDAF /* Coordinator.swift in Sources */,
 				ECA425F4292634A6004DFDAF /* LoginViewController.swift in Sources */,
 				779672AD2A53D699003064A8 /* AppleOAuthService.swift in Sources */,
@@ -1310,11 +1332,13 @@
 				BDC0D0832A2600D9003D770E /* AuthAPI.swift in Sources */,
 				ECA425E0292532B7004DFDAF /* AppCoordinator.swift in Sources */,
 				BD834A622A8A073300A6DCBD /* ExternalMapModalViewModel.swift in Sources */,
+				BDF434672AB1887C00FFAA45 /* MapAPIService.swift in Sources */,
 				ECA425E629262A42004DFDAF /* DefaultLoginCoordinator.swift in Sources */,
 				ECA425DC29253259004DFDAF /* CoordinatorFinishDelegate.swift in Sources */,
 				ECA4252D29224DB8004DFDAF /* AppDelegate.swift in Sources */,
 				ECA425EA29262A80004DFDAF /* LoginCoordinator.swift in Sources */,
 				ECA425DE29253292004DFDAF /* CoordinatorCase.swift in Sources */,
+				BDF4346E2AB1900200FFAA45 /* SmokingAreaEntity.swift in Sources */,
 				BD9AA41829929ABD00D4E7CE /* AppleLoginManager.swift in Sources */,
 				777ECFEF2A2C575B0009E302 /* UserDefault.swift in Sources */,
 				BD90E9E02976C3EF00C7CB6B /* NetworkEnv.swift in Sources */,
