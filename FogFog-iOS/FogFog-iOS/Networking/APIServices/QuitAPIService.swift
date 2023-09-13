@@ -5,6 +5,8 @@
 //  Created by taekki on 2023/09/13.
 //
 
+import Foundation
+
 import Moya
 import RxSwift
 
@@ -26,6 +28,17 @@ final class QuitAPIService: QuitAPIServiceType {
     func quit(id: Int) -> Single<Void> {
         return provider
             .request(.quit(id: id))
+            .do(onSuccess: { [weak self] _ in
+                UserDefaults.userId  = nil    // 유저 아이디 삭제
+                self?.removeAllKeychainKeys() // 키체인 값 삭제
+            })
             .map { _ in () }
+    }
+    
+    // 회원탈퇴 시에 모든 키체인 값을 제거합니다.
+    func removeAllKeychainKeys() {
+        Keychain.delete(key: Keychain.Keys.accessToken)
+        Keychain.delete(key: Keychain.Keys.refreshToken)
+        Keychain.delete(key: Keychain.Keys.socialType)
     }
 }
