@@ -68,6 +68,7 @@
 		BD4D62AD2A1A0FB200532778 /* RxKakaoSDKUser in Frameworks */ = {isa = PBXBuildFile; productRef = BD4D62AC2A1A0FB200532778 /* RxKakaoSDKUser */; };
 		BD4D62AF2A1A100B00532778 /* KakaoOAuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD4D62AE2A1A100B00532778 /* KakaoOAuthService.swift */; };
 		BD4E13652973DAC400AEA757 /* NetworkError.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD4E13642973DAC400AEA757 /* NetworkError.swift */; };
+		BD4EA69E2AB19A73004CE0BB /* QuitAPIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD4EA69D2AB19A73004CE0BB /* QuitAPIService.swift */; };
 		BD5D0D7029F12E0600190471 /* MessageModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD5D0D6F29F12E0600190471 /* MessageModel.swift */; };
 		BD5D0D7429F1302F00190471 /* Presentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD5D0D7329F1302F00190471 /* Presentable.swift */; };
 		BD5D0D7629F1310800190471 /* SmokingAreaCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD5D0D7529F1310800190471 /* SmokingAreaCardView.swift */; };
@@ -212,6 +213,7 @@
 		BD4B550E292A29EC00ECFD04 /* SmokingAreaResponseModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SmokingAreaResponseModel.swift; sourceTree = "<group>"; };
 		BD4D62AE2A1A100B00532778 /* KakaoOAuthService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KakaoOAuthService.swift; sourceTree = "<group>"; };
 		BD4E13642973DAC400AEA757 /* NetworkError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkError.swift; sourceTree = "<group>"; };
+		BD4EA69D2AB19A73004CE0BB /* QuitAPIService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuitAPIService.swift; sourceTree = "<group>"; };
 		BD5D0D6F29F12E0600190471 /* MessageModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageModel.swift; sourceTree = "<group>"; };
 		BD5D0D7329F1302F00190471 /* Presentable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Presentable.swift; sourceTree = "<group>"; };
 		BD5D0D7529F1310800190471 /* SmokingAreaCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SmokingAreaCardView.swift; sourceTree = "<group>"; };
@@ -457,6 +459,7 @@
 				BDC0D0842A26035D003D770E /* AuthAPIService.swift */,
 				775DB37A2A91D65000214C8F /* ReissueAPIService.swift */,
 				BDF434662AB1887C00FFAA45 /* MapAPIService.swift */,
+				BD4EA69D2AB19A73004CE0BB /* QuitAPIService.swift */,
 			);
 			path = APIServices;
 			sourceTree = "<group>";
@@ -1334,6 +1337,7 @@
 				BD834A622A8A073300A6DCBD /* ExternalMapModalViewModel.swift in Sources */,
 				BDF434672AB1887C00FFAA45 /* MapAPIService.swift in Sources */,
 				ECA425E629262A42004DFDAF /* DefaultLoginCoordinator.swift in Sources */,
+				BD4EA69E2AB19A73004CE0BB /* QuitAPIService.swift in Sources */,
 				ECA425DC29253259004DFDAF /* CoordinatorFinishDelegate.swift in Sources */,
 				ECA4252D29224DB8004DFDAF /* AppDelegate.swift in Sources */,
 				ECA425EA29262A80004DFDAF /* LoginCoordinator.swift in Sources */,
