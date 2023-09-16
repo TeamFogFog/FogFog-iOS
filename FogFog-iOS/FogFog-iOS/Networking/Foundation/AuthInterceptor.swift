@@ -43,7 +43,12 @@ final class AuthInterceptor: RequestInterceptor {
             return
         }
         
-        // 토큰 재발급 요청
+        if let urlString = response.url?.absoluteString, urlString.hasSuffix("/reissue/token") {
+            completion(.doNotRetryWithError(error))
+            return
+        }
+        
+        // 토큰 재발급 요청 (401일 떄)
         ReissueAPIService.shared.reissueAuthentication()
             .subscribe(onSuccess: { result in
                 Keychain.create(key: Keychain.Keys.accessToken, data: result?.accessToken ?? "")
