@@ -39,12 +39,6 @@ final class DefaultLoginCoordinator: LoginCoordinator {
         makeNicknameController.setNaviTitle(.create)
     }
     
-    func connectMapCoordinator() {
-        let mapCoordinator = DefaultMapCoordinator(self.navigationController)
-        mapCoordinator.start()
-        self.childCoordinators.append(mapCoordinator)
-    }
-    
     func finish() {
         finishDelegate?
             .didFinish(childCoordinator: self)
