@@ -44,7 +44,7 @@ final class AuthInterceptor: RequestInterceptor {
         }
         
         if let urlString = response.url?.absoluteString, urlString.hasSuffix("/reissue/token") {
-            completion(.doNotRetryWithError(error))
+            completion(.doNotRetry)
             return
         }
         
@@ -55,7 +55,8 @@ final class AuthInterceptor: RequestInterceptor {
                 Keychain.create(key: Keychain.Keys.refreshToken, data: result?.refreshToken ?? "")
                 completion(.retry)
             }, onFailure: { error in
-                // TODO: 토큰 재발급 실패 - 로그인 화면으로 전환
+                // refreshToken 만료 시 로그인 화면으로 전환
+                NotificationCenter.default.post(name: NotificationCenterKey.refreshTokenHasExpired, object: nil)
                 completion(.doNotRetryWithError(error))
             })
             .disposed(by: disposeBag)
