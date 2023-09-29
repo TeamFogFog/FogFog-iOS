@@ -31,7 +31,6 @@ final class ReissueAPIService: Networking {
     func reissueAuthentication() -> Single<SignInResponseDTO?> {
         return provider
             .request(.reissueToken)
-            .retry(2)
             .map(SignInResponseDTO.self)
     }
 }
