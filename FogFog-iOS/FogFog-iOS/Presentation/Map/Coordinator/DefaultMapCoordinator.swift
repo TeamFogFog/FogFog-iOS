@@ -29,7 +29,7 @@ final class DefaultMapCoordinator: MapCoordinator {
         navigationController.viewControllers = [mapViewController]
     }
     
-    func connectSettingCoordinator() {
+    func showSettingFlow() {
         let settingCoordinator = DefaultSettingCoordinator(self.navigationController)
         settingCoordinator.finishDelegate = self
         self.childCoordinators.append(settingCoordinator)

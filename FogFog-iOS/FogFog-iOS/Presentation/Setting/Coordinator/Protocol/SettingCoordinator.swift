@@ -9,5 +9,5 @@ import Foundation
 
 protocol SettingCoordinator: Coordinator {
     func showSettingViewController()
-    func connectLoginCoordinator()
+    func showEditNicknameViewController()
 }

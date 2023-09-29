@@ -15,9 +15,9 @@ final class MakeNicknameViewModel: ViewModelType {
     
     var disposeBag = DisposeBag()
     
-    private weak var coordinator: LoginCoordinator?
+    private weak var coordinator: Coordinator?
     
-    init(coordinator: LoginCoordinator?) {
+    init(coordinator: Coordinator?) {
         self.coordinator = coordinator
     }
     

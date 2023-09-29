@@ -18,6 +18,15 @@ final class DefaultSettingCoordinator: SettingCoordinator {
         self.navigationController = navigationController
     }
     
+    func start() {
+        showSettingViewController()
+    }
+    
+    func finish() {
+        finishDelegate?
+            .didFinish(childCoordinator: self)
+    }
+    
     func showSettingViewController() {
         let settingViewModel = SettingViewModel(coordinator: self)
         let settingViewController = SettingViewController(viewModel: settingViewModel)
@@ -25,15 +34,11 @@ final class DefaultSettingCoordinator: SettingCoordinator {
     }
     
     // 닉네임 수정 뷰로 이동
-    func connectLoginCoordinator() {
-        let loginCoordinator = DefaultLoginCoordinator(self.navigationController)
-        loginCoordinator.finishDelegate = self
-        self.childCoordinators.append(loginCoordinator)
-        loginCoordinator.showMakeNicknameViewController(to: .edit)
-    }
-    
-    func start() {
-        showSettingViewController()
+    func showEditNicknameViewController() {
+        let editNicknameViewModel = MakeNicknameViewModel(coordinator: self)
+        let editNicknameViewController = MakeNicknameViewController(viewModel: editNicknameViewModel)
+        navigationController.pushViewController(editNicknameViewController, animated: true)
+        editNicknameViewController.setNaviTitle(.edit)
     }
 }
 
@@ -42,6 +47,6 @@ extension DefaultSettingCoordinator: CoordinatorFinishDelegate {
     
     func didFinish(childCoordinator: Coordinator) {
         self.childCoordinators = self.childCoordinators.filter { $0.type != childCoordinator.type }
-        self.navigationController.popViewController(animated: true)
+        childCoordinator.navigationController.popToRootViewController(animated: true)
     }
 }

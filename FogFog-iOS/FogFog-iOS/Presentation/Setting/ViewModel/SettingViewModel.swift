@@ -56,7 +56,7 @@ final class SettingViewModel: ViewModelType {
         input.tapEditNicknameButton
             .withUnretained(self)
             .emit { owner, _ in
-                owner.coordinator?.connectLoginCoordinator()
+                owner.coordinator?.showEditNicknameViewController()
             }
             .disposed(by: disposeBag)
         

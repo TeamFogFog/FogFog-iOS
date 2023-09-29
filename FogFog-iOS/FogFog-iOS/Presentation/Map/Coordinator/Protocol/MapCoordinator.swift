@@ -10,5 +10,5 @@ import Foundation
 protocol MapCoordinator: Coordinator {
     
     func showMapViewController()
-    func connectSettingCoordinator()
+    func showSettingFlow()
 }
