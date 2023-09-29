@@ -10,6 +10,7 @@
 		1DDE6DAB87E9F15EAEAD8A1B /* Pods_FogFog_iOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 44BDDCB91FAFFFC51A0C1A4C /* Pods_FogFog_iOS.framework */; };
 		35919B344F294722AA448E4E /* Pods_FogFog_iOS_FogFog_iOSUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D67B489E657987D4A7AD92C7 /* Pods_FogFog_iOS_FogFog_iOSUITests.framework */; };
 		56E6DAD19F1058E2F6B779B7 /* Pods_FogFog_iOSTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 848DD0928406FC10714344E4 /* Pods_FogFog_iOSTests.framework */; };
+		77148CCA2AC69DB8008E24B2 /* NotificationCenterKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77148CC92AC69DB8008E24B2 /* NotificationCenterKey.swift */; };
 		772577D929349212008273A7 /* RxKeyboard in Frameworks */ = {isa = PBXBuildFile; productRef = 772577D829349212008273A7 /* RxKeyboard */; };
 		772577DC2934924E008273A7 /* RxGesture in Frameworks */ = {isa = PBXBuildFile; productRef = 772577DB2934924E008273A7 /* RxGesture */; };
 		775AC1972A735FE800A2A47E /* Keychain.swift in Sources */ = {isa = PBXBuildFile; fileRef = 775AC1962A735FE800A2A47E /* Keychain.swift */; };
@@ -161,6 +162,7 @@
 		44BDDCB91FAFFFC51A0C1A4C /* Pods_FogFog_iOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FogFog_iOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		47D49EE273F775CA2202B593 /* Pods-FogFog-iOS-FogFog-iOSUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FogFog-iOS-FogFog-iOSUITests.debug.xcconfig"; path = "Target Support Files/Pods-FogFog-iOS-FogFog-iOSUITests/Pods-FogFog-iOS-FogFog-iOSUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		568E5A05A08D8D049D3D8E62 /* Pods-FogFog-iOSTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FogFog-iOSTests.release.xcconfig"; path = "Target Support Files/Pods-FogFog-iOSTests/Pods-FogFog-iOSTests.release.xcconfig"; sourceTree = "<group>"; };
+		77148CC92AC69DB8008E24B2 /* NotificationCenterKey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationCenterKey.swift; sourceTree = "<group>"; };
 		775AC1962A735FE800A2A47E /* Keychain.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Keychain.swift; sourceTree = "<group>"; };
 		775AC1982A7369C800A2A47E /* Keychain + Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Keychain + Extension.swift"; sourceTree = "<group>"; };
 		775DB3742A8F40E800214C8F /* AuthInterceptor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthInterceptor.swift; sourceTree = "<group>"; };
@@ -926,6 +928,7 @@
 			children = (
 				ECA425DD29253292004DFDAF /* CoordinatorCase.swift */,
 				BDDAA3902A249D090055859E /* Config.swift */,
+				77148CC92AC69DB8008E24B2 /* NotificationCenterKey.swift */,
 			);
 			path = Contstant;
 			sourceTree = "<group>";
@@ -1296,6 +1299,7 @@
 				775DB3752A8F40E800214C8F /* AuthInterceptor.swift in Sources */,
 				77A99D6C2971B0220037FCAD /* DefaultSettingCoordinator.swift in Sources */,
 				BD4572142A8A404D009E9B3C /* EmptyData.swift in Sources */,
+				77148CCA2AC69DB8008E24B2 /* NotificationCenterKey.swift in Sources */,
 				BD4D62AF2A1A100B00532778 /* KakaoOAuthService.swift in Sources */,
 				77E70F4A2930D0FA00F55CD7 /* MakeNicknameViewModel.swift in Sources */,
 				77650210295462D7002BF7AD /* UIViewController + Extension.swift in Sources */,
