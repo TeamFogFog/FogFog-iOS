@@ -20,6 +20,12 @@ final class DefaultAppCoordinator: AppCoordinator {
         // BaseViewController에서 ViewWillAppear에 해당하는 부분인데
         // BaseViewController에서 코드를 지울지, 아래의 코드를 지울지 논의 필요
         navigationController.setNavigationBarHidden(true, animated: true)
+        NotificationCenter.default.addObserver(
+            self,
+            selector: #selector(popToRoot),
+            name: NotificationCenterKey.refreshTokenHasExpired,
+            object: nil
+        )
     }
     
     func start() {
@@ -44,6 +50,11 @@ final class DefaultAppCoordinator: AppCoordinator {
         mapCoordinator.finishDelegate = self
         mapCoordinator.start()
         childCoordinators.append(mapCoordinator)
+    }
+    
+    @objc
+    func popToRoot(_ notification: Notification) {
+        showLoginFlow()
     }
 }
 

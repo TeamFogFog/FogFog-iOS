@@ -9,6 +9,5 @@ import Foundation
 
 protocol LoginCoordinator: Coordinator {
     func showLoginViewController()
-    func showMakeNicknameViewController(to type: MakeNicknameViewType)
-    func connectMapCoordinator()
+    func showMakeNicknameViewController()
 }

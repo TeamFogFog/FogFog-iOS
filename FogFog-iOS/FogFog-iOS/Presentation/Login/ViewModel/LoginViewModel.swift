@@ -44,8 +44,11 @@ final class LoginViewModel: ViewModelType {
         input.kakaoButtonDidTap
             .flatMap(loginWithKakao)
             .subscribe { _ in
-                result.onNext("success!")
-                self.coordinator.showMakeNicknameViewController(to: .create)
+                if UserDefaults.nickname == nil {
+                    self.coordinator.showMakeNicknameViewController()
+                } else {
+                    self.coordinator.finish()
+                }
             } onError: { error in
                 result.onNext("error: \(error.localizedDescription)")
             }
@@ -54,8 +57,11 @@ final class LoginViewModel: ViewModelType {
         input.appleButtonDidTap
             .flatMap(loginWithApple)
             .subscribe { _ in
-                result.onNext("success!")
-                self.coordinator.showMakeNicknameViewController(to: .create)
+                if UserDefaults.nickname == nil {
+                    self.coordinator.showMakeNicknameViewController()
+                } else {
+                    self.coordinator.finish()
+                }
             } onError: { error in
                 result.onNext("error: \(error.localizedDescription)")
             }

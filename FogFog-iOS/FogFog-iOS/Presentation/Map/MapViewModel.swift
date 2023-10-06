@@ -87,7 +87,7 @@ final class MapViewModel: ViewModelType {
         
         input.tapSettingButton
             .subscribe(with: self, onNext: { owner, _ in
-                owner.coordinator?.connectSettingCoordinator()
+                owner.coordinator?.showSettingFlow()
             })
             .disposed(by: disposeBag)
         

@@ -43,14 +43,20 @@ final class AuthInterceptor: RequestInterceptor {
             return
         }
         
-        // 토큰 재발급 요청
+        if let urlString = response.url?.absoluteString, urlString.hasSuffix("/reissue/token") {
+            completion(.doNotRetry)
+            return
+        }
+        
+        // 토큰 재발급 요청 (401일 떄)
         ReissueAPIService.shared.reissueAuthentication()
             .subscribe(onSuccess: { result in
                 Keychain.create(key: Keychain.Keys.accessToken, data: result?.accessToken ?? "")
                 Keychain.create(key: Keychain.Keys.refreshToken, data: result?.refreshToken ?? "")
                 completion(.retry)
             }, onFailure: { error in
-                // TODO: 토큰 재발급 실패 - 로그인 화면으로 전환
+                // refreshToken 만료 시 로그인 화면으로 전환
+                NotificationCenter.default.post(name: NotificationCenterKey.refreshTokenHasExpired, object: nil)
                 completion(.doNotRetryWithError(error))
             })
             .disposed(by: disposeBag)
