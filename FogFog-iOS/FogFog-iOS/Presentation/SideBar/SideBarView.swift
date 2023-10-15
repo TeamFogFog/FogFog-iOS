@@ -44,7 +44,7 @@ final class SideBarView: BaseView {
         }
         
         logoImageView.do {
-            $0.image = FogImage.logo
+            $0.image = FogImage.wordMark
         }
         
         titleLabel.do {
@@ -140,7 +140,7 @@ final class SideBarView: BaseView {
         }
         
         logoImageView.snp.makeConstraints {
-            $0.top.equalToSuperview().inset(77)
+            $0.top.equalToSuperview().inset(78)
             $0.leading.equalToSuperview().inset(15)
         }
         
