@@ -9,7 +9,7 @@ import UIKit.UIImage
 
 public enum FogImage {
 
-    static let logo = UIImage(named: "ic_fogfog")!
+    static let logo = UIImage(named: "fogfog_logo")!
     static let hamburger = UIImage(named: "ic_ham")!
     static let locationInactive = UIImage(named: "loca_inactive")!
     static let minus = UIImage(named: "ic_minus")!
