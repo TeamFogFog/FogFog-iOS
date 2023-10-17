@@ -54,7 +54,12 @@ final class Keychain {
             kSecClass: kSecClassGenericPassword,
             kSecAttrAccount: key
         ]
+        
         let status = SecItemDelete(query)
-        assert(status == noErr, "Failed to delete the value, status code = \(status)")
+        if status != errSecSuccess {
+            #if DEBUG
+            print("Failed to delete")
+            #endif
+        }
     }
 }
