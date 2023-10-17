@@ -48,7 +48,7 @@ final class MakeNicknameViewModel: ViewModelType {
         input.tapConfirmButton
             .withUnretained(self)
             .emit { owner, _ in
-                owner.editUserNicknameAPI(userId: UserDefaults.userId ?? -1, nickname: self.output.nickname.value)
+                owner.editUserNicknameAPI(userId: UserInfo.userId, nickname: self.output.nickname.value)
             }
             .disposed(by: disposeBag)
         
@@ -84,7 +84,7 @@ extension MakeNicknameViewModel {
         UserAPIService.shared.editUserNickname(userId: userId, nickname: nickname)
             .subscribe(onSuccess: { result in
                 // 닉네임 등록 or 수정 성공 시 UserDefaults 값 갱신, 화면 전환
-                UserDefaults.nickname = result?.nickname
+                UserInfo.nickname = result?.nickname ?? ""
                 self.output.isValid.accept(true)
                 self.coordinator?.finish()
             }, onFailure: { error in

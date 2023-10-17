@@ -51,7 +51,7 @@ final class ExternalMapModalViewModel: ViewModelType {
             .withLatestFrom(selectedMap)
             .withUnretained(self)
             .flatMap { owner, mapType in
-                let userId = UserDefaults.userId ?? 13
+                let userId = UserInfo.userId
                 let mapId = mapType.rawValue
                 return owner.setPreferredMap(userId: userId, mapId: mapId)
             }
