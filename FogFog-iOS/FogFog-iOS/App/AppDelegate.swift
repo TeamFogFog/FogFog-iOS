@@ -26,7 +26,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         RxKakaoSDK.initSDK(appKey: Config.kakaoNativeAppKey)
         
         // MARK: 키체인 정보 초기화
-        resetKeyChainAtFirstLaunch()
+        resetKeychainAtFirstLaunch()
         
         return true
     }
@@ -40,7 +40,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
     
     // 첫 실행 시 키체인 정보 초기화하는 메서드
-    private func resetKeyChainAtFirstLaunch() {
+    private func resetKeychainAtFirstLaunch() {
         let quitApiService = QuitAPIService()
         
         if UserInfo.isFirstLaunch {
