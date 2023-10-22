@@ -7,7 +7,7 @@
 
 import UIKit
 
-final class DefaultSettingCoordinator: NSObject, SettingCoordinator {
+final class DefaultSettingCoordinator: SettingCoordinator {
     
     weak var finishDelegate: CoordinatorFinishDelegate?
     var navigationController: UINavigationController
@@ -16,8 +16,6 @@ final class DefaultSettingCoordinator: NSObject, SettingCoordinator {
     
     init(_ navigationController: UINavigationController) {
         self.navigationController = navigationController
-        super.init()
-        navigationController.interactivePopGestureRecognizer?.delegate = self
     }
     
     func start() {
@@ -50,13 +48,5 @@ extension DefaultSettingCoordinator: CoordinatorFinishDelegate {
     func didFinish(childCoordinator: Coordinator) {
         self.childCoordinators = self.childCoordinators.filter { $0.type != childCoordinator.type }
         childCoordinator.navigationController.popToRootViewController(animated: true)
-    }
-}
-
-// MARK: - UIGestureRecognizerDelegate
-extension DefaultSettingCoordinator: UIGestureRecognizerDelegate {
-
-    func gestureRecognizerShouldBegin(_ gestureRecognizer: UIGestureRecognizer) -> Bool {
-        return true
     }
 }
