@@ -11,12 +11,10 @@ class BaseNavigationController: UINavigationController {
     
     private(set) var isTransitioning: Bool = false
     
-    /// Pop Gesture 막아야 하는 뷰 컨트롤러의 타입 배열
-    private var disabledPopViewControllers: [AnyClass] = []
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        self.navigationBar.isHidden = true
         self.interactivePopGestureRecognizer?.delegate = self
         self.delegate = self
     }
@@ -36,17 +34,13 @@ extension BaseNavigationController: UIGestureRecognizerDelegate {
         guard gestureRecognizer == interactivePopGestureRecognizer else {
             return true
         }
-    
-        return viewControllers.count > 1 && isTransitioning == false && isPopGestureEnabled()
-    }
-    
-    private func isPopGestureEnabled() -> Bool {
-        guard let topViewController else { return false }
         
-        for viewController in disabledPopViewControllers where topViewController.isKind(of: viewController.self) {
+        // 특정 뷰 컨트롤러에 대해서 Popped 되는 것을 막고 싶다면, preventInteractivePopGesture 오버라이딩해서 false로 수정
+        if let viewController = visibleViewController as? BaseViewController, viewController.preventInteractivePopGesture() {
             return false
         }
-        return true
+        
+        return viewControllers.count > 1 && isTransitioning == false
     }
 }
 
