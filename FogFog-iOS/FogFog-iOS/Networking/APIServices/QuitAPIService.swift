@@ -29,15 +29,10 @@ final class QuitAPIService: QuitAPIServiceType {
         return provider
             .request(.quit(id: id))
             .do(onSuccess: { [weak self] _ in
-                self?.removeAllUserDefaulsKeys() // 유저 정보 초기화
+                removeAllUserDefaulsKeys() // 유저 정보 초기화
                 self?.removeAllKeychainKeys() // 키체인 값 삭제
             })
             .map { _ in () }
-    }
-    
-    // 회원탈퇴 시에 UserDefaults에 저장된 모든 유저 정보를 제거합니다.
-    func removeAllUserDefaulsKeys() {
-        UserDefaultsKey.allCases.forEach { UserDefaults.standard.removeObject(forKey: $0.rawValue) }
     }
     
     // 회원탈퇴 시에 모든 키체인 값을 제거합니다.
