@@ -44,7 +44,7 @@ final class LoginViewModel: ViewModelType {
         input.kakaoButtonDidTap
             .flatMap(loginWithKakao)
             .subscribe { _ in
-                if UserInfo.nickname == "" {
+                if UserDefaults.nickname.isEmpty {
                     self.coordinator.showMakeNicknameViewController()
                 } else {
                     self.coordinator.finish()
@@ -57,7 +57,7 @@ final class LoginViewModel: ViewModelType {
         input.appleButtonDidTap
             .flatMap(loginWithApple)
             .subscribe { _ in
-                if UserInfo.nickname == "" {
+                if UserDefaults.nickname.isEmpty {
                     self.coordinator.showMakeNicknameViewController()
                 } else {
                     self.coordinator.finish()

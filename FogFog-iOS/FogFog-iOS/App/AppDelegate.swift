@@ -43,7 +43,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     private func resetKeychainAtFirstLaunch() {
         let quitApiService = QuitAPIService()
         
-        if UserInfo.isFirstLaunch {
+        if UserDefaults.isFirstLaunch {
             quitApiService.removeAllKeychainKeys()
         }
     }

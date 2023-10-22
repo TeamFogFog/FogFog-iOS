@@ -45,7 +45,7 @@ final class MapViewModel: ViewModelType {
         let currentUserLocation: Driver<CLLocationCoordinate2D>
     }
     
-    let userNickname = BehaviorSubject<String>(value: UserInfo.nickname)
+    let userNickname = BehaviorSubject<String>(value: UserDefaults.nickname)
     
     func transform(input: Input) -> Output {
         let sideBarState = PublishRelay<Bool>()
@@ -61,15 +61,15 @@ final class MapViewModel: ViewModelType {
             .subscribe(with: self, onNext: { owner, _ in
                 owner.checkAuthorization()
                 owner.observeUserLocation()
-                if UserInfo.nickname == "" {
-                    owner.getUserNicknameAPI(userId: UserInfo.userId)
+                if UserDefaults.nickname.isEmpty {
+                    owner.getUserNicknameAPI(userId: UserDefaults.userId)
                 }
             })
             .disposed(by: disposeBag)
         
         input.viewWillAppear
             .subscribe(with: self, onNext: { owner, _ in
-                owner.userNickname.onNext(UserInfo.nickname)
+                owner.userNickname.onNext(UserDefaults.nickname)
             })
             .disposed(by: disposeBag)
         
@@ -139,7 +139,7 @@ extension MapViewModel {
         UserAPIService.shared.getUserNickname(userId: userId)
             .subscribe(onSuccess: { result in
                 self.userNickname.onNext(result?.nickname ?? "")
-                UserInfo.nickname = result?.nickname ?? ""
+                UserDefaults.nickname = result?.nickname ?? ""
             }, onFailure: { error in
                 if let networkError = error as? NetworkError {
                     switch networkError {

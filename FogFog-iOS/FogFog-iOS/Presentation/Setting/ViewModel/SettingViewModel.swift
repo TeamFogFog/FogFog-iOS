@@ -31,7 +31,7 @@ final class SettingViewModel: ViewModelType {
         let didEditNicknameButtonTapped: Signal<Void>
     }
     
-    let nickname = BehaviorSubject<String>(value: UserInfo.nickname)
+    let nickname = BehaviorSubject<String>(value: UserDefaults.nickname)
     
     func transform(input: Input) -> Output {
         let didBackButtonTapped = PublishRelay<Void>()
@@ -42,7 +42,7 @@ final class SettingViewModel: ViewModelType {
         
         input.viewWillAppear
             .subscribe(with: self, onNext: { owner, _ in
-                owner.nickname.onNext(UserInfo.nickname)
+                owner.nickname.onNext(UserDefaults.nickname)
             })
             .disposed(by: disposeBag)
         

@@ -27,7 +27,7 @@ final class SettingNicknameTableViewCell: BaseTableViewCell {
         nicknameLabel.do {
             $0.font = .pretendardB(20)
             $0.textColor = .grayBlack
-            $0.text = "\(UserInfo.nickname)님"
+            $0.text = "\(UserDefaults.nickname)님"
             $0.setTextStyle(targetStringList: ["님"], font: .pretendardM(20), color: .grayBlack)
         }
         

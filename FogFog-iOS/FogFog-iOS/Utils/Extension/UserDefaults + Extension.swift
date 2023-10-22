@@ -1,13 +1,13 @@
 //
-//  UserInfo.swift
+//  UserDefaults + Extension.swift
 //  FogFog-iOS
 //
-//  Created by EUNJU on 2023/10/17.
+//  Created by EUNJU on 2023/10/22.
 //
 
 import Foundation
 
-struct UserInfo {
+extension UserDefaults {
     
     @UserDefault<String>(key: UserDefaultsKey.nickname.rawValue, defaultValue: "")
     static var nickname

@@ -12,7 +12,7 @@
 		56E6DAD19F1058E2F6B779B7 /* Pods_FogFog_iOSTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 848DD0928406FC10714344E4 /* Pods_FogFog_iOSTests.framework */; };
 		77148CCA2AC69DB8008E24B2 /* NotificationCenterKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77148CC92AC69DB8008E24B2 /* NotificationCenterKey.swift */; };
 		77148CDB2ADEB67E008E24B2 /* UserDefaultsKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77148CDA2ADEB67E008E24B2 /* UserDefaultsKey.swift */; };
-		77148CDD2ADEB8AC008E24B2 /* UserInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77148CDC2ADEB8AC008E24B2 /* UserInfo.swift */; };
+		77148CDF2AE50008008E24B2 /* UserDefaults + Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77148CDE2AE50008008E24B2 /* UserDefaults + Extension.swift */; };
 		772577D929349212008273A7 /* RxKeyboard in Frameworks */ = {isa = PBXBuildFile; productRef = 772577D829349212008273A7 /* RxKeyboard */; };
 		772577DC2934924E008273A7 /* RxGesture in Frameworks */ = {isa = PBXBuildFile; productRef = 772577DB2934924E008273A7 /* RxGesture */; };
 		775AC1972A735FE800A2A47E /* Keychain.swift in Sources */ = {isa = PBXBuildFile; fileRef = 775AC1962A735FE800A2A47E /* Keychain.swift */; };
@@ -170,7 +170,7 @@
 		568E5A05A08D8D049D3D8E62 /* Pods-FogFog-iOSTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FogFog-iOSTests.release.xcconfig"; path = "Target Support Files/Pods-FogFog-iOSTests/Pods-FogFog-iOSTests.release.xcconfig"; sourceTree = "<group>"; };
 		77148CC92AC69DB8008E24B2 /* NotificationCenterKey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationCenterKey.swift; sourceTree = "<group>"; };
 		77148CDA2ADEB67E008E24B2 /* UserDefaultsKey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultsKey.swift; sourceTree = "<group>"; };
-		77148CDC2ADEB8AC008E24B2 /* UserInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserInfo.swift; sourceTree = "<group>"; };
+		77148CDE2AE50008008E24B2 /* UserDefaults + Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UserDefaults + Extension.swift"; sourceTree = "<group>"; };
 		775AC1962A735FE800A2A47E /* Keychain.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Keychain.swift; sourceTree = "<group>"; };
 		775AC1982A7369C800A2A47E /* Keychain + Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Keychain + Extension.swift"; sourceTree = "<group>"; };
 		775DB3742A8F40E800214C8F /* AuthInterceptor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthInterceptor.swift; sourceTree = "<group>"; };
@@ -365,14 +365,6 @@
 				568E5A05A08D8D049D3D8E62 /* Pods-FogFog-iOSTests.release.xcconfig */,
 			);
 			path = Pods;
-			sourceTree = "<group>";
-		};
-		77148CD72ADEB2FA008E24B2 /* Struct */ = {
-			isa = PBXGroup;
-			children = (
-				77148CDC2ADEB8AC008E24B2 /* UserInfo.swift */,
-			);
-			path = Struct;
 			sourceTree = "<group>";
 		};
 		775AC1952A735FCC00A2A47E /* Class */ = {
@@ -795,7 +787,6 @@
 		ECA42562292252AB004DFDAF /* Utils */ = {
 			isa = PBXGroup;
 			children = (
-				77148CD72ADEB2FA008E24B2 /* Struct */,
 				775AC1952A735FCC00A2A47E /* Class */,
 				BDB6E1F82A30545900AE6228 /* Wrapper */,
 				ECA425F029263461004DFDAF /* Contstant */,
@@ -925,6 +916,7 @@
 				77E70F4729309A6D00F55CD7 /* UILabel + Extension.swift */,
 				7765020F295462D7002BF7AD /* UIViewController + Extension.swift */,
 				775AC1982A7369C800A2A47E /* Keychain + Extension.swift */,
+				77148CDE2AE50008008E24B2 /* UserDefaults + Extension.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -1347,10 +1339,10 @@
 				ECA425F4292634A6004DFDAF /* LoginViewController.swift in Sources */,
 				779672AD2A53D699003064A8 /* AppleOAuthService.swift in Sources */,
 				ECA425CF292382AD004DFDAF /* NavigationView.swift in Sources */,
+				77148CDF2AE50008008E24B2 /* UserDefaults + Extension.swift in Sources */,
 				77F899DE29308C6000806896 /* FogTextField.swift in Sources */,
 				BDC0D0832A2600D9003D770E /* AuthAPI.swift in Sources */,
 				ECA425E0292532B7004DFDAF /* AppCoordinator.swift in Sources */,
-				77148CDD2ADEB8AC008E24B2 /* UserInfo.swift in Sources */,
 				BD834A622A8A073300A6DCBD /* ExternalMapModalViewModel.swift in Sources */,
 				BDF434672AB1887C00FFAA45 /* MapAPIService.swift in Sources */,
 				ECA425E629262A42004DFDAF /* DefaultLoginCoordinator.swift in Sources */,

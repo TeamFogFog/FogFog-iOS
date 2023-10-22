@@ -50,8 +50,8 @@ final class AuthAPIService: Networking, AuthAPIServiceType {
             .flatMap(signIn)
             .do { dto in
                 if let dto {
-                    UserInfo.isFirstLaunch = false
-                    UserInfo.userId = dto.id ?? -1
+                    UserDefaults.isFirstLaunch = false
+                    UserDefaults.userId = dto.id ?? -1
                     Keychain.create(key: Keychain.Keys.accessToken, data: dto.accessToken)
                     Keychain.create(key: Keychain.Keys.refreshToken, data: dto.refreshToken)
                 } else {
