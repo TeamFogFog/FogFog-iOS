@@ -54,7 +54,12 @@ final class Keychain {
             kSecClass: kSecClassGenericPassword,
             kSecAttrAccount: key
         ]
+        
         let status = SecItemDelete(query)
-        assert(status == noErr, "Failed to delete the value, status code = \(status)")
+        if status != errSecSuccess && status != errSecItemNotFound {
+            print("failed to delete")
+            SecCopyErrorMessageString(status, nil)
+            // TODO: 오류 팝업 (팝업에서 확인 버튼 클릭 시 retry 1회 하도록)
+        }
     }
 }

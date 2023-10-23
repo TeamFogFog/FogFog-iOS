@@ -19,11 +19,15 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication,
                      didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         
-        // MARK: - 구글 맵 설정
+        // MARK: 구글 맵 설정
         GMSServices.provideAPIKey(Bundle.main.apiKey)
         
-        // MARK: - 카카오 SDK 초기화
+        // MARK: 카카오 SDK 초기화
         RxKakaoSDK.initSDK(appKey: Config.kakaoNativeAppKey)
+        
+        // MARK: 키체인 정보 초기화
+        resetKeychainAtFirstLaunch()
+        
         return true
     }
     
@@ -33,6 +37,15 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         }
 
         return false
+    }
+    
+    // 첫 실행 시 키체인 정보 초기화하는 메서드
+    private func resetKeychainAtFirstLaunch() {
+        let quitApiService = QuitAPIService()
+        
+        if UserDefaults.isFirstLaunch {
+            quitApiService.removeAllKeychainKeys()
+        }
     }
 }
 

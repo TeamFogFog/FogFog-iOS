@@ -15,6 +15,7 @@ protocol QuitAPIServiceType {
 }
 
 final class QuitAPIService: QuitAPIServiceType {
+    
     // MARK: - Rx
     private let disposeBag = DisposeBag()
     
@@ -29,7 +30,7 @@ final class QuitAPIService: QuitAPIServiceType {
         return provider
             .request(.quit(id: id))
             .do(onSuccess: { [weak self] _ in
-                UserDefaults.userId  = nil    // 유저 아이디 삭제
+                UserDefaults.standard.removeAllUserDefaulsKeys() // 유저 정보 초기화
                 self?.removeAllKeychainKeys() // 키체인 값 삭제
             })
             .map { _ in () }
