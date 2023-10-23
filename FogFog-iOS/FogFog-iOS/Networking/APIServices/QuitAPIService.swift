@@ -30,7 +30,7 @@ final class QuitAPIService: QuitAPIServiceType {
         return provider
             .request(.quit(id: id))
             .do(onSuccess: { [weak self] _ in
-                removeAllUserDefaulsKeys() // 유저 정보 초기화
+                UserDefaults.standard.removeAllUserDefaulsKeys() // 유저 정보 초기화
                 self?.removeAllKeychainKeys() // 키체인 값 삭제
             })
             .map { _ in () }
