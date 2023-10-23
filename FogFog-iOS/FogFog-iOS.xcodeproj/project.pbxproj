@@ -94,6 +94,7 @@
 		BDC20F9D293B44B600B9A2E7 /* FogToast.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDC20F9C293B44B600B9A2E7 /* FogToast.swift */; };
 		BDC50ED2292A07EB002378C6 /* SmokingAreaDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDC50ED1292A07EB002378C6 /* SmokingAreaDetailViewModel.swift */; };
 		BDC50ED6292A09BD002378C6 /* BaseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDC50ED5292A09BD002378C6 /* BaseView.swift */; };
+		BDC795D82AE5371D0068109F /* BaseNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDC795D72AE5371D0068109F /* BaseNavigationController.swift */; };
 		BDDAA3912A249D090055859E /* Config.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDDAA3902A249D090055859E /* Config.swift */; };
 		BDDAA3932A24B9D00055859E /* OAuthServiceType.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDDAA3922A24B9D00055859E /* OAuthServiceType.swift */; };
 		BDDAA3952A24BA130055859E /* OAuthAuthentication.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDDAA3942A24BA130055859E /* OAuthAuthentication.swift */; };
@@ -240,6 +241,7 @@
 		BDC20F9C293B44B600B9A2E7 /* FogToast.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FogToast.swift; sourceTree = "<group>"; };
 		BDC50ED1292A07EB002378C6 /* SmokingAreaDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SmokingAreaDetailViewModel.swift; sourceTree = "<group>"; };
 		BDC50ED5292A09BD002378C6 /* BaseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseView.swift; sourceTree = "<group>"; };
+		BDC795D72AE5371D0068109F /* BaseNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseNavigationController.swift; sourceTree = "<group>"; };
 		BDDAA3902A249D090055859E /* Config.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Config.swift; sourceTree = "<group>"; };
 		BDDAA3922A24B9D00055859E /* OAuthServiceType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OAuthServiceType.swift; sourceTree = "<group>"; };
 		BDDAA3942A24BA130055859E /* OAuthAuthentication.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OAuthAuthentication.swift; sourceTree = "<group>"; };
@@ -805,6 +807,7 @@
 				ECA4257D292254C6004DFDAF /* BaseViewController.swift */,
 				BDC50ED5292A09BD002378C6 /* BaseView.swift */,
 				77650211295463B8002BF7AD /* BaseTableViewCell.swift */,
+				BDC795D72AE5371D0068109F /* BaseNavigationController.swift */,
 			);
 			path = Base;
 			sourceTree = "<group>";
@@ -1364,6 +1367,7 @@
 				77A99D6A2971AFDC0037FCAD /* SettingCoordinator.swift in Sources */,
 				BDDAA3932A24B9D00055859E /* OAuthServiceType.swift in Sources */,
 				ECA4259729229B15004DFDAF /* FogFont.swift in Sources */,
+				BDC795D82AE5371D0068109F /* BaseNavigationController.swift in Sources */,
 				BDC50ED2292A07EB002378C6 /* SmokingAreaDetailViewModel.swift in Sources */,
 				77CB027F29DEAE57006817E5 /* RxMoya + Extension.swift in Sources */,
 				BDB6E1F52A30383700AE6228 /* NetworkMonitor.swift in Sources */,
