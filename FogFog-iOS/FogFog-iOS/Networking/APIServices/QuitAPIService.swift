@@ -15,6 +15,7 @@ protocol QuitAPIServiceType {
 }
 
 final class QuitAPIService: QuitAPIServiceType {
+    
     // MARK: - Rx
     private let disposeBag = DisposeBag()
     
