@@ -23,13 +23,18 @@ final class DefaultMapCoordinator: MapCoordinator {
     }
 
     func showMapViewController() {
-        let mapViewModel = MapViewModel(coordinator: self, locationService: DefaultLocationService())
+        let mapViewModel = MapViewModel(coordinator: self,
+                                        locationService: DefaultLocationService(),
+                                        networkProvider: MapAPIService())
         let mapViewController = MapViewController(viewModel: mapViewModel)
         changeAnimation()
         navigationController.viewControllers = [mapViewController]
     }
     
     func showSettingFlow() {
+    }
+    
+    func connectSettingCoordinator() {
         let settingCoordinator = DefaultSettingCoordinator(self.navigationController)
         settingCoordinator.finishDelegate = self
         self.childCoordinators.append(settingCoordinator)
