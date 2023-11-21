@@ -32,4 +32,5 @@ public enum FogImage {
     static let btnX = UIImage(named: "btnX")!
     static let btnPen = UIImage(named: "btnPen")!
     static let siren = UIImage(named: "ic_siren")
+    static let pinActive = UIImage(named: "pinActive")!
 }
