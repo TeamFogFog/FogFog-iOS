@@ -9,20 +9,20 @@ import Moya
 import RxSwift
 
 protocol MapAPIServiceType {
-    func fetchPlaceAll(coordinates: CoordinatesRequest) -> Single<SmokingAreaResponseEntity>
-    func fetchPlaceDetail(id: Int, coordinates: CoordinatesRequest) -> Single<SmokingAreaDetailResponseEntity>
+    func fetchPlaceAll(coordinates: CoordinatesRequest) -> Single<SmokingAreaResponseEntity?>
+    func fetchPlaceDetail(id: Int, coordinates: CoordinatesRequest) -> Single<SmokingAreaDetailResponseEntity?>
 }
 
 final class MapAPIService: MapAPIServiceType {
     private let provider = MoyaProvider<MapAPI>()
     
-    private init() {}
+    public init() {}
     
-    func fetchPlaceAll(coordinates: CoordinatesRequest) -> Single<SmokingAreaResponseEntity> {
+    func fetchPlaceAll(coordinates: CoordinatesRequest) -> Single<SmokingAreaResponseEntity?> {
         return provider.rx.request(.fetchPlace(coordinates)).map(SmokingAreaResponseEntity.self)
     }
 
-    func fetchPlaceDetail(id: Int, coordinates: CoordinatesRequest) -> Single<SmokingAreaDetailResponseEntity> {
+    func fetchPlaceDetail(id: Int, coordinates: CoordinatesRequest) -> Single<SmokingAreaDetailResponseEntity?> {
         return provider.rx.request(.fetchPlaceDetail(id, coordinates)).map(SmokingAreaDetailResponseEntity.self)
     }
 }
