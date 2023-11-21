@@ -33,7 +33,8 @@ extension MapAPI: TargetType {
     }
     
     var headers: [String: String]? {
-        return .none
+        return ["Authorization": "Bearer " + (Keychain.read(key: Keychain.Keys.accessToken) ?? "") ,
+                "Content-Type": "application/json"]
     }
 
     var method: Moya.Method {
@@ -51,11 +52,11 @@ extension MapAPI: TargetType {
         case .fetchPlace(let coordinates):
             params["lat"] = coordinates.lat
             params["long"] = coordinates.long
-            return .requestParameters(parameters: params, encoding: URLEncoding.default)
+            return .requestParameters(parameters: params, encoding: URLEncoding.queryString)
         case .fetchPlaceDetail(_, let coordinates):
             params["lat"] = coordinates.lat
             params["long"] = coordinates.long
-            return .requestParameters(parameters: params, encoding: URLEncoding.default)
+            return .requestParameters(parameters: params, encoding: URLEncoding.queryString)
         }
     }
 }
