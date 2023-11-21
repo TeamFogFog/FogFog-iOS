@@ -24,10 +24,14 @@ final class MapViewModel: ViewModelType {
     
     private weak var coordinator: MapCoordinator?
     private let locationService: LocationService
+    private let networkProvider: MapAPIServiceType
     
-    init(coordinator: MapCoordinator?, locationService: LocationService) {
+    init(coordinator: MapCoordinator?,
+         locationService: LocationService,
+         networkProvider: MapAPIServiceType) {
         self.coordinator = coordinator
         self.locationService = locationService
+        self.networkProvider = networkProvider
     }
     
     struct Input {
@@ -36,6 +40,7 @@ final class MapViewModel: ViewModelType {
         let tapMenuButton: ControlEvent<Void>
         let tapBlurEffectView: Signal<Void>
         let tapSettingButton: ControlEvent<Void>
+        let tapResearchButton: Observable<CLLocationCoordinate2D>
     }
     
     struct Output {
@@ -43,33 +48,82 @@ final class MapViewModel: ViewModelType {
         let isVisible: Driver<Bool>
         let didSettingButtonTapped: Signal<Void>
         let currentUserLocation: Driver<CLLocationCoordinate2D>
+        let smokingAreas: Driver<[CLLocationCoordinate2D]>
+        let smokingAreasCount: Driver<Int>
     }
     
-    let userNickname = BehaviorSubject<String>(value: UserDefaults.nickname)
+    let userNickname = BehaviorSubject<String>(value: UserDefaults.nickname ?? "")
     
     func transform(input: Input) -> Output {
         let sideBarState = PublishRelay<Bool>()
         let didSettingButtonTapped = PublishRelay<Void>()
         let currentUserLocation = PublishRelay<CLLocationCoordinate2D>()
+        let coordinate = BehaviorRelay<[CLLocationCoordinate2D]>(value: [])
+        let smokingAreasCount = PublishRelay<Int>()
         
         let output = Output(userNickname: userNickname,
                             isVisible: sideBarState.asDriver(onErrorJustReturn: false),
                             didSettingButtonTapped: didSettingButtonTapped.asSignal(),
-                            currentUserLocation: currentUserLocation.asDriver(onErrorJustReturn: CLLocationCoordinate2D(latitude: 20, longitude: 20)))
+                            currentUserLocation: currentUserLocation.asDriver(onErrorJustReturn: CLLocationCoordinate2D(latitude: 20, longitude: 20)),
+                            smokingAreas: coordinate.asDriver(onErrorJustReturn: [CLLocationCoordinate2D(latitude: 0.0, longitude: 0.0)]),
+                            smokingAreasCount: smokingAreasCount.asDriver(onErrorJustReturn: 0))
         
         input.viewDidLoad
             .subscribe(with: self, onNext: { owner, _ in
                 owner.checkAuthorization()
                 owner.observeUserLocation()
-                if UserDefaults.nickname.isEmpty {
-                    owner.getUserNicknameAPI(userId: UserDefaults.userId)
+                if UserDefaults.nickname == nil {
+                    owner.getUserNicknameAPI(userId: UserDefaults.userId ?? -1)
+                }
+                
+            })
+            .disposed(by: disposeBag)
+        
+        /*
+         viewDidLoad() 실행시, take(1)로 현재 위치의 위도 경도를 통해 호출
+         */
+        locationService.location
+            .asObservable()
+            .take(1)
+            .flatMap { res in
+                return self.networkProvider.fetchPlaceAll(coordinates: CoordinatesRequest(lat: res.first!.coordinate.latitude, long: res.first!.coordinate.longitude))
+            }
+            .subscribe(onNext: { res in
+                if let res {
+                    for area in res.areas {
+                        coordinate.accept([CLLocationCoordinate2D(latitude: area.latitude, longitude: area.longitude)])
+                    }
+                    dump(res)
+                }
+            })
+            .disposed(by: disposeBag)
+        
+        /*
+         이게 문제인 것 같은데 검색 버튼 클릭하면 현재 화면의 위도, 경도의 중앙값으로 검색
+         */
+        input.tapResearchButton
+            .asObservable()
+            .skip(1)
+            .throttle(.seconds(1), scheduler: MainScheduler.instance)
+            .flatMap { coordinate in
+                let roundedLatitude = Double(String(format: "%.6f", coordinate.latitude))!
+                let roundedLongitude = Double(String(format: "%.6f", coordinate.longitude))!
+                print("위경도", roundedLatitude)
+                return self.networkProvider.fetchPlaceAll(coordinates: CoordinatesRequest(lat: 37.628534603279185, long: 127.07641601558362))
+            }
+            .subscribe(onNext: { res in
+                if let res {
+                    for area in res.areas {
+                        coordinate.accept([CLLocationCoordinate2D(latitude: area.latitude, longitude: area.longitude)])
+                    }
+                    smokingAreasCount.accept(res.total)
                 }
             })
             .disposed(by: disposeBag)
         
         input.viewWillAppear
             .subscribe(with: self, onNext: { owner, _ in
-                owner.userNickname.onNext(UserDefaults.nickname)
+                owner.userNickname.onNext(UserDefaults.nickname ?? "")
             })
             .disposed(by: disposeBag)
         
@@ -87,10 +141,11 @@ final class MapViewModel: ViewModelType {
         
         input.tapSettingButton
             .subscribe(with: self, onNext: { owner, _ in
-                owner.coordinator?.showSettingFlow()
+                owner.coordinator?.connectSettingCoordinator()
             })
             .disposed(by: disposeBag)
         
+    
         self.userLocation
             .map({ $0.coordinate })
             .bind(to: currentUserLocation)
@@ -124,6 +179,7 @@ private extension MapViewModel {
     
     func observeUserLocation() {
         return self.locationService.observeUpdatedLocation()
+            .take(1)
             .compactMap({ $0.last })
             .withUnretained(self)
             .subscribe(onNext: { owner, location in
@@ -139,7 +195,7 @@ extension MapViewModel {
         UserAPIService.shared.getUserNickname(userId: userId)
             .subscribe(onSuccess: { result in
                 self.userNickname.onNext(result?.nickname ?? "")
-                UserDefaults.nickname = result?.nickname ?? ""
+//                UserDefaults.nickname = result?.nickname
             }, onFailure: { error in
                 if let networkError = error as? NetworkError {
                     switch networkError {
