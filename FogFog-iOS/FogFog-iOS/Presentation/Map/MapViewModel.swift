@@ -60,7 +60,6 @@ final class MapViewModel: ViewModelType {
         let currentUserLocation = PublishRelay<CLLocationCoordinate2D>()
         let coordinate = BehaviorRelay<[CLLocationCoordinate2D]>(value: [])
         let smokingAreasCount = PublishRelay<Int>()
-        
         let output = Output(userNickname: userNickname,
                             isVisible: sideBarState.asDriver(onErrorJustReturn: false),
                             didSettingButtonTapped: didSettingButtonTapped.asSignal(),
@@ -145,7 +144,42 @@ final class MapViewModel: ViewModelType {
             })
             .disposed(by: disposeBag)
         
-    
+        locationService.location
+            .asObservable()
+            .take(1)
+            .flatMap { res in
+                return self.networkProvider.fetchPlaceAll(coordinates: CoordinatesRequest(lat: res.first!.coordinate.latitude, long: res.first!.coordinate.longitude))
+            }
+            .subscribe(onNext: { res in
+                if let res {
+                    for area in res.areas {
+                        coordinate.accept([CLLocationCoordinate2D(latitude: area.latitude, longitude: area.longitude)])
+                    }
+                    dump(res)
+                }
+            })
+            .disposed(by: disposeBag)
+
+        input.tapResearchButton
+            .asObservable()
+            .throttle(.seconds(1), scheduler: MainScheduler.instance)
+            .flatMap { coordinate in
+                let roundedLatitude = Double(String(format: "%.4f", coordinate.latitude))!
+                let roundedLongitude = Double(String(format: "%.4f", coordinate.longitude))!
+                print("위도", roundedLatitude)
+                print("경도", roundedLongitude)
+                return self.networkProvider.fetchPlaceAll(coordinates: CoordinatesRequest(lat: roundedLatitude, long: roundedLongitude))
+            }
+            .subscribe(onNext: { res in
+                if let res {
+                    for area in res.areas {
+                        coordinate.accept([CLLocationCoordinate2D(latitude: area.latitude, longitude: area.longitude)])
+                    }
+                    smokingAreasCount.accept(res.total)
+                }
+            })
+            .disposed(by: disposeBag)
+        
         self.userLocation
             .map({ $0.coordinate })
             .bind(to: currentUserLocation)

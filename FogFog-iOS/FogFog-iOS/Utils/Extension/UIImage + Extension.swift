@@ -2,7 +2,7 @@
 //  UIImage + Extension.swift
 //  FogFog-iOS
 //
-//  Created by 김승찬 on 2023/10/24.
+//  Created by 김승찬 on 2023/11/22.
 //
 
 import UIKit.UIImage
@@ -18,4 +18,3 @@ extension UIImage {
     return resizedImage
   }
 }
-

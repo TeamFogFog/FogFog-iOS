@@ -8,12 +8,12 @@
 import UIKit
 
 final class DefaultMapCoordinator: MapCoordinator {
- 
+    
     weak var finishDelegate: CoordinatorFinishDelegate?
     var navigationController: UINavigationController
     var childCoordinators = [Coordinator]()
     var type: CoordinatorCase { .map }
-
+    
     init(_ navigationController: UINavigationController) {
         self.navigationController = navigationController
     }
@@ -21,7 +21,7 @@ final class DefaultMapCoordinator: MapCoordinator {
     func start() {
         showMapViewController()
     }
-
+    
     func showMapViewController() {
         let mapViewModel = MapViewModel(coordinator: self,
                                         locationService: DefaultLocationService(),

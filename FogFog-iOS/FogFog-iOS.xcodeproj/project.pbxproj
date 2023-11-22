@@ -109,7 +109,7 @@
 		EC15622F2A6D78C800163875 /* GoogleMap.plist in Resources */ = {isa = PBXBuildFile; fileRef = EC15622E2A6D78C800163875 /* GoogleMap.plist */; };
 		EC1562312A6D7D8200163875 /* LocationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC1562302A6D7D8200163875 /* LocationService.swift */; };
 		EC1562332A6D7D8A00163875 /* DefaultLoactionService.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC1562322A6D7D8A00163875 /* DefaultLoactionService.swift */; };
-		EC4077F62AE79930003AF4A6 /* UIImage + Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC4077F52AE79930003AF4A6 /* UIImage + Extension.swift */; };
+		EC8B48FA2B0DDBB300DA87C8 /* UIImage + Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC8B48F92B0DDBB300DA87C8 /* UIImage + Extension.swift */; };
 		ECA4252D29224DB8004DFDAF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECA4252C29224DB8004DFDAF /* AppDelegate.swift */; };
 		ECA4252F29224DB8004DFDAF /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECA4252E29224DB8004DFDAF /* SceneDelegate.swift */; };
 		ECA4253629224DBB004DFDAF /* Asset.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ECA4253529224DBB004DFDAF /* Asset.xcassets */; };
@@ -259,7 +259,7 @@
 		EC15622E2A6D78C800163875 /* GoogleMap.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = GoogleMap.plist; sourceTree = "<group>"; };
 		EC1562302A6D7D8200163875 /* LocationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationService.swift; sourceTree = "<group>"; };
 		EC1562322A6D7D8A00163875 /* DefaultLoactionService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultLoactionService.swift; sourceTree = "<group>"; };
-		EC4077F52AE79930003AF4A6 /* UIImage + Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage + Extension.swift"; sourceTree = "<group>"; };
+		EC8B48F92B0DDBB300DA87C8 /* UIImage + Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage + Extension.swift"; sourceTree = "<group>"; };
 		ECA4252929224DB8004DFDAF /* FogFog-iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "FogFog-iOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		ECA4252C29224DB8004DFDAF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		ECA4252E29224DB8004DFDAF /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -922,7 +922,7 @@
 				7765020F295462D7002BF7AD /* UIViewController + Extension.swift */,
 				775AC1982A7369C800A2A47E /* Keychain + Extension.swift */,
 				77148CDE2AE50008008E24B2 /* UserDefaults + Extension.swift */,
-				EC4077F52AE79930003AF4A6 /* UIImage + Extension.swift */,
+				EC8B48F92B0DDBB300DA87C8 /* UIImage + Extension.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -1367,7 +1367,7 @@
 				779672AF2A58034E003064A8 /* ASAuthorizationControllerProxy.swift in Sources */,
 				BD90E9E22976C4F800C7CB6B /* Networking.swift in Sources */,
 				BDE3EEB22A1D124300632662 /* OAuthService.swift in Sources */,
-				EC4077F62AE79930003AF4A6 /* UIImage + Extension.swift in Sources */,
+				EC8B48FA2B0DDBB300DA87C8 /* UIImage + Extension.swift in Sources */,
 				77A99D6A2971AFDC0037FCAD /* SettingCoordinator.swift in Sources */,
 				BDDAA3932A24B9D00055859E /* OAuthServiceType.swift in Sources */,
 				ECA4259729229B15004DFDAF /* FogFont.swift in Sources */,

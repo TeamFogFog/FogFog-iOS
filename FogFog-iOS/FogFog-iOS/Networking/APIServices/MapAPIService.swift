@@ -18,7 +18,7 @@ final class MapAPIService: MapAPIServiceType {
     
     public init() {}
     
-    func fetchPlaceAll(coordinates: CoordinatesRequest) -> Single<SmokingAreaResponseEntity?> {
+        func fetchPlaceAll(coordinates: CoordinatesRequest) -> Single<SmokingAreaResponseEntity?> {
         return provider.rx.request(.fetchPlace(coordinates)).map(SmokingAreaResponseEntity.self)
     }
 
