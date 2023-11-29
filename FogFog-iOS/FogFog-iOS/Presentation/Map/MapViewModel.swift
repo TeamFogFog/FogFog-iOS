@@ -11,6 +11,10 @@ import RxCocoa
 import RxSwift
 import Moya
 
+enum MapError: Error {
+    case locationError
+}
+
 @frozen
 enum LocationAuthorizationStatus {
     case allowed, disallowed, notDetermined
@@ -52,7 +56,7 @@ final class MapViewModel: ViewModelType {
         let smokingAreasCount: Driver<Int>
     }
     
-    let userNickname = BehaviorSubject<String>(value: UserDefaults.nickname ?? "")
+    let userNickname = BehaviorSubject<String>(value: UserDefaults.nickname)
     
     func transform(input: Input) -> Output {
         let sideBarState = PublishRelay<Bool>()
@@ -71,58 +75,39 @@ final class MapViewModel: ViewModelType {
             .subscribe(with: self, onNext: { owner, _ in
                 owner.checkAuthorization()
                 owner.observeUserLocation()
-                if UserDefaults.nickname == nil {
-                    owner.getUserNicknameAPI(userId: UserDefaults.userId ?? -1)
+                if UserDefaults.nickname.isEmpty {
+                    owner.getUserNicknameAPI(userId: UserDefaults.userId)
                 }
-                
             })
             .disposed(by: disposeBag)
         
-        /*
-         viewDidLoad() 실행시, take(1)로 현재 위치의 위도 경도를 통해 호출
-         */
         locationService.location
             .asObservable()
             .take(1)
-            .flatMap { res in
-                return self.networkProvider.fetchPlaceAll(coordinates: CoordinatesRequest(lat: res.first!.coordinate.latitude, long: res.first!.coordinate.longitude))
-            }
-            .subscribe(onNext: { res in
-                if let res {
-                    for area in res.areas {
-                        coordinate.accept([CLLocationCoordinate2D(latitude: area.latitude, longitude: area.longitude)])
-                    }
-                    dump(res)
+            .flatMap { [weak self] res -> Single<SmokingAreaResponseEntity> in
+                guard let self = self, let coordinate = res.first else {
+                    return Single.error(MapError.locationError)
                 }
-            })
-            .disposed(by: disposeBag)
-        
-        /*
-         이게 문제인 것 같은데 검색 버튼 클릭하면 현재 화면의 위도, 경도의 중앙값으로 검색
-         */
-        input.tapResearchButton
-            .asObservable()
-            .skip(1)
-            .throttle(.seconds(1), scheduler: MainScheduler.instance)
-            .flatMap { coordinate in
-                let roundedLatitude = Double(String(format: "%.6f", coordinate.latitude))!
-                let roundedLongitude = Double(String(format: "%.6f", coordinate.longitude))!
-                print("위경도", roundedLatitude)
-                return self.networkProvider.fetchPlaceAll(coordinates: CoordinatesRequest(lat: 37.628534603279185, long: 127.07641601558362))
+                let roundedLatitude = Double(String(format: "%.4f", coordinate.coordinate.latitude))!
+                let roundedLongitude = Double(String(format: "%.4f", coordinate.coordinate.longitude))!
+                return self.networkProvider.fetchPlaceAll(coordinates: CoordinatesRequest(lat: roundedLatitude, long: roundedLongitude))
+                    .map { response in
+                        guard let errorResponse = response else {
+                            throw MapError.locationError
+                        }
+                        return errorResponse
+                    }
             }
             .subscribe(onNext: { res in
-                if let res {
-                    for area in res.areas {
-                        coordinate.accept([CLLocationCoordinate2D(latitude: area.latitude, longitude: area.longitude)])
-                    }
-                    smokingAreasCount.accept(res.total)
+                for area in res.areas {
+                    coordinate.accept([CLLocationCoordinate2D(latitude: area.latitude, longitude: area.longitude)])
                 }
             })
             .disposed(by: disposeBag)
         
         input.viewWillAppear
             .subscribe(with: self, onNext: { owner, _ in
-                owner.userNickname.onNext(UserDefaults.nickname ?? "")
+                owner.userNickname.onNext(UserDefaults.nickname)
             })
             .disposed(by: disposeBag)
         
@@ -147,34 +132,40 @@ final class MapViewModel: ViewModelType {
         locationService.location
             .asObservable()
             .take(1)
-            .flatMap { res in
-                return self.networkProvider.fetchPlaceAll(coordinates: CoordinatesRequest(lat: res.first!.coordinate.latitude, long: res.first!.coordinate.longitude))
-            }
-            .subscribe(onNext: { res in
-                if let res {
-                    for area in res.areas {
-                        coordinate.accept([CLLocationCoordinate2D(latitude: area.latitude, longitude: area.longitude)])
+            .flatMap { [weak self] res -> Single<SmokingAreaResponseEntity> in
+                guard let self = self, let coordinate = res.first else {
+                    return Single.error(MapError.locationError)
+                }
+                let roundedLatitude = Double(String(format: "%.4f", coordinate.coordinate.latitude))!
+                let roundedLongitude = Double(String(format: "%.4f", coordinate.coordinate.longitude))!
+                return self.networkProvider.fetchPlaceAll(coordinates: CoordinatesRequest(lat: roundedLatitude, long: roundedLongitude))
+                    .map { response in
+                        guard let errorResponse = response else {
+                            throw MapError.locationError
+                        }
+                        return errorResponse
                     }
-                    dump(res)
+            }
+            .compactMap { $0 }
+            .subscribe(onNext: { res in
+                for area in res.areas {
+                    coordinate.accept([CLLocationCoordinate2D(latitude: area.latitude, longitude: area.longitude)])
                 }
             })
             .disposed(by: disposeBag)
-
+        
         input.tapResearchButton
             .asObservable()
             .throttle(.seconds(1), scheduler: MainScheduler.instance)
             .flatMap { coordinate in
                 let roundedLatitude = Double(String(format: "%.4f", coordinate.latitude))!
                 let roundedLongitude = Double(String(format: "%.4f", coordinate.longitude))!
-                print("위도", roundedLatitude)
-                print("경도", roundedLongitude)
                 return self.networkProvider.fetchPlaceAll(coordinates: CoordinatesRequest(lat: roundedLatitude, long: roundedLongitude))
             }
+            .compactMap { $0 }
             .subscribe(onNext: { res in
-                if let res {
-                    for area in res.areas {
-                        coordinate.accept([CLLocationCoordinate2D(latitude: area.latitude, longitude: area.longitude)])
-                    }
+                for area in res.areas {
+                    coordinate.accept([CLLocationCoordinate2D(latitude: area.latitude, longitude: area.longitude)])
                     smokingAreasCount.accept(res.total)
                 }
             })
@@ -229,7 +220,7 @@ extension MapViewModel {
         UserAPIService.shared.getUserNickname(userId: userId)
             .subscribe(onSuccess: { result in
                 self.userNickname.onNext(result?.nickname ?? "")
-//                UserDefaults.nickname = result?.nickname
+                //                UserDefaults.nickname = result?.nickname
             }, onFailure: { error in
                 if let networkError = error as? NetworkError {
                     switch networkError {

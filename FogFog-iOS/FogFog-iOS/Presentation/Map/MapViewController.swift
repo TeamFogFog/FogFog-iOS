@@ -18,8 +18,6 @@ final class MapViewController: BaseViewController {
     
     // MARK: Properties
     private lazy var navigationView = NavigationView()
-    private var markersArray: [GMSMarker] = []
-    private lazy var researchButton = UIButton()
     private lazy var sideBarView = SideBarView()
     private var blurEffectView: UIVisualEffectView!
     
@@ -46,16 +44,6 @@ final class MapViewController: BaseViewController {
     private var viewModel: MapViewModel
     private let tapBlurEffectView = PublishRelay<Void>()
     private let disposeBag = DisposeBag()
-    private let researchButtonTapRelay = PublishRelay<CLLocationCoordinate2D>()
-
-    lazy var input = MapViewModel.Input(
-        viewDidLoad: self.rx.viewDidLoad,
-        viewWillAppear: self.rx.viewWillAppear,
-        tapMenuButton: navigationView.rx.menuButtonTapped,
-        tapBlurEffectView: tapBlurEffectView.asSignal(),
-        tapSettingButton: sideBarView.rx.settingButtonTapped,
-        tapResearchButton: researchButtonTapRelay.asObservable())
-    lazy var output = viewModel.transform(input: input)
     
     // MARK: Init
     init(viewModel: MapViewModel) {
@@ -115,13 +103,6 @@ final class MapViewController: BaseViewController {
             $0.top.bottom.leading.trailing.equalToSuperview()
         }
         
-        researchButton.snp.makeConstraints {
-            $0.top.equalTo(navigationView.snp.bottom).offset(10)
-            $0.width.equalTo(138.adjusted)
-            $0.height.equalTo(40.adjustedH)
-            $0.centerX.equalToSuperview()
-        }
-        
         sideBarView.snp.makeConstraints {
             $0.top.bottom.equalToSuperview()
             $0.trailing.equalToSuperview().inset(-309)
@@ -132,7 +113,6 @@ final class MapViewController: BaseViewController {
 
 // MARK: - Bind
 extension MapViewController {
-    
     private func makeMap() {
         let mapID = GMSMapID(identifier: "42619687bc36aafd")
         output.currentUserLocation
@@ -231,27 +211,13 @@ extension MapViewController {
             self.tapBlurEffectView.accept(())
         }
     }
-    
-    private func makeMap() {
-        let mapID = GMSMapID(identifier: "42619687bc36aafd")
-        output.currentUserLocation
-            .asDriver()
-            .drive { coordinates in
-                self.currentLocation.accept(coordinates)
-                self.move(at: coordinates)
-            }
-            .disposed(by: disposeBag)
-        
-        mapView = GMSMapView(frame: .zero, mapID: mapID, camera: GMSCameraPosition(latitude: currentLocation.value.latitude, longitude: currentLocation.value.longitude, zoom: 16))
-        
-        self.view = mapView
-    }
 }
 
 private extension MapViewController {
     func setLocation() {
         mapView.isMyLocationEnabled = true
     }
+    
     func makeMarker(at coordinate: CLLocationCoordinate2D) {
         let mapCenter = CLLocationCoordinate2DMake(coordinate.latitude, coordinate.longitude)
         let marker = GMSMarker(position: mapCenter)
@@ -266,14 +232,6 @@ private extension MapViewController {
         for marker in markersArray {
             marker.map = nil
         }
-        markersArray.removeAll()
-    }
-    
-    func removeMarkers() {
-        for marker in markersArray {
-            marker.map = nil
-        }
-        
         markersArray.removeAll()
     }
 
