@@ -12,12 +12,11 @@ import RxSwift
 import RxRelay
 
 final class DefaultLocationService: NSObject, LocationService {
-   
+    
     var locationManager: CLLocationManager?
     var disposeBag: DisposeBag = DisposeBag()
     var authorizationStatus = BehaviorRelay<CLAuthorizationStatus>(value: .notDetermined)
     var location = BehaviorRelay<[CLLocation]>(value: [CLLocation(latitude: 0, longitude: 0)])
-
     
     override init() {
         super.init()
@@ -60,16 +59,13 @@ extension DefaultLocationService: CLLocationManagerDelegate {
     func locationManager(
         _ manager: CLLocationManager,
         didUpdateLocations locations: [CLLocation]) {
-                  if let location = locations.first {
-                      print(self.location.value)
-                  }
-                  self.location.accept(locations)
-
-              }
-
+            if let location = locations.first {
+                print(self.location.value)
+            }
+            self.location.accept(locations)
+        }
     
     func locationManager(_ manager: CLLocationManager, didChangeAuthorization status: CLAuthorizationStatus) {
         self.authorizationStatus.accept(status)
     }
 }
-
