@@ -19,5 +19,4 @@ protocol LocationService {
     func requestAuthorization()
     func observeUpdatedAuthorization() -> Observable<CLAuthorizationStatus>
     func observeUpdatedLocation() -> Observable<[CLLocation]>
-    var location: BehaviorRelay<[CLLocation]> { get set }
 }
