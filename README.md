@@ -14,7 +14,12 @@
 
 ## 프로젝트 소개
 ### 주요 기능
-<img src="https://github.com/TeamFogFog/FogFog-iOS/assets/63277563/eb1f8d52-8d36-4d3c-8269-f3bded5e3b9e.jpg" width="240"> <img src="https://github.com/TeamFogFog/FogFog-iOS/assets/63277563/64c7e954-ea20-43cc-9ce9-76971caff968.jpg" width="240"> <img src="https://github.com/TeamFogFog/FogFog-iOS/assets/63277563/cbd19d84-c1b2-4afc-a4c5-c83d070579a4.jpg" width="240"> <img src="https://github.com/TeamFogFog/FogFog-iOS/assets/63277563/c2416b69-ebee-4b49-a513-dd35ce8b2cf6.jpg" width="240">
+<p align="left" width="100%">
+ <img src="https://github.com/TeamFogFog/FogFog-iOS/assets/63277563/eb1f8d52-8d36-4d3c-8269-f3bded5e3b9e.jpg" width="22%"> 
+ <img src="https://github.com/TeamFogFog/FogFog-iOS/assets/63277563/64c7e954-ea20-43cc-9ce9-76971caff968.jpg" width="22%"> 
+ <img src="https://github.com/TeamFogFog/FogFog-iOS/assets/63277563/cbd19d84-c1b2-4afc-a4c5-c83d070579a4.jpg" width="22%"> 
+ <img src="https://github.com/TeamFogFog/FogFog-iOS/assets/63277563/c2416b69-ebee-4b49-a513-dd35ce8b2cf6.jpg" width="22%">
+</p>
 
 - **현재 위치에서 가까운 흡연구역 찾기**   
   지도를 통해 현재 위치에서 가까운 흡연구역을 빠르게 찾을 수 있습니다.
