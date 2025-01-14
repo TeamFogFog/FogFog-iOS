@@ -10,6 +10,6 @@ import Foundation
 protocol ModernEndpoint {
     var path: String { get }
     var method: ModernHttpMethod { get }
-    var parameters: [String: Any]? { get }
+    var task: ModernHTTPTask { get }
     var headers: [String: String]? { get }
 }

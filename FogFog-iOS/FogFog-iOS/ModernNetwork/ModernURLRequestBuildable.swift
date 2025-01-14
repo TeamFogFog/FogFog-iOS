@@ -27,11 +27,27 @@ struct ModernURLRequestBuilder: ModernURLRequestBuildable {
        endpoint.headers?.forEach { request.addValue($1, forHTTPHeaderField: $0) }
        
        // HTTP 메서드가 GET이 아닌 경우, 파라미터를 JSON 형태로 변환하여 body에 추가
-       if let parameters = endpoint.parameters, endpoint.method != .get {
-           request.httpBody = try JSONSerialization.data(withJSONObject: parameters)
-           request.setValue("application/json", forHTTPHeaderField: "Content-Type")
-       }
-       
-       return request
+       switch endpoint.task {
+        case .query(let query):
+            let queryParams = query.map { URLQueryItem(name: $0.key, value: "\($0.value)") }
+           var components = URLComponents(string: url.appendingPathComponent(endpoint.path).absoluteString)
+            components?.queryItems = queryParams
+            request.url = components?.url
+            
+        case .queryBody(let query, let body):
+            let queryParams = query.map { URLQueryItem(name: $0.key, value: "\($0.value)") }
+            var components = URLComponents(string: url.appendingPathComponent(endpoint.path).absoluteString)
+            components?.queryItems = queryParams
+            request.url = components?.url
+            request.httpBody = try JSONSerialization.data(withJSONObject: body, options: [])
+            
+        case .requestBody(let body):
+            request.httpBody = try JSONSerialization.data(withJSONObject: body, options: [])
+            
+        case .requestPlain:
+            break
+        }
+        
+        return request
    }
 }
